@@ -1,0 +1,105 @@
+NOTES
+
+.\recent-templates\1
+
+use Cursus for the courses & blog\news
+use Mordenize for the marketplace & music & auctions
+use social.webestica for the overview & social template
+
+social might be more compatible
+
+\social.webestica -> 263deals
+blog -> news
+blog-detils -> news-details
+index -> overview, forum
+events -> competitions, campaigns, surveys
+events-details-2 -> competition-details, campaign-details, survey-details
+groups -> clubs
+group-details -> club-details
+help -> help
+help-details -> help-details
+messaging -> chat
+my-profile -> user-profile
+post -> post
+privacy-and-terms -> terms-and-conditions
+settings -> settings
+video-details -> movie-trailer-details
+
+------------------------
+
+\mordenize -> 263deals
+eco-shop -> marketplace
+eco-shop-details -> market-details
+eco-checkout -> market-checkout
+index6 -> music
+app-calendar -> app-calendar
+app-invoice -> app-invoice ...
+pages-search-result -> app-search-engine
+
+
+--------------------------
+
+\cursus css will not be used since some ui is similar to that of social.webestica
+it will now be used for the courses since we are using a base css and a style css over the base
+
+explore -> courses
+saved_courses -> saved-courses
+course_detail_view -> course-details
+
+---------------------------------------------------------------------------------------------------------------------
+
+.\recent-templates\3
+
+use tuneinhtml for the music template
+
+\tuneinhtml -> 263deals
+download -> music-details
+
+---------it is incompatible
+
+\gambolthemes.net\html-items\new-micko-html\
+use it for the job template
+all_jobs -> jobs
+job_detail_view -> job-details
+all_products -> all-products [to replace marketplace]
+product_detail_view -> product-details
+all_learning -> courses [not compatible]
+cart -> product-cart
+checkout -> product-checkout
+invoice -> product-invoice
+my_connections -> user-connections
+explore_connections -> explore-connections
+forums -> forums
+forum_topics -> forum-topics
+forum_topic_view -> forum-topic-details
+forum_members -> forum-members
+setting... -> setting...
+
+
+\gambolthemes.net\natto-new-demo\
+use it for the food\restaurants template
+index -> food
+partners -> food-places
+
+
+\autohive-html.themetags.com\ -> cars & housing listing
+inventory-list -> cars-grid
+inventory-list-2 -> cars-list [chose list over the grid view]
+inventory-details -> car-details
+dealers -> car-dealers
+
+
+\sports\pixner.net\onlinebets\
+sports -> sports
+live -> sports-live
+
+
+-------------------------------------------------------------------------------------------------------------------
+
+C:\my websites\dating\
+\demo.foxthemes.net\socialite -> more like Social [named social2.css]
+it uses tailwind.css & uikit not bootstrap which is tricky
+
+-----not compatible----
+
+

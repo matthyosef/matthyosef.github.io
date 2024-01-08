@@ -1,0 +1,44 @@
+this document contains the links for the about details to provide per page
+
+--------------------------------------------------------------------------
+
+#Courses
+file:///C:/Users/gobby/Documents/BMSOFT/projects/recent%20templates/1/cursus_main_demo/course_detail_view.html
+
+#Games & Sports
+file:///C:/Users/gobby/Documents/BMSOFT/projects/recent%20templates/3/odindesignthemes.com/pixel-diamond/esports-player.html
+file:///C:/Users/gobby/Documents/BMSOFT/projects/recent%20templates/3/peredion.netlify.app/peredion-dashboard/dashboard-bet-history.html
+file:///C:/Users/gobby/Documents/BMSOFT/projects/recent%20templates/3/sports/oxentictemplates.in/templatemonster/soocer/matches-details.html
+
+
+#Jobs
+file:///C:/Users/gobby/Documents/BMSOFT/projects/recent%20templates/3/jobickadmin-30/Jobick-v3.0-13-April-2023/xhtml/apply-job.html
+file:///C:/Users/gobby/Documents/BMSOFT/projects/recent%20templates/3/gambolthemes.net/html-items/new-micko-html/disable-demo-link/post_a_job.html
+
+#Marketplace
+#Auctions
+
+
+#Travels
+file:///C:/Users/gobby/Documents/BMSOFT/projects/recent%20templates/3/autohive-html.themetags.com/car-listing.html
+
+#Food&Other
+file:///C:/Users/gobby/Documents/BMSOFT/projects/recent%20templates/3/gambolthemes.net/natto-new-demo/add_restaurant.html
+
+#General Listing
+file:///C:/Users/gobby/Documents/BMSOFT/projects/recent%20templates/3/lion-coders.com/demo/html/listagram/add-listing.html
+
+#Human Resources 
+file:///C:/Users/gobby/Documents/BMSOFT/projects/recent%20templates/3/w3crm.w3itexpert.com/xhtml/core-hr.html
+
+#Events
+file:///C:/Users/gobby/Documents/BMSOFT/projects/recent%20templates/3/www.gambolthemes.net/html-items/barren-html/disable-demo-link/create_online_event.html
+file:///C:/Users/gobby/Documents/BMSOFT/projects/recent%20templates/3/gambolthemes.net/html-items/new-goeveni/disable_demo/add_new_event.html#
+
+#Android/iOS Views
+(Appkit Mobile)
+file:///C:/Users/gobby/Documents/BMSOFT/projects/recent%20templates/3/appkitmobilehtml-32/themeforest-appkit-mobile/code/page-places.html
+
+
+#dark-skin
+C:\Users\gobby\Documents\BMSOFT\projects\recent templates\0\admin2\bootstrapsale.com\projects\maed\2-0\resources\css
