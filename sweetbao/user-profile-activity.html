@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Basic Page Info -->
+		<meta charset="utf-8" />
+		<title>DeskApp - Bootstrap Admin Dashboard HTML Template</title>
+
+		<!-- Site favicon -->
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="assets/images/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="assets/images/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="assets/images/favicon-16x16.png"
+		/>
+
+		<!-- Mobile Specific Metas -->
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, maximum-scale=1"
+		/>
+
+		<!-- CSS -->
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="assets/styles/icon-font.min.css"
+		/>
+        
+		<!-- PLUGINS -->
+		<link rel="stylesheet" type="text/css" href="assets/plugins/glightbox-master/dist/css/glightbox.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/plugins/zuck.js/dist/zuck.min.css">
+
+		<!-- MAIN -->
+		<link rel="stylesheet" type="text/css" href="assets/styles/app.min.css" />
+
+	</head>
+	<body>
+		<div class="header">
+			<div class="header-left">
+				<div class="menu-icon bi bi-list"></div>
+				<div
+					class="search-toggle-icon bi bi-search"
+					data-toggle="header_search"
+				></div>
+				<div class="header-search">
+					<form>
+						<div class="form-group mb-0">
+							<i class="dw dw-search2 search-icon"></i>
+							<input
+								type="text"
+								class="form-control search-input"
+								placeholder="Search Here"
+							/>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="header-right">
+				<div class="dashboard-setting user-notification">
+					<div class="dropdown">
+						<a
+							class="dropdown-toggle no-arrow"
+							href="javascript:void(0)" 
+							data-bs-toggle="offcanvas" 
+							data-bs-target="#offcanvasMenu" 
+							aria-controls="offcanvasMenu"
+						>
+							<i class="dw dw-expand1"></i>
+						</a>
+						<div class="right-sidebar" id="right-sidebar">
+							<div class="sidebar-title">
+								<h3 class="weight-600 font-16 text-blue">
+									Layout Settings
+									<span class="btn-block font-weight-400 font-12"
+										>User Interface Settings</span
+									>
+								</h3>
+								<div class="close-sidebar" data-toggle="right-sidebar-close">
+									<i class="icon-copy ion-close-round"></i>
+								</div>
+							</div>
+							<div class="right-sidebar-body customscroll">
+								<div class="right-sidebar-body-content">
+									<h4 class="weight-600 font-18 pb-10">Header Background</h4>
+									<div class="sidebar-btn-group pb-30 mb-10">
+										<a
+											href="javascript:void(0);"
+											class="btn btn-outline-primary header-white active"
+											>White</a
+										>
+										<a
+											href="javascript:void(0);"
+											class="btn btn-outline-primary header-dark"
+											>Dark</a
+										>
+									</div>
+				
+									<h4 class="weight-600 font-18 pb-10">Sidebar Background</h4>
+									<div class="sidebar-btn-group pb-30 mb-10">
+										<a
+											href="javascript:void(0);"
+											class="btn btn-outline-primary sidebar-light"
+											>White</a
+										>
+										<a
+											href="javascript:void(0);"
+											class="btn btn-outline-primary sidebar-dark active"
+											>Dark</a
+										>
+									</div>
+				
+									<h4 class="weight-600 font-18 pb-10">Menu Dropdown Icon</h4>
+									<div class="sidebar-radio-group pb-10 mb-10">
+										<div class="custom-control custom-radio custom-control-inline">
+											<input
+												type="radio"
+												id="sidebaricon-1"
+												name="menu-dropdown-icon"
+												class="custom-control-input"
+												value="icon-style-1"
+												checked=""
+											/>
+											<label class="custom-control-label" for="sidebaricon-1"
+												><i class="fa fa-angle-down"></i
+											></label>
+										</div>
+										<div class="custom-control custom-radio custom-control-inline">
+											<input
+												type="radio"
+												id="sidebaricon-2"
+												name="menu-dropdown-icon"
+												class="custom-control-input"
+												value="icon-style-2"
+											/>
+											<label class="custom-control-label" for="sidebaricon-2"
+												><i class="ion-plus-round"></i
+											></label>
+										</div>
+										<div class="custom-control custom-radio custom-control-inline">
+											<input
+												type="radio"
+												id="sidebaricon-3"
+												name="menu-dropdown-icon"
+												class="custom-control-input"
+												value="icon-style-3"
+											/>
+											<label class="custom-control-label" for="sidebaricon-3"
+												><i class="fa fa-angle-double-right"></i
+											></label>
+										</div>
+									</div>
+				
+									<h4 class="weight-600 font-18 pb-10">Menu List Icon</h4>
+									<div class="sidebar-radio-group pb-30 mb-10">
+										<div class="custom-control custom-radio custom-control-inline">
+											<input
+												type="radio"
+												id="sidebariconlist-1"
+												name="menu-list-icon"
+												class="custom-control-input"
+												value="icon-list-style-1"
+												checked=""
+											/>
+											<label class="custom-control-label" for="sidebariconlist-1"
+												><i class="ion-minus-round"></i
+											></label>
+										</div>
+										<div class="custom-control custom-radio custom-control-inline">
+											<input
+												type="radio"
+												id="sidebariconlist-2"
+												name="menu-list-icon"
+												class="custom-control-input"
+												value="icon-list-style-2"
+											/>
+											<label class="custom-control-label" for="sidebariconlist-2"
+												><i class="fa fa-circle-o" aria-hidden="true"></i
+											></label>
+										</div>
+										<div class="custom-control custom-radio custom-control-inline">
+											<input
+												type="radio"
+												id="sidebariconlist-3"
+												name="menu-list-icon"
+												class="custom-control-input"
+												value="icon-list-style-3"
+											/>
+											<label class="custom-control-label" for="sidebariconlist-3"
+												><i class="dw dw-check"></i
+											></label>
+										</div>
+										<div class="custom-control custom-radio custom-control-inline">
+											<input
+												type="radio"
+												id="sidebariconlist-4"
+												name="menu-list-icon"
+												class="custom-control-input"
+												value="icon-list-style-4"
+												checked=""
+											/>
+											<label class="custom-control-label" for="sidebariconlist-4"
+												><i class="icon-copy dw dw-next-2"></i
+											></label>
+										</div>
+										<div class="custom-control custom-radio custom-control-inline">
+											<input
+												type="radio"
+												id="sidebariconlist-5"
+												name="menu-list-icon"
+												class="custom-control-input"
+												value="icon-list-style-5"
+											/>
+											<label class="custom-control-label" for="sidebariconlist-5"
+												><i class="dw dw-fast-forward-1"></i
+											></label>
+										</div>
+										<div class="custom-control custom-radio custom-control-inline">
+											<input
+												type="radio"
+												id="sidebariconlist-6"
+												name="menu-list-icon"
+												class="custom-control-input"
+												value="icon-list-style-6"
+											/>
+											<label class="custom-control-label" for="sidebariconlist-6"
+												><i class="dw dw-next"></i
+											></label>
+										</div>
+									</div>
+				
+									<div class="reset-options pt-30 text-center">
+										<button class="btn btn-danger" id="reset-settings">
+											Reset Settings
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="dashboard-setting user-notification">
+					<div class="dropdown">
+						<a
+							class="dropdown-toggle no-arrow"
+							href="javascript:void(0)" 
+							data-bs-toggle="offcanvas" 
+							data-bs-target="#offcanvasCart" 
+							aria-controls="offcanvasCart"
+						>
+							<i class="dw dw-shop"></i>
+						</a>
+					</div>
+				</div>
+				<div class="dashboard-setting user-notification">
+					<div class="dropdown">
+						<a
+							class="dropdown-toggle no-arrow"
+							href="javascript:void(0)" 
+							data-bs-toggle="offcanvas" 
+							data-bs-target="#offcanvasNotifications" 
+							aria-controls="offcanvasNotifications"
+						>
+							<i class="dw dw-notification"></i>
+						</a>
+					</div>
+				</div>
+				<div class="dashboard-setting user-info-dropdown">
+					<div class="dropdown">
+						<a
+							class="dropdown-toggle"
+							href="javascript:void(0)" 
+							data-bs-toggle="offcanvas" 
+							data-bs-target="#offcanvasOptions" 
+							aria-controls="offcanvasOptions"
+						>
+							<span class="user-icon">
+								<img src="assets/images/photo1.jpg" alt="" />
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasRightLabel">
+			<div class="offcanvas-header py-4">
+			  <h5 class="offcanvas-title fs-6 fw-semibold" id="offcanvasRightLabel">Menu</h5>
+			  <span class="badge bg-primary rounded-4 px-3 py-1 lh-sm">5 new</span>
+			</div>
+			<div class="offcanvas-body h-100 px-4 pt-0" data-simplebar>
+				<div class="py-2">
+
+				</div>
+			</div>
+		  </div>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasRightLabel">
+			<div class="offcanvas-header py-4">
+			  <h5 class="offcanvas-title fs-6 fw-semibold" id="offcanvasRightLabel">Shopping Cart</h5>
+			  <span class="badge bg-primary rounded-4 px-3 py-1 lh-sm">5 new</span>
+			</div>
+			<div class="offcanvas-body h-100 px-4 pt-0" data-simplebar>
+				<div class="row d-flex justify-content-center align-items-center h-100">
+					<div class="col-12">
+					  <div class="card rounded-3 mb-4">
+						<div class="card-body p-4">
+						  <div class="row d-flex justify-content-between align-items-center">
+							<div class="col-md-4 col-lg-4 col-xl-4">
+							  <img
+								src="assets/images/4.jpg"
+								class="img-fluid rounded-3" alt="Cotton T-shirt">
+							</div>
+							<div class="col-md-8 col-lg-8 col-xl-8 text-center">
+							  <p class="lead fs-6 my-2">Basic T-shirt</p>
+							  <p><span class="text-success">$45.65</p>
+							</div>
+						  </div>
+						</div>
+					  </div>
+			  
+					  <div class="card rounded-3 mb-4">
+						<div class="card-body p-4">
+						  <div class="row d-flex justify-content-between align-items-center">
+							<div class="col-md-4 col-lg-4 col-xl-4">
+							  <img
+								src="assets/images/4.jpg"
+								class="img-fluid rounded-3" alt="Cotton T-shirt">
+							</div>
+							<div class="col-md-8 col-lg-8 col-xl-8 text-center">
+							  <p class="lead fs-6 my-2">Basic T-shirt</p>
+							  <p><span class="text-success">$45.65</p>
+							</div>
+						  </div>
+						</div>
+					  </div>
+			  
+					  <div class="card rounded-3 mb-4">
+						<div class="card-body p-4">
+						  <div class="row d-flex justify-content-between align-items-center">
+							<div class="col-md-4 col-lg-4 col-xl-4">
+							  <img
+								src="assets/images/4.jpg"
+								class="img-fluid rounded-3" alt="Cotton T-shirt">
+							</div>
+							<div class="col-md-8 col-lg-8 col-xl-8 text-center">
+							  <p class="lead fs-6 my-2">Basic T-shirt</p>
+							  <p><span class="text-success">$45.65</p>
+							</div>
+						  </div>
+						</div>
+					  </div>
+			  
+					  <div class="card rounded-3 mb-4">
+						<div class="card-body p-4">
+						  <div class="row d-flex justify-content-between align-items-center">
+							<div class="col-md-4 col-lg-4 col-xl-4">
+							  <img
+								src="assets/images/4.jpg"
+								class="img-fluid rounded-3" alt="Cotton T-shirt">
+							</div>
+							<div class="col-md-8 col-lg-8 col-xl-8 text-center">
+							  <p class="lead fs-6 my-2">Basic T-shirt</p>
+							  <p><span class="text-success">$45.65</p>
+							</div>
+						  </div>
+						</div>
+					  </div>
+		
+			  
+					  <div class="card">
+						<div class="card-body">
+						  <button type="button" class="btn btn-warning btn-block btn-lg">Proceed to Pay</button>
+						</div>
+					  </div>
+			  
+					</div>
+				  </div>
+			</div>
+		  </div>
+
+		  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNotifications" aria-labelledby="offcanvasRightLabel">
+			<div class="offcanvas-header py-4">
+				<h6 class="m-0">Notifications <span class="badge bg-danger bg-opacity-10 text-danger ms-2">4 new</span></h6>
+				<a class="small" href="#">Clear all</a>
+			</div>
+			<div class="offcanvas-body h-100 px-4 pt-0" data-simplebar>
+				<div class="my-2">
+					<div class="card-body p-0">
+						<ul class="list-group list-group-flush list-unstyled p-2">
+							<!-- Notif item -->
+							<li>
+								<div class="list-group-item list-group-item-action rounded badge-unread d-flex border-0 mb-1 p-3">
+									<div class="avatar text-center d-none d-sm-inline-block">
+										<img class="avatar-img rounded-circle" src="assets/images/avatar/01.jpg" alt="">
+									</div>
+									<div class="ms-sm-3">
+										<div class=" d-flex">
+										<p class="small mb-2"><b>Judy Nguyen</b> sent you a friend request.</p>
+										<p class="small ms-3 text-nowrap">Just now</p>
+									</div>
+									<div class="d-flex">
+										<button class="btn btn-sm py-1 btn-primary me-2">Accept </button>
+										<button class="btn btn-sm py-1 btn-danger-soft">Delete </button>
+									</div>
+								</div>
+							</div>
+							</li>
+							<!-- Notif item -->
+							<li>
+								<div class="list-group-item list-group-item-action rounded badge-unread d-flex border-0 mb-1 p-3 position-relative">
+									<div class="avatar text-center d-none d-sm-inline-block">
+										<img class="avatar-img rounded-circle" src="assets/images/avatar/02.jpg" alt="">
+									</div>
+									<div class="ms-sm-3 d-flex">
+										<div>
+											<p class="small mb-2">Wish <b>Amanda Reed</b> a happy birthday (Nov 12)</p>
+											<button class="btn btn-sm btn-outline-light py-1 me-2">Say happy birthday 🎂</button>
+										</div>
+										<p class="small ms-3">2min</p>
+									</div>
+								</div>
+							</li>
+							<!-- Notif item -->
+							<li>
+								<a href="#" class="list-group-item list-group-item-action rounded d-flex border-0 mb-1 p-3">
+									<div class="avatar text-center d-none d-sm-inline-block">
+										<div class="avatar-img rounded-circle bg-success"><span class="text-white position-absolute top-50 start-50 translate-middle fw-bold">WB</span></div>
+									</div>
+									<div class="ms-sm-3">
+										<div class="d-flex">
+											<p class="small mb-2">Webestica has 15 like and 1 new activity</p>
+											<p class="small ms-3">1hr</p>
+										</div>
+									</div>
+								</a>
+							</li>
+							<!-- Notif item -->
+							<li>
+								<a href="#" class="list-group-item list-group-item-action rounded d-flex border-0 p-3 mb-1">
+									<div class="avatar text-center d-none d-sm-inline-block">
+										<img class="avatar-img rounded-circle" src="assets/images/logo/12.svg" alt="">
+									</div>
+									<div class="ms-sm-3 d-flex">
+										<p class="small mb-2"><b>Bootstrap in the news:</b> The search giant’s parent company, Alphabet, just joined an exclusive club of tech stocks.</p>
+										<p class="small ms-3">4hr</p>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="card-footer text-center">
+						<a href="#" class="btn btn-sm btn-primary-soft">See all incoming activity</a>
+					</div>
+				</div>
+			</div>
+		  </div>	
+		  
+		  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasOptions" aria-labelledby="offcanvasRightLabel">
+			<div class="offcanvas-header py-4" data-simplebar>
+				<div class="d-flex align-items-center position-relative">
+					<!-- Avatar -->
+					<div class="avatar me-3">
+						<img class="avatar-img rounded-circle" src="assets/images/avatar/07.jpg" alt="avatar">
+					</div>
+					<div>
+						<a class="h6 stretched-link" href="#">Lori Ferguson</a>
+						<p class="small m-0">Web Developer</p>
+					</div>
+				</div>
+			</div>
+			<div class="offcanvas-body h-100 px-4 pt-0" data-simplebar>
+				<div class="my-2">
+					<!-- Links -->
+					<ul>
+					<li><a class="dropdown-item" href="settings.html"><i class="bi bi-gear fa-fw me-2"></i>Settings & Privacy</a></li>
+					<li> 
+						<a class="dropdown-item" href="https://support.webestica.com/" target="_blank">
+							<i class="fa-fw bi bi-life-preserver me-2"></i>Support
+						</a> 
+					</li>
+					<li> 
+						<a class="dropdown-item" href="docs/overview.html" target="_blank">
+							<i class="fa-fw bi bi-card-text me-2"></i>Documentation
+						</a> 
+					</li>
+					<li class="dropdown-divider"></li>
+					<li><a class="dropdown-item bg-danger-soft-hover" href="sign-in-advance.html"><i class="bi bi-power fa-fw me-2"></i>Sign Out</a></li>
+					<li> <hr class="dropdown-divider"></li>
+					<!-- Dark mode options START -->
+					<li>
+						<div class="modeswitch-item theme-icon-active d-flex justify-content-center gap-3 align-items-center p-2 pb-0">
+							<span>Mode:</span>
+							<button type="button" class="btn btn-modeswitch nav-link text-primary-hover mb-0" data-bs-theme-value="light" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Light">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun fa-fw mode-switch" viewBox="0 0 16 16">
+									<path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+									<use href="#"></use>
+								</svg>
+							</button>
+							<button type="button" class="btn btn-modeswitch nav-link text-primary-hover mb-0" data-bs-theme-value="dark" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Dark">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-stars fa-fw mode-switch" viewBox="0 0 16 16">
+									<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/>
+									<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+									<use href="#"></use>
+								</svg>
+							</button>
+							<button type="button" class="btn btn-modeswitch nav-link text-primary-hover mb-0 active" data-bs-theme-value="auto" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Auto">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-half fa-fw mode-switch" viewBox="0 0 16 16">
+									<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+									<use href="#"></use>
+								</svg>
+							</button>
+						</div>
+					</li>
+					</ul>
+				</div>
+			</div>
+		  </div>
+
+		<div class="left-side-bar">
+			<div class="brand-logo">
+				<a href="overview.html">
+					<img src="assets/images/deskapp-logo.svg" alt="" class="dark-logo" />
+					<img
+						src="assets/images/deskapp-logo-white.svg"
+						alt=""
+						class="light-logo"
+					/>
+				</a>
+				<div class="close-sidebar" data-toggle="left-sidebar-close">
+					<i class="ion-close-round"></i>
+				</div>
+			</div>
+			<div class="menu-block customscroll">
+				<div class="sidebar-menu">
+					<ul id="accordion-menu">
+						<li>
+							<a href="overview.html" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-house"></span
+								><span class="mtext">Overview</span>
+							</a>
+						</li>
+						<li>
+							<div class="dropdown-divider"></div>
+						</li>
+						<li>
+							<a href="artworks.html" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-card-image"></span
+								><span class="mtext">Artworks</span>
+							</a>
+						</li>
+						<li>
+							<a href="ebooks.html" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-book"></span
+								><span class="mtext">Ebooks</span>
+							</a>
+						</li>
+						<li>
+							<a href="courses.html" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-grid"></span
+								><span class="mtext">Courses</span>
+							</a>
+						</li>
+						<li>
+							<a href="movies.html" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-camera-video"></span
+								><span class="mtext">Movies</span>
+							</a>
+						</li>
+						<li>
+							<a href="music.html" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-soundwave"></span
+								><span class="mtext">Songs</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-infinity"></span
+								><span class="mtext">Podcasts</span>
+							</a>
+						</li>
+						<li>
+							<div class="dropdown-divider"></div>
+						</li>
+						<li>
+							<a href="news.html" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-peace"></span
+								><span class="mtext">News</span>
+							</a>
+						</li>
+						<li>
+							<a href="competitions.html" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-puzzle"></span
+								><span class="mtext">Competitions</span>
+							</a>
+						</li>
+						<li>
+							<a href="campaigns.html" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-briefcase"></span
+								><span class="mtext">Campaigns</span>
+							</a>
+						</li>
+						<li>
+							<div class="dropdown-divider"></div>
+						</li>
+						<li>
+							<a href="sports.html" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-trophy"></span
+								><span class="mtext">Sports</span>
+							</a>
+						</li>
+						<li>
+							<a href="stories.html" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-yin-yang"></span
+								><span class="mtext">Stories</span>
+							</a>
+						</li>
+						<li>
+							<a href="forums.html" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-palette2"></span
+								><span class="mtext">Forums</span>
+							</a>
+						</li>
+						<li>
+							<a href="brands.html" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-bricks"></span
+								><span class="mtext">Brands</span>
+							</a>
+						</li>
+						<li>
+							<a href="clubs.html" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-fan"></span
+								><span class="mtext">Clubs</span>
+							</a>
+						</li>
+						<li>
+							<div class="dropdown-divider"></div>
+						</li>
+						<li>
+							<a href="archive.html" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-archive-fill"></span
+								><span class="mtext">Archive</span>
+							</a>
+						</li>
+						<li>
+							<a href="downloads.html" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-download"></span
+								><span class="mtext">Downloads</span>
+							</a>
+						</li>
+                        <li>
+							<div class="dropdown-divider"></div>
+						</li>
+                        <li>
+                            <div>
+                                <a href="" class="dropdown-item">About Us</a>
+                                <a href="" class="dropdown-item">Settings</a>
+                                <a href="" class="dropdown-item">Privacy Policy</a>
+                                <a href="" class="dropdown-item">Terms & Conditions</a>
+                            </div>
+                        </li>
+					</ul>
+                    
+				</div>
+			</div>
+		</div>
+		<div class="mobile-menu-overlay"></div>
+
+		<div class="main-container">
+			<div class="xs-pd-20-10 pd-ltr-20">
+				<div class="page-header">
+						<div class="row">
+							<div class="col-md-12 col-sm-12">
+								<div class="title">
+									<h4>Product</h4>
+								</div>
+								<nav aria-label="breadcrumb" role="navigation">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item">
+											<a href="overview.html">Home</a>
+										</li>
+										<li class="breadcrumb-item active" aria-current="page">
+											Product
+										</li>
+									</ol>
+								</nav>
+							</div>
+						</div>
+					</div>
+
+				<div class="row g-4">
+
+					<!-- Main content START -->
+					<div class="col-lg-8 vstack gap-4">
+					  <!-- Card START -->
+					  <div class="card">
+						<div class="h-200px rounded-top" style="background-image:url(assets/images/bg/05.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;"></div>
+						  <!-- Card body START -->
+						  <div class="card-body py-0">
+							<div class="d-sm-flex align-items-start text-center text-sm-start">
+							  <div>
+								<!-- Avatar -->
+								<div class="avatar avatar-xxl mt-n5 mb-3">
+								  <img class="avatar-img rounded-circle border border-white border-3" src="assets/images/avatar/07.jpg" alt="">
+								</div>
+							  </div>
+							  <div class="ms-sm-4 mt-sm-3">
+								<!-- Info -->
+								<h1 class="mb-0 h5">Sam Lanson <i class="bi bi-patch-check-fill text-success small"></i></h1>
+								<p>250 connections</p>
+							  </div>
+							  <!-- Button -->
+							  <div class="d-flex mt-3 justify-content-center ms-sm-auto">
+								<button class="btn btn-danger-soft me-2" type="button"> <i class="bi bi-pencil-fill pe-1"></i> Edit profile </button>
+								<div class="dropdown">
+								  <!-- Card share action menu -->
+								  <button class="icon-md btn btn-light" type="button" id="profileAction2" data-bs-toggle="dropdown" aria-expanded="false">
+									<i class="bi bi-three-dots"></i>
+								  </button>
+								  <!-- Card share action dropdown menu -->
+								  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileAction2">
+									<li><a class="dropdown-item" href="#"> <i class="bi bi-bookmark fa-fw pe-2"></i>Share profile in a message</a></li>
+									<li><a class="dropdown-item" href="#"> <i class="bi bi-file-earmark-pdf fa-fw pe-2"></i>Save your profile to PDF</a></li>
+									<li><a class="dropdown-item" href="#"> <i class="bi bi-lock fa-fw pe-2"></i>Lock profile</a></li>
+									<li><hr class="dropdown-divider"></li>
+									<li><a class="dropdown-item" href="#"> <i class="bi bi-gear fa-fw pe-2"></i>Profile settings</a></li>
+								  </ul>
+								</div>
+							  </div>
+							</div>
+							<!-- List profile -->
+							<ul class="list-inline mb-0 text-center text-sm-start mt-3 mt-sm-0">
+							  <li class="list-inline-item"><i class="bi bi-briefcase me-1"></i> Lead Developer</li>
+							  <li class="list-inline-item"><i class="bi bi-geo-alt me-1"></i> New Hampshire</li>
+							  <li class="list-inline-item"><i class="bi bi-calendar2-plus me-1"></i> Joined on Nov 26, 2019</li>
+							</ul>
+						  </div>
+						  <!-- Card body END -->
+						  <div class="card-footer mt-3 pt-2 pb-0">
+							<!-- Nav profile pages -->
+							<ul class="nav nav-bottom-line align-items-center justify-content-center justify-content-md-start mb-0 border-0">
+							  <li class="nav-item"> <a class="nav-link" href="user-profile.html"> Posts </a> </li>
+							  <li class="nav-item"> <a class="nav-link" href="user-profile-about.html"> About </a> </li>
+							  <li class="nav-item"> <a class="nav-link" href="user-profile-connections.html"> Connections <span class="badge bg-success bg-opacity-10 text-success small"> 230</span> </a> </li>
+							  <li class="nav-item"> <a class="nav-link" href="user-profile-media.html"> Media</a> </li>
+							  <li class="nav-item"> <a class="nav-link" href="user-profile-videos.html"> Videos</a> </li>
+							  <li class="nav-item"> <a class="nav-link" href="user-profile-events.html"> Events</a> </li>
+							  <li class="nav-item"> <a class="nav-link active" href="user-profile-activity.html"> Activity</a> </li>
+							</ul>
+						  </div>
+					  </div>
+					  <!-- Card END -->
+			  
+					  <!-- Activity feed START -->
+					  <div class="card">
+						<!-- Card header START -->
+						<div class="card-header border-0 pb-0">
+						   <h5 class="card-title"> Activity feed</h5> 
+						</div>
+						<!-- Card header END -->
+						<!-- Card body START -->
+						  <div class="card-body">
+							<div class="timeline">
+			  
+							  <!-- Timeline item START -->
+							  <div class="timeline-item">
+								<!-- Timeline icon -->
+								<div class="timeline-icon">
+								  <div class="avatar text-center">
+									<img class="avatar-img rounded-circle" src="assets/images/avatar/07.jpg" alt="">
+								  </div>
+								</div>
+								<!-- Timeline content -->
+								<div class="timeline-content">
+								  <div class="d-sm-flex justify-content-between">
+								  <div>
+									<p class="small mb-0"><b>Sam Lanson</b> update a playlist on webestica.</p>
+									<p class="small mb-0"><i class="bi bi-unlock-fill pe-1"></i>Public</p>
+								  </div>
+								  <p class="small ms-sm-3 mt-2 mt-sm-0 text-nowrap">Just now</p>
+								</div>
+							  </div>
+							</div>
+							<!-- Timeline item END -->
+			  
+							<!-- Timeline item START -->
+							<div class="timeline-item">
+							  <!-- Timeline icon -->
+							  <div class="timeline-icon">
+								<div class="avatar text-center">
+								  <img class="avatar-img rounded-circle" src="assets/images/avatar/01.jpg" alt="">
+								</div>
+							  </div>
+							  <!-- Timeline content -->
+							  <div class="timeline-content">
+								<div class="d-sm-flex justify-content-between">
+								  <div>
+									<p class="small mb-0"><b>Billy Vasquez</b> save a <a href="#!">link.</a> </p>
+									<p class="small mb-0"><i class="bi bi-lock-fill pe-1"></i>only me</p>
+								  </div>
+								  <p class="small ms-sm-3 mt-2 mt-sm-0">2min</p>
+								</div>
+							  </div>
+							</div>
+							<!-- Timeline item END -->
+			  
+							<!-- Timeline item START -->
+							<div class="timeline-item align-items-center">
+							  <!-- Timeline icon -->
+							  <div class="timeline-icon">
+								<div class="avatar text-center">
+								  <div class="avatar-img rounded-circle bg-success"><span class="text-white position-absolute top-50 start-50 translate-middle fw-bold">SM</span></div>
+								</div>
+							  </div>
+							  <!-- Timeline content -->
+							  <div class="timeline-content">
+								<div class="d-sm-flex justify-content-between">
+								  <div>
+									<p class="small mb-0"> <b>Sam Lanson</b> liked <b> Frances Guerrero's </b> add comment.</p>
+									<p class="small mb-0">This is the best picture I have come across today.... </p>
+								  </div>
+								  <p class="small mb-0 ms-sm-3">1hr</p>
+								</div>
+							  </div>
+							</div>
+							<!-- Timeline item END -->
+			  
+							<!-- Timeline item START -->
+							<div class="timeline-item align-items-center">
+							  <!-- Timeline icon -->
+							  <div class="timeline-icon">
+								<div class="avatar text-center">
+								  <img class="avatar-img rounded-circle" src="assets/images/avatar/02.jpg" alt="">
+								</div>
+							  </div>
+							  <!-- Timeline content -->
+							  <div class="timeline-content">
+								<div class="d-sm-flex justify-content-between">
+								  <div>
+								  <p class="small mb-0"><b>Judy Nguyen</b> likes <b>Jacqueline Miller</b> Photos. </p>
+								  <p class="mb-0">✌️👌👍</p>
+								</div>
+								  <p class="small ms-sm-3 mt-2 mt-sm-0">4hr</p>
+								</div>
+							  </div>
+							</div>
+							<!-- Timeline item END -->
+			  
+							<!-- Timeline item START -->
+							<div class="timeline-item">
+							  <!-- Timeline icon -->
+							  <div class="timeline-icon">
+								<div class="avatar text-center">
+								  <img class="avatar-img rounded-circle" src="assets/images/avatar/03.jpg" alt="">
+								</div>
+							  </div>
+							  <!-- Timeline content -->
+							  <div class="timeline-content">
+								<div class="d-sm-flex justify-content-between">
+								  <div>
+								  <p class="small mb-0"><b>Larry Lawson</b> </p>
+								  <p class="small mb-2">Replied to your comment on Blogzine blog theme</p>
+								  <small class="bg-light rounded p-2 d-block">
+									Yes, I am so excited to see it live. 👍
+								  </small>
+								</div>
+								  <p class="small ms-sm-3 mt-2 mt-sm-0">10hr</p>
+								</div>
+							  </div>
+							</div>
+							<!-- Timeline item END -->
+			  
+						  </div>
+						</div>
+						<!-- Card body END -->
+						<!-- Card footer START -->
+						<div class="card-footer border-0 py-3 text-center position-relative d-grid pt-0">
+						  <!-- Load more button START -->
+						  <a href="#!" role="button" class="btn btn-sm btn-loader btn-primary-soft" data-bs-toggle="button" aria-pressed="true">
+							<span class="load-text"> Load more activity </span>
+							<div class="load-icon">
+							  <div class="spinner-grow spinner-grow-sm" role="status">
+								<span class="visually-hidden">Loading...</span>
+							  </div>
+							</div>
+						  </a>
+						  <!-- Load more button END -->
+						</div>
+						<!-- Card footer END -->
+					  </div>
+					  <!-- Activity feed END -->
+			  
+					</div>
+					<!-- Main content END -->
+			  
+					<!-- Right sidebar START -->
+					<div class="col-lg-4">
+			  
+					  <div class="row g-4">
+			  
+						<!-- Card START -->
+						<div class="col-sm-6 col-lg-12">
+						  <div class="card">
+							<div class="card-header border-0 pb-0">
+							  <h5 class="card-title">About</h5>
+							  <!-- Button modal -->
+							</div>
+							<!-- Card body START -->
+							<div class="card-body position-relative pt-0">
+							  <p>He moonlights difficult engrossed it, sportsmen. Interested has all Devonshire difficulty gay assistance joy.</p>
+							  <!-- Date time -->
+							  <ul class="list-unstyled mt-3 mb-0">
+								<li class="mb-2"> <i class="bi bi-calendar-date fa-fw pe-1"></i> Born: <strong> October 20, 1990 </strong> </li>
+								<li class="mb-2"> <i class="bi bi-heart fa-fw pe-1"></i> Status: <strong> Single </strong> </li>
+								<li> <i class="bi bi-envelope fa-fw pe-1"></i> Email: <strong> webestica@gmail.com </strong> </li>
+							  </ul>
+							</div>
+							<!-- Card body END -->
+						  </div>
+						</div>
+						<!-- Card END -->
+			  
+						<!-- Card START -->
+						<div class="col-sm-6 col-lg-12">
+						  <div class="card">
+							<!-- Card header START -->
+							<div class="card-header d-flex justify-content-between border-0">
+							  <h5 class="card-title">Experience</h5>
+							  <a class="btn btn-primary-soft btn-sm" href="#!"> <i class="fa-solid fa-plus"></i> </a>
+							</div>
+							<!-- Card header END -->
+							<!-- Card body START -->
+							<div class="card-body position-relative pt-0">
+							  <!-- Experience item START -->
+							  <div class="d-flex">
+								<!-- Avatar -->
+								<div class="avatar me-3">
+								  <a href="#!"> <img class="avatar-img rounded-circle" src="assets/images/logo/08.svg" alt=""> </a>
+								</div>
+								<!-- Info -->
+								<div>
+								  <h6 class="card-title mb-0"><a href="#!"> Apple Computer, Inc. </a></h6>
+								  <p class="small">May 2015 – Present Employment Duration 8 mos <a class="btn btn-primary-soft btn-xs ms-2" href="#!">Edit </a></p>
+								</div>
+							  </div>
+							  <!-- Experience item END -->
+			  
+							  <!-- Experience item START -->
+							  <div class="d-flex">
+								<!-- Avatar -->
+								<div class="avatar me-3">
+								  <a href="#!"> <img class="avatar-img rounded-circle" src="assets/images/logo/09.svg" alt=""> </a>
+								</div>
+								<!-- Info -->
+								<div>
+								  <h6 class="card-title mb-0"><a href="#!"> Microsoft Corporation </a></h6>
+								  <p class="small">May 2017 – Present Employment Duration 1 yrs 5 mos <a class="btn btn-primary-soft btn-xs ms-2" href="#!">Edit </a></p>
+								</div>
+							  </div>
+							  <!-- Experience item END -->
+			  
+							  <!-- Experience item START -->
+							  <div class="d-flex">
+								<!-- Avatar -->
+								<div class="avatar me-3">
+								  <a href="#!"> <img class="avatar-img rounded-circle" src="assets/images/logo/10.svg" alt=""> </a>
+								</div>
+								<!-- Info -->
+								<div>
+								  <h6 class="card-title mb-0"><a href="#!"> Tata Consultancy Services. </a></h6>
+								  <p class="small mb-0">May 2022 – Present Employment Duration 6 yrs 10 mos <a class="btn btn-primary-soft btn-xs ms-2" href="#!">Edit </a></p>
+								</div>
+							  </div>
+							  <!-- Experience item END -->
+			  
+							</div>
+							<!-- Card body END -->
+						  </div>
+						</div>
+						<!-- Card END -->
+						
+						<!-- Card START -->
+						<div class="col-sm-6 col-lg-12">
+						  <div class="card">
+							<!-- Card header START -->
+							<div class="card-header d-sm-flex justify-content-between border-0">
+							  <h5 class="card-title">Photos</h5>
+							  <a class="btn btn-primary-soft btn-sm" href="#!"> See all photo</a>
+							</div>
+							<!-- Card header END -->
+							<!-- Card body START -->
+							<div class="card-body position-relative pt-0">
+							  <div class="row g-2">
+								<!-- Photos item -->
+								<div class="col-6">
+								  <a href="assets/images/albums/01.jpg" data-gallery="image-popup" data-glightbox="">
+									<img class="rounded img-fluid" src="assets/images/albums/01.jpg" alt="">
+								  </a>
+								</div>
+								<!-- Photos item -->
+								<div class="col-6">
+								  <a href="assets/images/albums/02.jpg" data-gallery="image-popup" data-glightbox="">
+									<img class="rounded img-fluid" src="assets/images/albums/02.jpg" alt="">
+								  </a>
+								</div>
+								<!-- Photos item -->
+								<div class="col-4">
+								  <a href="assets/images/albums/03.jpg" data-gallery="image-popup" data-glightbox="">
+									<img class="rounded img-fluid" src="assets/images/albums/03.jpg" alt="">
+								  </a>
+								</div>
+								<!-- Photos item -->
+								<div class="col-4">
+								  <a href="assets/images/albums/04.jpg" data-gallery="image-popup" data-glightbox="">
+									<img class="rounded img-fluid" src="assets/images/albums/04.jpg" alt="">
+								  </a>
+								</div>
+								<!-- Photos item -->
+								<div class="col-4">
+								  <a href="assets/images/albums/05.jpg" data-gallery="image-popup" data-glightbox="">
+									<img class="rounded img-fluid" src="assets/images/albums/05.jpg" alt="">
+								  </a>
+								  <!-- glightbox Albums left bar END  -->
+								</div>
+							  </div>
+							</div>
+							<!-- Card body END -->
+						  </div>
+						</div>
+						<!-- Card END -->
+			  
+						<!-- Card START -->
+						<div class="col-sm-6 col-lg-12">
+						  <div class="card">
+							<!-- Card header START -->
+							<div class="card-header d-sm-flex justify-content-between align-items-center border-0">
+							  <h5 class="card-title">Friends <span class="badge bg-danger bg-opacity-10 text-danger">230</span></h5>
+							  <a class="btn btn-primary-soft btn-sm" href="#!"> See all friends</a>
+							</div>
+							<!-- Card header END -->
+							<!-- Card body START -->
+							<div class="card-body position-relative pt-0">
+							  <div class="row g-3">
+			  
+								<div class="col-6">
+								  <!-- Friends item START -->
+								  <div class="card shadow-none text-center h-100">
+									<!-- Card body -->
+									<div class="card-body p-2 pb-0">
+									  <div class="avatar avatar-story avatar-xl">
+										<a href="#!"><img class="avatar-img rounded-circle" src="assets/images/avatar/02.jpg" alt=""></a>
+									  </div>
+									  <h6 class="card-title mb-1 mt-3"> <a href="#!"> Amanda Reed </a></h6>
+									  <p class="mb-0 small lh-sm">16 mutual connections</p>
+									</div>
+									<!-- Card footer -->
+									<div class="card-footer p-2 border-0">
+									  <button class="btn btn-sm btn-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Send message"> <i class="bi bi-chat-left-text"></i> </button>
+									  <button class="btn btn-sm btn-danger" data-bs-toggle="tooltip" data-bs-placement="top" title="Remove friend"> <i class="bi bi-person-x"></i> </button>
+									</div>
+								  </div>
+								  <!-- Friends item END -->
+								</div>
+			  
+								<div class="col-6">
+								  <!-- Friends item START -->
+								  <div class="card shadow-none text-center h-100">
+									<!-- Card body -->
+									<div class="card-body p-2 pb-0">
+									  <div class="avatar avatar-xl">
+										<a href="#!"><img class="avatar-img rounded-circle" src="assets/images/avatar/03.jpg" alt=""></a>
+									  </div>
+									  <h6 class="card-title mb-1 mt-3"> <a href="#!"> Samuel Bishop </a></h6>
+									  <p class="mb-0 small lh-sm">22 mutual connections</p>
+									</div>
+									<!-- Card footer -->
+									<div class="card-footer p-2 border-0">
+									  <button class="btn btn-sm btn-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Send message"> <i class="bi bi-chat-left-text"></i> </button>
+									  <button class="btn btn-sm btn-danger" data-bs-toggle="tooltip" data-bs-placement="top" title="Remove friend"> <i class="bi bi-person-x"></i> </button>
+									</div>
+								  </div>
+								  <!-- Friends item END -->
+								</div>
+			  
+								<div class="col-6">
+								  <!-- Friends item START -->
+								  <div class="card shadow-none text-center h-100">
+									<!-- Card body -->
+									<div class="card-body p-2 pb-0">
+									  <div class="avatar avatar-xl">
+										<a href="#!"><img class="avatar-img rounded-circle" src="assets/images/avatar/04.jpg" alt=""></a>
+									  </div>
+									  <h6 class="card-title mb-1 mt-3"> <a href="#"> Bryan Knight </a></h6>
+									  <p class="mb-0 small lh-sm">1 mutual connection</p>
+									</div>
+									<!-- Card footer -->
+									<div class="card-footer p-2 border-0">
+									  <button class="btn btn-sm btn-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Send message"> <i class="bi bi-chat-left-text"></i> </button>
+									  <button class="btn btn-sm btn-danger" data-bs-toggle="tooltip" data-bs-placement="top" title="Remove friend"> <i class="bi bi-person-x"></i> </button>
+									</div>
+								  </div>
+								  <!-- Friends item END -->
+								</div>
+			  
+								<div class="col-6">
+								  <!-- Friends item START -->
+								  <div class="card shadow-none text-center h-100">
+									<!-- Card body -->
+									<div class="card-body p-2 pb-0">
+									  <div class="avatar avatar-xl">
+										<a href="#!"><img class="avatar-img rounded-circle" src="assets/images/avatar/05.jpg" alt=""></a>
+									  </div>
+									  <h6 class="card-title mb-1 mt-3"> <a href="#!"> Amanda Reed </a></h6>
+									  <p class="mb-0 small lh-sm">15 mutual connections</p>
+									</div>
+									<!-- Card footer -->
+									<div class="card-footer p-2 border-0">
+									  <button class="btn btn-sm btn-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Send message"> <i class="bi bi-chat-left-text"></i> </button>
+									  <button class="btn btn-sm btn-danger" data-bs-toggle="tooltip" data-bs-placement="top" title="Remove friend"> <i class="bi bi-person-x"></i> </button>
+									</div>
+								  </div>
+								  <!-- Friends item END -->
+								</div>
+			  
+							  </div>
+							</div>
+							<!-- Card body END -->
+						  </div>
+						</div>
+						<!-- Card END -->
+					  </div>
+					</div>
+					<!-- Right sidebar END -->
+			  
+				  </div>
+				
+				
+			</div>
+		</div>
+
+		<!-- js -->
+		<script src="assets/scripts/core.js"></script>
+		<script src="assets/scripts/script.min.js"></script>
+		<script src="assets/scripts/process.js"></script>
+		<script src="assets/scripts/layout-settings.js"></script>
+		<script src="assets/plugins/apexcharts/apexcharts.min.js"></script>
+        <script src="assets/plugins/bootstrap/popper.min.js"></script>
+		<script src="assets/plugins/bootstrap/bootstrap.js"></script>
+		<script src="assets/scripts/dashboard3.js"></script>
+
+		<!-- plugins -->
+		
+
+	</body>
+</html>
