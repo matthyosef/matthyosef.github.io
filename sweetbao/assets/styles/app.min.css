@@ -41,8 +41,8 @@
   --bs-info-rgb: 79, 158, 248;
   --bs-warning-rgb: 247, 195, 46;
   --bs-danger-rgb: 214, 41, 62;
-  --bs-dark-rgb: 238, 240, 242;
-  --bs-light-rgb: 20, 25, 30;
+  --bs-light-rgb: 238, 240, 242;
+  --bs-dark-rgb: 20, 25, 30;
   --bs-primary-text: #6ea8fe;
   --bs-secondary-text: #eef0f2;
   --bs-success-text: #2cc56f;
@@ -25981,7 +25981,7 @@ table.dataTable.dtr-inline.collapsed>tbody>tr.parent>th:first-child:before {
 .login-header {
   position: relative;
   padding: 0 15px;
-  background-color: #fff;
+  background-color: var(--bs-card-bg);
   z-index: 1;
 }
 
