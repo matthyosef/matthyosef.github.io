@@ -6,6 +6,7 @@ use Cursus for the courses & blog\news
 use Mordenize for the marketplace & music & auctions
 use social.webestica for the overview & social template
 
+to make it the best
 social might be more compatible
 
 \social.webestica -> 263deals
