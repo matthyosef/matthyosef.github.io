@@ -1,0 +1,1206 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="dark-style layout-navbar-fixed layout-menu-fixed " dir="assets" data-theme="theme-default"
+      data-assets-path="./assets" data-template="vertical-menu-template-dark">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>263deals</title>
+
+
+    <meta name="description" content="the best ecommerce platform" />
+    <meta name="keywords" content="ecommerce, zimbabwe, deals, digital products, online shop">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="#" />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="~/assets/fonts/boxicons.css" />
+    <link rel="stylesheet" href="~/assets/fonts/flag-icons.css" />
+    <link rel="stylesheet" href="~/assets/styles/icon-font.css" />
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="~/assets/styles/core-dark.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="~/assets/styles/theme-default-dark.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="~/assets/styles/demo.css" />
+
+    <!-- Vendors CSS -->
+    <link rel="stylesheet" href="~/assets/plugins/perfect-scrollbar/perfect-scrollbar.css" />
+    <link rel="stylesheet" href="~/assets/plugins/typeahead-js/typeahead.css" />
+    <link rel="stylesheet" href="~/assets/plugins/datatables-bs5/datatables.bootstrap5.css">
+    <link rel="stylesheet" href="~/assets/plugins/datatables-responsive-bs5/responsive.bootstrap5.css">
+    <link rel="stylesheet" href="~/assets/plugins/datatables-checkboxes-jquery/datatables.checkboxes.css">
+    <link rel="stylesheet" href="~/assets/plugins/datatables-buttons-bs5/buttons.bootstrap5.css">
+    <link rel="stylesheet" href="~/assets/plugins/flatpickr/flatpickr.css" />
+    <!-- Row Group CSS -->
+    <link rel="stylesheet" href="~/assets/plugins/datatables-rowgroup-bs5/rowgroup.bootstrap5.css">
+    <!-- Form Validation -->
+    <link rel="stylesheet" href="~/assets/plugins/formvalidation/dist/css/formValidation.min.css" />
+    <!-- Page CSS -->
+    <!-- MAIN -->
+    <style>
+        .img-logo {
+            opacity: 0.5;
+            max-width: 100%;
+            max-height: 100%;
+            height: 40px;
+            width: 40px;
+            object-fit: fill;
+        }
+
+        .text-logo {
+            color: var(--bs-body-color);
+            opacity: 0.65;
+            text-transform: uppercase;
+            margin-bottom: 0rem;
+            font-family: Cambria;
+            font-size: 28px;
+        }
+    </style>
+
+    <!-- Helpers -->
+    <script src="~/assets/scripts/helpers.js"></script>
+
+    <script src="~/assets/scripts/config.js"></script>
+
+    <script src="~/assets/plugins/datatables/js/jquery.dataTables.min.js"></script>
+</head>
+
+<body>
+
+
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-content-navbar  ">
+        <div class="layout-container">
+            <!-- Menu -->
+            <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+                <div class="app-brand demo ">
+                    <a href="index.html" class="app-brand-link">
+                        <img src="~/assets/images/sweetbao.png" alt="" class="img-logo" />
+                        <h2 class="text-logo">263<small>deals</small></h2>
+                    </a>
+                </div>
+
+                <div class="menu-divider mt-0  "></div>
+                <div class="menu-inner-shadow"></div>
+
+                <ul class="menu-inner py-1">
+                    <li class="menu-item">
+                        <a href="#" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bi bi-card-image"></i>
+                            <div data-i18n="Artworks">Artworks</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href='@Url.Action("All","vArtworks","")'  class="menu-link">
+                                    <div data-i18n="Collapsed menu">All Artworks</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Collections","vArtworks","")' class="menu-link">
+                                    <div data-i18n="Content nav + Sidebar">Collections</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Artists","vArtworks","")' class="menu-link">
+                                    <div data-i18n="Horizontal">Artists</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Publishers","vArtworks","")' class="menu-link">
+                                    <div data-i18n="Without menu">Publishers</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Searches","vArtworks","")' class="menu-link">
+                                    <div data-i18n="Without menu">Searches</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bi bi-book"></i>
+                            <div data-i18n="Ebooks">Ebooks</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href='@Url.Action("All","vEbooks","")' class="menu-link">
+                                    <div data-i18n="Collapsed menu">All Ebooks</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Collections","vEbooks","")' class="menu-link">
+                                    <div data-i18n="Content nav + Sidebar">Collections</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Authors","vEbooks","")' class="menu-link">
+                                    <div data-i18n="Horizontal">Authors</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Publishers","vEbooks","")' class="menu-link">
+                                    <div data-i18n="Without menu">Publishers</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Searches","vEbooks","")' class="menu-link">
+                                    <div data-i18n="Without menu">Searches</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bi bi-award"></i>
+                            <div data-i18n="Courses">Courses</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href='@Url.Action("All","vCourses","")' class="menu-link">
+                                    <div data-i18n="Collapsed menu">All Courses</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Collections","vCourses","")' class="menu-link">
+                                    <div data-i18n="Content nav + Sidebar">Collections</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Tutors","vCourses","")' class="menu-link">
+                                    <div data-i18n="Horizontal">Tutors</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="panel-artworks-publishers#" class="menu-link">
+                                    <div data-i18n="Without menu">Searches</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Enrollment","vCourses","")' class="menu-link">
+                                    <div data-i18n="Without menu">Enrollment</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Notes","vCourses","")' class="menu-link">
+                                    <div data-i18n="Without menu">Notes</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Tests","vCourses","")' class="menu-link">
+                                    <div data-i18n="Without menu">Tests</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Assignments","vCourses","")' class="menu-link">
+                                    <div data-i18n="Without menu">Assignments</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bi bi-camera-video"></i>
+                            <div data-i18n="Movies">Movies</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href='@Url.Action("All","vMovies","")' class="menu-link">
+                                    <div data-i18n="Collapsed menu">All Movies</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Collections","vMovies","")'  class="menu-link">
+                                    <div data-i18n="Content nav + Sidebar">Collections</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Series","vMovies","")'  class="menu-link">
+                                    <div data-i18n="Without menu">Series</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Episodes","vMovies","")'  class="menu-link">
+                                    <div data-i18n="Without menu">Episodes</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Actors","vMovies","")'  class="menu-link">
+                                    <div data-i18n="Horizontal">Actors</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Crew","vMovies","")'  class="menu-link">
+                                    <div data-i18n="Without menu">Crew</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Studios","vMovies","")'  class="menu-link">
+                                    <div data-i18n="Without menu">Studios</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Searches","vMovies","")'  class="menu-link">
+                                    <div data-i18n="Without menu">Searches</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bi bi-soundwave"></i>
+                            <div data-i18n="Songs">Songs</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href='@Url.Action("All","vMusic","")'  class="menu-link">
+                                    <div data-i18n="Collapsed menu">All Songs</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Albums","vMusic","")' class="menu-link">
+                                    <div data-i18n="Content nav + Sidebar">Albums</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Playlists","vMusic","")' class="menu-link">
+                                    <div data-i18n="Horizontal">Playlists</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Studios","vMusic","")' class="menu-link">
+                                    <div data-i18n="Without menu">Studios</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Searches","vMusic","")' class="menu-link">
+                                    <div data-i18n="Without menu">Searches</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bi bi-fan"></i>
+                            <div data-i18n="Clubs">Clubs</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href='@Url.Action("All","vClubs","")' class="menu-link">
+                                    <div data-i18n="Collapsed menu">All Clubs</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Searches","vClubs","")' class="menu-link">
+                                    <div data-i18n="Content nav + Sidebar">Searches</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Subscriptions","vClubs","")' class="menu-link">
+                                    <div data-i18n="Horizontal">Subscriptions</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bi bi-circle-square"></i>
+                            <div data-i18n="Presets">Auctions</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href='@Url.Action("All","vAuctions","")' class="menu-link">
+                                    <div data-i18n="Collapsed menu">All Auctions</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Offers","vAuctions","")' class="menu-link">
+                                    <div data-i18n="Content nav + Sidebar">Offers</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Collections","vAuctions","")' class="menu-link">
+                                    <div data-i18n="Horizontal">Collections</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Brands","vAuctions","")' class="menu-link">
+                                    <div data-i18n="Without menu">Brands</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Searches","vAuctions","")' class="menu-link">
+                                    <div data-i18n="Without menu">Searches</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Projects and Activities -->
+                    <li class="menu-header small text-uppercase">
+                        <span class="menu-header-text">Projects & Activities</span>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bi bi-cloud-fog-fill"></i>
+                            <div data-i18n="Presets">Presets</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href='@Url.Action("All","vPresets","")' class="menu-link">
+                                    <div data-i18n="Collapsed menu">All Presets</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Collections","vPresets","")' class="menu-link">
+                                    <div data-i18n="Content nav + Sidebar">Collections</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Developers","vPresets","")' class="menu-link">
+                                    <div data-i18n="Horizontal">Developers</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Searches","vPresets","")' class="menu-link">
+                                    <div data-i18n="Without menu">Searches</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bi bi-hammer"></i>
+                            <div data-i18n="Classifieds">Classifieds</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href='@Url.Action("All","vClassifieds","")' class="menu-link">
+                                    <div data-i18n="Collapsed menu">All Items</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Collections","vClassifieds","")' class="menu-link">
+                                    <div data-i18n="Content nav + Sidebar">Collections</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Searches","vClassifieds","")' class="menu-link">
+                                    <div data-i18n="Without menu">Searches</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bi bi-trophy"></i>
+                            <div data-i18n="Applications">Applications</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href='@Url.Action("All","vApplications","")' class="menu-link">
+                                    <div data-i18n="Collapsed menu">All Apps</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Collections","vApplications","")' class="menu-link">
+                                    <div data-i18n="Content nav + Sidebar">Collections</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Developers","vApplications","")' class="menu-link">
+                                    <div data-i18n="Horizontal">Developers</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Searches","vApplications","")' class="menu-link">
+                                    <div data-i18n="Without menu">Searches</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bi bi-distribute-vertical"></i>
+                            <div data-i18n="Newsletters">Newsletters</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href='@Url.Action("All","vNewsletters","")' class="menu-link">
+                                    <div data-i18n="Collapsed menu">All Items</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Collections","vNewsletters","")' class="menu-link">
+                                    <div data-i18n="Content nav + Sidebar">Collections</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Brands","vNewsletters","")' class="menu-link">
+                                    <div data-i18n="Horizontal">Brands</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Subscriptions","vNewsletters","")' class="menu-link">
+                                    <div data-i18n="Without menu">Subscriptions</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Searches","vNewsletters","")' class="menu-link">
+                                    <div data-i18n="Without menu">Searches</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bi bi-diagram-3"></i>
+                            <div data-i18n="Competitions">Competitions</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href='@Url.Action("All","vCompetitions","")' class="menu-link">
+                                    <div data-i18n="Collapsed menu">All Events</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Collections","vCompetitions","")' class="menu-link">
+                                    <div data-i18n="Content nav + Sidebar">Collections</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Brands","vCompetitions","")' class="menu-link">
+                                    <div data-i18n="Horizontal">Brands</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Searches","vCompetitions","")' class="menu-link">
+                                    <div data-i18n="Without menu">Searches</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bi bi-briefcase"></i>
+                            <div data-i18n="Campaigns">Campaigns</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href='@Url.Action("All","vCampaigns","")' class="menu-link">
+                                    <div data-i18n="Collapsed menu">All Campaigns</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Collections","vCampaigns","")' class="menu-link">
+                                    <div data-i18n="Content nav + Sidebar">Collections</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Brands","vCampaigns","")' class="menu-link">
+                                    <div data-i18n="Horizontal">Brands</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Polls","vCampaigns","")' class="menu-link">
+                                    <div data-i18n="Without menu">Polls</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Votes","vCampaigns","")' class="menu-link">
+                                    <div data-i18n="Without menu">Votes</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Searches","vCampaigns","")' class="menu-link">
+                                    <div data-i18n="Without menu">Searches</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Communities -->
+                    <li class="menu-header small text-uppercase">
+                        <span class="menu-header-text">Communities</span>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bi bi-yin-yang"></i>
+                            <div data-i18n="Stories">Stories</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href='@Url.Action("All","vStories","")' class="menu-link">
+                                    <div data-i18n="Collapsed menu">All Stories</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Collections","vStories","")' class="menu-link">
+                                    <div data-i18n="Content nav + Sidebar">Collections</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Writers","vStories","")' class="menu-link">
+                                    <div data-i18n="Horizontal">Writers</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Searches","vStories","")' class="menu-link">
+                                    <div data-i18n="Without menu">Searches</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bi bi-palette2"></i>
+                            <div data-i18n="Forums">Forums</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href='@Url.Action("All","vForums","")' class="menu-link">
+                                    <div data-i18n="Collapsed menu">All Forums</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Groups","vForums","")' class="menu-link">
+                                    <div data-i18n="Content nav + Sidebar">Groups</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Posts","vForums","")' class="menu-link">
+                                    <div data-i18n="Horizontal">Posts</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Topics","vForums","")' class="menu-link">
+                                    <div data-i18n="Without menu">Topics</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Subscriptions","vForums","")' class="menu-link">
+                                    <div data-i18n="Without menu">Subscriptions</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Searches","vForums","")' class="menu-link">
+                                    <div data-i18n="Without menu">Searches</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bi bi-bricks"></i>
+                            <div data-i18n="Brands">Brands</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href='@Url.Action("All","vBrands","")' class="menu-link">
+                                    <div data-i18n="Collapsed menu">All Brands</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Searches","vBrands","")' class="menu-link">
+                                    <div data-i18n="Without menu">Searches</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bi bi-boxes"></i>
+                            <div data-i18n="Clubs">Wikis</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href='@Url.Action("All","vWikis","")' class="menu-link">
+                                    <div data-i18n="Collapsed menu">All Wikis</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Searches","vWikis","")' class="menu-link">
+                                    <div data-i18n="Without menu">Searches</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bi bi-graph-up"></i>
+                            <div data-i18n="Ebooks">Events Manager</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href='@Url.Action("Calendar","vEvents","")' class="menu-link">
+                                    <div data-i18n="Collapsed menu">Calendar</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Store Panel -->
+                    <li class="menu-header small text-uppercase">
+                        <span class="menu-header-text">Store Panel</span>
+                    </li>
+                    <li class="menu-item">
+                        <a href='@Url.Action("Index","vDashboard","")' class="menu-link">
+                            <i class="menu-icon tf-icons bi bi-tv"></i>
+                            <div data-i18n="Artworks">Dashboard</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bi bi-alt"></i>
+                            <div data-i18n="Artworks">Catalog</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href='@Url.Action("Products","vCatalog","")' class="menu-link">
+                                    <div data-i18n="Collapsed menu">Products</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Categories","vCatalog","")' class="menu-link">
+                                    <div data-i18n="Content navbar">Categories</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Manufacturers","vCatalog","")' class="menu-link">
+                                    <div data-i18n="Content nav + Sidebar">Manufacturers</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Tags","vCatalog","")' class="menu-link">
+                                    <div data-i18n="Without menu">Tags</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Searches","vCatalog","")' class="menu-link">
+                                    <div data-i18n="Horizontal">Searches</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bi bi-cart3"></i>
+                            <div data-i18n="Ebooks">Sales</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href='@Url.Action("Orders","vSales","")' class="menu-link">
+                                    <div data-i18n="Collapsed menu">Orders</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("RecurringPayments","vSales","")' class="menu-link">
+                                    <div data-i18n="Horizontal">Recurring payments</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("ShoppingCarts","vSales","")' class="menu-link">
+                                    <div data-i18n="Without menu">Shopping Carts</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Wishlists","vSales","")' class="menu-link">
+                                    <div data-i18n="Without menu">Wishlists</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Transactions","vSales","")' class="menu-link">
+                                    <div data-i18n="Horizontal">Transactions</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bi bi-tags"></i>
+                            <div data-i18n="Artworks">Promotions</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href='@Url.Action("Discounts","vPromotions","")' class="menu-link">
+                                    <div data-i18n="Collapsed menu">Discounts</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Affiliates","vPromotions","")' class="menu-link">
+                                    <div data-i18n="Content navbar">Affiliates</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Banners","vPromotions","")' class="menu-link">
+                                    <div data-i18n="Content navbar">Banners</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bi bi-bucket"></i>
+                            <div data-i18n="Artworks">Content Management</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href='@Url.Action("Posts","vContent","")' class="menu-link">
+                                    <div data-i18n="Content nav + Sidebar">Blog posts</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Comments","vContent","")' class="menu-link">
+                                    <div data-i18n="Horizontal">Blog comments</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Photos","vContent","")' class="menu-link">
+                                    <div data-i18n="Horizontal">Blog photos</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Videos","vContent","")' class="menu-link">
+                                    <div data-i18n="Horizontal">Blog videos</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Links","vContent","")' class="menu-link">
+                                    <div data-i18n="Horizontal">Blog links</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Links","vContent","")' class="menu-link">
+                                    <div data-i18n="Horizontal">Blog stories</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href='@Url.Action("Searches","vContent","")' class="menu-link">
+                                    <div data-i18n="Content navbar">Searches</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href='@Url.Action("Index","vSettings","")' class="menu-link">
+                            <i class="menu-icon tf-icons bi bi-lock"></i>
+                            <div data-i18n="Artworks">Settings</div>
+                        </a>
+                    </li>
+                    <li class="menu-item mb-4">
+                        <a href='@Url.Action("Index","vReports","")' class="menu-link">
+                            <i class="menu-icon tf-icons bi bi-bar-chart"></i>
+                            <div data-i18n="Artworks">Reports</div>
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+            <!-- / Menu -->
+            <!-- Layout container -->
+            <div class="layout-page">
+                <nav class="layout-navbar navbar navbar-expand-xl align-items-center bg-navbar-theme"
+                     id="layout-navbar">
+                    <div class="container-fluid">
+
+                        <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0   d-xl-none ">
+                            <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+                                <i class="bx bx-menu bx-sm"></i>
+                            </a>
+                        </div>
+
+                        <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+                            <!-- Search -->
+                            <div class="navbar-nav align-items-center">
+                                <div class="nav-item navbar-search-wrapper mb-0">
+                                    <a class="nav-item nav-link px-0" href="javascript:void(0);">
+                                        <i class="bx bx-search-alt bx-sm"></i>
+                                        <label type="text" class="d-md-inline-block text-muted">Search?</label>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- /Search -->
+
+                            <ul class="navbar-nav gap-3 flex-row align-items-center ms-auto">
+                                <!-- Quick links  -->
+                                <li class="nav-item me-2 me-xl-0">
+                                    <a class="nav-link" href="javascript:void(0);" data-bs-toggle="offcanvas"
+                                       data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+                                        <i class='bx bx-grid-alt bx-sm'></i>
+                                    </a>
+                                </li>
+                                <!-- Quick links -->
+                                <!-- Cart  -->
+                                <li class="nav-item me-2 me-xl-0">
+                                    <a class="nav-link" href="javascript:void(0);" data-bs-toggle="offcanvas"
+                                       data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">
+                                        <i class='bx bx-cart bx-sm'></i>
+                                    </a>
+                                </li>
+                                <!-- Cart -->
+                                <!-- Notification -->
+                                <li class="nav-item me-xl-2">
+                                    <a class="nav-link" href="javascript:void(0);" data-bs-toggle="offcanvas"
+                                       data-bs-target="#offcanvasNotifications" aria-controls="offcanvasNotifications">
+                                        <i class="bx bx-bell bx-sm"></i>
+                                        <span class="badge bg-secondary rounded-pill badge-notifications">5</span>
+                                    </a>
+                                </li>
+                                <!--/ Notification -->
+                                <!-- Messages -->
+                                <li class="nav-item me-xl-2">
+                                    <a class="nav-link" href="javascript:void(0);" data-bs-toggle="offcanvas"
+                                       data-bs-target="#offcanvasMessages" aria-controls="offcanvasMessages">
+                                        <i class="bx bx-chat bx-sm"></i>
+                                        <span class="badge bg-dark rounded-pill badge-notifications">5</span>
+                                    </a>
+                                </li>
+                                <!--/ Messages -->
+                                <!-- User -->
+                                <li class="nav-item navbar-dropdown dropdown-user dropdown">
+                                    <a class="nav-link" href="javascript:void(0);" data-bs-toggle="offcanvas"
+                                       data-bs-target="#offcanvasSettings" aria-controls="offcanvasSettings">
+                                        <div class="avatar avatar-online">
+                                            <img src="~/assets/images/avatars/1.png" alt class="rounded-circle">
+                                        </div>
+                                    </a>
+                                </li>
+                                <!--/ User -->
+
+
+                            </ul>
+                        </div>
+
+
+                        <!-- Search Small Screens -->
+                        <div class="navbar-search-wrapper search-input-wrapper  d-none">
+                            <input type="text" class="form-control search-input container-fluid border-0"
+                                   placeholder="Search..." aria-label="Search...">
+                            <i class="bx bx-x bx-sm search-toggler cursor-pointer"></i>
+                        </div>
+
+
+                    </div>
+                </nav>
+
+                <!-- offcanvas -->
+
+                <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                     id="offcanvasMenu">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title">Menu</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body mx-0 flex-grow-0">
+                        <div class="row mb-0">
+                            <div class="col pe-2">
+                                <a href="#" data-back-button class="card card-style rounded-m me-0 p-3 mb-3">
+                                    <i class="fa fa-gift text-danger fs-4"></i>
+                                    <h6 class="pt-3">
+                                        Your Orders</h4>
+                                        <p class="small mt-n2 mb-0 color-highlight">
+                                            Track, return, or buy things again
+                                        </p>
+                                </a>
+                            </div>
+                            <div class="col ps-2">
+                                <a href="#" data-back-button class="card card-style rounded-m ms-0  p-3 mb-3">
+                                    <i class="fa fa-shopping-bag text-success fs-4"></i>
+                                    <h6 class="pt-3">
+                                        Wishlist</h4>
+                                        <p class="small mt-n2 mb-0 color-highlight">Act on or delete preferences</p>
+                                </a>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col pe-2">
+                                <a href="#" data-back-button class="card card-style rounded-m me-0 p-3 mb-3">
+                                    <i class="fa fa-question-circle text-white fs-4"></i>
+                                    <h6 class="pt-3">
+                                        Searches</h4>
+                                        <p class="small mt-n2 mb-0 color-highlight">Discover your taste</p>
+                                </a>
+                            </div>
+                            <div class="col ps-2">
+                                <a href="#" data-back-button class="card card-style rounded-m ms-0  p-3 mb-3">
+                                    <i class="fa fa-code text-warning fs-4"></i>
+                                    <h6 class="pt-3">
+                                        Transactions Log</h4>
+                                        <p class="small mt-n2 mb-0 color-highlight">View deals occured</p>
+                                </a>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col pe-2">
+                                <a href="#" data-back-button class="card card-style rounded-m me-0 p-3 mb-3">
+                                    <i class="fa fa-image text-primary fs-4"></i>
+                                    <h6 class="pt-3">
+                                        Photos</h4>
+                                        <p class="small mt-n2 mb-0 color-highlight">Browse photos</p>
+                                </a>
+                            </div>
+                            <div class="col ps-2">
+                                <a href="#" data-back-button class="card card-style rounded-m ms-0  p-3 mb-3">
+                                    <i class="fa fa-camera text-info fs-4"></i>
+                                    <h6 class="pt-3">
+                                        Videos</h4>
+                                        <p class="small mt-n2 mb-0 color-highlight">Browse videos</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                     id="offcanvasCart">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title">Cart</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body mx-0 flex-grow-0">
+                        <div class="row d-flex justify-content-center align-items-center h-100">
+                            <div class="col-12">
+                                <div class="card rounded-3 mb-4">
+                                    <div class="card-body p-4">
+                                        <div class="row d-flex justify-content-between align-items-center gap-2">
+                                            <div class="col-md-4 col-lg-4 col-xl-4">
+                                                <img src="~/assets/images/4.jpg" class="img-fluid rounded-3"
+                                                     alt="Cotton T-shirt">
+                                            </div>
+                                            <div class="col-md-8 col-lg-8 col-xl-8 text-center">
+                                                <p class="lead fs-6 my-2">Basic T-shirt</p>
+                                                <p><span class="text-success">$45.65</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card rounded-3 mb-4">
+                                    <div class="card-body p-4">
+                                        <div class="row d-flex justify-content-between align-items-center gap-2">
+                                            <div class="col-md-4 col-lg-4 col-xl-4">
+                                                <img src="~/assets/images/4.jpg" class="img-fluid rounded-3"
+                                                     alt="Cotton T-shirt">
+                                            </div>
+                                            <div class="col-md-8 col-lg-8 col-xl-8 text-center">
+                                                <p class="lead fs-6 my-2">Basic T-shirt</p>
+                                                <p><span class="text-success">$45.65</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card rounded-3 mb-4">
+                                    <div class="card-body p-4">
+                                        <div class="row d-flex justify-content-between align-items-center gap-2">
+                                            <div class="col-md-4 col-lg-4 col-xl-4">
+                                                <img src="~/assets/images/4.jpg" class="img-fluid rounded-3"
+                                                     alt="Cotton T-shirt">
+                                            </div>
+                                            <div class="col-md-8 col-lg-8 col-xl-8 text-center">
+                                                <p class="lead fs-6 my-2">Basic T-shirt</p>
+                                                <p><span class="text-success">$45.65</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card rounded-3 mb-4">
+                                    <div class="card-body p-4">
+                                        <div class="row d-flex justify-content-between align-items-center gap-2">
+                                            <div class="col-md-4 col-lg-4 col-xl-4">
+                                                <img src="~/assets/images/4.jpg" class="img-fluid rounded-3"
+                                                     alt="Cotton T-shirt">
+                                            </div>
+                                            <div class="col-md-8 col-lg-8 col-xl-8 text-center">
+                                                <p class="lead fs-6 my-2">Basic T-shirt</p>
+                                                <p><span class="text-success">$45.65</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="card">
+                                    <div class="card-body">
+                                        <button type="button" class="btn btn-success btn-block btn-lg">
+                                            Proceed to
+                                            Pay
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                     id="offcanvasNotifications">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title mb-0">Notifications</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body mx-0 flex-grow-0">
+                        <div class="mt-0">
+                            <ul class="list-group list-group-flush list-unstyled">
+                                <!-- Notif item -->
+                                <li>
+                                    <div class="list-group-item list-group-item-action rounded badge-unread d-flex border-0 mb-1 p-3">
+                                        <div class="avatar text-center d-none d-sm-inline-block">
+                                            <img class="avatar-img rounded-circle" src="~/assets/images/avatar/01.jpg"
+                                                 alt="">
+                                        </div>
+                                        <div class="ms-sm-3">
+                                            <div class=" d-flex">
+                                                <p class="small mb-2"><b>Judy Nguyen</b> sent you a friend request.</p>
+                                                <p class="small ms-3 text-nowrap">Just now</p>
+                                            </div>
+                                            <div class="d-flex">
+                                                <button class="btn btn-sm py-1 btn-primary me-2">Accept </button>
+                                                <button class="btn btn-sm py-1 btn-danger-soft">Delete </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- Notif item -->
+                                <li>
+                                    <div class="list-group-item list-group-item-action rounded badge-unread d-flex border-0 mb-1 p-3 position-relative">
+                                        <div class="avatar text-center d-none d-sm-inline-block">
+                                            <img class="avatar-img rounded-circle" src="~/assets/images/avatar/02.jpg"
+                                                 alt="">
+                                        </div>
+                                        <div class="ms-sm-3 d-flex">
+                                            <div>
+                                                <p class="small mb-2">
+                                                    Wish <b>Amanda Reed</b> a happy birthday (Nov 12)
+                                                </p>
+                                                <button class="btn btn-sm btn-outline-light py-1 me-2">
+                                                    Say happy
+                                                    birthday 🎂
+                                                </button>
+                                            </div>
+                                            <p class="small ms-3">2min</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- Notif item -->
+                                <li>
+                                    <a href="#"
+                                       class="list-group-item list-group-item-action rounded d-flex border-0 mb-1 p-3">
+                                        <div class="avatar text-center d-none d-sm-inline-block">
+                                            <div class="avatar-img rounded-circle bg-success">
+                                                <span class="text-white position-absolute top-50 start-50 translate-middle fw-bold">WB</span>
+                                            </div>
+                                        </div>
+                                        <div class="ms-sm-3">
+                                            <div class="d-flex">
+                                                <p class="small mb-2">Webestica has 15 like and 1 new activity</p>
+                                                <p class="small ms-3">1hr</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <!-- Notif item -->
+                                <li>
+                                    <a href="#"
+                                       class="list-group-item list-group-item-action rounded d-flex border-0 p-3 mb-1">
+                                        <div class="avatar text-center d-none d-sm-inline-block">
+                                            <img class="avatar-img rounded-circle" src="~/assets/images/logo/12.svg"
+                                                 alt="">
+                                        </div>
+                                        <div class="ms-sm-3 d-flex">
+                                            <p class="small mb-2">
+                                                <b>Bootstrap in the news:</b> The search giant’s
+                                                parent company, Alphabet, just joined an exclusive club of tech stocks.
+                                            </p>
+                                            <p class="small ms-3">4hr</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-footer text-center">
+                            <a href="#" class="btn btn-sm btn-primary-soft">See all incoming activity</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                     id="offcanvasMessages">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title">Messages</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body mx-0 flex-grow-0">
+
+                        <button type="button" class="btn btn-primary mb-2 d-grid w-100">Continue</button>
+                        <button type="button" class="btn btn-label-secondary d-grid w-100"
+                                data-bs-dismiss="offcanvas">
+                            Cancel
+                        </button>
+                    </div>
+                </div>
+
+                @Html.Partial("~/Views/Shared/_pCanvasSettings.cshtml")
+
+                <!-- / Navbar -->
+                <!-- Content wrapper -->
+                <div class="content-wrapper">
+                    <div class="container-xxl flex-grow-1 container-p-y">
+                        @RenderBody()
+                    </div>
+
+                    @Html.Partial("~/Views/Shared/_pFooter.cshtml")
+                    <!-- / Footer -->
+                    <div class="content-backdrop fade"></div>
+                </div>
+                <!-- Content wrapper -->
+            </div>
+            <!-- / Layout page -->
+        </div>
+
+        <!-- Overlay -->
+        <div class="layout-overlay layout-menu-toggle"></div>
+
+        <!-- Drag Target Area To SlideIn Menu On Small Screens -->
+        <div class="drag-target"></div>
+
+    </div>
+    <!-- / Layout wrapper -->
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/core.js -->
+    <script src="~/assets/plugins/jquery/jquery.js"></script>
+    <script src="~/assets/plugins/popper/popper.js"></script>
+    <script src="~/assets/scripts/bootstrap.js"></script>
+    <script src="~/assets/plugins/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+    <script src="~/assets/plugins/hammer/hammer.js"></script>
+
+
+    <script src="~/assets/plugins/i18n/i18n.js"></script>
+    <script src="~/assets/plugins/typeahead-js/typeahead.js"></script>
+
+    <script src="~/assets/scripts/menu.js"></script>
+    <!-- endbuild -->
+    <!-- Vendors JS -->
+    <script src="~/assets/plugins/datatables-bs5/datatables-bootstrap5.js"></script>
+    <!-- Flat Picker -->
+    <script src="~/assets/plugins/moment/moment.js"></script>
+    <script src="~/assets/plugins/flatpickr/flatpickr.js"></script>
+    <!-- Form Validation -->
+    <script src="~/assets/plugins/formvalidation/dist/js/FormValidation.min.js"></script>
+    <script src="~/assets/plugins/formvalidation/dist/js/plugins/Bootstrap5.min.js"></script>
+    <script src="~/assets/plugins/formvalidation/dist/js/plugins/AutoFocus.min.js"></script>
+
+    <!-- Main JS -->
+    <script src="~/assets/scripts/main.js"></script>
+
+    <!-- Page JS -->
+    @RenderSection("Scripts", required:false)
+</body>
+
+</html>

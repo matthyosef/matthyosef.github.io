@@ -1,0 +1,169 @@
+﻿@model tstdealsv2.Models.tstproducts_discounts
+
+@{
+    ViewBag.Title = "Discounts";
+    Layout = "~/Views/Shared/_LayoutVPanel.cshtml";
+}
+
+<h4 class="py-3 breadcrumb-wrapper mb-4">
+    <span class="text-muted fw-light">Promotions /</span> Discounts
+</h4>
+<div class="card">
+    <div class="card-datatable table-responsive pt-0">
+        <table class="datatables-basic table table-bordered">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Id</th>
+                    <th>DiscountName</th>
+                    <th>CouponCode</th>
+                    <th>AdminComment</th>
+                    <th>DiscountTypeId</th>
+                    <th>UsePercentage</th>
+                    <th>DiscountPercentage</th>
+                    <th>DiscountAmount</th>
+                    <th>MaximumDiscountAmount</th>
+                    <th>StartDate</th>
+                    <th>EndDate</th>
+                    <th>RequiresCouponCode</th>
+                    <th>IsCumulative</th>
+                    <th>DiscountLimitationId</th>
+                    <th>LimitationTimes</th>
+                    <th>MaximumDiscountedQuantity</th>
+                    <th>AppliedToSubCategories</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+<!-- Modal to add new record -->
+<div class="offcanvas offcanvas-end" id="offcanvasRecords">
+    <div class="offcanvas-header border-bottom">
+        <h5 class="offcanvas-title" id="offcanvasRecordsHeader">New Record</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body flex-grow-1">
+        <form class="add-new-record pt-0 row g-2" id="formAddEdit" onsubmit="return false">
+            @Html.EditorFor(m => m.Id, new { htmlAttributes = new { @class = "form-control d-none", @id = "txtId", @Value = "0" } })
+            <div class="col-sm-12">
+                <label class="form-label">Discount Name</label>
+                <div class="input-group input-group-merge">
+                    <span class="input-group-text"><i class="bx bx-user"></i></span>
+                    @Html.EditorFor(m => m.DiscountName, new { htmlAttributes = new { @class = "form-control", @id = "txtDiscName" } })
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <label class="form-label">Coupon Code</label>
+                <div class="input-group input-group-merge">
+                    <span class="input-group-text"><i class='bx bxs-briefcase'></i></span>
+                    @Html.EditorFor(m => m.CouponCode, new { htmlAttributes = new { @class = "form-control", @id = "txtCouponCode" } })
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <label class="form-label">Discount Type</label>
+                <div class="input-group input-group-merge">
+                    <span class="input-group-text"><i class="bx bx-envelope"></i></span>
+                    @Html.EditorFor(m => m.DiscountTypeId, new { htmlAttributes = new { @class = "form-control", @id = "txtDiscTypeId" } })
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <label class="form-label">Use Percentage</label>
+                <div class="input-group input-group-merge">
+                    <span class="input-group-text"><i class='bx bx-calendar'></i></span>
+                    @Html.EditorFor(m => m.UsePercentage, new { htmlAttributes = new { @class = "form-control", @id = "txtUsePercentage" } })
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <label class="form-label">Discount Percentage</label>
+                <div class="input-group input-group-merge">
+                    <span class="input-group-text"><i class="bx bx-envelope"></i></span>
+                    @Html.EditorFor(m => m.DiscountPercentage, new { htmlAttributes = new { @class = "form-control", @id = "txtDiscPercentage" } })
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <label class="form-label">Discount Amount</label>
+                <div class="input-group input-group-merge">
+                    <span class="input-group-text"><i class="bx bx-envelope"></i></span>
+                    @Html.EditorFor(m => m.DiscountAmount, new { htmlAttributes = new { @class = "form-control", @id = "txtDiscAmount" } })
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <label class="form-label">Start Date</label>
+                <div class="input-group input-group-merge">
+                    <span class="input-group-text"><i class="bx bx-envelope"></i></span>
+                    @Html.EditorFor(m => m.StartDate, new { htmlAttributes = new { @class = "form-control", @id = "txtStartDate" } })
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <label class="form-label">End Date</label>
+                <div class="input-group input-group-merge">
+                    <span class="input-group-text"><i class="bx bx-envelope"></i></span>
+                    @Html.EditorFor(m => m.EndDate, new { htmlAttributes = new { @class = "form-control", @id = "txtEndDate" } })
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <label class="form-label">Requires Coupon Code</label>
+                <div class="input-group input-group-merge">
+                    <span class="input-group-text"><i class="bx bx-envelope"></i></span>
+                    @Html.EditorFor(m => m.RequiresCouponCode, new { htmlAttributes = new { @class = "form-control", @id = "txtRequiresCoupon" } })
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <label class="form-label">Is Cumulative</label>
+                <div class="input-group input-group-merge">
+                    <span class="input-group-text"><i class="bx bx-envelope"></i></span>
+                    @Html.EditorFor(m => m.IsCumulative, new { htmlAttributes = new { @class = "form-control", @id = "txtIsCumulative" } })
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <label class="form-label">Limited Times</label>
+                <div class="input-group input-group-merge">
+                    <span class="input-group-text"><i class="bx bx-envelope"></i></span>
+                    @Html.EditorFor(m => m.LimitationTimes, new { htmlAttributes = new { @class = "form-control", @id = "txtLimTimes" } })
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <label class="form-label">Maximum Discounted Quantity</label>
+                <div class="input-group input-group-merge">
+                    <span class="input-group-text"><i class="bx bx-envelope"></i></span>
+                    @Html.EditorFor(m => m.MaximumDiscountedQuantity, new { htmlAttributes = new { @class = "form-control", @id = "txtMaxDiscQuantity" } })
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <button type="submit" class="btn btn-primary data-submit me-sm-3 me-1" onclick="SubmitMVM();">Save</button>
+                <button type="reset" class="btn btn-outline-secondary" data-bs-dismiss="offcanvas">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Modal to delete record -->
+<div class="modal fade" id="modalDeleteRecord" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-simple modal-enable-otp modal-dialog-centered">
+        <div class="modal-content p-3 p-md-5">
+            <div class="modal-body">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="text-center mb-4">
+                    <h3 class="mb-4">Delete Confirmation</h3>
+                </div>
+                <h6>Are you sure you want to delete this record?</h6>
+                <form id="formDeleteRecord" class="row g-3 mt-3" onsubmit="return false">
+                    @Html.EditorFor(d => d.Id, new { htmlAttributes = new { @class = "form-control d-none", @readonly = true, @Value="0", @id="ctlId" } })
+                    <div class="col-12 text-center">
+                        <button type="submit" class="btn btn-danger me-sm-3 me-1" onclick="DeleteMVM();">Delete</button>
+                        <button type="reset" class="btn btn-label-secondary" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/assets/scripts/api/vPromotionsDiscounts.js"></script>
+
+
+}
+

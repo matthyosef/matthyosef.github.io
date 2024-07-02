@@ -1,0 +1,880 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en" class="dark-style layout-navbar-fixed layout-menu-fixed " dir="~/assets" data-theme="theme-default"
+      data-assets-path="./assets" data-template="vertical-menu-template-dark">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>263deals</title>
+
+
+    <meta name="description" content="the best ecommerce platform" />
+    <meta name="keywords" content="ecommerce, zimbabwe, deals, digital products, online shop">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="#" />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="~/assets/fonts/boxicons.css" />
+    <link rel="stylesheet" href="~/assets/fonts/flag-icons.css" />
+    <link rel="stylesheet" href="~/assets/styles/icon-font.css" />
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="~/assets/styles/core-dark.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="~/assets/styles/theme-default-dark.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="~/assets/styles/demo.css" />
+
+    <!-- Vendors CSS -->
+    <link rel="stylesheet" href="~/assets/plugins/perfect-scrollbar/perfect-scrollbar.css" />
+    <link rel="stylesheet" href="~/assets/plugins/typeahead-js/typeahead.css" />
+    <link rel="stylesheet" href="~/assets/plugins/apex-charts/apex-charts.css" />
+
+    <!-- Social CSS -->
+    <link rel="stylesheet" href="~/assets/plugins/glightbox-master/dist/css/glightbox.min.css" />
+    <link rel="stylesheet" href="~/assets/plugins/zuck.js/dist/zuck.min.css" />
+
+    <!-- Page CSS -->
+    <!-- MAIN -->
+    <link rel="stylesheet" type="text/css" href="~/assets/styles/musicv3.css" />
+    <link rel="stylesheet" type="text/css" href="~/assets/styles/app.min.css" />
+
+    <!-- Helpers -->
+    <script src="~/assets/scripts/helpers.js"></script>
+
+    <script src="~/assets/scripts/config.js"></script>
+</head>
+
+<body>
+
+
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-content-navbar  ">
+        <div class="layout-container">
+            <!-- Menu -->
+            <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+                <div class="app-brand demo ">
+                    <a href="index.html" class="app-brand-link">
+                        <img src="~/assets/images/sweetbao.png" alt="" class="img-logo" />
+                        <h2 class="text-logo">263<small>deals</small></h2>
+                    </a>
+                </div>
+
+                <div class="menu-divider mt-0  "></div>
+                <div class="menu-inner-shadow"></div>
+
+                <ul class="menu-inner py-1">
+                    <li class="menu-item">
+                        <a href='@Url.Action("Index","cHome","")'  class="menu-link">
+                            <i class="menu-icon tf-icons bi bi-arrow-left-circle"></i>
+                            <div data-i18n="Overview">Return Home</div>
+                        </a>
+                    </li>
+                    <!-- Filters -->
+                    <li class="menu-header small text-uppercase">
+                        <span class="menu-header-text">Filters</span>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <i class="menu-icon tf-icons bi bi-app-indicator"></i>
+                            <div data-i18n="Artworks">All</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <i class="menu-icon tf-icons bi bi-activity"></i>
+                            <div data-i18n="Ebooks">Trending</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <i class="menu-icon tf-icons bi bi-arrow-through-heart"></i>
+                            <div data-i18n="Courses">Most Popular</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <i class="menu-icon tf-icons bi bi-layers"></i>
+                            <div data-i18n="Movies">Recents</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <i class="menu-icon tf-icons bi bi-star"></i>
+                            <div data-i18n="Songs">Favourites</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <i class="menu-icon tf-icons bi-chat-right-dots"></i>
+                            <div data-i18n="Songs">Comments</div>
+                        </a>
+                    </li>
+                    <!-- Sources -->
+                    <li class="menu-header small text-uppercase">
+                        <span class="menu-header-text">Sources</span>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <i class="menu-icon tf-icons bi bi-brush"></i>
+                            <div data-i18n="Stories">Artists</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <i class="menu-icon tf-icons bi bi-collection-play"></i>
+                            <div data-i18n="Forums">Albums</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <i class="menu-icon tf-icons bi bi-broadcast"></i>
+                            <div data-i18n="Brands">Studios</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <i class="menu-icon tf-icons bi bi-globe2"></i>
+                            <div data-i18n="Clubs">News</div>
+                        </a>
+                    </li>
+                    <li class="menu-item mb-4">
+                        <a href="#" class="menu-link">
+                            <i class="menu-icon tf-icons bi bi-funnel"></i>
+                            <div data-i18n="Clubs">Searches</div>
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+            <!-- / Menu -->
+            <!-- Layout container -->
+            <div class="layout-page">
+                <nav class="layout-navbar navbar navbar-expand-xl align-items-center bg-navbar-theme"
+                     id="layout-navbar">
+                    <div class="container-fluid">
+
+                        <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0   d-xl-none ">
+                            <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+                                <i class="bx bx-menu bx-sm"></i>
+                            </a>
+                        </div>
+
+                        <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+                            <!-- Search -->
+                            <div class="navbar-nav align-items-center">
+                                <div class="nav-item navbar-search-wrapper mb-0">
+                                    <a class="nav-item nav-link px-0" href="javascript:void(0);">
+                                        <i class="bx bx-search-alt bx-sm"></i>
+                                        <label type="text" class="d-md-inline-block text-muted">Search?</label>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- /Search -->
+
+                            <ul class="navbar-nav gap-3 flex-row align-items-center ms-auto">
+                                <!-- Quick links  -->
+                                <li class="nav-item me-2 me-xl-0">
+                                    <a class="nav-link" href="javascript:void(0);"
+                                       data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+                                        <i class='bx bx-grid-alt bx-sm'></i>
+                                    </a>
+                                </li>
+                                <!-- Quick links -->
+                                <!-- Cart  -->
+                                <li class="nav-item me-2 me-xl-0">
+                                    <a class="nav-link" href="javascript:void(0);"
+                                       data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">
+                                        <i class='bx bx-cart bx-sm'></i>
+                                    </a>
+                                </li>
+                                <!-- Cart -->
+                                <!-- Notification -->
+                                <li class="nav-item me-xl-2">
+                                    <a class="nav-link" href="javascript:void(0);"
+                                       data-bs-toggle="offcanvas" data-bs-target="#offcanvasNotifications" aria-controls="offcanvasNotifications">
+                                        <i class="bx bx-bell bx-sm"></i>
+                                        <span class="badge bg-secondary rounded-pill badge-notifications">5</span>
+                                    </a>
+                                </li>
+                                <!--/ Notification -->
+                                <!-- Messages -->
+                                <li class="nav-item me-xl-2">
+                                    <a class="nav-link" href="javascript:void(0);"
+                                       data-bs-toggle="offcanvas" data-bs-target="#offcanvasMessages" aria-controls="offcanvasMessages">
+                                        <i class="bx bx-chat bx-sm"></i>
+                                        <span class="badge bg-dark rounded-pill badge-notifications">5</span>
+                                    </a>
+                                </li>
+                                <!--/ Messages -->
+                                <!-- User -->
+                                <li class="nav-item navbar-dropdown dropdown-user dropdown">
+                                    <a class="nav-link" href="javascript:void(0);"
+                                       data-bs-toggle="offcanvas" data-bs-target="#offcanvasSettings" aria-controls="offcanvasSettings">
+                                        <div class="avatar avatar-online">
+                                            <img src="~/assets/images/avatars/1.png" alt class="rounded-circle">
+                                        </div>
+                                    </a>
+                                </li>
+                                <!--/ User -->
+
+
+                            </ul>
+                        </div>
+
+
+                        <!-- Search Small Screens -->
+                        <div class="navbar-search-wrapper search-input-wrapper  d-none">
+                            <input type="text" class="form-control search-input container-fluid border-0"
+                                   placeholder="Search..." aria-label="Search...">
+                            <i class="bx bx-x bx-sm search-toggler cursor-pointer"></i>
+                        </div>
+
+
+                    </div>
+                </nav>
+
+                <!-- offcanvas -->
+
+                <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasMenu">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title">Menu</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body mx-0 flex-grow-0">
+                        <div class="row mb-0">
+                            <div class="col pe-2">
+                                <a href="#" data-back-button class="card card-style rounded-m me-0 p-3 mb-3">
+                                    <i class="fa fa-gift text-danger fs-4"></i>
+                                    <h6 class="pt-3">
+                                        Your Orders</h4>
+                                        <p class="small mt-n2 mb-0 color-highlight">Track, return, or buy things again</p>
+                                </a>
+                            </div>
+                            <div class="col ps-2">
+                                <a href="#" data-back-button class="card card-style rounded-m ms-0  p-3 mb-3">
+                                    <i class="fa fa-shopping-bag text-success fs-4"></i>
+                                    <h6 class="pt-3">
+                                        Wishlist</h4>
+                                        <p class="small mt-n2 mb-0 color-highlight">Act on or delete preferences</p>
+                                </a>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col pe-2">
+                                <a href="#" data-back-button class="card card-style rounded-m me-0 p-3 mb-3">
+                                    <i class="fa fa-question-circle text-white fs-4"></i>
+                                    <h6 class="pt-3">
+                                        Searches</h4>
+                                        <p class="small mt-n2 mb-0 color-highlight">Discover your taste</p>
+                                </a>
+                            </div>
+                            <div class="col ps-2">
+                                <a href="#" data-back-button class="card card-style rounded-m ms-0  p-3 mb-3">
+                                    <i class="fa fa-code text-warning fs-4"></i>
+                                    <h6 class="pt-3">
+                                        Transactions Log</h4>
+                                        <p class="small mt-n2 mb-0 color-highlight">View deals occured</p>
+                                </a>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col pe-2">
+                                <a href="#" data-back-button class="card card-style rounded-m me-0 p-3 mb-3">
+                                    <i class="fa fa-image text-primary fs-4"></i>
+                                    <h6 class="pt-3">
+                                        Photos</h4>
+                                        <p class="small mt-n2 mb-0 color-highlight">Browse photos</p>
+                                </a>
+                            </div>
+                            <div class="col ps-2">
+                                <a href="#" data-back-button class="card card-style rounded-m ms-0  p-3 mb-3">
+                                    <i class="fa fa-camera text-info fs-4"></i>
+                                    <h6 class="pt-3">
+                                        Videos</h4>
+                                        <p class="small mt-n2 mb-0 color-highlight">Browse videos</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasCart">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title">Cart</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body mx-0 flex-grow-0">
+                        <div class="row d-flex justify-content-center align-items-center h-100">
+                            <div class="col-12">
+                                <div class="card rounded-3 mb-4">
+                                    <div class="card-body p-4">
+                                        <div class="row d-flex justify-content-between align-items-center">
+                                            <div class="col-md-4 col-lg-4 col-xl-4">
+                                                <img src="~/assets/images/4.jpg"
+                                                     class="img-fluid rounded-3" alt="Cotton T-shirt">
+                                            </div>
+                                            <div class="col-md-8 col-lg-8 col-xl-8 text-center">
+                                                <p class="lead fs-6 my-2">Basic T-shirt</p>
+                                                <p><span class="text-success">$45.65</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card rounded-3 mb-4">
+                                    <div class="card-body p-4">
+                                        <div class="row d-flex justify-content-between align-items-center">
+                                            <div class="col-md-4 col-lg-4 col-xl-4">
+                                                <img src="~/assets/images/4.jpg"
+                                                     class="img-fluid rounded-3" alt="Cotton T-shirt">
+                                            </div>
+                                            <div class="col-md-8 col-lg-8 col-xl-8 text-center">
+                                                <p class="lead fs-6 my-2">Basic T-shirt</p>
+                                                <p><span class="text-success">$45.65</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card rounded-3 mb-4">
+                                    <div class="card-body p-4">
+                                        <div class="row d-flex justify-content-between align-items-center">
+                                            <div class="col-md-4 col-lg-4 col-xl-4">
+                                                <img src="~/assets/images/4.jpg"
+                                                     class="img-fluid rounded-3" alt="Cotton T-shirt">
+                                            </div>
+                                            <div class="col-md-8 col-lg-8 col-xl-8 text-center">
+                                                <p class="lead fs-6 my-2">Basic T-shirt</p>
+                                                <p><span class="text-success">$45.65</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card rounded-3 mb-4">
+                                    <div class="card-body p-4">
+                                        <div class="row d-flex justify-content-between align-items-center">
+                                            <div class="col-md-4 col-lg-4 col-xl-4">
+                                                <img src="~/assets/images/4.jpg"
+                                                     class="img-fluid rounded-3" alt="Cotton T-shirt">
+                                            </div>
+                                            <div class="col-md-8 col-lg-8 col-xl-8 text-center">
+                                                <p class="lead fs-6 my-2">Basic T-shirt</p>
+                                                <p><span class="text-success">$45.65</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="card">
+                                    <div class="card-body">
+                                        <button type="button" class="btn btn-success btn-block btn-lg">Proceed to Pay</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasNotifications">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title mb-0">Notifications</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body mx-0 flex-grow-0">
+                        <div class="mt-0">
+                            <ul class="list-group list-group-flush list-unstyled">
+                                <!-- Notif item -->
+                                <li>
+                                    <div class="list-group-item list-group-item-action rounded badge-unread d-flex border-0 mb-1 p-3">
+                                        <div class="avatar text-center d-none d-sm-inline-block">
+                                            <img class="avatar-img rounded-circle" src="~/assets/images/avatar/01.jpg" alt="">
+                                        </div>
+                                        <div class="ms-sm-3">
+                                            <div class=" d-flex">
+                                                <p class="small mb-2"><b>Judy Nguyen</b> sent you a friend request.</p>
+                                                <p class="small ms-3 text-nowrap">Just now</p>
+                                            </div>
+                                            <div class="d-flex">
+                                                <button class="btn btn-sm py-1 btn-primary me-2">Accept </button>
+                                                <button class="btn btn-sm py-1 btn-danger-soft">Delete </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- Notif item -->
+                                <li>
+                                    <div class="list-group-item list-group-item-action rounded badge-unread d-flex border-0 mb-1 p-3 position-relative">
+                                        <div class="avatar text-center d-none d-sm-inline-block">
+                                            <img class="avatar-img rounded-circle" src="~/assets/images/avatar/02.jpg" alt="">
+                                        </div>
+                                        <div class="ms-sm-3 d-flex">
+                                            <div>
+                                                <p class="small mb-2">Wish <b>Amanda Reed</b> a happy birthday (Nov 12)</p>
+                                                <button class="btn btn-sm btn-outline-light py-1 me-2">Say happy birthday 🎂</button>
+                                            </div>
+                                            <p class="small ms-3">2min</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- Notif item -->
+                                <li>
+                                    <a href="#" class="list-group-item list-group-item-action rounded d-flex border-0 mb-1 p-3">
+                                        <div class="avatar text-center d-none d-sm-inline-block">
+                                            <div class="avatar-img rounded-circle bg-success"><span class="text-white position-absolute top-50 start-50 translate-middle fw-bold">WB</span></div>
+                                        </div>
+                                        <div class="ms-sm-3">
+                                            <div class="d-flex">
+                                                <p class="small mb-2">Webestica has 15 like and 1 new activity</p>
+                                                <p class="small ms-3">1hr</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <!-- Notif item -->
+                                <li>
+                                    <a href="#" class="list-group-item list-group-item-action rounded d-flex border-0 p-3 mb-1">
+                                        <div class="avatar text-center d-none d-sm-inline-block">
+                                            <img class="avatar-img rounded-circle" src="~/assets/images/logo/12.svg" alt="">
+                                        </div>
+                                        <div class="ms-sm-3 d-flex">
+                                            <p class="small mb-2"><b>Bootstrap in the news:</b> The search giant’s parent company, Alphabet, just joined an exclusive club of tech stocks.</p>
+                                            <p class="small ms-3">4hr</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-footer text-center">
+                            <a href="#" class="btn btn-sm btn-primary-soft">See all incoming activity</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasMessages">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title">Messages</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body mx-0 flex-grow-0">
+                        <div class="mx-2 mr-2 mb-0 mt-2">
+                            <a href="page-chat.html" class="d-flex mb-3">
+                                <div>
+                                    <img src="~/assets/images/04.png" class="avatar-xl rounded-circle me-3" />
+                                </div>
+                                <div>
+                                    <h5 class="opacity-5">Jane Louder</h5>
+                                    <p class="line-height-s mt-1 opacity-5">This is a sample chat box, it looks pretty sweet and has text in it.</p>
+                                </div>
+                                <div class="align-self-center ps-3">
+                                    <i class="fa fa-angle-right opacity-5"></i>
+                                </div>
+                            </a>
+                            <hr />
+                        </div>
+                        <div class="mx-2 mr-2 mb-0 mt-2">
+                            <a href="page-chat.html" class="d-flex mb-3">
+                                <div>
+                                    <img src="~/assets/images/author-2.jpg" class="avatar-xl rounded-circle me-3" />
+                                </div>
+                                <div>
+                                    <h5 class="opacity-5">Jane Louder</h5>
+                                    <p class="line-height-s mt-1 opacity-5">This is a sample chat box, it looks pretty sweet and has text in it.</p>
+                                </div>
+                                <div class="align-self-center ps-3">
+                                    <i class="fa fa-angle-right opacity-5"></i>
+                                </div>
+                            </a>
+                            <hr />
+                        </div>
+                    </div>
+                </div>
+
+
+                @Html.Partial("~/Views/Shared/_pCanvasSettings.cshtml")
+                <!-- / Navbar -->
+                <!-- Content wrapper -->
+                <div class="content-wrapper">
+                    <div class="container-xxl flex-grow-1 container-p-y">
+                        <div class="slider_heading_wrap marger_bottom30">
+                            <div class="slider_cheading">
+                                <h4 class="cheading_title">Songs List&nbsp;</h4>
+                            </div>
+                        </div>
+                        <div class="music_listwrap">
+                            <div class="ms_songslist_box">
+                                <ul class="ms_songlist">
+                                    <li>
+                                        <div class="ms_songslist_inner">
+                                            <div class="ms_songslist_left">
+                                                <div class="songslist_number">
+                                                    <h4 class="songslist_sn">01</h4>
+                                                    <span class="songslist_play"><img src="~/assets/images/svg/play_songlist.svg" alt="Play" class="img-fluid" /></span>
+                                                </div>
+                                                <div class="songslist_details">
+                                                    <div class="songslist_thumb">
+                                                        <img src="~/assets/images/songlist/01.jpg" alt="thumb" class="img-fluid" />
+                                                    </div>
+                                                    <div class="songslist_name">
+
+                                                        <h3 class="song_name"><a href="javascript:void(0);">Walking Promises</a></h3>
+                                                        <p class="song_artist">Harry Jackson, Virginia Harris</p>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="ms_songslist_right">
+                                                <span class="ms_songslist_like">
+                                                    <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="17px" height="16px"><path fill-rule="evenodd" fill="rgb(124, 142, 165)" d="M11.777,-0.000 C10.940,-0.000 10.139,0.197 9.395,0.585 C9.080,0.749 8.783,0.947 8.506,1.173 C8.230,0.947 7.931,0.749 7.618,0.585 C6.874,0.197 6.073,-0.000 5.236,-0.000 C2.354,-0.000 0.009,2.394 0.009,5.337 C0.009,7.335 1.010,9.428 2.986,11.557 C4.579,13.272 6.527,14.702 7.881,15.599 L8.506,16.012 L9.132,15.599 C10.487,14.701 12.436,13.270 14.027,11.557 C16.002,9.428 17.004,7.335 17.004,5.337 C17.004,2.394 14.659,-0.000 11.777,-0.000 ZM5.236,2.296 C6.168,2.296 7.027,2.738 7.590,3.507 L8.506,4.754 L9.423,3.505 C9.986,2.737 10.844,2.296 11.777,2.296 C13.403,2.296 14.727,3.660 14.727,5.337 C14.727,6.734 13.932,8.298 12.364,9.986 C11.114,11.332 9.604,12.490 8.506,13.255 C7.409,12.490 5.899,11.332 4.649,9.986 C3.081,8.298 2.286,6.734 2.286,5.337 C2.286,3.660 3.610,2.296 5.236,2.296 Z" /></svg>
+                                                </span>
+                                                <span class="ms_songslist_time">04:23</span>
+                                                <div class="ms_songslist_more">
+                                                    <a href="#" class="option-eps text-secondary" role="button" data-bs-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+                                                    <ul class="dropdown-menu">
+                                                        <li>
+                                                            <a href="javascript:void(0);" class="text-secondary">
+                                                                <span class="mx-2 common_drop_icon drop_fav"></span>Favourites
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);" class="text-secondary">
+                                                                <span class="mx-2 common_drop_icon drop_downld"></span>Download Now
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);" class="text-secondary">
+                                                                <span class="mx-2 common_drop_icon drop_playlist"></span>Add to Playlist
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);" class="text-secondary">
+                                                                <span class="mx-2 common_drop_icon drop_share"></span>Share
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="ms_songslist_inner">
+                                            <div class="ms_songslist_left">
+                                                <div class="songslist_number">
+                                                    <h4 class="songslist_sn">03</h4>
+                                                    <span class="songslist_play"><img src="~/assets/images/svg/play_songlist.svg" alt="Play" class="img-fluid" /></span>
+                                                </div>
+                                                <div class="songslist_details">
+                                                    <div class="songslist_thumb">
+                                                        <img src="~/assets/images/songlist/03.jpg" alt="thumb" class="img-fluid" />
+                                                    </div>
+                                                    <div class="songslist_name">
+
+                                                        <h3 class="song_name"><a href="javascript:void(0);">Don’t Let me down</a></h3>
+                                                        <p class="song_artist">David Parker, Virginia Harris</p>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="ms_songslist_right">
+                                                <span class="ms_songslist_like">
+                                                    <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="17px" height="16px"><path fill-rule="evenodd" fill="rgb(124, 142, 165)" d="M11.777,-0.000 C10.940,-0.000 10.139,0.197 9.395,0.585 C9.080,0.749 8.783,0.947 8.506,1.173 C8.230,0.947 7.931,0.749 7.618,0.585 C6.874,0.197 6.073,-0.000 5.236,-0.000 C2.354,-0.000 0.009,2.394 0.009,5.337 C0.009,7.335 1.010,9.428 2.986,11.557 C4.579,13.272 6.527,14.702 7.881,15.599 L8.506,16.012 L9.132,15.599 C10.487,14.701 12.436,13.270 14.027,11.557 C16.002,9.428 17.004,7.335 17.004,5.337 C17.004,2.394 14.659,-0.000 11.777,-0.000 ZM5.236,2.296 C6.168,2.296 7.027,2.738 7.590,3.507 L8.506,4.754 L9.423,3.505 C9.986,2.737 10.844,2.296 11.777,2.296 C13.403,2.296 14.727,3.660 14.727,5.337 C14.727,6.734 13.932,8.298 12.364,9.986 C11.114,11.332 9.604,12.490 8.506,13.255 C7.409,12.490 5.899,11.332 4.649,9.986 C3.081,8.298 2.286,6.734 2.286,5.337 C2.286,3.660 3.610,2.296 5.236,2.296 Z" /></svg>
+                                                </span>
+                                                <span class="ms_songslist_time">04:23</span>
+                                                <div class="ms_songslist_more">
+                                                    <a href="#" class="option-eps text-secondary songslist_moreicon" role="button" data-bs-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+                                                    <ul class="dropdown-menu">
+                                                        <li>
+                                                            <a href="javascript:void(0);" class="text-secondary">
+                                                                <span class="mx-2 common_drop_icon drop_fav"></span>Favourites
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);" class="text-secondary">
+                                                                <span class="mx-2 common_drop_icon drop_downld"></span>Download Now
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);" class="text-secondary">
+                                                                <span class="mx-2 common_drop_icon drop_playlist"></span>Add to Playlist
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);" class="text-secondary">
+                                                                <span class="mx-2 common_drop_icon drop_share"></span>Share
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="ms_songslist_inner">
+                                            <div class="ms_songslist_left">
+                                                <div class="songslist_number">
+                                                    <h4 class="songslist_sn">04</h4>
+                                                    <span class="songslist_play"><img src="~/assets/images/svg/play_songlist.svg" alt="Play" class="img-fluid" /></span>
+                                                </div>
+                                                <div class="songslist_details">
+                                                    <div class="songslist_thumb">
+                                                        <img src="~/assets/images/songlist/02.jpg" alt="thumb" class="img-fluid" />
+                                                    </div>
+                                                    <div class="songslist_name">
+
+                                                        <h3 class="song_name"><a href="javascript:void(0);">Dark Alley Acoustic</a></h3>
+                                                        <p class="song_artist">Kevin Buckland, Carl Brown</p>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="ms_songslist_right">
+                                                <span class="ms_songslist_like">
+                                                    <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="17px" height="16px"><path fill-rule="evenodd" fill="rgb(124, 142, 165)" d="M11.777,-0.000 C10.940,-0.000 10.139,0.197 9.395,0.585 C9.080,0.749 8.783,0.947 8.506,1.173 C8.230,0.947 7.931,0.749 7.618,0.585 C6.874,0.197 6.073,-0.000 5.236,-0.000 C2.354,-0.000 0.009,2.394 0.009,5.337 C0.009,7.335 1.010,9.428 2.986,11.557 C4.579,13.272 6.527,14.702 7.881,15.599 L8.506,16.012 L9.132,15.599 C10.487,14.701 12.436,13.270 14.027,11.557 C16.002,9.428 17.004,7.335 17.004,5.337 C17.004,2.394 14.659,-0.000 11.777,-0.000 ZM5.236,2.296 C6.168,2.296 7.027,2.738 7.590,3.507 L8.506,4.754 L9.423,3.505 C9.986,2.737 10.844,2.296 11.777,2.296 C13.403,2.296 14.727,3.660 14.727,5.337 C14.727,6.734 13.932,8.298 12.364,9.986 C11.114,11.332 9.604,12.490 8.506,13.255 C7.409,12.490 5.899,11.332 4.649,9.986 C3.081,8.298 2.286,6.734 2.286,5.337 C2.286,3.660 3.610,2.296 5.236,2.296 Z" /></svg>
+                                                </span>
+                                                <span class="ms_songslist_time">04:23</span>
+                                                <div class="ms_songslist_more">
+                                                    <a href="#" class="option-eps text-secondary songslist_moreicon" role="button" data-bs-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+                                                    <ul class="dropdown-menu">
+                                                        <li>
+                                                            <a href="javascript:void(0);" class="text-secondary">
+                                                                <span class="mx-2 common_drop_icon drop_fav"></span>Favourites
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);" class="text-secondary">
+                                                                <span class="mx-2 common_drop_icon drop_downld"></span>Download Now
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);" class="text-secondary">
+                                                                <span class="mx-2 common_drop_icon drop_playlist"></span>Add to Playlist
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);" class="text-secondary">
+                                                                <span class="mx-2 common_drop_icon drop_share"></span>Share
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="ms_songslist_inner">
+                                            <div class="ms_songslist_left">
+                                                <div class="songslist_number">
+                                                    <h4 class="songslist_sn">05</h4>
+                                                    <span class="songslist_play"><img src="~/assets/images/svg/play_songlist.svg" alt="Play" class="img-fluid" /></span>
+                                                </div>
+                                                <div class="songslist_details">
+                                                    <div class="songslist_thumb">
+                                                        <img src="~/assets/images/songlist/05.jpg" alt="thumb" class="img-fluid" />
+                                                    </div>
+                                                    <div class="songslist_name">
+
+                                                        <h3 class="song_name"><a href="javascript:void(0);">Until I Met You</a></h3>
+                                                        <p class="song_artist">Jennifer Kelly, Virginia Harris</p>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="ms_songslist_right">
+                                                <span class="ms_songslist_like">
+                                                    <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="17px" height="16px"><path fill-rule="evenodd" fill="rgb(124, 142, 165)" d="M11.777,-0.000 C10.940,-0.000 10.139,0.197 9.395,0.585 C9.080,0.749 8.783,0.947 8.506,1.173 C8.230,0.947 7.931,0.749 7.618,0.585 C6.874,0.197 6.073,-0.000 5.236,-0.000 C2.354,-0.000 0.009,2.394 0.009,5.337 C0.009,7.335 1.010,9.428 2.986,11.557 C4.579,13.272 6.527,14.702 7.881,15.599 L8.506,16.012 L9.132,15.599 C10.487,14.701 12.436,13.270 14.027,11.557 C16.002,9.428 17.004,7.335 17.004,5.337 C17.004,2.394 14.659,-0.000 11.777,-0.000 ZM5.236,2.296 C6.168,2.296 7.027,2.738 7.590,3.507 L8.506,4.754 L9.423,3.505 C9.986,2.737 10.844,2.296 11.777,2.296 C13.403,2.296 14.727,3.660 14.727,5.337 C14.727,6.734 13.932,8.298 12.364,9.986 C11.114,11.332 9.604,12.490 8.506,13.255 C7.409,12.490 5.899,11.332 4.649,9.986 C3.081,8.298 2.286,6.734 2.286,5.337 C2.286,3.660 3.610,2.296 5.236,2.296 Z" /></svg>
+                                                </span>
+                                                <span class="ms_songslist_time">04:23</span>
+                                                <div class="ms_songslist_more">
+                                                    <a href="#" class="option-eps text-secondary songslist_moreicon" role="button" data-bs-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+                                                    <ul class="dropdown-menu">
+                                                        <li>
+                                                            <a href="javascript:void(0);" class="text-secondary">
+                                                                <span class="mx-2 common_drop_icon drop_fav"></span>Favourites
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);" class="text-secondary">
+                                                                <span class="mx-2 common_drop_icon drop_downld"></span>Download Now
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);" class="text-secondary">
+                                                                <span class="mx-2 common_drop_icon drop_playlist"></span>Add to Playlist
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);" class="text-secondary">
+                                                                <span class="mx-2 common_drop_icon drop_share"></span>Share
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / Content -->
+                    <div class="ms_player_wrapper">
+                        <div class="ms_player_close">
+                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </div>
+                        <div class="player_mid">
+                            <div class="audio-player">
+                                <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+                                <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
+                                    <div class="player_left">
+                                        <div class="ms_play_song">
+                                            <div class="play_song_name">
+                                                <a href="javascript:void(0);" id="playlist-text">
+                                                    <div class="jp-now-playing flex-item">
+                                                        <div class="jp-track-name"></div>
+                                                        <div class="jp-artist-name"></div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="play_song_options">
+                                            <ul>
+                                                <li><a href="#"><span class="song_optn_icon"><i class="ms_icon icon_download"></i></span>download now</a></li>
+                                                <li><a href="#"><span class="song_optn_icon"><i class="ms_icon icon_fav"></i></span>Add To Favourites</a></li>
+                                                <li><a href="#"><span class="song_optn_icon"><i class="ms_icon icon_playlist"></i></span>Add To Playlist</a></li>
+                                                <li><a href="#"><span class="song_optn_icon"><i class="ms_icon icon_share"></i></span>Share</a></li>
+                                            </ul>
+                                        </div>
+                                        <span class="play-left-arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                                    </div>
+                                    <!----Right Queue---->
+                                    <div class="jp_queue_wrapper">
+                                        <span class="que_text ms_btn" id="myPlaylistQueue"><i class="fa fa-angle-up" aria-hidden="true"></i> queue</span>
+                                        <div id="playlist-wrap" class="jp-playlist">
+                                            <div class="jp_queue_cls"><i class="fa fa-angle-down" aria-hidden="true"></i></div>
+                                            <h2>queue</h2>
+                                            <div class="jp_queue_list_inner">
+                                                <ul>
+                                                    <li>&nbsp;</li>
+                                                </ul>
+                                            </div>
+                                            <div class="jp_queue_btn">
+                                                <a href="clear_modal.html" class="ms_save ms_btn" data-toggle="modal" data-target="#save_modal">save Playlist</a>
+                                                <a href="javascript:;" class="ms_clear" data-toggle="modal" data-target="#clear_modal">clear</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="jp-type-playlist">
+                                        <div class="jp-gui jp-interface flex-wrap">
+                                            <div class="jp-controls flex-item">
+                                                <button class="jp-previous" tabindex="0">
+                                                    <i class="ms_play_control"></i>
+                                                </button>
+                                                <button class="jp-play" tabindex="0">
+                                                    <i class="ms_play_control"></i>
+                                                </button>
+                                                <button class="jp-next" tabindex="0">
+                                                    <i class="ms_play_control"></i>
+                                                </button>
+                                            </div>
+                                            <div class="jp-progress-container flex-item">
+                                                <div class="jp-time-holder">
+                                                    <span class="jp-current-time" role="timer" aria-label="time">&nbsp;</span>
+                                                    <span class="jp-duration" role="timer" aria-label="duration">&nbsp;</span>
+                                                </div>
+                                                <div class="jp-progress">
+                                                    <div class="jp-seek-bar">
+                                                        <div class="jp-play-bar">
+                                                            <div class="bullet">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="jp-volume-controls flex-item">
+                                                <div class="widget knob-container">
+                                                    <div class="knob-wrapper-outer">
+                                                        <div class="knob-wrapper">
+                                                            <div class="knob-mask">
+                                                                <div class="knob d3"><span></span></div>
+                                                                <div class="handle"></div>
+                                                                <div class="round">
+                                                                    <img src="~/assets/images/svg/volume.svg" alt="volume">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- <input></input> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="jp-toggles flex-item">
+                                                <button class="jp-shuffle" tabindex="0" title="Shuffle">
+                                                    <i class="ms_play_control"></i>
+                                                </button>
+                                                <button class="jp-repeat" tabindex="0" title="Repeat"><i class="ms_play_control"></i></button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--main div-->
+                    </div>
+
+                    <!-- Footer -->
+                    @Html.Partial("~/Views/Shared/_pFooter.cshtml")
+                    <!-- / Footer -->
+                    <div class="content-backdrop fade"></div>
+                </div>
+                <!-- Content wrapper -->
+            </div>
+            <!-- / Layout page -->
+        </div>
+
+        <!-- Overlay -->
+        <div class="layout-overlay layout-menu-toggle"></div>
+
+        <!-- Drag Target Area To SlideIn Menu On Small Screens -->
+        <div class="drag-target"></div>
+
+    </div>
+    <!-- / Layout wrapper -->
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/core.js -->
+    <script src="~/assets/plugins/jquery/jquery.js"></script>
+    <script src="~/assets/plugins/popper/popper.js"></script>
+    <script src="~/assets/scripts/bootstrap.js"></script>
+    <script src="~/assets/plugins/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+    <script src="~/assets/plugins/hammer/hammer.js"></script>
+
+
+    <script src="~/assets/plugins/i18n/i18n.js"></script>
+    <script src="~/assets/plugins/typeahead-js/typeahead.js"></script>
+
+    <script src="~/assets/scripts/menu.js"></script>
+    <!-- endbuild -->
+    <!-- Vendors JS -->
+    <script src="~/assets/plugins/apex-charts/apexcharts.js"></script>
+    <script src="~/assets/plugins/tiny-slider/dist/tiny-slider.js"></script>
+    <script src="~/assets/plugins/OverlayScrollbars-master/js/OverlayScrollbars.min.js"></script>
+    <script src="~/assets/plugins/player/jplayer.playlist.min.js"></script>
+    <script src="~/assets/plugins/player/jquery.jplayer.min.js"></script>
+    <script src="~/assets/plugins/player/audio-player.js"></script>
+    <script src="~/assets/plugins/player/volume.js"></script>
+
+    <!-- Main JS -->
+    <script src="~/assets/scripts/main.js"></script>
+
+</body>
+
+</html>
+

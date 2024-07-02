@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Basic Page Info -->
+		<meta charset="utf-8" />
+		<title>263deals</title>
+
+		<!-- Site favicon -->
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="assets/images/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="assets/images/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="assets/images/favicon-16x16.png"
+		/>
+
+		<!-- Mobile Specific Metas -->
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, maximum-scale=1"
+		/>
+
+		<!-- CSS -->
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="assets/styles/icon-font.min.css"
+		/>
+        
+		<!-- PLUGINS -->
+		
+
+		<!-- MAIN -->
+		<link rel="stylesheet" type="text/css" href="assets/styles/app.min.css" />
+
+	</head>
+	<body>
+		<div class="header">
+			<div class="header-left">
+				<div class="menu-icon bi bi-list"></div>
+				<div
+					class="search-toggle-icon bi bi-search"
+					data-toggle="header_search"
+				></div>
+				<div class="header-search">
+					<form>
+						<div class="form-group mb-0">
+							<i class="dw dw-search2 search-icon"></i>
+							<input
+								type="text"
+								class="form-control search-input"
+								placeholder="Search Here"
+							/>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="header-right">
+				<div class="dashboard-setting user-notification">
+					<div class="dropdown">
+						<a
+							class="dropdown-toggle no-arrow"
+							href="javascript:void(0)" 
+							data-bs-toggle="offcanvas" 
+							data-bs-target="#offcanvasMenu" 
+							aria-controls="offcanvasMenu"
+						>
+							<i class="dw dw-expand1"></i>
+						</a>
+						<div class="right-sidebar" id="right-sidebar">
+							<div class="sidebar-title">
+								<h3 class="weight-600 font-16 text-blue">
+									Layout Settings
+									<span class="btn-block font-weight-400 font-12"
+										>User Interface Settings</span
+									>
+								</h3>
+								<div class="close-sidebar" data-toggle="right-sidebar-close">
+									<i class="icon-copy ion-close-round"></i>
+								</div>
+							</div>
+							<div class="right-sidebar-body customscroll">
+								<div class="right-sidebar-body-content">
+									<h4 class="weight-600 font-18 pb-10">Background</h4>
+									<div class="sidebar-btn-group pb-30 mb-10">
+										<a
+											href="javascript:void(0);"
+											class="btn btn-outline-primary header-white active"
+											>White</a
+										>
+										<a
+											href="javascript:void(0);"
+											class="btn btn-outline-primary header-dark"
+											>Dark</a
+										>
+									</div>
+				
+									<h4 class="weight-600 font-18 pb-10">Sidebar Background</h4>
+									<div class="sidebar-btn-group pb-30 mb-10">
+										<a
+											href="javascript:void(0);"
+											class="btn btn-outline-primary sidebar-light"
+											>White</a
+										>
+										<a
+											href="javascript:void(0);"
+											class="btn btn-outline-primary sidebar-dark active"
+											>Dark</a
+										>
+									</div>
+				
+									<h4 class="weight-600 font-18 pb-10">Menu Dropdown Icon</h4>
+									<div class="sidebar-radio-group pb-10 mb-10">
+										<div class="custom-control custom-radio custom-control-inline">
+											<input
+												type="radio"
+												id="sidebaricon-1"
+												name="menu-dropdown-icon"
+												class="custom-control-input"
+												value="icon-style-1"
+												checked=""
+											/>
+											<label class="custom-control-label" for="sidebaricon-1"
+												><i class="fa fa-angle-down"></i
+											></label>
+										</div>
+										<div class="custom-control custom-radio custom-control-inline">
+											<input
+												type="radio"
+												id="sidebaricon-2"
+												name="menu-dropdown-icon"
+												class="custom-control-input"
+												value="icon-style-2"
+											/>
+											<label class="custom-control-label" for="sidebaricon-2"
+												><i class="ion-plus-round"></i
+											></label>
+										</div>
+										<div class="custom-control custom-radio custom-control-inline">
+											<input
+												type="radio"
+												id="sidebaricon-3"
+												name="menu-dropdown-icon"
+												class="custom-control-input"
+												value="icon-style-3"
+											/>
+											<label class="custom-control-label" for="sidebaricon-3"
+												><i class="fa fa-angle-double-right"></i
+											></label>
+										</div>
+									</div>
+				
+									<h4 class="weight-600 font-18 pb-10">Menu List Icon</h4>
+									<div class="sidebar-radio-group pb-30 mb-10">
+										<div class="custom-control custom-radio custom-control-inline">
+											<input
+												type="radio"
+												id="sidebariconlist-1"
+												name="menu-list-icon"
+												class="custom-control-input"
+												value="icon-list-style-1"
+												checked=""
+											/>
+											<label class="custom-control-label" for="sidebariconlist-1"
+												><i class="ion-minus-round"></i
+											></label>
+										</div>
+										<div class="custom-control custom-radio custom-control-inline">
+											<input
+												type="radio"
+												id="sidebariconlist-2"
+												name="menu-list-icon"
+												class="custom-control-input"
+												value="icon-list-style-2"
+											/>
+											<label class="custom-control-label" for="sidebariconlist-2"
+												><i class="fa fa-circle-o" aria-hidden="true"></i
+											></label>
+										</div>
+										<div class="custom-control custom-radio custom-control-inline">
+											<input
+												type="radio"
+												id="sidebariconlist-3"
+												name="menu-list-icon"
+												class="custom-control-input"
+												value="icon-list-style-3"
+											/>
+											<label class="custom-control-label" for="sidebariconlist-3"
+												><i class="dw dw-check"></i
+											></label>
+										</div>
+										<div class="custom-control custom-radio custom-control-inline">
+											<input
+												type="radio"
+												id="sidebariconlist-4"
+												name="menu-list-icon"
+												class="custom-control-input"
+												value="icon-list-style-4"
+												checked=""
+											/>
+											<label class="custom-control-label" for="sidebariconlist-4"
+												><i class="icon-copy dw dw-next-2"></i
+											></label>
+										</div>
+										<div class="custom-control custom-radio custom-control-inline">
+											<input
+												type="radio"
+												id="sidebariconlist-5"
+												name="menu-list-icon"
+												class="custom-control-input"
+												value="icon-list-style-5"
+											/>
+											<label class="custom-control-label" for="sidebariconlist-5"
+												><i class="dw dw-fast-forward-1"></i
+											></label>
+										</div>
+										<div class="custom-control custom-radio custom-control-inline">
+											<input
+												type="radio"
+												id="sidebariconlist-6"
+												name="menu-list-icon"
+												class="custom-control-input"
+												value="icon-list-style-6"
+											/>
+											<label class="custom-control-label" for="sidebariconlist-6"
+												><i class="dw dw-next"></i
+											></label>
+										</div>
+									</div>
+				
+									<div class="reset-options pt-30 text-center">
+										<button class="btn btn-danger" id="reset-settings">
+											Reset Settings
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="dashboard-setting user-notification">
+					<div class="dropdown">
+						<a
+							class="dropdown-toggle no-arrow"
+							href="javascript:void(0)" 
+							data-bs-toggle="offcanvas" 
+							data-bs-target="#offcanvasCart" 
+							aria-controls="offcanvasCart"
+						>
+							<i class="dw dw-shop"></i>
+						</a>
+					</div>
+				</div>
+				<div class="dashboard-setting user-notification">
+					<div class="dropdown">
+						<a
+							class="dropdown-toggle no-arrow"
+							href="javascript:void(0)" 
+							data-bs-toggle="offcanvas" 
+							data-bs-target="#offcanvasNotifications" 
+							aria-controls="offcanvasNotifications"
+						>
+							<i class="dw dw-notification"></i>
+						</a>
+					</div>
+				</div>
+				<div class="dashboard-setting user-info-dropdown">
+					<div class="dropdown">
+						<a
+							class="dropdown-toggle"
+							href="javascript:void(0)" 
+							data-bs-toggle="offcanvas" 
+							data-bs-target="#offcanvasOptions" 
+							aria-controls="offcanvasOptions"
+						>
+							<span class="user-icon">
+								<img src="assets/images/photo1.jpg" alt="" />
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasRightLabel">
+			<div class="offcanvas-header py-4">
+			  <h5 class="offcanvas-title fs-6 fw-semibold" id="offcanvasRightLabel">Menu</h5>
+			  <span class="badge bg-primary rounded-4 px-3 py-1 lh-sm">5 new</span>
+			</div>
+			<div class="offcanvas-body h-100 px-4 pt-0" data-simplebar>
+				<div class="py-2">
+
+				</div>
+			</div>
+		  </div>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasRightLabel">
+			<div class="offcanvas-header py-4">
+			  <h5 class="offcanvas-title fs-6 fw-semibold" id="offcanvasRightLabel">Shopping Cart</h5>
+			  <span class="badge bg-primary rounded-4 px-3 py-1 lh-sm">5 new</span>
+			</div>
+			<div class="offcanvas-body h-100 px-4 pt-0" data-simplebar>
+				<div class="row d-flex justify-content-center align-items-center h-100">
+					<div class="col-12">
+					  <div class="card rounded-3 mb-4">
+						<div class="card-body p-4">
+						  <div class="row d-flex justify-content-between align-items-center">
+							<div class="col-md-4 col-lg-4 col-xl-4">
+							  <img
+								src="assets/images/4.jpg"
+								class="img-fluid rounded-3" alt="Cotton T-shirt">
+							</div>
+							<div class="col-md-8 col-lg-8 col-xl-8 text-center">
+							  <p class="lead fs-6 my-2">Basic T-shirt</p>
+							  <p><span class="text-success">$45.65</p>
+							</div>
+						  </div>
+						</div>
+					  </div>
+			  
+					  <div class="card rounded-3 mb-4">
+						<div class="card-body p-4">
+						  <div class="row d-flex justify-content-between align-items-center">
+							<div class="col-md-4 col-lg-4 col-xl-4">
+							  <img
+								src="assets/images/4.jpg"
+								class="img-fluid rounded-3" alt="Cotton T-shirt">
+							</div>
+							<div class="col-md-8 col-lg-8 col-xl-8 text-center">
+							  <p class="lead fs-6 my-2">Basic T-shirt</p>
+							  <p><span class="text-success">$45.65</p>
+							</div>
+						  </div>
+						</div>
+					  </div>
+			  
+					  <div class="card rounded-3 mb-4">
+						<div class="card-body p-4">
+						  <div class="row d-flex justify-content-between align-items-center">
+							<div class="col-md-4 col-lg-4 col-xl-4">
+							  <img
+								src="assets/images/4.jpg"
+								class="img-fluid rounded-3" alt="Cotton T-shirt">
+							</div>
+							<div class="col-md-8 col-lg-8 col-xl-8 text-center">
+							  <p class="lead fs-6 my-2">Basic T-shirt</p>
+							  <p><span class="text-success">$45.65</p>
+							</div>
+						  </div>
+						</div>
+					  </div>
+			  
+					  <div class="card rounded-3 mb-4">
+						<div class="card-body p-4">
+						  <div class="row d-flex justify-content-between align-items-center">
+							<div class="col-md-4 col-lg-4 col-xl-4">
+							  <img
+								src="assets/images/4.jpg"
+								class="img-fluid rounded-3" alt="Cotton T-shirt">
+							</div>
+							<div class="col-md-8 col-lg-8 col-xl-8 text-center">
+							  <p class="lead fs-6 my-2">Basic T-shirt</p>
+							  <p><span class="text-success">$45.65</p>
+							</div>
+						  </div>
+						</div>
+					  </div>
+		
+			  
+					  <div class="card">
+						<div class="card-body">
+						  <button type="button" class="btn btn-warning btn-block btn-lg">Proceed to Pay</button>
+						</div>
+					  </div>
+			  
+					</div>
+				  </div>
+			</div>
+		  </div>
+
+		  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNotifications" aria-labelledby="offcanvasRightLabel">
+			<div class="offcanvas-header py-4">
+				<h6 class="m-0">Notifications <span class="badge bg-danger bg-opacity-10 text-danger ms-2">4 new</span></h6>
+				<a class="small" href="#">Clear all</a>
+			</div>
+			<div class="offcanvas-body h-100 px-4 pt-0" data-simplebar>
+				<div class="my-2">
+					<div class="card-body p-0">
+						<ul class="list-group list-group-flush list-unstyled p-2">
+							<!-- Notif item -->
+							<li>
+								<div class="list-group-item list-group-item-action rounded badge-unread d-flex border-0 mb-1 p-3">
+									<div class="avatar text-center d-none d-sm-inline-block">
+										<img class="avatar-img rounded-circle" src="assets/images/avatar/01.jpg" alt="">
+									</div>
+									<div class="ms-sm-3">
+										<div class=" d-flex">
+										<p class="small mb-2"><b>Judy Nguyen</b> sent you a friend request.</p>
+										<p class="small ms-3 text-nowrap">Just now</p>
+									</div>
+									<div class="d-flex">
+										<button class="btn btn-sm py-1 btn-primary me-2">Accept </button>
+										<button class="btn btn-sm py-1 btn-danger-soft">Delete </button>
+									</div>
+								</div>
+							</div>
+							</li>
+							<!-- Notif item -->
+							<li>
+								<div class="list-group-item list-group-item-action rounded badge-unread d-flex border-0 mb-1 p-3 position-relative">
+									<div class="avatar text-center d-none d-sm-inline-block">
+										<img class="avatar-img rounded-circle" src="assets/images/avatar/02.jpg" alt="">
+									</div>
+									<div class="ms-sm-3 d-flex">
+										<div>
+											<p class="small mb-2">Wish <b>Amanda Reed</b> a happy birthday (Nov 12)</p>
+											<button class="btn btn-sm btn-outline-light py-1 me-2">Say happy birthday 🎂</button>
+										</div>
+										<p class="small ms-3">2min</p>
+									</div>
+								</div>
+							</li>
+							<!-- Notif item -->
+							<li>
+								<a href="#" class="list-group-item list-group-item-action rounded d-flex border-0 mb-1 p-3">
+									<div class="avatar text-center d-none d-sm-inline-block">
+										<div class="avatar-img rounded-circle bg-success"><span class="text-white position-absolute top-50 start-50 translate-middle fw-bold">WB</span></div>
+									</div>
+									<div class="ms-sm-3">
+										<div class="d-flex">
+											<p class="small mb-2">Webestica has 15 like and 1 new activity</p>
+											<p class="small ms-3">1hr</p>
+										</div>
+									</div>
+								</a>
+							</li>
+							<!-- Notif item -->
+							<li>
+								<a href="#" class="list-group-item list-group-item-action rounded d-flex border-0 p-3 mb-1">
+									<div class="avatar text-center d-none d-sm-inline-block">
+										<img class="avatar-img rounded-circle" src="assets/images/logo/12.svg" alt="">
+									</div>
+									<div class="ms-sm-3 d-flex">
+										<p class="small mb-2"><b>Bootstrap in the news:</b> The search giant’s parent company, Alphabet, just joined an exclusive club of tech stocks.</p>
+										<p class="small ms-3">4hr</p>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="card-footer text-center">
+						<a href="#" class="btn btn-sm btn-primary-soft">See all incoming activity</a>
+					</div>
+				</div>
+			</div>
+		  </div>	
+		  
+		  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasOptions" aria-labelledby="offcanvasRightLabel">
+			<div class="offcanvas-header py-4" data-simplebar>
+				<div class="d-flex align-items-center position-relative">
+					<!-- Avatar -->
+					<div class="avatar me-3">
+						<img class="avatar-img rounded-circle" src="assets/images/avatar/07.jpg" alt="avatar">
+					</div>
+					<div>
+						<a class="h6 stretched-link" href="#">Lori Ferguson</a>
+						<p class="small m-0">Web Developer</p>
+					</div>
+				</div>
+			</div>
+			<div class="offcanvas-body h-100 px-4 pt-0" data-simplebar>
+				<div class="my-2">
+					<!-- Links -->
+					<ul>
+					<li><a class="dropdown-item" href="settings.html"><i class="bi bi-gear fa-fw me-2"></i>Settings & Privacy</a></li>
+					<li> 
+						<a class="dropdown-item" href="https://support.webestica.com/" target="_blank">
+							<i class="fa-fw bi bi-life-preserver me-2"></i>Support
+						</a> 
+					</li>
+					<li> 
+						<a class="dropdown-item" href="docs/overview.html" target="_blank">
+							<i class="fa-fw bi bi-card-text me-2"></i>Documentation
+						</a> 
+					</li>
+					<li class="dropdown-divider"></li>
+					<li><a class="dropdown-item bg-danger-soft-hover" href="sign-in-advance.html"><i class="bi bi-power fa-fw me-2"></i>Sign Out</a></li>
+					<li> <hr class="dropdown-divider"></li>
+					<!-- Dark mode options START -->
+					<li>
+						<div class="modeswitch-item theme-icon-active d-flex justify-content-center gap-3 align-items-center p-2 pb-0">
+							<span>Mode:</span>
+							<button type="button" class="btn btn-modeswitch nav-link text-primary-hover mb-0" data-bs-theme-value="light" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Light">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun fa-fw mode-switch" viewBox="0 0 16 16">
+									<path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+									<use href="#"></use>
+								</svg>
+							</button>
+							<button type="button" class="btn btn-modeswitch nav-link text-primary-hover mb-0" data-bs-theme-value="dark" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Dark">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-stars fa-fw mode-switch" viewBox="0 0 16 16">
+									<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/>
+									<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+									<use href="#"></use>
+								</svg>
+							</button>
+							<button type="button" class="btn btn-modeswitch nav-link text-primary-hover mb-0 active" data-bs-theme-value="auto" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Auto">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-half fa-fw mode-switch" viewBox="0 0 16 16">
+									<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+									<use href="#"></use>
+								</svg>
+							</button>
+						</div>
+					</li>
+					</ul>
+				</div>
+			</div>
+		  </div>
+
+		<div class="left-side-bar">
+			<div class="brand-logo">
+				<a href="overview.html">
+					<img src="assets/images/sweetbao.png" alt="" class="img-logo" />
+					<h2 class="text-logo">263<small>deals</small></h2>
+				</a>
+				<div class="close-sidebar" data-toggle="left-sidebar-close">
+					<i class="ion-close-round"></i>
+				</div>
+			</div>
+			<div class="menu-block customscroll">
+				<div class="sidebar-menu">
+					<ul id="accordion-menu">
+						<li>
+							<a href="overview.html" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-arrow-left-circle"></span
+								><span class="mtext">Return Home</span>
+							</a>
+						</li>
+						<li>
+							<div class="dropdown-divider"></div>
+						</li>
+						<li>
+							<a href="#l" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-app-indicator"></span
+								><span class="mtext">All</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-activity"></span
+								><span class="mtext">Trending</span>
+							</a>
+						</li>
+						<li>
+							<a href="#l" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-arrow-through-heart"></span
+								><span class="mtext">Most Popular</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-layers"></span
+								><span class="mtext">Recents</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-star"></span
+								><span class="mtext">Favorites</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-brightness-high"></span
+								><span class="mtext">Subscriptions</span>
+							</a>
+						</li>
+						<li>
+							<div class="dropdown-divider"></div>
+						</li>
+						<li>
+							<a href="#" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-brush"></span
+								><span class="mtext">Players</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-collection-play"></span
+								><span class="mtext">Teams</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-broadcast"></span
+								><span class="mtext">Leagues</span>
+							</a>
+						</li>
+						<li>
+							<a href="#l" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-code-slash"></span
+								><span class="mtext">Ratings</span>
+							</a>
+						</li>
+						<li>
+							<a href="#l" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-chat-right-dots"></span
+								><span class="mtext">Comments</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-globe2"></span
+								><span class="mtext">News</span>
+							</a>
+						</li>
+						<li>
+							<a href="#l" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-tags"></span
+								><span class="mtext">Tags</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-funnel"></span
+								><span class="mtext">Searches</span>
+							</a>
+						</li>
+						<li>
+							<div class="dropdown-divider"></div>
+						</li>
+						<li>
+							<a href="#" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-wrench-adjustable"></span
+								><span class="mtext">Utilities</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-braces"></span
+								><span class="mtext">Developer</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="dropdown-toggle no-arrow">
+								<span class="micon bi bi-question-square"></span
+								><span class="mtext">Help</span>
+							</a>
+						</li>
+                        <li>
+							<div class="dropdown-divider"></div>
+						</li>
+                        <li>
+                            <div>
+                                <a href="" class="dropdown-item">About Us</a>
+                                <a href="" class="dropdown-item">Settings</a>
+                                <a href="" class="dropdown-item">Privacy Policy</a>
+                                <a href="" class="dropdown-item">Terms & Conditions</a>
+                            </div>
+                        </li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="mobile-menu-overlay"></div>
+
+		<div class="main-container">
+			<div class="xs-pd-20-10 pd-ltr-20">
+				<div class="page-header">
+						<div class="row">
+							<div class="col-md-12 col-sm-12">
+								<div class="title">
+									<h4>Product</h4>
+								</div>
+								<nav aria-label="breadcrumb" role="navigation">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item">
+											<a href="overview.html">Home</a>
+										</li>
+										<li class="breadcrumb-item active" aria-current="page">
+											Product
+										</li>
+									</ol>
+								</nav>
+							</div>
+						</div>
+					</div>
+
+					
+					<div class="row g-4">
+						<div class="col-md-12 col-lg-12 vstack gap-4">
+							<!-- Card START -->
+							<div class="card">
+							  <!-- Card header START -->
+							  <div class="card-header border-0 pb-0">
+								<div class="row g-2">
+								  <div class="col-lg-2">
+									<!-- Card title -->
+									<h1 class="h4 card-title mb-lg-0">Group</h1>
+								  </div>
+								  <div class="col-sm-6 col-lg-3 ms-lg-auto">
+									<!-- Select Groups -->
+									<select class="form-select choice-select-text-none form mb-20" data-search-enabled="false">
+									  <option value="AB">Alphabetical</option>
+									  <option value="NG">Newest group</option>
+									  <option value="RA">Recently active</option>
+									  <option value="SG">Suggested</option>
+									</select>
+								  </div>
+									<div class="col-sm-6 col-lg-3">
+									<!-- Button modal -->
+									<a class="btn btn-primary-soft ms-auto w-100 mb-20" href="#" data-bs-toggle="modal" data-bs-target="#modalCreateGroup"> 
+										<i class="fa-solid fa-plus pe-1"></i> Create group
+									</a>
+								  </div>
+								</div>
+							  </div>
+							  <!-- Card header START -->
+							  <!-- Card body START -->
+							  <div class="card-body">
+								
+								<!-- Tab nav line -->
+								<ul class="nav nav-tabs nav-bottom-line justify-content-center justify-content-md-start gap-4">
+								  <li class="nav-item"> <a class="nav-link active" data-bs-toggle="tab" href="#tab-1"> Friends' groups </a> </li>
+								  <li class="nav-item"> <a class="nav-link" data-bs-toggle="tab" href="#tab-2"> Suggested for you </a> </li>
+								  <li class="nav-item"> <a class="nav-link" data-bs-toggle="tab" href="#tab-3"> Popular near you </a> </li>
+								  <li class="nav-item"> <a class="nav-link" data-bs-toggle="tab" href="#tab-4"> More suggestions </a> </li>
+								</ul>
+								<div class="tab-content mb-0 pb-0">
+				  
+								  <!-- Friends groups tab START -->
+								  <div class="tab-pane fade show active" id="tab-1">
+									<div class="row g-4">
+
+										<div class="nk-match">
+											<div class="nk-match-team-left">
+												<a href="#">
+													<span class="nk-match-team-logo">
+														<img src="assets/images/team-3.jpg" alt="">
+													</span>
+													<span class="nk-match-team-name">
+														Counted logic gaming
+													</span>
+												</a>
+											</div>
+											<div class="nk-match-status">
+												<a href="#">
+													<span class="nk-match-status-vs"> <strong>3&nbsp;</strong> VS <strong>&nbsp;4</strong></span>
+													<span class="nk-match-score bg-dark-1">Now Playing</span>
+												</a>
+											</div>
+											<div class="nk-match-team-right">
+												<a href="#">
+													<span class="nk-match-team-name">
+														SK Telecom T1
+													</span>
+													<span class="nk-match-team-logo">
+														<img src="assets/images/team-1.jpg" alt="">
+													</span>
+												</a>
+											</div>
+										</div>
+										
+										<div class="nk-match">
+											<div class="nk-match-team-left">
+												<a href="#">
+													<span class="nk-match-team-logo">
+														<img src="assets/images/team-1.jpg" alt="">
+													</span>
+													<span class="nk-match-team-name">
+														SK Telecom T1
+													</span>
+												</a>
+											</div>
+											<div class="nk-match-status">
+												<a href="#">
+													<span class="nk-match-status-vs">VS</span>
+													<span class="nk-match-status-date">Apr 28, 2018 8:00 pm</span>
+													<span class="nk-match-score bg-danger">2 : 17</span>
+												</a>
+											</div>
+											<div class="nk-match-team-right">
+												<a href="#">
+													<span class="nk-match-team-name">
+														Cloud 9
+													</span>
+													<span class="nk-match-team-logo">
+														<img src="assets/images/team-2.jpg" alt="">
+													</span>
+												</a>
+											</div>
+										</div>
+										
+										<div class="nk-match">
+											<div class="nk-match-team-left">
+												<a href="#">
+													<span class="nk-match-team-logo">
+														<img src="assets/images/team-3.jpg" alt="">
+													</span>
+													<span class="nk-match-team-name">
+														Counted logic gaming
+													</span>
+												</a>
+											</div>
+											<div class="nk-match-status">
+												<a href="#">
+													<span class="nk-match-status-vs">VS</span>
+													<span class="nk-match-status-date">Apr 15, 2018 9:00 pm</span>
+													<span class="nk-match-score bg-success">
+														28 : 19
+													</span>
+												</a>
+											</div>
+											<div class="nk-match-team-right">
+												<a href="#">
+													<span class="nk-match-team-name">
+														SK Telecom T1
+													</span>
+													<span class="nk-match-team-logo">
+														<img src="assets/images/team-1.jpg" alt="">
+													</span>
+												</a>
+											</div>
+										</div>
+										
+										<div class="nk-match">
+											<div class="nk-match-team-left">
+												<a href="#">
+													<span class="nk-match-team-logo">
+														<img src="assets/images/team-4.jpg" alt="">
+													</span>
+													<span class="nk-match-team-name">
+														Team SoloMid
+													</span>
+												</a>
+											</div>
+											<div class="nk-match-status">
+												<a href="#">
+													<span class="nk-match-status-vs">VS</span>
+													<span class="nk-match-status-date">Apr 28, 2018 8:00 pm</span>
+													<span class="nk-match-score bg-dark-1">
+														13 : 13
+													</span>
+												</a>
+											</div>
+											<div class="nk-match-team-right">
+												<a href="#">
+													<span class="nk-match-team-name">
+														SK Telecom T1
+													</span>
+													<span class="nk-match-team-logo">
+														<img src="assets/images/team-1.jpg" alt="">
+													</span>
+												</a>
+											</div>
+										</div>
+										
+										<!-- END: Latest Matches -->
+							
+									</div>
+								</div>
+									<!-- Friends' groups tab END -->
+				  
+				  
+							  </div>
+							</div>
+							<!-- Card body END -->
+						  </div>
+						  <!-- Card END -->
+						</div>
+					</div>
+				
+			</div>
+		</div>
+
+		<!-- js -->
+		<script src="assets/scripts/core.js"></script>
+		<script src="assets/scripts/script.min.js"></script>
+		<script src="assets/scripts/process.js"></script>
+		<script src="assets/scripts/layout-settings.js"></script>
+		<script src="assets/plugins/apexcharts/apexcharts.min.js"></script>
+        <script src="assets/plugins/bootstrap/popper.min.js"></script>
+		<script src="assets/scripts/bootstrap.bundle.min.js"></script>
+		<script src="assets/scripts/dashboard3.js"></script>
+		<script src="assets/scripts/sports.js"></script>
+
+		<!-- plugins -->
+		
+
+	</body>
+</html>

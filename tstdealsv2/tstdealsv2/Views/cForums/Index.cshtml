@@ -1,0 +1,848 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en" class="dark-style layout-navbar-fixed layout-menu-fixed " dir="~/assets" data-theme="theme-default"
+      data-assets-path="./assets" data-template="vertical-menu-template-dark">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>263deals</title>
+
+
+    <meta name="description" content="the best ecommerce platform" />
+    <meta name="keywords" content="ecommerce, zimbabwe, deals, digital products, online shop">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="#" />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="~/assets/fonts/boxicons.css" />
+    <link rel="stylesheet" href="~/assets/fonts/flag-icons.css" />
+    <link rel="stylesheet" href="~/assets/styles/icon-font.css" />
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="~/assets/styles/core-dark.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="~/assets/styles/theme-default-dark.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="~/assets/styles/demo.css" />
+
+    <!-- Vendors CSS -->
+    <link rel="stylesheet" href="~/assets/plugins/perfect-scrollbar/perfect-scrollbar.css" />
+    <link rel="stylesheet" href="~/assets/plugins/typeahead-js/typeahead.css" />
+    <link rel="stylesheet" href="~/assets/plugins/apex-charts/apex-charts.css" />
+
+    <!-- Social CSS -->
+    <link rel="stylesheet" href="~/assets/plugins/glightbox-master/dist/css/glightbox.min.css" />
+    <link rel="stylesheet" href="~/assets/plugins/zuck.js/dist/zuck.min.css" />
+
+    <!-- Page CSS -->
+    <!-- MAIN -->
+    <link rel="stylesheet" type="text/css" href="~/assets/styles/app.min.css" />
+
+    <!-- Helpers -->
+    <script src="~/assets/scripts/helpers.js"></script>
+
+    <script src="~/assets/scripts/config.js"></script>
+</head>
+
+<body>
+
+
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-content-navbar  ">
+        <div class="layout-container">
+            <!-- Menu -->
+            <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+                <div class="app-brand demo ">
+                    <a href="index.html" class="app-brand-link">
+                        <img src="~/assets/images/sweetbao.png" alt="" class="img-logo" />
+                        <h2 class="text-logo">263<small>deals</small></h2>
+                    </a>
+                </div>
+
+                <div class="menu-divider mt-0  "></div>
+                <div class="menu-inner-shadow"></div>
+
+                <ul class="menu-inner py-1">
+                    <li class="menu-item">
+                        <a href='@Url.Action("Index","cHome","")'  class="menu-link">
+                            <i class="menu-icon tf-icons bi bi-house"></i>
+                            <div data-i18n="Overview">Overview</div>
+                        </a>
+                    </li>
+                    <!-- Products and Services -->
+                    <li class="menu-header small text-uppercase">
+                        <span class="menu-header-text">Products & Services</span>
+                    </li>
+                    <li class="menu-item">
+                        <a href="Artworks.html" class="menu-link">
+                            <i class="menu-icon tf-icons bi bi-card-image"></i>
+                            <div data-i18n="Artworks">Artworks</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="Ebooks.html" class="menu-link">
+                            <i class="menu-icon tf-icons bi bi-book"></i>
+                            <div data-i18n="Ebooks">Ebooks</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="Courses.html" class="menu-link">
+                            <i class="menu-icon tf-icons bi bi-award"></i>
+                            <div data-i18n="Courses">Courses</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="Movies.html" class="menu-link">
+                            <i class="menu-icon tf-icons bi bi-camera-video"></i>
+                            <div data-i18n="Movies">Movies</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="Songs.html" class="menu-link">
+                            <i class="menu-icon tf-icons bi bi-soundwave"></i>
+                            <div data-i18n="Songs">Songs</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="Presets.html" class="menu-link">
+                            <i class="menu-icon tf-icons bi bi-infinity"></i>
+                            <div data-i18n="Presets">Presets</div>
+                        </a>
+                    </li>
+                    <!-- Projects and Activities -->
+                    <li class="menu-header small text-uppercase">
+                        <span class="menu-header-text">Projects & Activities</span>
+                    </li>
+                    <li class="menu-item">
+                        <a href="Classifieds.html" class="menu-link">
+                            <i class="menu-icon tf-icons bi bi-hammer"></i>
+                            <div data-i18n="Classifieds">Classifieds</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="Applications.html" class="menu-link">
+                            <i class="menu-icon tf-icons bi bi-trophy"></i>
+                            <div data-i18n="Applications">Applications</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="Newsletters.html" class="menu-link">
+                            <i class="menu-icon tf-icons bi bi-distribute-vertical"></i>
+                            <div data-i18n="Newsletters">Newsletters</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="Competitions.html" class="menu-link">
+                            <i class="menu-icon tf-icons bi bi-diagram-3"></i>
+                            <div data-i18n="Competitions">Competitions</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="Campaigns.html" class="menu-link">
+                            <i class="menu-icon tf-icons bi bi-briefcase"></i>
+                            <div data-i18n="Campaigns">Campaigns</div>
+                        </a>
+                    </li>
+                    <!-- Communities -->
+                    <li class="menu-header small text-uppercase">
+                        <span class="menu-header-text">Communities</span>
+                    </li>
+                    <li class="menu-item">
+                        <a href="Stories.html" class="menu-link">
+                            <i class="menu-icon tf-icons bi bi-yin-yang"></i>
+                            <div data-i18n="Stories">Stories</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="Forums.html" class="menu-link">
+                            <i class="menu-icon tf-icons bi bi-palette2"></i>
+                            <div data-i18n="Forums">Forums</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="Brands.html" class="menu-link">
+                            <i class="menu-icon tf-icons bi bi-bricks"></i>
+                            <div data-i18n="Brands">Brands</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="Clubs.html" class="menu-link">
+                            <i class="menu-icon tf-icons bi bi-fan"></i>
+                            <div data-i18n="Clubs">Clubs</div>
+                        </a>
+                    </li>
+                    <!-- Reserves -->
+                    <li class="menu-header small text-uppercase">
+                        <span class="menu-header-text">Reserves</span>
+                    </li>
+                    <li class="menu-item">
+                        <a href="Archive.html" class="menu-link">
+                            <i class="menu-icon tf-icons bi bi-archive-fill"></i>
+                            <div data-i18n="Archive">Archive</div>
+                        </a>
+                    </li>
+                    <li class="menu-item mb-4">
+                        <a href="Downloads.html" class="menu-link">
+                            <i class="menu-icon tf-icons bi bi-download"></i>
+                            <div data-i18n="Downloads">Downloads</div>
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+            <!-- / Menu -->
+            <!-- Layout container -->
+            <div class="layout-page">
+                <nav class="layout-navbar navbar navbar-expand-xl align-items-center bg-navbar-theme"
+                     id="layout-navbar">
+                    <div class="container-fluid">
+
+                        <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0   d-xl-none ">
+                            <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+                                <i class="bx bx-menu bx-sm"></i>
+                            </a>
+                        </div>
+
+                        <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+                            <!-- Search -->
+                            <div class="navbar-nav align-items-center">
+                                <div class="nav-item navbar-search-wrapper mb-0">
+                                    <a class="nav-item nav-link px-0" href="javascript:void(0);">
+                                        <i class="bx bx-search-alt bx-sm"></i>
+                                        <label type="text" class="d-md-inline-block text-muted">Search?</label>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- /Search -->
+
+                            <ul class="navbar-nav gap-3 flex-row align-items-center ms-auto">
+                                <!-- Quick links  -->
+                                <li class="nav-item me-2 me-xl-0">
+                                    <a class="nav-link" href="javascript:void(0);"
+                                       data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+                                        <i class='bx bx-grid-alt bx-sm'></i>
+                                    </a>
+                                </li>
+                                <!-- Quick links -->
+                                <!-- Cart  -->
+                                <li class="nav-item me-2 me-xl-0">
+                                    <a class="nav-link" href="javascript:void(0);"
+                                       data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">
+                                        <i class='bx bx-cart bx-sm'></i>
+                                    </a>
+                                </li>
+                                <!-- Cart -->
+                                <!-- Notification -->
+                                <li class="nav-item me-xl-2">
+                                    <a class="nav-link" href="javascript:void(0);"
+                                       data-bs-toggle="offcanvas" data-bs-target="#offcanvasNotifications" aria-controls="offcanvasNotifications">
+                                        <i class="bx bx-bell bx-sm"></i>
+                                        <span class="badge bg-secondary rounded-pill badge-notifications">5</span>
+                                    </a>
+                                </li>
+                                <!--/ Notification -->
+                                <!-- Messages -->
+                                <li class="nav-item me-xl-2">
+                                    <a class="nav-link" href="javascript:void(0);"
+                                       data-bs-toggle="offcanvas" data-bs-target="#offcanvasMessages" aria-controls="offcanvasMessages">
+                                        <i class="bx bx-chat bx-sm"></i>
+                                        <span class="badge bg-dark rounded-pill badge-notifications">5</span>
+                                    </a>
+                                </li>
+                                <!--/ Messages -->
+                                <!-- User -->
+                                <li class="nav-item navbar-dropdown dropdown-user dropdown">
+                                    <a class="nav-link" href="javascript:void(0);"
+                                       data-bs-toggle="offcanvas" data-bs-target="#offcanvasSettings" aria-controls="offcanvasSettings">
+                                        <div class="avatar avatar-online">
+                                            <img src="~/assets/images/avatars/1.png" alt class="rounded-circle">
+                                        </div>
+                                    </a>
+                                </li>
+                                <!--/ User -->
+
+
+                            </ul>
+                        </div>
+
+
+                        <!-- Search Small Screens -->
+                        <div class="navbar-search-wrapper search-input-wrapper  d-none">
+                            <input type="text" class="form-control search-input container-fluid border-0"
+                                   placeholder="Search..." aria-label="Search...">
+                            <i class="bx bx-x bx-sm search-toggler cursor-pointer"></i>
+                        </div>
+
+
+                    </div>
+                </nav>
+
+                <!-- offcanvas -->
+
+                <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasMenu">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title">Menu</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body mx-0 flex-grow-0">
+                        <div class="row mb-0">
+                            <div class="col pe-2">
+                                <a href="#" data-back-button class="card card-style rounded-m me-0 p-3 mb-3">
+                                    <i class="fa fa-gift text-danger fs-4"></i>
+                                    <h6 class="pt-3">
+                                        Your Orders</h4>
+                                        <p class="small mt-n2 mb-0 color-highlight">Track, return, or buy things again</p>
+                                </a>
+                            </div>
+                            <div class="col ps-2">
+                                <a href="#" data-back-button class="card card-style rounded-m ms-0  p-3 mb-3">
+                                    <i class="fa fa-shopping-bag text-success fs-4"></i>
+                                    <h6 class="pt-3">
+                                        Wishlist</h4>
+                                        <p class="small mt-n2 mb-0 color-highlight">Act on or delete preferences</p>
+                                </a>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col pe-2">
+                                <a href="#" data-back-button class="card card-style rounded-m me-0 p-3 mb-3">
+                                    <i class="fa fa-question-circle text-white fs-4"></i>
+                                    <h6 class="pt-3">
+                                        Searches</h4>
+                                        <p class="small mt-n2 mb-0 color-highlight">Discover your taste</p>
+                                </a>
+                            </div>
+                            <div class="col ps-2">
+                                <a href="#" data-back-button class="card card-style rounded-m ms-0  p-3 mb-3">
+                                    <i class="fa fa-code text-warning fs-4"></i>
+                                    <h6 class="pt-3">
+                                        Transactions Log</h4>
+                                        <p class="small mt-n2 mb-0 color-highlight">View deals occured</p>
+                                </a>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col pe-2">
+                                <a href="#" data-back-button class="card card-style rounded-m me-0 p-3 mb-3">
+                                    <i class="fa fa-image text-primary fs-4"></i>
+                                    <h6 class="pt-3">
+                                        Photos</h4>
+                                        <p class="small mt-n2 mb-0 color-highlight">Browse photos</p>
+                                </a>
+                            </div>
+                            <div class="col ps-2">
+                                <a href="#" data-back-button class="card card-style rounded-m ms-0  p-3 mb-3">
+                                    <i class="fa fa-camera text-info fs-4"></i>
+                                    <h6 class="pt-3">
+                                        Videos</h4>
+                                        <p class="small mt-n2 mb-0 color-highlight">Browse videos</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasCart">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title">Cart</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body mx-0 flex-grow-0">
+                        <div class="row d-flex justify-content-center align-items-center h-100">
+                            <div class="col-12">
+                                <div class="card rounded-3 mb-4">
+                                    <div class="card-body p-4">
+                                        <div class="row d-flex justify-content-between align-items-center">
+                                            <div class="col-md-4 col-lg-4 col-xl-4">
+                                                <img src="~/assets/images/4.jpg"
+                                                     class="img-fluid rounded-3" alt="Cotton T-shirt">
+                                            </div>
+                                            <div class="col-md-8 col-lg-8 col-xl-8 text-center">
+                                                <p class="lead fs-6 my-2">Basic T-shirt</p>
+                                                <p><span class="text-success">$45.65</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card rounded-3 mb-4">
+                                    <div class="card-body p-4">
+                                        <div class="row d-flex justify-content-between align-items-center">
+                                            <div class="col-md-4 col-lg-4 col-xl-4">
+                                                <img src="~/assets/images/4.jpg"
+                                                     class="img-fluid rounded-3" alt="Cotton T-shirt">
+                                            </div>
+                                            <div class="col-md-8 col-lg-8 col-xl-8 text-center">
+                                                <p class="lead fs-6 my-2">Basic T-shirt</p>
+                                                <p><span class="text-success">$45.65</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card rounded-3 mb-4">
+                                    <div class="card-body p-4">
+                                        <div class="row d-flex justify-content-between align-items-center">
+                                            <div class="col-md-4 col-lg-4 col-xl-4">
+                                                <img src="~/assets/images/4.jpg"
+                                                     class="img-fluid rounded-3" alt="Cotton T-shirt">
+                                            </div>
+                                            <div class="col-md-8 col-lg-8 col-xl-8 text-center">
+                                                <p class="lead fs-6 my-2">Basic T-shirt</p>
+                                                <p><span class="text-success">$45.65</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card rounded-3 mb-4">
+                                    <div class="card-body p-4">
+                                        <div class="row d-flex justify-content-between align-items-center">
+                                            <div class="col-md-4 col-lg-4 col-xl-4">
+                                                <img src="~/assets/images/4.jpg"
+                                                     class="img-fluid rounded-3" alt="Cotton T-shirt">
+                                            </div>
+                                            <div class="col-md-8 col-lg-8 col-xl-8 text-center">
+                                                <p class="lead fs-6 my-2">Basic T-shirt</p>
+                                                <p><span class="text-success">$45.65</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="card">
+                                    <div class="card-body">
+                                        <button type="button" class="btn btn-success btn-block btn-lg">Proceed to Pay</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasNotifications">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title mb-0">Notifications</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body mx-0 flex-grow-0">
+                        <div class="mt-0">
+                            <ul class="list-group list-group-flush list-unstyled">
+                                <!-- Notif item -->
+                                <li>
+                                    <div class="list-group-item list-group-item-action rounded badge-unread d-flex border-0 mb-1 p-3">
+                                        <div class="avatar text-center d-none d-sm-inline-block">
+                                            <img class="avatar-img rounded-circle" src="~/assets/images/avatar/01.jpg" alt="">
+                                        </div>
+                                        <div class="ms-sm-3">
+                                            <div class=" d-flex">
+                                                <p class="small mb-2"><b>Judy Nguyen</b> sent you a friend request.</p>
+                                                <p class="small ms-3 text-nowrap">Just now</p>
+                                            </div>
+                                            <div class="d-flex">
+                                                <button class="btn btn-sm py-1 btn-primary me-2">Accept </button>
+                                                <button class="btn btn-sm py-1 btn-danger-soft">Delete </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- Notif item -->
+                                <li>
+                                    <div class="list-group-item list-group-item-action rounded badge-unread d-flex border-0 mb-1 p-3 position-relative">
+                                        <div class="avatar text-center d-none d-sm-inline-block">
+                                            <img class="avatar-img rounded-circle" src="~/assets/images/avatar/02.jpg" alt="">
+                                        </div>
+                                        <div class="ms-sm-3 d-flex">
+                                            <div>
+                                                <p class="small mb-2">Wish <b>Amanda Reed</b> a happy birthday (Nov 12)</p>
+                                                <button class="btn btn-sm btn-outline-light py-1 me-2">Say happy birthday 🎂</button>
+                                            </div>
+                                            <p class="small ms-3">2min</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- Notif item -->
+                                <li>
+                                    <a href="#" class="list-group-item list-group-item-action rounded d-flex border-0 mb-1 p-3">
+                                        <div class="avatar text-center d-none d-sm-inline-block">
+                                            <div class="avatar-img rounded-circle bg-success"><span class="text-white position-absolute top-50 start-50 translate-middle fw-bold">WB</span></div>
+                                        </div>
+                                        <div class="ms-sm-3">
+                                            <div class="d-flex">
+                                                <p class="small mb-2">Webestica has 15 like and 1 new activity</p>
+                                                <p class="small ms-3">1hr</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <!-- Notif item -->
+                                <li>
+                                    <a href="#" class="list-group-item list-group-item-action rounded d-flex border-0 p-3 mb-1">
+                                        <div class="avatar text-center d-none d-sm-inline-block">
+                                            <img class="avatar-img rounded-circle" src="~/assets/images/logo/12.svg" alt="">
+                                        </div>
+                                        <div class="ms-sm-3 d-flex">
+                                            <p class="small mb-2"><b>Bootstrap in the news:</b> The search giant’s parent company, Alphabet, just joined an exclusive club of tech stocks.</p>
+                                            <p class="small ms-3">4hr</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-footer text-center">
+                            <a href="#" class="btn btn-sm btn-primary-soft">See all incoming activity</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasMessages">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title">Messages</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body mx-0 flex-grow-0">
+                        <div class="mx-2 mr-2 mb-0 mt-2">
+                            <a href="page-chat.html" class="d-flex mb-3">
+                                <div>
+                                    <img src="~/assets/images/04.png" class="avatar-xl rounded-circle me-3" />
+                                </div>
+                                <div>
+                                    <h5 class="opacity-5">Jane Louder</h5>
+                                    <p class="line-height-s mt-1 opacity-5">This is a sample chat box, it looks pretty sweet and has text in it.</p>
+                                </div>
+                                <div class="align-self-center ps-3">
+                                    <i class="fa fa-angle-right opacity-5"></i>
+                                </div>
+                            </a>
+                            <hr />
+                        </div>
+                        <div class="mx-2 mr-2 mb-0 mt-2">
+                            <a href="page-chat.html" class="d-flex mb-3">
+                                <div>
+                                    <img src="~/assets/images/author-2.jpg" class="avatar-xl rounded-circle me-3" />
+                                </div>
+                                <div>
+                                    <h5 class="opacity-5">Jane Louder</h5>
+                                    <p class="line-height-s mt-1 opacity-5">This is a sample chat box, it looks pretty sweet and has text in it.</p>
+                                </div>
+                                <div class="align-self-center ps-3">
+                                    <i class="fa fa-angle-right opacity-5"></i>
+                                </div>
+                            </a>
+                            <hr />
+                        </div>
+                    </div>
+                </div>
+
+
+                @Html.Partial("~/Views/Shared/_pCanvasSettings.cshtml")
+                <!-- / Navbar -->
+                <!-- Content wrapper -->
+                <div class="content-wrapper">
+                    <div class="container-xxl flex-grow-1 container-p-y">
+
+                        <div class="row g-4">
+                            <div class="col-lg-8 col-md-8 vstack gap-4">
+
+                                <!-- Card feed item START -->
+                                <div class="card">
+                                    <!-- Card header START -->
+                                    <div class="card-header border-0 pb-0">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="d-flex align-items-center">
+                                                <!-- Avatar -->
+                                                <div class="avatar me-2">
+                                                    <a href="#"> <img class="avatar-img rounded-circle" src="~/assets/images/logo/13.svg" alt=""> </a>
+                                                </div>
+                                                <!-- Title -->
+                                                <div>
+                                                    <h6 class="card-title mb-0 mt-4"> <a href="#!"> Apple Education </a></h6>
+                                                    <p class="mb-0 small">9 November at 23:29</p>
+                                                </div>
+                                            </div>
+                                            <!-- Card share action menu -->
+                                            <a href="#" class="text-secondary btn btn-secondary-soft-hover py-1 px-2" id="cardShareAction5" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="bi bi-three-dots"></i>
+                                            </a>
+                                            <!-- Card share action dropdown menu -->
+                                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="cardShareAction5">
+                                                <li><a class="dropdown-item" href="#"> <i class="bi bi-bookmark fa-fw pe-2"></i>Save post</a></li>
+                                                <li><a class="dropdown-item" href="#"> <i class="bi bi-person-x fa-fw pe-2"></i>Unfollow lori ferguson </a></li>
+                                                <li><a class="dropdown-item" href="#"> <i class="bi bi-x-circle fa-fw pe-2"></i>Hide post</a></li>
+                                                <li><a class="dropdown-item" href="#"> <i class="bi bi-slash-circle fa-fw pe-2"></i>Block</a></li>
+                                                <li><hr class="dropdown-divider"></li>
+                                                <li><a class="dropdown-item" href="#"> <i class="bi bi-flag fa-fw pe-2"></i>Report post</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- Card share action END -->
+                                    </div>
+                                    <!-- Card header START -->
+                                    <!-- Card body START -->
+                                    <div class="card-body pb-0 mt-2">
+                                        <p>Find out how you can save time in the classroom this year. Earn recognition while you learn new skills on iPad and Mac. Start  recognition your first Apple Teacher badge today!</p>
+                                        <!-- Feed react START -->
+                                        <ul class="nav nav-stack pb-2 small">
+                                            <li class="nav-item">
+                                                <a class="nav-link active text-secondary" href="#!"> <i class="bi bi-heart-fill me-1 icon-xs bg-danger rounded-circle"></i> Louis, Billy and 126 others </a>
+                                            </li>
+                                            <li class="nav-item ms-sm-auto">
+                                                <a class="nav-link" href="#!"> <i class="bi bi-chat-fill pe-1"></i>Comments (12)</a>
+                                            </li>
+                                        </ul>
+                                        <!-- Feed react END -->
+                                    </div>
+                                    <!-- Card body END -->
+                                    <!-- Card Footer START -->
+                                    <div class="card-footer py-3">
+                                        <!-- Feed react START -->
+                                        <ul class="nav nav-fill nav-stack small">
+                                            <li class="nav-item">
+                                                <a class="nav-link mb-0 active" href="#!"> <i class="bi bi-heart pe-1"></i>Liked (56)</a>
+                                            </li>
+                                            <!-- Card share action dropdown START -->
+                                            <li class="nav-item dropdown">
+                                                <a href="#" class="nav-link mb-0" id="cardShareAction6" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="bi bi-reply-fill flip-horizontal ps-1"></i>Share (3)
+                                                </a>
+                                                <!-- Card share action dropdown menu -->
+                                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="cardShareAction6">
+                                                    <li><a class="dropdown-item" href="#"> <i class="bi bi-envelope fa-fw pe-2"></i>Send via Direct Message</a></li>
+                                                    <li><a class="dropdown-item" href="#"> <i class="bi bi-bookmark-check fa-fw pe-2"></i>Bookmark </a></li>
+                                                    <li><a class="dropdown-item" href="#"> <i class="bi bi-link fa-fw pe-2"></i>Copy link to post</a></li>
+                                                    <li><a class="dropdown-item" href="#"> <i class="bi bi-share fa-fw pe-2"></i>Share post via …</a></li>
+                                                    <li><hr class="dropdown-divider"></li>
+                                                    <li><a class="dropdown-item" href="#"> <i class="bi bi-pencil-square fa-fw pe-2"></i>Share to News Feed</a></li>
+                                                </ul>
+                                            </li>
+                                            <!-- Card share action dropdown END -->
+                                            <li class="nav-item">
+                                                <a class="nav-link mb-0" href="#!"> <i class="bi bi-send-fill pe-1"></i>Send</a>
+                                            </li>
+                                        </ul>
+                                        <!-- Feed react END -->
+                                    </div>
+                                    <!-- Card Footer END -->
+                                </div>
+                                <!-- Card feed item END -->
+                                <!-- Load more button START -->
+                                <a href="#!" role="button" class="btn btn-loader btn-primary-soft" data-bs-toggle="button" aria-pressed="true">
+                                    <span class="load-text"> Load more </span>
+                                    <div class="load-icon">
+                                        <div class="spinner-grow spinner-grow-sm" role="status">
+                                            <span class="visually-hidden">Loading...</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <!-- Load more button END -->
+
+                            </div>
+
+                            <div class="col-lg-4 col-md-4 gap-4">
+                                <div class="row g-4">
+                                    <!-- Card follow START -->
+                                    <div class="col-sm-6 col-lg-12">
+                                        <div class="card">
+                                            <!-- Card header START -->
+                                            <div class="card-header pb-0 border-0">
+                                                <h5 class="card-title mb-0">Who to follow</h5>
+                                            </div>
+                                            <!-- Card header END -->
+                                            <!-- Card body START -->
+                                            <div class="card-body">
+                                                <!-- Connection item START -->
+                                                <div class="hstack gap-2 mb-3">
+                                                    <!-- Avatar -->
+                                                    <div class="avatar">
+                                                        <a href="#!"><img class="avatar-img rounded-circle" src="~/assets/images/avatar/04.jpg" alt=""></a>
+                                                    </div>
+                                                    <!-- Title -->
+                                                    <div class="overflow-hidden">
+                                                        <a class="h6 mb-0" href="#!">Judy Nguyen </a>
+                                                        <p class="mb-0 small text-truncate">News anchor</p>
+                                                    </div>
+                                                    <!-- Button -->
+                                                    <a class="btn btn-primary-soft rounded-circle icon-md ms-auto" href="#"><i class="fa fa-plus"> </i></a>
+                                                </div>
+                                                <!-- Connection item END -->
+                                                <!-- Connection item START -->
+                                                <div class="hstack gap-2 mb-3">
+                                                    <!-- Avatar -->
+                                                    <div class="avatar avatar-story">
+                                                        <a href="#!"> <img class="avatar-img rounded-circle" src="~/assets/images/avatar/05.jpg" alt=""> </a>
+                                                    </div>
+                                                    <!-- Title -->
+                                                    <div class="overflow-hidden">
+                                                        <a class="h6 mb-0" href="#!">Amanda Reed </a>
+                                                        <p class="mb-0 small text-truncate">Web Developer</p>
+                                                    </div>
+                                                    <!-- Button -->
+                                                    <a class="btn btn-primary-soft rounded-circle icon-md ms-auto" href="#"><i class="fa fa-plus"> </i></a>
+                                                </div>
+                                                <!-- Connection item END -->
+                                                <!-- Connection item START -->
+                                                <div class="hstack gap-2 mb-3">
+                                                    <!-- Avatar -->
+                                                    <div class="avatar">
+                                                        <a href="#"> <img class="avatar-img rounded-circle" src="~/assets/images/avatar/11.jpg" alt=""> </a>
+                                                    </div>
+                                                    <!-- Title -->
+                                                    <div class="overflow-hidden">
+                                                        <a class="h6 mb-0" href="#!">Billy Vasquez </a>
+                                                        <p class="mb-0 small text-truncate">News anchor</p>
+                                                    </div>
+                                                    <!-- Button -->
+                                                    <a class="btn btn-primary rounded-circle icon-md ms-auto" href="#"><i class="bi bi-person-check-fill"> </i></a>
+                                                </div>
+                                                <!-- Connection item END -->
+                                                <!-- Connection item START -->
+                                                <div class="hstack gap-2 mb-3">
+                                                    <!-- Avatar -->
+                                                    <div class="avatar">
+                                                        <a href="#"> <img class="avatar-img rounded-circle" src="~/assets/images/avatar/01.jpg" alt=""> </a>
+                                                    </div>
+                                                    <!-- Title -->
+                                                    <div class="overflow-hidden">
+                                                        <a class="h6 mb-0" href="#!">Lori Ferguson </a>
+                                                        <p class="mb-0 small text-truncate">Web Developer at Webestica</p>
+                                                    </div>
+                                                    <!-- Button -->
+                                                    <a class="btn btn-primary-soft rounded-circle icon-md ms-auto" href="#"><i class="fa fa-plus"> </i></a>
+                                                </div>
+                                                <!-- Connection item END -->
+                                                <!-- Connection item START -->
+                                                <div class="hstack gap-2 mb-3">
+                                                    <!-- Avatar -->
+                                                    <div class="avatar">
+                                                        <a href="#"> <img class="avatar-img rounded-circle" src="~/assets/images/avatar/placeholder.jpg" alt=""> </a>
+                                                    </div>
+                                                    <!-- Title -->
+                                                    <div class="overflow-hidden">
+                                                        <a class="h6 mb-0" href="#!">Carolyn Ortiz </a>
+                                                        <p class="mb-0 small text-truncate">News anchor</p>
+                                                    </div>
+                                                    <!-- Button -->
+                                                    <a class="btn btn-primary-soft rounded-circle icon-md ms-auto" href="#"><i class="fa fa-plus"> </i></a>
+                                                </div>
+                                                <!-- Connection item END -->
+                                                <!-- View more button -->
+                                                <div class="d-grid mt-3">
+                                                    <a class="btn btn-sm btn-primary-soft" href="#!">View more</a>
+                                                </div>
+                                            </div>
+                                            <!-- Card body END -->
+                                        </div>
+                                    </div>
+                                    <!-- Card follow START -->
+                                    <!-- Card News START -->
+                                    <div class="col-sm-6 col-lg-12">
+                                        <div class="card">
+                                            <!-- Card header START -->
+                                            <div class="card-header pb-0 border-0">
+                                                <h5 class="card-title mb-0">Today’s news</h5>
+                                            </div>
+                                            <!-- Card header END -->
+                                            <!-- Card body START -->
+                                            <div class="card-body">
+                                                <!-- News item -->
+                                                <div class="mb-3">
+                                                    <h6 class="mb-0"><a href="blank-post-details.html">Ten questions you should answer truthfully</a></h6>
+                                                    <small>2hr</small>
+                                                </div>
+                                                <!-- News item -->
+                                                <div class="mb-3">
+                                                    <h6 class="mb-0"><a href="blank-post-details.html">Five unbelievable facts about money</a></h6>
+                                                    <small>3hr</small>
+                                                </div>
+                                                <!-- News item -->
+                                                <div class="mb-3">
+                                                    <h6 class="mb-0"><a href="blank-post-details.html">Best Pinterest Boards for learning about business</a></h6>
+                                                    <small>4hr</small>
+                                                </div>
+                                                <!-- News item -->
+                                                <div class="mb-3">
+                                                    <h6 class="mb-0"><a href="blank-post-details.html">Skills that you can learn from business</a></h6>
+                                                    <small>6hr</small>
+                                                </div>
+                                                <!-- Load more comments -->
+                                                <a href="#!" role="button" class="btn btn-link btn-link-loader btn-sm text-secondary d-flex align-items-center" data-bs-toggle="button" aria-pressed="true">
+                                                    <div class="spinner-dots me-2">
+                                                        <span class="spinner-dot"></span>
+                                                        <span class="spinner-dot"></span>
+                                                        <span class="spinner-dot"></span>
+                                                    </div>
+                                                    View all latest news
+                                                </a>
+                                            </div>
+                                            <!-- Card body END -->
+                                        </div>
+                                    </div>
+                                    <!-- Card News END -->
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- / Content -->
+                    <!-- Footer -->
+                    @Html.Partial("~/Views/Shared/_pFooter.cshtml")
+                    <!-- / Footer -->
+                    <div class="content-backdrop fade"></div>
+                </div>
+                <!-- Content wrapper -->
+            </div>
+            <!-- / Layout page -->
+        </div>
+
+        <!-- Overlay -->
+        <div class="layout-overlay layout-menu-toggle"></div>
+
+        <!-- Drag Target Area To SlideIn Menu On Small Screens -->
+        <div class="drag-target"></div>
+
+    </div>
+    <!-- / Layout wrapper -->
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/core.js -->
+    <script src="~/assets/plugins/jquery/jquery.js"></script>
+    <script src="~/assets/plugins/popper/popper.js"></script>
+    <script src="~/assets/scripts/bootstrap.js"></script>
+    <script src="~/assets/plugins/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+    <script src="~/assets/plugins/hammer/hammer.js"></script>
+
+
+    <script src="~/assets/plugins/i18n/i18n.js"></script>
+    <script src="~/assets/plugins/typeahead-js/typeahead.js"></script>
+
+    <script src="~/assets/scripts/menu.js"></script>
+    <!-- endbuild -->
+    <!-- Vendors JS -->
+    <script src="~/assets/plugins/apex-charts/apexcharts.js"></script>
+    <script src="~/assets/plugins/tiny-slider/dist/tiny-slider.js"></script>
+    <script src="~/assets/plugins/OverlayScrollbars-master/js/OverlayScrollbars.min.js"></script>
+    <script src="~/assets/plugins/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="~/assets/plugins/glightbox-master/dist/js/glightbox.min.js"></script>
+    <script src="~/assets/plugins/flatpickr/dist/flatpickr.min.js"></script>
+    <script src="~/assets/plugins/plyr/plyr.js"></script>
+    <script src="~/assets/plugins/dropzone/dist/min/dropzone.min.js"></script>
+    <script src="~/assets/plugins/zuck.js/dist/zuck.min.js"></script>
+
+    <script src="~/assets/scripts/zuck-stories.js"></script>
+    <script src="~/assets/scripts/functions.js"></script>
+
+    <!-- Main JS -->
+    <script src="~/assets/scripts/main.js"></script>
+
+    <!-- Page JS -->
+    <script src="~/assets/scripts/dashboards-analytics.js"></script>
+</body>
+
+</html>
+

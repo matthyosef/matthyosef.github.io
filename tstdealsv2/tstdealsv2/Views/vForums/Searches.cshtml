@@ -1,0 +1,93 @@
+﻿@model tstdealsv2.Models.tstforums_searches
+
+@{
+    ViewBag.Title = "Searches";
+    Layout = "~/Views/Shared/_LayoutVPanel.cshtml";
+}
+
+<h4 class="py-3 breadcrumb-wrapper mb-4">
+    <span class="text-muted fw-light">Forums /</span> Searches
+</h4>
+<div class="card">
+    <div class="card-datatable table-responsive pt-0">
+        <table class="datatables-basic table table-bordered">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Id</th>
+                    <th>Keywords</th>
+                    <th>DateSearched</th>
+                    <th>Count</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+<!-- Modal to add new record -->
+<div class="offcanvas offcanvas-end" id="offcanvasRecords">
+    <div class="offcanvas-header border-bottom">
+        <h5 class="offcanvas-title" id="offcanvasRecordsHeader">New Record</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body flex-grow-1">
+        <form class="add-new-record pt-0 row g-2" id="formAddEdit" onsubmit="return false">
+            @Html.EditorFor(m => m.Id, new { htmlAttributes = new { @class = "form-control d-none", @id = "txtId", @Value = "0" } })
+            <div class="col-sm-12">
+                <label class="form-label">Keywords</label>
+                <div class="input-group input-group-merge">
+                    <span class="input-group-text"><i class="bx bx-user"></i></span>
+                    @Html.EditorFor(m => m.Keywords, new { htmlAttributes = new { @class = "form-control", @id = "txtKeywords" } })
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <label class="form-label">Date Searched</label>
+                <div class="input-group input-group-merge">
+                    <span class="input-group-text"><i class='bx bxs-briefcase'></i></span>
+                    @Html.EditorFor(m => m.DateSearched, new { htmlAttributes = new { @class = "form-control", @id = "txtDateSearched" } })
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <label class="form-label">Number of times searched</label>
+                <div class="input-group input-group-merge">
+                    <span class="input-group-text"><i class="bx bx-envelope"></i></span>
+                    @Html.EditorFor(m => m.Count, new { htmlAttributes = new { @class = "form-control", @id = "txtCount" } })
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <button type="submit" class="btn btn-primary data-submit me-sm-3 me-1" onclick="SubmitMVM();">Save</button>
+                <button type="reset" class="btn btn-outline-secondary" data-bs-dismiss="offcanvas">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Modal to delete record -->
+<div class="modal fade" id="modalDeleteRecord" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-simple modal-enable-otp modal-dialog-centered">
+        <div class="modal-content p-3 p-md-5">
+            <div class="modal-body">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="text-center mb-4">
+                    <h3 class="mb-4">Delete Confirmation</h3>
+                </div>
+                <h6>Are you sure you want to delete this record?</h6>
+                <form id="formDeleteRecord" class="row g-3 mt-3" onsubmit="return false">
+                    @Html.EditorFor(d => d.Id, new { htmlAttributes = new { @class = "form-control d-none", @readonly = true, @Value = "0", @id = "ctlId" } })
+                    <div class="col-12 text-center">
+                        <button type="submit" class="btn btn-danger me-sm-3 me-1" onclick="DeleteMVM();">Delete</button>
+                        <button type="reset" class="btn btn-label-secondary" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/assets/scripts/api/vForumsSearches.js"></script>
+
+
+}
+

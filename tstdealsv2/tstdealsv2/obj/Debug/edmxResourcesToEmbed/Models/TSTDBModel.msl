@@ -1,0 +1,3074 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="tstdbvModelStoreContainer" CdmEntityContainer="tstdbvEntities">
+    <EntitySetMapping Name="tstaccounts">
+      <EntityTypeMapping TypeName="tstdbvModel.tstaccount">
+        <MappingFragment StoreEntitySet="tstaccount">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AddressId" ColumnName="AddressId" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="EncryptionMethod" ColumnName="EncryptionMethod" />
+          <ScalarProperty Name="KeyScheme" ColumnName="KeyScheme" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="BPN" ColumnName="BPN" />
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+          <ScalarProperty Name="TimeRegion" ColumnName="TimeRegion" />
+          <ScalarProperty Name="IsCreatedOn" ColumnName="IsCreatedOn" />
+          <ScalarProperty Name="IsUpdatedOn" ColumnName="IsUpdatedOn" />
+          <ScalarProperty Name="IsSuspended" ColumnName="IsSuspended" />
+          <ScalarProperty Name="IsSuspendedOn" ColumnName="IsSuspendedOn" />
+          <ScalarProperty Name="SuspensionEndsOn" ColumnName="SuspensionEndsOn" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+          <ScalarProperty Name="IsPrivate" ColumnName="IsPrivate" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstaccount_activitylog">
+      <EntityTypeMapping TypeName="tstdbvModel.tstaccount_activitylog">
+        <MappingFragment StoreEntitySet="tstaccount_activitylog">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="LinkVisited" ColumnName="LinkVisited" />
+          <ScalarProperty Name="DeviceDetails" ColumnName="DeviceDetails" />
+          <ScalarProperty Name="BrowserDetails" ColumnName="BrowserDetails" />
+          <ScalarProperty Name="Ipv4Address" ColumnName="Ipv4Address" />
+          <ScalarProperty Name="Ipv6Address" ColumnName="Ipv6Address" />
+          <ScalarProperty Name="VisitedOn" ColumnName="VisitedOn" />
+          <ScalarProperty Name="TimeSpent" ColumnName="TimeSpent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstaccount_address">
+      <EntityTypeMapping TypeName="tstdbvModel.tstaccount_address">
+        <MappingFragment StoreEntitySet="tstaccount_address">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="StateProvinceId" ColumnName="StateProvinceId" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="StateOrProvince" ColumnName="StateOrProvince" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="ZipPostalCode" ColumnName="ZipPostalCode" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="FaxNumber" ColumnName="FaxNumber" />
+          <ScalarProperty Name="CustomAttributes" ColumnName="CustomAttributes" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstaccount_alertrule">
+      <EntityTypeMapping TypeName="tstdbvModel.tstaccount_alertrule">
+        <MappingFragment StoreEntitySet="tstaccount_alertrule">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Keyword" ColumnName="Keyword" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="AlertPriority" ColumnName="AlertPriority" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstaccount_alerts">
+      <EntityTypeMapping TypeName="tstdbvModel.tstaccount_alerts">
+        <MappingFragment StoreEntitySet="tstaccount_alerts">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="AlertMessage" ColumnName="AlertMessage" />
+          <ScalarProperty Name="TimeSent" ColumnName="TimeSent" />
+          <ScalarProperty Name="AlertPriority" ColumnName="AlertPriority" />
+          <ScalarProperty Name="WarningType" ColumnName="WarningType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstaccount_authentication">
+      <EntityTypeMapping TypeName="tstdbvModel.tstaccount_authentication">
+        <MappingFragment StoreEntitySet="tstaccount_authentication">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="ExternalIdentifier" ColumnName="ExternalIdentifier" />
+          <ScalarProperty Name="ExternalDisplayIdentifier" ColumnName="ExternalDisplayIdentifier" />
+          <ScalarProperty Name="OAuthToken" ColumnName="OAuthToken" />
+          <ScalarProperty Name="OAuthAccessToken" ColumnName="OAuthAccessToken" />
+          <ScalarProperty Name="ProviderSystemName" ColumnName="ProviderSystemName" />
+          <ScalarProperty Name="SecretKey" ColumnName="SecretKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstaccount_bankaccount">
+      <EntityTypeMapping TypeName="tstdbvModel.tstaccount_bankaccount">
+        <MappingFragment StoreEntitySet="tstaccount_bankaccount">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="CardType" ColumnName="CardType" />
+          <ScalarProperty Name="CardName" ColumnName="CardName" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="MaskedCreditCardNumber" ColumnName="MaskedCreditCardNumber" />
+          <ScalarProperty Name="CardCvv2" ColumnName="CardCvv2" />
+          <ScalarProperty Name="CardExpirationMonth" ColumnName="CardExpirationMonth" />
+          <ScalarProperty Name="CardExpirationYear" ColumnName="CardExpirationYear" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstaccount_connections">
+      <EntityTypeMapping TypeName="tstdbvModel.tstaccount_connections">
+        <MappingFragment StoreEntitySet="tstaccount_connections">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="FriendId" ColumnName="FriendId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstaccount_country">
+      <EntityTypeMapping TypeName="tstdbvModel.tstaccount_country">
+        <MappingFragment StoreEntitySet="tstaccount_country">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="TwoLetterIsoCode" ColumnName="TwoLetterIsoCode" />
+          <ScalarProperty Name="ThreeLetterIsoCode" ColumnName="ThreeLetterIsoCode" />
+          <ScalarProperty Name="AllowsBilling" ColumnName="AllowsBilling" />
+          <ScalarProperty Name="AllowsShipping" ColumnName="AllowsShipping" />
+          <ScalarProperty Name="NumericIsoCode" ColumnName="NumericIsoCode" />
+          <ScalarProperty Name="SubjectToVat" ColumnName="SubjectToVat" />
+          <ScalarProperty Name="Published" ColumnName="Published" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="LimitedToStores" ColumnName="LimitedToStores" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstaccount_currency">
+      <EntityTypeMapping TypeName="tstdbvModel.tstaccount_currency">
+        <MappingFragment StoreEntitySet="tstaccount_currency">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+          <ScalarProperty Name="DisplayLocale" ColumnName="DisplayLocale" />
+          <ScalarProperty Name="CustomFormatting" ColumnName="CustomFormatting" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="LimitedToStores" ColumnName="LimitedToStores" />
+          <ScalarProperty Name="Published" ColumnName="Published" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="RoundingTypeId" ColumnName="RoundingTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstaccount_interests">
+      <EntityTypeMapping TypeName="tstdbvModel.tstaccount_interests">
+        <MappingFragment StoreEntitySet="tstaccount_interests">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="StoreId" ColumnName="StoreId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstaccount_language">
+      <EntityTypeMapping TypeName="tstdbvModel.tstaccount_language">
+        <MappingFragment StoreEntitySet="tstaccount_language">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="LanguageCulture" ColumnName="LanguageCulture" />
+          <ScalarProperty Name="UniqueSeoCode" ColumnName="UniqueSeoCode" />
+          <ScalarProperty Name="FlagImageFileName" ColumnName="FlagImageFileName" />
+          <ScalarProperty Name="Rtl" ColumnName="Rtl" />
+          <ScalarProperty Name="LimitedToStores" ColumnName="LimitedToStores" />
+          <ScalarProperty Name="DefaultCurrencyId" ColumnName="DefaultCurrencyId" />
+          <ScalarProperty Name="Published" ColumnName="Published" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstaccount_settings">
+      <EntityTypeMapping TypeName="tstdbvModel.tstaccount_settings">
+        <MappingFragment StoreEntitySet="tstaccount_settings">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="StoreId" ColumnName="StoreId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstaccount_stateprovince">
+      <EntityTypeMapping TypeName="tstdbvModel.tstaccount_stateprovince">
+        <MappingFragment StoreEntitySet="tstaccount_stateprovince">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Abbreviation" ColumnName="Abbreviation" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="Published" ColumnName="Published" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstaccount_store">
+      <EntityTypeMapping TypeName="tstdbvModel.tstaccount_store">
+        <MappingFragment StoreEntitySet="tstaccount_store">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="PictureId" ColumnName="PictureId" />
+          <ScalarProperty Name="StoreName" ColumnName="StoreName" />
+          <ScalarProperty Name="StoreURL" ColumnName="StoreURL" />
+          <ScalarProperty Name="Hosts" ColumnName="Hosts" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="CompanyAddress" ColumnName="CompanyAddress" />
+          <ScalarProperty Name="CompanyPhoneNumber" ColumnName="CompanyPhoneNumber" />
+          <ScalarProperty Name="CompanyVat" ColumnName="CompanyVat" />
+          <ScalarProperty Name="DefaultMetaKeywords" ColumnName="DefaultMetaKeywords" />
+          <ScalarProperty Name="DefaultMetaDescription" ColumnName="DefaultMetaDescription" />
+          <ScalarProperty Name="DefaultTitle" ColumnName="DefaultTitle" />
+          <ScalarProperty Name="HomepageTitle" ColumnName="HomepageTitle" />
+          <ScalarProperty Name="HomepageDescription" ColumnName="HomepageDescription" />
+          <ScalarProperty Name="SslEnabled" ColumnName="SslEnabled" />
+          <ScalarProperty Name="DefaultLanguageId" ColumnName="DefaultLanguageId" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstaccount_taxrates">
+      <EntityTypeMapping TypeName="tstdbvModel.tstaccount_taxrates">
+        <MappingFragment StoreEntitySet="tstaccount_taxrates">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="StateProvinceId" ColumnName="StateProvinceId" />
+          <ScalarProperty Name="Percentage" ColumnName="Percentage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstapplications">
+      <EntityTypeMapping TypeName="tstdbvModel.tstapplication">
+        <MappingFragment StoreEntitySet="tstapplications">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="AppName" ColumnName="AppName" />
+          <ScalarProperty Name="AppDescription" ColumnName="AppDescription" />
+          <ScalarProperty Name="ReleasedDate" ColumnName="ReleasedDate" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstapplications_collections">
+      <EntityTypeMapping TypeName="tstdbvModel.tstapplications_collections">
+        <MappingFragment StoreEntitySet="tstapplications_collections">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="DeveloperId" ColumnName="DeveloperId" />
+          <ScalarProperty Name="CollectionName" ColumnName="CollectionName" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateModified" ColumnName="DateModified" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="PictureId" ColumnName="PictureId" />
+          <ScalarProperty Name="NumberOfFiles" ColumnName="NumberOfFiles" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstapplications_collectionsitems">
+      <EntityTypeMapping TypeName="tstdbvModel.tstapplications_collectionsitems">
+        <MappingFragment StoreEntitySet="tstapplications_collectionsitems">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="CollectionId" ColumnName="CollectionId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstapplications_developers">
+      <EntityTypeMapping TypeName="tstdbvModel.tstapplications_developers">
+        <MappingFragment StoreEntitySet="tstapplications_developers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstapplications_searches">
+      <EntityTypeMapping TypeName="tstdbvModel.tstapplications_searches">
+        <MappingFragment StoreEntitySet="tstapplications_searches">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+          <ScalarProperty Name="DateSearched" ColumnName="DateSearched" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstarchives">
+      <EntityTypeMapping TypeName="tstdbvModel.tstarchive">
+        <MappingFragment StoreEntitySet="tstarchives">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="LinkURL" ColumnName="LinkURL" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="DateModified" ColumnName="DateModified" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstarchives_searches">
+      <EntityTypeMapping TypeName="tstdbvModel.tstarchives_searches">
+        <MappingFragment StoreEntitySet="tstarchives_searches">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+          <ScalarProperty Name="DateSearched" ColumnName="DateSearched" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstartworks">
+      <EntityTypeMapping TypeName="tstdbvModel.tstartwork">
+        <MappingFragment StoreEntitySet="tstartworks">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="ArtistName" ColumnName="ArtistName" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="MediumType" ColumnName="MediumType" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="PictureId" ColumnName="PictureId" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstartworks_artists">
+      <EntityTypeMapping TypeName="tstdbvModel.tstartworks_artists">
+        <MappingFragment StoreEntitySet="tstartworks_artists">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="ArtistName" ColumnName="ArtistName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="PictureId" ColumnName="PictureId" />
+          <ScalarProperty Name="TypeOfArt" ColumnName="TypeOfArt" />
+          <ScalarProperty Name="NumberOfArticles" ColumnName="NumberOfArticles" />
+          <ScalarProperty Name="DateJoined" ColumnName="DateJoined" />
+          <ScalarProperty Name="YearsActive" ColumnName="YearsActive" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstartworks_collections">
+      <EntityTypeMapping TypeName="tstdbvModel.tstartworks_collections">
+        <MappingFragment StoreEntitySet="tstartworks_collections">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="DeveloperId" ColumnName="DeveloperId" />
+          <ScalarProperty Name="CollectionName" ColumnName="CollectionName" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateModified" ColumnName="DateModified" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="PictureId" ColumnName="PictureId" />
+          <ScalarProperty Name="NumberOfFiles" ColumnName="NumberOfFiles" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstartworks_collectionsitems">
+      <EntityTypeMapping TypeName="tstdbvModel.tstartworks_collectionsitems">
+        <MappingFragment StoreEntitySet="tstartworks_collectionsitems">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="CollectionId" ColumnName="CollectionId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstartworks_publishers">
+      <EntityTypeMapping TypeName="tstdbvModel.tstartworks_publishers">
+        <MappingFragment StoreEntitySet="tstartworks_publishers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstartworks_searches">
+      <EntityTypeMapping TypeName="tstdbvModel.tstartworks_searches">
+        <MappingFragment StoreEntitySet="tstartworks_searches">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+          <ScalarProperty Name="DateSearched" ColumnName="DateSearched" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstauctions">
+      <EntityTypeMapping TypeName="tstdbvModel.tstauction">
+        <MappingFragment StoreEntitySet="tstauctions">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="MediumType" ColumnName="MediumType" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="PictureId" ColumnName="PictureId" />
+          <ScalarProperty Name="BiddingPrice" ColumnName="BiddingPrice" />
+          <ScalarProperty Name="BiddingMessage" ColumnName="BiddingMessage" />
+          <ScalarProperty Name="BiddingEndDate" ColumnName="BiddingEndDate" />
+          <ScalarProperty Name="WinnerId" ColumnName="WinnerId" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstauctions_brands">
+      <EntityTypeMapping TypeName="tstdbvModel.tstauctions_brands">
+        <MappingFragment StoreEntitySet="tstauctions_brands">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstauctions_collections">
+      <EntityTypeMapping TypeName="tstdbvModel.tstauctions_collections">
+        <MappingFragment StoreEntitySet="tstauctions_collections">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="DeveloperId" ColumnName="DeveloperId" />
+          <ScalarProperty Name="CollectionName" ColumnName="CollectionName" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateModified" ColumnName="DateModified" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="PictureId" ColumnName="PictureId" />
+          <ScalarProperty Name="NumberOfFiles" ColumnName="NumberOfFiles" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstauctions_collectionsitems">
+      <EntityTypeMapping TypeName="tstdbvModel.tstauctions_collectionsitems">
+        <MappingFragment StoreEntitySet="tstauctions_collectionsitems">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="CollectionId" ColumnName="CollectionId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstauctions_offers">
+      <EntityTypeMapping TypeName="tstdbvModel.tstauctions_offers">
+        <MappingFragment StoreEntitySet="tstauctions_offers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BidderId" ColumnName="BidderId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="OfferPrice" ColumnName="OfferPrice" />
+          <ScalarProperty Name="OfferMessage" ColumnName="OfferMessage" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstauctions_searches">
+      <EntityTypeMapping TypeName="tstdbvModel.tstauctions_searches">
+        <MappingFragment StoreEntitySet="tstauctions_searches">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+          <ScalarProperty Name="DateSearched" ColumnName="DateSearched" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstblog_categories">
+      <EntityTypeMapping TypeName="tstdbvModel.tstblog_categories">
+        <MappingFragment StoreEntitySet="tstblog_categories">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="MetaKeywords" ColumnName="MetaKeywords" />
+          <ScalarProperty Name="MetaTitle" ColumnName="MetaTitle" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="MetaDescription" ColumnName="MetaDescription" />
+          <ScalarProperty Name="ParentCategoryId" ColumnName="ParentCategoryId" />
+          <ScalarProperty Name="PictureId" ColumnName="PictureId" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstblog_comments">
+      <EntityTypeMapping TypeName="tstdbvModel.tstblog_comments">
+        <MappingFragment StoreEntitySet="tstblog_comments">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PostId" ColumnName="PostId" />
+          <ScalarProperty Name="SenderId" ColumnName="SenderId" />
+          <ScalarProperty Name="RecepientId" ColumnName="RecepientId" />
+          <ScalarProperty Name="CommentText" ColumnName="CommentText" />
+          <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstblog_links">
+      <EntityTypeMapping TypeName="tstdbvModel.tstblog_links">
+        <MappingFragment StoreEntitySet="tstblog_links">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="PostId" ColumnName="PostId" />
+          <ScalarProperty Name="LinkURL" ColumnName="LinkURL" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstblog_notifications">
+      <EntityTypeMapping TypeName="tstdbvModel.tstblog_notifications">
+        <MappingFragment StoreEntitySet="tstblog_notifications">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="TimeSent" ColumnName="TimeSent" />
+          <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstblog_photos">
+      <EntityTypeMapping TypeName="tstdbvModel.tstblog_photos">
+        <MappingFragment StoreEntitySet="tstblog_photos">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="PostId" ColumnName="PostId" />
+          <ScalarProperty Name="PhotoId" ColumnName="PhotoId" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstblog_post">
+      <EntityTypeMapping TypeName="tstdbvModel.tstblog_post">
+        <MappingFragment StoreEntitySet="tstblog_post">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Body" ColumnName="Body" />
+          <ScalarProperty Name="MetaKeywords" ColumnName="MetaKeywords" />
+          <ScalarProperty Name="MetaTitle" ColumnName="MetaTitle" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="BodyOverview" ColumnName="BodyOverview" />
+          <ScalarProperty Name="AllowComments" ColumnName="AllowComments" />
+          <ScalarProperty Name="Tags" ColumnName="Tags" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="MetaDescription" ColumnName="MetaDescription" />
+          <ScalarProperty Name="LimitedToStores" ColumnName="LimitedToStores" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstblog_searches">
+      <EntityTypeMapping TypeName="tstdbvModel.tstblog_searches">
+        <MappingFragment StoreEntitySet="tstblog_searches">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+          <ScalarProperty Name="DateSearched" ColumnName="DateSearched" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstblog_videos">
+      <EntityTypeMapping TypeName="tstdbvModel.tstblog_videos">
+        <MappingFragment StoreEntitySet="tstblog_videos">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="PostId" ColumnName="PostId" />
+          <ScalarProperty Name="VideoId" ColumnName="VideoId" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstbrands">
+      <EntityTypeMapping TypeName="tstdbvModel.tstbrand">
+        <MappingFragment StoreEntitySet="tstbrands">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="StoreId" ColumnName="StoreId" />
+          <ScalarProperty Name="PictureId" ColumnName="PictureId" />
+          <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="Industry" ColumnName="Industry" />
+          <ScalarProperty Name="WebsiteURL" ColumnName="WebsiteURL" />
+          <ScalarProperty Name="OtherURL" ColumnName="OtherURL" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstbrands_searches">
+      <EntityTypeMapping TypeName="tstdbvModel.tstbrands_searches">
+        <MappingFragment StoreEntitySet="tstbrands_searches">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+          <ScalarProperty Name="DateSearched" ColumnName="DateSearched" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstcalendar_events">
+      <EntityTypeMapping TypeName="tstdbvModel.tstcalendar_events">
+        <MappingFragment StoreEntitySet="tstcalendar_events">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstcampaigns">
+      <EntityTypeMapping TypeName="tstdbvModel.tstcampaign">
+        <MappingFragment StoreEntitySet="tstcampaigns">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Body" ColumnName="Body" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="CampaignStatus" ColumnName="CampaignStatus" />
+          <ScalarProperty Name="ExpectedRevenue" ColumnName="ExpectedRevenue" />
+          <ScalarProperty Name="BudgetCost" ColumnName="BudgetCost" />
+          <ScalarProperty Name="ActualCost" ColumnName="ActualCost" />
+          <ScalarProperty Name="ExpectedResponse" ColumnName="ExpectedResponse" />
+          <ScalarProperty Name="NumberSent" ColumnName="NumberSent" />
+          <ScalarProperty Name="Sponsor" ColumnName="Sponsor" />
+          <ScalarProperty Name="TargetAudience" ColumnName="TargetAudience" />
+          <ScalarProperty Name="TargetSize" ColumnName="TargetSize" />
+          <ScalarProperty Name="ExpectedResponseCount" ColumnName="ExpectedResponseCount" />
+          <ScalarProperty Name="ExpectedSalesCount" ColumnName="ExpectedSalesCount" />
+          <ScalarProperty Name="ExpectedROI" ColumnName="ExpectedROI" />
+          <ScalarProperty Name="ActualResponseCount" ColumnName="ActualResponseCount" />
+          <ScalarProperty Name="ActualSalesCount" ColumnName="ActualSalesCount" />
+          <ScalarProperty Name="ActualROI" ColumnName="ActualROI" />
+          <ScalarProperty Name="ClosingDate" ColumnName="ClosingDate" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstcampaigns_brands">
+      <EntityTypeMapping TypeName="tstdbvModel.tstcampaigns_brands">
+        <MappingFragment StoreEntitySet="tstcampaigns_brands">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstcampaigns_collections">
+      <EntityTypeMapping TypeName="tstdbvModel.tstcampaigns_collections">
+        <MappingFragment StoreEntitySet="tstcampaigns_collections">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="DeveloperId" ColumnName="DeveloperId" />
+          <ScalarProperty Name="CollectionName" ColumnName="CollectionName" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateModified" ColumnName="DateModified" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="PictureId" ColumnName="PictureId" />
+          <ScalarProperty Name="NumberOfFiles" ColumnName="NumberOfFiles" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstcampaigns_collectionsitems">
+      <EntityTypeMapping TypeName="tstdbvModel.tstcampaigns_collectionsitems">
+        <MappingFragment StoreEntitySet="tstcampaigns_collectionsitems">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="CollectionId" ColumnName="CollectionId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstcampaigns_pollanswer">
+      <EntityTypeMapping TypeName="tstdbvModel.tstcampaigns_pollanswer">
+        <MappingFragment StoreEntitySet="tstcampaigns_pollanswer">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="PollId" ColumnName="PollId" />
+          <ScalarProperty Name="NumberOfVotes" ColumnName="NumberOfVotes" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstcampaigns_polls">
+      <EntityTypeMapping TypeName="tstdbvModel.tstcampaigns_polls">
+        <MappingFragment StoreEntitySet="tstcampaigns_polls">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="SystemKeywords" ColumnName="SystemKeywords" />
+          <ScalarProperty Name="Published" ColumnName="Published" />
+          <ScalarProperty Name="ShowOnHomepage" ColumnName="ShowOnHomepage" />
+          <ScalarProperty Name="AllowGuestsToVote" ColumnName="AllowGuestsToVote" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="LimitedToStores" ColumnName="LimitedToStores" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstcampaigns_searches">
+      <EntityTypeMapping TypeName="tstdbvModel.tstcampaigns_searches">
+        <MappingFragment StoreEntitySet="tstcampaigns_searches">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+          <ScalarProperty Name="DateSearched" ColumnName="DateSearched" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstcampaigns_votes">
+      <EntityTypeMapping TypeName="tstdbvModel.tstcampaigns_votes">
+        <MappingFragment StoreEntitySet="tstcampaigns_votes">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PollId" ColumnName="PollId" />
+          <ScalarProperty Name="CandidateId" ColumnName="CandidateId" />
+          <ScalarProperty Name="VoterId" ColumnName="VoterId" />
+          <ScalarProperty Name="Choice" ColumnName="Choice" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstclassifieds">
+      <EntityTypeMapping TypeName="tstdbvModel.tstclassified">
+        <MappingFragment StoreEntitySet="tstclassifieds">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="BannerId" ColumnName="BannerId" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstclassifieds_collections">
+      <EntityTypeMapping TypeName="tstdbvModel.tstclassifieds_collections">
+        <MappingFragment StoreEntitySet="tstclassifieds_collections">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="DeveloperId" ColumnName="DeveloperId" />
+          <ScalarProperty Name="CollectionName" ColumnName="CollectionName" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateModified" ColumnName="DateModified" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="PictureId" ColumnName="PictureId" />
+          <ScalarProperty Name="NumberOfFiles" ColumnName="NumberOfFiles" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstclassifieds_collectionsitems">
+      <EntityTypeMapping TypeName="tstdbvModel.tstclassifieds_collectionsitems">
+        <MappingFragment StoreEntitySet="tstclassifieds_collectionsitems">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="CollectionId" ColumnName="CollectionId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstclassifieds_searches">
+      <EntityTypeMapping TypeName="tstdbvModel.tstclassifieds_searches">
+        <MappingFragment StoreEntitySet="tstclassifieds_searches">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+          <ScalarProperty Name="DateSearched" ColumnName="DateSearched" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstclubs">
+      <EntityTypeMapping TypeName="tstdbvModel.tstclub">
+        <MappingFragment StoreEntitySet="tstclubs">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="StoreId" ColumnName="StoreId" />
+          <ScalarProperty Name="PictureId" ColumnName="PictureId" />
+          <ScalarProperty Name="ClubName" ColumnName="ClubName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateEstablished" ColumnName="DateEstablished" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="MembersCount" ColumnName="MembersCount" />
+          <ScalarProperty Name="SubscriptionPrice" ColumnName="SubscriptionPrice" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstclubs_searches">
+      <EntityTypeMapping TypeName="tstdbvModel.tstclubs_searches">
+        <MappingFragment StoreEntitySet="tstclubs_searches">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+          <ScalarProperty Name="DateSearched" ColumnName="DateSearched" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstclubs_subscriptions">
+      <EntityTypeMapping TypeName="tstdbvModel.tstclubs_subscriptions">
+        <MappingFragment StoreEntitySet="tstclubs_subscriptions">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="SubscriptionGuId" ColumnName="SubscriptionGuId" />
+          <ScalarProperty Name="ClubId" ColumnName="ClubId" />
+          <ScalarProperty Name="SubscriptionType" ColumnName="SubscriptionType" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstcompetitions">
+      <EntityTypeMapping TypeName="tstdbvModel.tstcompetition">
+        <MappingFragment StoreEntitySet="tstcompetitions">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="GameId" ColumnName="GameId" />
+          <ScalarProperty Name="CompetitionName" ColumnName="CompetitionName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="MetaDescription" ColumnName="MetaDescription" />
+          <ScalarProperty Name="CompetitionModel" ColumnName="CompetitionModel" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="EntryPrice" ColumnName="EntryPrice" />
+          <ScalarProperty Name="TeamSize" ColumnName="TeamSize" />
+          <ScalarProperty Name="MaxNoOfTeams" ColumnName="MaxNoOfTeams" />
+          <ScalarProperty Name="TeamsRegistered" ColumnName="TeamsRegistered" />
+          <ScalarProperty Name="TotalPrizeMoney" ColumnName="TotalPrizeMoney" />
+          <ScalarProperty Name="FirstPlaceId" ColumnName="FirstPlaceId" />
+          <ScalarProperty Name="SecondPlaceId" ColumnName="SecondPlaceId" />
+          <ScalarProperty Name="ThirdPlaceId" ColumnName="ThirdPlaceId" />
+          <ScalarProperty Name="FourthPlaceId" ColumnName="FourthPlaceId" />
+          <ScalarProperty Name="FifthPlaceId" ColumnName="FifthPlaceId" />
+          <ScalarProperty Name="SixthPlaceId" ColumnName="SixthPlaceId" />
+          <ScalarProperty Name="SeventhPlaceId" ColumnName="SeventhPlaceId" />
+          <ScalarProperty Name="EigthPlaceId" ColumnName="EigthPlaceId" />
+          <ScalarProperty Name="NinthPlaceId" ColumnName="NinthPlaceId" />
+          <ScalarProperty Name="TenthPlaceId" ColumnName="TenthPlaceId" />
+          <ScalarProperty Name="FirstPlaceReward" ColumnName="FirstPlaceReward" />
+          <ScalarProperty Name="SecondPlaceReward" ColumnName="SecondPlaceReward" />
+          <ScalarProperty Name="ThirdPlaceReward" ColumnName="ThirdPlaceReward" />
+          <ScalarProperty Name="FourthPlaceReward" ColumnName="FourthPlaceReward" />
+          <ScalarProperty Name="FifthPlaceReward" ColumnName="FifthPlaceReward" />
+          <ScalarProperty Name="SixthPlaceReward" ColumnName="SixthPlaceReward" />
+          <ScalarProperty Name="SeventhPlaceReward" ColumnName="SeventhPlaceReward" />
+          <ScalarProperty Name="EigthPlaceReward" ColumnName="EigthPlaceReward" />
+          <ScalarProperty Name="NinthPlaceReward" ColumnName="NinthPlaceReward" />
+          <ScalarProperty Name="TenthPlaceReward" ColumnName="TenthPlaceReward" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstcompetitions_brands">
+      <EntityTypeMapping TypeName="tstdbvModel.tstcompetitions_brands">
+        <MappingFragment StoreEntitySet="tstcompetitions_brands">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstcompetitions_collections">
+      <EntityTypeMapping TypeName="tstdbvModel.tstcompetitions_collections">
+        <MappingFragment StoreEntitySet="tstcompetitions_collections">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="DeveloperId" ColumnName="DeveloperId" />
+          <ScalarProperty Name="CollectionName" ColumnName="CollectionName" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateModified" ColumnName="DateModified" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="PictureId" ColumnName="PictureId" />
+          <ScalarProperty Name="NumberOfFiles" ColumnName="NumberOfFiles" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstcompetitions_collectionsitems">
+      <EntityTypeMapping TypeName="tstdbvModel.tstcompetitions_collectionsitems">
+        <MappingFragment StoreEntitySet="tstcompetitions_collectionsitems">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="CollectionId" ColumnName="CollectionId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstcompetitions_searches">
+      <EntityTypeMapping TypeName="tstdbvModel.tstcompetitions_searches">
+        <MappingFragment StoreEntitySet="tstcompetitions_searches">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+          <ScalarProperty Name="DateSearched" ColumnName="DateSearched" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstcourses">
+      <EntityTypeMapping TypeName="tstdbvModel.tstcours">
+        <MappingFragment StoreEntitySet="tstcourses">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="PictureId" ColumnName="PictureId" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ContentCovered" ColumnName="ContentCovered" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstcourses_assignmentanswers">
+      <EntityTypeMapping TypeName="tstdbvModel.tstcourses_assignmentanswers">
+        <MappingFragment StoreEntitySet="tstcourses_assignmentanswers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AssignmentId" ColumnName="AssignmentId" />
+          <ScalarProperty Name="LearnerId" ColumnName="LearnerId" />
+          <ScalarProperty Name="AnswerText" ColumnName="AnswerText" />
+          <ScalarProperty Name="SubmissionDate" ColumnName="SubmissionDate" />
+          <ScalarProperty Name="MarksGotten" ColumnName="MarksGotten" />
+          <ScalarProperty Name="PrivateMessage" ColumnName="PrivateMessage" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstcourses_assignments">
+      <EntityTypeMapping TypeName="tstdbvModel.tstcourses_assignments">
+        <MappingFragment StoreEntitySet="tstcourses_assignments">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="CourseId" ColumnName="CourseId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="AssignTo" ColumnName="AssignTo" />
+          <ScalarProperty Name="DateDue" ColumnName="DateDue" />
+          <ScalarProperty Name="DateCutoff" ColumnName="DateCutoff" />
+          <ScalarProperty Name="MultiSubmit" ColumnName="MultiSubmit" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstcourses_assignmentsquestions">
+      <EntityTypeMapping TypeName="tstdbvModel.tstcourses_assignmentsquestions">
+        <MappingFragment StoreEntitySet="tstcourses_assignmentsquestions">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="AssignmentId" ColumnName="AssignmentId" />
+          <ScalarProperty Name="QuestionText" ColumnName="QuestionText" />
+          <ScalarProperty Name="MarksAwarded" ColumnName="MarksAwarded" />
+          <ScalarProperty Name="TopicSection" ColumnName="TopicSection" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstcourses_collections">
+      <EntityTypeMapping TypeName="tstdbvModel.tstcourses_collections">
+        <MappingFragment StoreEntitySet="tstcourses_collections">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="DeveloperId" ColumnName="DeveloperId" />
+          <ScalarProperty Name="CollectionName" ColumnName="CollectionName" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateModified" ColumnName="DateModified" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="PictureId" ColumnName="PictureId" />
+          <ScalarProperty Name="NumberOfFiles" ColumnName="NumberOfFiles" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstcourses_collectionsitems">
+      <EntityTypeMapping TypeName="tstdbvModel.tstcourses_collectionsitems">
+        <MappingFragment StoreEntitySet="tstcourses_collectionsitems">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="CollectionId" ColumnName="CollectionId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstcourses_enrollment">
+      <EntityTypeMapping TypeName="tstdbvModel.tstcourses_enrollment">
+        <MappingFragment StoreEntitySet="tstcourses_enrollment">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="MemberId" ColumnName="MemberId" />
+          <ScalarProperty Name="CourseId" ColumnName="CourseId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstcourses_gradebook">
+      <EntityTypeMapping TypeName="tstdbvModel.tstcourses_gradebook">
+        <MappingFragment StoreEntitySet="tstcourses_gradebook">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="LearnerId" ColumnName="LearnerId" />
+          <ScalarProperty Name="CourseId" ColumnName="CourseId" />
+          <ScalarProperty Name="ExamScore" ColumnName="ExamScore" />
+          <ScalarProperty Name="AssignmentScore" ColumnName="AssignmentScore" />
+          <ScalarProperty Name="FinalGrade" ColumnName="FinalGrade" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstcourses_notes">
+      <EntityTypeMapping TypeName="tstdbvModel.tstcourses_notes">
+        <MappingFragment StoreEntitySet="tstcourses_notes">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="PostId" ColumnName="PostId" />
+          <ScalarProperty Name="CourseId" ColumnName="CourseId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Tags" ColumnName="Tags" />
+          <ScalarProperty Name="Pinned" ColumnName="Pinned" />
+          <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+          <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstcourses_searches">
+      <EntityTypeMapping TypeName="tstdbvModel.tstcourses_searches">
+        <MappingFragment StoreEntitySet="tstcourses_searches">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+          <ScalarProperty Name="DateSearched" ColumnName="DateSearched" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstcourses_testresults">
+      <EntityTypeMapping TypeName="tstdbvModel.tstcourses_testresults">
+        <MappingFragment StoreEntitySet="tstcourses_testresults">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="TestId" ColumnName="TestId" />
+          <ScalarProperty Name="DateTaken" ColumnName="DateTaken" />
+          <ScalarProperty Name="FinalScore" ColumnName="FinalScore" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstcourses_tests">
+      <EntityTypeMapping TypeName="tstdbvModel.tstcourses_tests">
+        <MappingFragment StoreEntitySet="tstcourses_tests">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="CourseId" ColumnName="CourseId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Format" ColumnName="Format" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="RandomizeOrder" ColumnName="RandomizeOrder" />
+          <ScalarProperty Name="NumQuestions" ColumnName="NumQuestions" />
+          <ScalarProperty Name="Instructions" ColumnName="Instructions" />
+          <ScalarProperty Name="ContentId" ColumnName="ContentId" />
+          <ScalarProperty Name="ResultRelease" ColumnName="ResultRelease" />
+          <ScalarProperty Name="Difficulty" ColumnName="Difficulty" />
+          <ScalarProperty Name="NumTakes" ColumnName="NumTakes" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="PassScore" ColumnName="PassScore" />
+          <ScalarProperty Name="PassPercent" ColumnName="PassPercent" />
+          <ScalarProperty Name="PassFeedback" ColumnName="PassFeedback" />
+          <ScalarProperty Name="FailFeedback" ColumnName="FailFeedback" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstcourses_testsanswers">
+      <EntityTypeMapping TypeName="tstdbvModel.tstcourses_testsanswers">
+        <MappingFragment StoreEntitySet="tstcourses_testsanswers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+          <ScalarProperty Name="QuestionId" ColumnName="QuestionId" />
+          <ScalarProperty Name="Answer" ColumnName="Answer" />
+          <ScalarProperty Name="Score" ColumnName="Score" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstcourses_testsquestions">
+      <EntityTypeMapping TypeName="tstdbvModel.tstcourses_testsquestions">
+        <MappingFragment StoreEntitySet="tstcourses_testsquestions">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="CourseId" ColumnName="CourseId" />
+          <ScalarProperty Name="Feedback" ColumnName="Feedback" />
+          <ScalarProperty Name="Question" ColumnName="Question" />
+          <ScalarProperty Name="Choice_0" ColumnName="Choice_0" />
+          <ScalarProperty Name="Choice_1" ColumnName="Choice_1" />
+          <ScalarProperty Name="Choice_2" ColumnName="Choice_2" />
+          <ScalarProperty Name="Choice_3" ColumnName="Choice_3" />
+          <ScalarProperty Name="Choice_4" ColumnName="Choice_4" />
+          <ScalarProperty Name="ExpectedAnswer" ColumnName="ExpectedAnswer" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstcourses_tutors">
+      <EntityTypeMapping TypeName="tstdbvModel.tstcourses_tutors">
+        <MappingFragment StoreEntitySet="tstcourses_tutors">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="PictureId" ColumnName="PictureId" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+          <ScalarProperty Name="Qualifications" ColumnName="Qualifications" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="JoiningDate" ColumnName="JoiningDate" />
+          <ScalarProperty Name="RegistrationDate" ColumnName="RegistrationDate" />
+          <ScalarProperty Name="IsPublic" ColumnName="IsPublic" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstdownloads">
+      <EntityTypeMapping TypeName="tstdbvModel.tstdownload">
+        <MappingFragment StoreEntitySet="tstdownloads">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="DownloadGuId" ColumnName="DownloadGuId" />
+          <ScalarProperty Name="UseDownloadURL" ColumnName="UseDownloadURL" />
+          <ScalarProperty Name="DownloadURL" ColumnName="DownloadURL" />
+          <ScalarProperty Name="DownloadBinary" ColumnName="DownloadBinary" />
+          <ScalarProperty Name="ContentType" ColumnName="ContentType" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="IsNew" ColumnName="IsNew" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstdownloads_searches">
+      <EntityTypeMapping TypeName="tstdbvModel.tstdownloads_searches">
+        <MappingFragment StoreEntitySet="tstdownloads_searches">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+          <ScalarProperty Name="DateSearched" ColumnName="DateSearched" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstebooks">
+      <EntityTypeMapping TypeName="tstdbvModel.tstebook">
+        <MappingFragment StoreEntitySet="tstebooks">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Edition" ColumnName="Edition" />
+          <ScalarProperty Name="PublisherId" ColumnName="PublisherId" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="CoverPhotoId" ColumnName="CoverPhotoId" />
+          <ScalarProperty Name="Tags" ColumnName="Tags" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstebooks_authors">
+      <EntityTypeMapping TypeName="tstdbvModel.tstebooks_authors">
+        <MappingFragment StoreEntitySet="tstebooks_authors">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="Biography" ColumnName="Biography" />
+          <ScalarProperty Name="LinkURL" ColumnName="LinkURL" />
+          <ScalarProperty Name="BookCount" ColumnName="BookCount" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstebooks_collections">
+      <EntityTypeMapping TypeName="tstdbvModel.tstebooks_collections">
+        <MappingFragment StoreEntitySet="tstebooks_collections">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="DeveloperId" ColumnName="DeveloperId" />
+          <ScalarProperty Name="CollectionName" ColumnName="CollectionName" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateModified" ColumnName="DateModified" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="PictureId" ColumnName="PictureId" />
+          <ScalarProperty Name="NumberOfFiles" ColumnName="NumberOfFiles" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstebooks_collectionsitems">
+      <EntityTypeMapping TypeName="tstdbvModel.tstebooks_collectionsitems">
+        <MappingFragment StoreEntitySet="tstebooks_collectionsitems">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="CollectionId" ColumnName="CollectionId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstebooks_publishers">
+      <EntityTypeMapping TypeName="tstdbvModel.tstebooks_publishers">
+        <MappingFragment StoreEntitySet="tstebooks_publishers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstebooks_searches">
+      <EntityTypeMapping TypeName="tstdbvModel.tstebooks_searches">
+        <MappingFragment StoreEntitySet="tstebooks_searches">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+          <ScalarProperty Name="DateSearched" ColumnName="DateSearched" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstfiles">
+      <EntityTypeMapping TypeName="tstdbvModel.tstfile">
+        <MappingFragment StoreEntitySet="tstfiles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="MemberId" ColumnName="MemberId" />
+          <ScalarProperty Name="FolderId" ColumnName="FolderId" />
+          <ScalarProperty Name="ParentFileId" ColumnName="ParentFileId" />
+          <ScalarProperty Name="DateAdded" ColumnName="DateAdded" />
+          <ScalarProperty Name="DateModified" ColumnName="DateModified" />
+          <ScalarProperty Name="NumberOfComments" ColumnName="NumberOfComments" />
+          <ScalarProperty Name="NumberOfRevisions" ColumnName="NumberOfRevisions" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="FileExtension" ColumnName="FileExtension" />
+          <ScalarProperty Name="FileSize" ColumnName="FileSize" />
+          <ScalarProperty Name="VirtualPath" ColumnName="VirtualPath" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstfiles_audio">
+      <EntityTypeMapping TypeName="tstdbvModel.tstfiles_audio">
+        <MappingFragment StoreEntitySet="tstfiles_audio">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Encoder" ColumnName="Encoder" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="Format" ColumnName="Format" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="Bitrate" ColumnName="Bitrate" />
+          <ScalarProperty Name="AudioCodec" ColumnName="AudioCodec" />
+          <ScalarProperty Name="AudioBitrate" ColumnName="AudioBitrate" />
+          <ScalarProperty Name="AudioRate" ColumnName="AudioRate" />
+          <ScalarProperty Name="AudioChannels" ColumnName="AudioChannels" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstfiles_folders">
+      <EntityTypeMapping TypeName="tstdbvModel.tstfiles_folders">
+        <MappingFragment StoreEntitySet="tstfiles_folders">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="ParentFolderId" ColumnName="ParentFolderId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="VirtualPath" ColumnName="VirtualPath" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstfiles_images">
+      <EntityTypeMapping TypeName="tstdbvModel.tstfiles_images">
+        <MappingFragment StoreEntitySet="tstfiles_images">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Tags" ColumnName="Tags" />
+          <ScalarProperty Name="DateAdded" ColumnName="DateAdded" />
+          <ScalarProperty Name="LastViewed" ColumnName="LastViewed" />
+          <ScalarProperty Name="Reported" ColumnName="Reported" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="VirtualPath" ColumnName="VirtualPath" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstfiles_pdf">
+      <EntityTypeMapping TypeName="tstdbvModel.tstfiles_pdf">
+        <MappingFragment StoreEntitySet="tstfiles_pdf">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Generator" ColumnName="Generator" />
+          <ScalarProperty Name="ModuleName" ColumnName="ModuleName" />
+          <ScalarProperty Name="HeaderContent" ColumnName="HeaderContent" />
+          <ScalarProperty Name="BodyContent" ColumnName="BodyContent" />
+          <ScalarProperty Name="FooterContent" ColumnName="FooterContent" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="PrimaryName" ColumnName="PrimaryName" />
+          <ScalarProperty Name="SecondaryName" ColumnName="SecondaryName" />
+          <ScalarProperty Name="MetaAuthor" ColumnName="MetaAuthor" />
+          <ScalarProperty Name="MetaKeywords" ColumnName="MetaKeywords" />
+          <ScalarProperty Name="MetatagsStatus" ColumnName="MetatagsStatus" />
+          <ScalarProperty Name="MetaSubject" ColumnName="MetaSubject" />
+          <ScalarProperty Name="MetaTitle" ColumnName="MetaTitle" />
+          <ScalarProperty Name="PageFormat" ColumnName="PageFormat" />
+          <ScalarProperty Name="MarginChkbox" ColumnName="MarginChkbox" />
+          <ScalarProperty Name="MarginTop" ColumnName="MarginTop" />
+          <ScalarProperty Name="MarginBottom" ColumnName="MarginBottom" />
+          <ScalarProperty Name="MarginLeft" ColumnName="MarginLeft" />
+          <ScalarProperty Name="MarginRight" ColumnName="MarginRight" />
+          <ScalarProperty Name="HeaderHeight" ColumnName="HeaderHeight" />
+          <ScalarProperty Name="FooterHeight" ColumnName="FooterHeight" />
+          <ScalarProperty Name="PageOrientation" ColumnName="PageOrientation" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="Visibility" ColumnName="Visibility" />
+          <ScalarProperty Name="Default" ColumnName="Default" />
+          <ScalarProperty Name="Conditions" ColumnName="Conditions" />
+          <ScalarProperty Name="WatermarkType" ColumnName="WatermarkType" />
+          <ScalarProperty Name="WatermarkText" ColumnName="WatermarkText" />
+          <ScalarProperty Name="WatermarkAngle" ColumnName="WatermarkAngle" />
+          <ScalarProperty Name="WatermarkImage" ColumnName="WatermarkImage" />
+          <ScalarProperty Name="TemplateMembers" ColumnName="TemplateMembers" />
+          <ScalarProperty Name="OnePdf" ColumnName="OnePdf" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Styles" ColumnName="Styles" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstfiles_videos">
+      <EntityTypeMapping TypeName="tstdbvModel.tstfiles_videos">
+        <MappingFragment StoreEntitySet="tstfiles_videos">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Encoder" ColumnName="Encoder" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="Format" ColumnName="Format" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="Bitrate" ColumnName="Bitrate" />
+          <ScalarProperty Name="VideoWidth" ColumnName="VideoWidth" />
+          <ScalarProperty Name="VideoHeight" ColumnName="VideoHeight" />
+          <ScalarProperty Name="VideoWhRatio" ColumnName="VideoWhRatio" />
+          <ScalarProperty Name="VideoCodec" ColumnName="VideoCodec" />
+          <ScalarProperty Name="VideoRate" ColumnName="VideoRate" />
+          <ScalarProperty Name="VideoBitrate" ColumnName="VideoBitrate" />
+          <ScalarProperty Name="VideoColor" ColumnName="VideoColor" />
+          <ScalarProperty Name="AudioCodec" ColumnName="AudioCodec" />
+          <ScalarProperty Name="AudioBitrate" ColumnName="AudioBitrate" />
+          <ScalarProperty Name="AudioRate" ColumnName="AudioRate" />
+          <ScalarProperty Name="AudioChannels" ColumnName="AudioChannels" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstforums">
+      <EntityTypeMapping TypeName="tstdbvModel.tstforum">
+        <MappingFragment StoreEntitySet="tstforums">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ForumGroupId" ColumnName="ForumGroupId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="NumTopics" ColumnName="NumTopics" />
+          <ScalarProperty Name="NumPosts" ColumnName="NumPosts" />
+          <ScalarProperty Name="LastTopicId" ColumnName="LastTopicId" />
+          <ScalarProperty Name="LastPostId" ColumnName="LastPostId" />
+          <ScalarProperty Name="LastPostCustomerId" ColumnName="LastPostCustomerId" />
+          <ScalarProperty Name="LastPostTime" ColumnName="LastPostTime" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstforums_group">
+      <EntityTypeMapping TypeName="tstdbvModel.tstforums_group">
+        <MappingFragment StoreEntitySet="tstforums_group">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstforums_post">
+      <EntityTypeMapping TypeName="tstdbvModel.tstforums_post">
+        <MappingFragment StoreEntitySet="tstforums_post">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="IpAddress" ColumnName="IpAddress" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="TopicId" ColumnName="TopicId" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="VoteCount" ColumnName="VoteCount" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstforums_privatemessage">
+      <EntityTypeMapping TypeName="tstdbvModel.tstforums_privatemessage">
+        <MappingFragment StoreEntitySet="tstforums_privatemessage">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="FromCustomerId" ColumnName="FromCustomerId" />
+          <ScalarProperty Name="ToCustomerId" ColumnName="ToCustomerId" />
+          <ScalarProperty Name="StoreId" ColumnName="StoreId" />
+          <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+          <ScalarProperty Name="IsDeletedByAuthor" ColumnName="IsDeletedByAuthor" />
+          <ScalarProperty Name="IsDeletedByRecipient" ColumnName="IsDeletedByRecipient" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstforums_searches">
+      <EntityTypeMapping TypeName="tstdbvModel.tstforums_searches">
+        <MappingFragment StoreEntitySet="tstforums_searches">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+          <ScalarProperty Name="DateSearched" ColumnName="DateSearched" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstforums_subscriptions">
+      <EntityTypeMapping TypeName="tstdbvModel.tstforums_subscriptions">
+        <MappingFragment StoreEntitySet="tstforums_subscriptions">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="SubscriptionGuId" ColumnName="SubscriptionGuId" />
+          <ScalarProperty Name="ForumId" ColumnName="ForumId" />
+          <ScalarProperty Name="TopicId" ColumnName="TopicId" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstforums_topic">
+      <EntityTypeMapping TypeName="tstdbvModel.tstforums_topic">
+        <MappingFragment StoreEntitySet="tstforums_topic">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="ForumId" ColumnName="ForumId" />
+          <ScalarProperty Name="TopicTypeId" ColumnName="TopicTypeId" />
+          <ScalarProperty Name="NumPosts" ColumnName="NumPosts" />
+          <ScalarProperty Name="LastPostId" ColumnName="LastPostId" />
+          <ScalarProperty Name="LastPostCustomerId" ColumnName="LastPostCustomerId" />
+          <ScalarProperty Name="LastPostTime" ColumnName="LastPostTime" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstmovies">
+      <EntityTypeMapping TypeName="tstdbvModel.tstmovy">
+        <MappingFragment StoreEntitySet="tstmovies">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="VideoId" ColumnName="VideoId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ReleaseDate" ColumnName="ReleaseDate" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="RentalDuration" ColumnName="RentalDuration" />
+          <ScalarProperty Name="RentalRate" ColumnName="RentalRate" />
+          <ScalarProperty Name="FilmLength" ColumnName="FilmLength" />
+          <ScalarProperty Name="ReplacementCost" ColumnName="ReplacementCost" />
+          <ScalarProperty Name="Rating" ColumnName="Rating" />
+          <ScalarProperty Name="TrailerURL" ColumnName="TrailerURL" />
+          <ScalarProperty Name="SpecialFeatures" ColumnName="SpecialFeatures" />
+          <ScalarProperty Name="LastUpDate" ColumnName="LastUpDate" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstmovies_actors">
+      <EntityTypeMapping TypeName="tstdbvModel.tstmovies_actors">
+        <MappingFragment StoreEntitySet="tstmovies_actors">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="MovieId" ColumnName="MovieId" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+          <ScalarProperty Name="RoleDescription" ColumnName="RoleDescription" />
+          <ScalarProperty Name="LinkURL" ColumnName="LinkURL" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstmovies_collections">
+      <EntityTypeMapping TypeName="tstdbvModel.tstmovies_collections">
+        <MappingFragment StoreEntitySet="tstmovies_collections">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="DeveloperId" ColumnName="DeveloperId" />
+          <ScalarProperty Name="CollectionName" ColumnName="CollectionName" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateModified" ColumnName="DateModified" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="PictureId" ColumnName="PictureId" />
+          <ScalarProperty Name="NumberOfFiles" ColumnName="NumberOfFiles" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstmovies_collectionsitems">
+      <EntityTypeMapping TypeName="tstdbvModel.tstmovies_collectionsitems">
+        <MappingFragment StoreEntitySet="tstmovies_collectionsitems">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="CollectionId" ColumnName="CollectionId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstmovies_crew">
+      <EntityTypeMapping TypeName="tstdbvModel.tstmovies_crew">
+        <MappingFragment StoreEntitySet="tstmovies_crew">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="MovieId" ColumnName="MovieId" />
+          <ScalarProperty Name="MovieSeriesId" ColumnName="MovieSeriesId" />
+          <ScalarProperty Name="MovieEpisodeId" ColumnName="MovieEpisodeId" />
+          <ScalarProperty Name="CastName" ColumnName="CastName" />
+          <ScalarProperty Name="MovieRole" ColumnName="MovieRole" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstmovies_episodes">
+      <EntityTypeMapping TypeName="tstdbvModel.tstmovies_episodes">
+        <MappingFragment StoreEntitySet="tstmovies_episodes">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="MovieSeriesId" ColumnName="MovieSeriesId" />
+          <ScalarProperty Name="EpisodeNumber" ColumnName="EpisodeNumber" />
+          <ScalarProperty Name="EpisodeTitle" ColumnName="EpisodeTitle" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="ReleaseDate" ColumnName="ReleaseDate" />
+          <ScalarProperty Name="GenreId" ColumnName="GenreId" />
+          <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstmovies_searches">
+      <EntityTypeMapping TypeName="tstdbvModel.tstmovies_searches">
+        <MappingFragment StoreEntitySet="tstmovies_searches">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+          <ScalarProperty Name="DateSearched" ColumnName="DateSearched" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstmovies_series">
+      <EntityTypeMapping TypeName="tstdbvModel.tstmovies_series">
+        <MappingFragment StoreEntitySet="tstmovies_series">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="ReleaseDate" ColumnName="ReleaseDate" />
+          <ScalarProperty Name="GenreId" ColumnName="GenreId" />
+          <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="NumberOfEpisodes" ColumnName="NumberOfEpisodes" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstmovies_studios">
+      <EntityTypeMapping TypeName="tstdbvModel.tstmovies_studios">
+        <MappingFragment StoreEntitySet="tstmovies_studios">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstmusic_albumitems">
+      <EntityTypeMapping TypeName="tstdbvModel.tstmusic_albumitems">
+        <MappingFragment StoreEntitySet="tstmusic_albumitems">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="AlbumId" ColumnName="AlbumId" />
+          <ScalarProperty Name="SongId" ColumnName="SongId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstmusic_albums">
+      <EntityTypeMapping TypeName="tstdbvModel.tstmusic_albums">
+        <MappingFragment StoreEntitySet="tstmusic_albums">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="ArtistId" ColumnName="ArtistId" />
+          <ScalarProperty Name="AlbumName" ColumnName="AlbumName" />
+          <ScalarProperty Name="ReleasedDate" ColumnName="ReleasedDate" />
+          <ScalarProperty Name="GenreId" ColumnName="GenreId" />
+          <ScalarProperty Name="PictureId" ColumnName="PictureId" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstmusic_artists">
+      <EntityTypeMapping TypeName="tstdbvModel.tstmusic_artists">
+        <MappingFragment StoreEntitySet="tstmusic_artists">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="ArtistsName" ColumnName="ArtistsName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="InstrumentsPlayed" ColumnName="InstrumentsPlayed" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="NumberOfSongs" ColumnName="NumberOfSongs" />
+          <ScalarProperty Name="DateJoined" ColumnName="DateJoined" />
+          <ScalarProperty Name="YearsActive" ColumnName="YearsActive" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstmusic_genres">
+      <EntityTypeMapping TypeName="tstdbvModel.tstmusic_genres">
+        <MappingFragment StoreEntitySet="tstmusic_genres">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CoverPhotoId" ColumnName="CoverPhotoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstmusic_playlist">
+      <EntityTypeMapping TypeName="tstdbvModel.tstmusic_playlist">
+        <MappingFragment StoreEntitySet="tstmusic_playlist">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="PlaylistName" ColumnName="PlaylistName" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateModified" ColumnName="DateModified" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstmusic_searches">
+      <EntityTypeMapping TypeName="tstdbvModel.tstmusic_searches">
+        <MappingFragment StoreEntitySet="tstmusic_searches">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+          <ScalarProperty Name="DateSearched" ColumnName="DateSearched" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstmusic_studios">
+      <EntityTypeMapping TypeName="tstdbvModel.tstmusic_studios">
+        <MappingFragment StoreEntitySet="tstmusic_studios">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstmusic_tracks">
+      <EntityTypeMapping TypeName="tstdbvModel.tstmusic_tracks">
+        <MappingFragment StoreEntitySet="tstmusic_tracks">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="AlbumId" ColumnName="AlbumId" />
+          <ScalarProperty Name="AudioId" ColumnName="AudioId" />
+          <ScalarProperty Name="PublisherId" ColumnName="PublisherId" />
+          <ScalarProperty Name="ArtistName" ColumnName="ArtistName" />
+          <ScalarProperty Name="TrackTitle" ColumnName="TrackTitle" />
+          <ScalarProperty Name="Genre" ColumnName="Genre" />
+          <ScalarProperty Name="PlayTime" ColumnName="PlayTime" />
+          <ScalarProperty Name="Lyrics" ColumnName="Lyrics" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstnews">
+      <EntityTypeMapping TypeName="tstdbvModel.tstnew">
+        <MappingFragment StoreEntitySet="tstnews">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="PictureId" ColumnName="PictureId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ShortTitle" ColumnName="ShortTitle" />
+          <ScalarProperty Name="FullTitle" ColumnName="FullTitle" />
+          <ScalarProperty Name="MetaKeywords" ColumnName="MetaKeywords" />
+          <ScalarProperty Name="MetaTitle" ColumnName="MetaTitle" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="Published" ColumnName="Published" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="AllowComments" ColumnName="AllowComments" />
+          <ScalarProperty Name="LimitedToStores" ColumnName="LimitedToStores" />
+          <ScalarProperty Name="MetaDescription" ColumnName="MetaDescription" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstnewsletters">
+      <EntityTypeMapping TypeName="tstdbvModel.tstnewsletter">
+        <MappingFragment StoreEntitySet="tstnewsletters">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CoverPhotoId" ColumnName="CoverPhotoId" />
+          <ScalarProperty Name="FileDocumentId" ColumnName="FileDocumentId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="SubscriptionPrice" ColumnName="SubscriptionPrice" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstnewsletters_brands">
+      <EntityTypeMapping TypeName="tstdbvModel.tstnewsletters_brands">
+        <MappingFragment StoreEntitySet="tstnewsletters_brands">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstnewsletters_collections">
+      <EntityTypeMapping TypeName="tstdbvModel.tstnewsletters_collections">
+        <MappingFragment StoreEntitySet="tstnewsletters_collections">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="DeveloperId" ColumnName="DeveloperId" />
+          <ScalarProperty Name="CollectionName" ColumnName="CollectionName" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateModified" ColumnName="DateModified" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="PictureId" ColumnName="PictureId" />
+          <ScalarProperty Name="NumberOfFiles" ColumnName="NumberOfFiles" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstnewsletters_collectionsitems">
+      <EntityTypeMapping TypeName="tstdbvModel.tstnewsletters_collectionsitems">
+        <MappingFragment StoreEntitySet="tstnewsletters_collectionsitems">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="CollectionId" ColumnName="CollectionId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstnewsletters_searches">
+      <EntityTypeMapping TypeName="tstdbvModel.tstnewsletters_searches">
+        <MappingFragment StoreEntitySet="tstnewsletters_searches">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+          <ScalarProperty Name="DateSearched" ColumnName="DateSearched" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstnewsletters_subscription">
+      <EntityTypeMapping TypeName="tstdbvModel.tstnewsletters_subscription">
+        <MappingFragment StoreEntitySet="tstnewsletters_subscription">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="NewsletterId" ColumnName="NewsletterId" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="NewsLetterSubscriptionGuId" ColumnName="NewsLetterSubscriptionGuId" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstpresets">
+      <EntityTypeMapping TypeName="tstdbvModel.tstpreset">
+        <MappingFragment StoreEntitySet="tstpresets">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="PresetGroup" ColumnName="PresetGroup" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstpresets_collections">
+      <EntityTypeMapping TypeName="tstdbvModel.tstpresets_collections">
+        <MappingFragment StoreEntitySet="tstpresets_collections">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="DeveloperId" ColumnName="DeveloperId" />
+          <ScalarProperty Name="CollectionName" ColumnName="CollectionName" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateModified" ColumnName="DateModified" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="PictureId" ColumnName="PictureId" />
+          <ScalarProperty Name="NumberOfFiles" ColumnName="NumberOfFiles" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstpresets_collectionsitems">
+      <EntityTypeMapping TypeName="tstdbvModel.tstpresets_collectionsitems">
+        <MappingFragment StoreEntitySet="tstpresets_collectionsitems">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="CollectionId" ColumnName="CollectionId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstpresets_developers">
+      <EntityTypeMapping TypeName="tstdbvModel.tstpresets_developers">
+        <MappingFragment StoreEntitySet="tstpresets_developers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstpresets_searches">
+      <EntityTypeMapping TypeName="tstdbvModel.tstpresets_searches">
+        <MappingFragment StoreEntitySet="tstpresets_searches">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+          <ScalarProperty Name="DateSearched" ColumnName="DateSearched" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstproducts">
+      <EntityTypeMapping TypeName="tstdbvModel.tstproduct">
+        <MappingFragment StoreEntitySet="tstproducts">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="StoreId" ColumnName="StoreId" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="MetaKeywords" ColumnName="MetaKeywords" />
+          <ScalarProperty Name="MetaTitle" ColumnName="MetaTitle" />
+          <ScalarProperty Name="Sku" ColumnName="Sku" />
+          <ScalarProperty Name="Gtin" ColumnName="Gtin" />
+          <ScalarProperty Name="ProductTypeId" ColumnName="ProductTypeId" />
+          <ScalarProperty Name="ShortDescription" ColumnName="ShortDescription" />
+          <ScalarProperty Name="FullDescription" ColumnName="FullDescription" />
+          <ScalarProperty Name="MetaDescription" ColumnName="MetaDescription" />
+          <ScalarProperty Name="AllowCustomerReviews" ColumnName="AllowCustomerReviews" />
+          <ScalarProperty Name="ApprovedRatingSum" ColumnName="ApprovedRatingSum" />
+          <ScalarProperty Name="NotApprovedRatingSum" ColumnName="NotApprovedRatingSum" />
+          <ScalarProperty Name="IsGiftCard" ColumnName="IsGiftCard" />
+          <ScalarProperty Name="GiftCardTypeId" ColumnName="GiftCardTypeId" />
+          <ScalarProperty Name="OverriddenGiftCardAmount" ColumnName="OverriddenGiftCardAmount" />
+          <ScalarProperty Name="IsDownload" ColumnName="IsDownload" />
+          <ScalarProperty Name="DownloadId" ColumnName="DownloadId" />
+          <ScalarProperty Name="UnlimitedDownloads" ColumnName="UnlimitedDownloads" />
+          <ScalarProperty Name="MaxNumberOfDownloads" ColumnName="MaxNumberOfDownloads" />
+          <ScalarProperty Name="DownloadExpirationDays" ColumnName="DownloadExpirationDays" />
+          <ScalarProperty Name="DownloadActivationTypeId" ColumnName="DownloadActivationTypeId" />
+          <ScalarProperty Name="HasSampleDownload" ColumnName="HasSampleDownload" />
+          <ScalarProperty Name="SampleDownloadId" ColumnName="SampleDownloadId" />
+          <ScalarProperty Name="HasUserAgreement" ColumnName="HasUserAgreement" />
+          <ScalarProperty Name="UserAgreementText" ColumnName="UserAgreementText" />
+          <ScalarProperty Name="IsRecurring" ColumnName="IsRecurring" />
+          <ScalarProperty Name="RecurringCycleLength" ColumnName="RecurringCycleLength" />
+          <ScalarProperty Name="RecurringCyclePeriodId" ColumnName="RecurringCyclePeriodId" />
+          <ScalarProperty Name="RecurringTotalCycles" ColumnName="RecurringTotalCycles" />
+          <ScalarProperty Name="IsRental" ColumnName="IsRental" />
+          <ScalarProperty Name="RentalPriceLength" ColumnName="RentalPriceLength" />
+          <ScalarProperty Name="IsTaxExempt" ColumnName="IsTaxExempt" />
+          <ScalarProperty Name="TaxCategoryId" ColumnName="TaxCategoryId" />
+          <ScalarProperty Name="StockQuantity" ColumnName="StockQuantity" />
+          <ScalarProperty Name="MinStockQuantity" ColumnName="MinStockQuantity" />
+          <ScalarProperty Name="AllowBackInStockSubscriptions" ColumnName="AllowBackInStockSubscriptions" />
+          <ScalarProperty Name="OrderMinimumQuantity" ColumnName="OrderMinimumQuantity" />
+          <ScalarProperty Name="OrderMaximumQuantity" ColumnName="OrderMaximumQuantity" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="OldPrice" ColumnName="OldPrice" />
+          <ScalarProperty Name="ProductCost" ColumnName="ProductCost" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstproducts_affiliates">
+      <EntityTypeMapping TypeName="tstdbvModel.tstproducts_affiliates">
+        <MappingFragment StoreEntitySet="tstproducts_affiliates">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="AffiliateAddressId" ColumnName="AffiliateAddressId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="Commission" ColumnName="Commission" />
+          <ScalarProperty Name="DateJoined" ColumnName="DateJoined" />
+          <ScalarProperty Name="AdminComment" ColumnName="AdminComment" />
+          <ScalarProperty Name="FriendlyURLName" ColumnName="FriendlyURLName" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstproducts_banners">
+      <EntityTypeMapping TypeName="tstdbvModel.tstproducts_banners">
+        <MappingFragment StoreEntitySet="tstproducts_banners">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="LinkURL" ColumnName="LinkURL" />
+          <ScalarProperty Name="CoverImageId" ColumnName="CoverImageId" />
+          <ScalarProperty Name="HtmlText" ColumnName="HtmlText" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstproducts_cart">
+      <EntityTypeMapping TypeName="tstdbvModel.tstproducts_cart">
+        <MappingFragment StoreEntitySet="tstproducts_cart">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstproducts_customers">
+      <EntityTypeMapping TypeName="tstdbvModel.tstproducts_customers">
+        <MappingFragment StoreEntitySet="tstproducts_customers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="StateProvinceId" ColumnName="StateProvinceId" />
+          <ScalarProperty Name="LastIpLocation" ColumnName="LastIpLocation" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstproducts_discounts">
+      <EntityTypeMapping TypeName="tstdbvModel.tstproducts_discounts">
+        <MappingFragment StoreEntitySet="tstproducts_discounts">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="DiscountName" ColumnName="DiscountName" />
+          <ScalarProperty Name="CouponCode" ColumnName="CouponCode" />
+          <ScalarProperty Name="AdminComment" ColumnName="AdminComment" />
+          <ScalarProperty Name="DiscountTypeId" ColumnName="DiscountTypeId" />
+          <ScalarProperty Name="UsePercentage" ColumnName="UsePercentage" />
+          <ScalarProperty Name="DiscountPercentage" ColumnName="DiscountPercentage" />
+          <ScalarProperty Name="DiscountAmount" ColumnName="DiscountAmount" />
+          <ScalarProperty Name="MaximumDiscountAmount" ColumnName="MaximumDiscountAmount" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="RequiresCouponCode" ColumnName="RequiresCouponCode" />
+          <ScalarProperty Name="IsCumulative" ColumnName="IsCumulative" />
+          <ScalarProperty Name="DiscountLimitationId" ColumnName="DiscountLimitationId" />
+          <ScalarProperty Name="LimitationTimes" ColumnName="LimitationTimes" />
+          <ScalarProperty Name="MaximumDiscountedQuantity" ColumnName="MaximumDiscountedQuantity" />
+          <ScalarProperty Name="AppliedToSubCategories" ColumnName="AppliedToSubCategories" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstproducts_giftcards">
+      <EntityTypeMapping TypeName="tstdbvModel.tstproducts_giftcards">
+        <MappingFragment StoreEntitySet="tstproducts_giftcards">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="PurchasedWithOrderItemId" ColumnName="PurchasedWithOrderItemId" />
+          <ScalarProperty Name="GiftCardTypeId" ColumnName="GiftCardTypeId" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="IsGiftCardActivated" ColumnName="IsGiftCardActivated" />
+          <ScalarProperty Name="GiftCardCouponCode" ColumnName="GiftCardCouponCode" />
+          <ScalarProperty Name="RecipientName" ColumnName="RecipientName" />
+          <ScalarProperty Name="RecipientEmail" ColumnName="RecipientEmail" />
+          <ScalarProperty Name="SenderName" ColumnName="SenderName" />
+          <ScalarProperty Name="SenderEmail" ColumnName="SenderEmail" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="IsRecipientNotified" ColumnName="IsRecipientNotified" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstproducts_manufacturers">
+      <EntityTypeMapping TypeName="tstdbvModel.tstproducts_manufacturers">
+        <MappingFragment StoreEntitySet="tstproducts_manufacturers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="ManufacturerName" ColumnName="ManufacturerName" />
+          <ScalarProperty Name="MetaKeywords" ColumnName="MetaKeywords" />
+          <ScalarProperty Name="MetaTitle" ColumnName="MetaTitle" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="MetaDescription" ColumnName="MetaDescription" />
+          <ScalarProperty Name="PictureId" ColumnName="PictureId" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstproducts_orderitem">
+      <EntityTypeMapping TypeName="tstdbvModel.tstproducts_orderitem">
+        <MappingFragment StoreEntitySet="tstproducts_orderitem">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="UnitPriceInclTax" ColumnName="UnitPriceInclTax" />
+          <ScalarProperty Name="UnitPriceExclTax" ColumnName="UnitPriceExclTax" />
+          <ScalarProperty Name="PriceInclTax" ColumnName="PriceInclTax" />
+          <ScalarProperty Name="PriceExclTax" ColumnName="PriceExclTax" />
+          <ScalarProperty Name="DiscountAmountInclTax" ColumnName="DiscountAmountInclTax" />
+          <ScalarProperty Name="DiscountAmountExclTax" ColumnName="DiscountAmountExclTax" />
+          <ScalarProperty Name="OriginalProductCost" ColumnName="OriginalProductCost" />
+          <ScalarProperty Name="AttributeDescription" ColumnName="AttributeDescription" />
+          <ScalarProperty Name="AttributesXml" ColumnName="AttributesXml" />
+          <ScalarProperty Name="DownloadCount" ColumnName="DownloadCount" />
+          <ScalarProperty Name="RentalStartDate" ColumnName="RentalStartDate" />
+          <ScalarProperty Name="RentalEndDate" ColumnName="RentalEndDate" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstproducts_orders">
+      <EntityTypeMapping TypeName="tstdbvModel.tstproducts_orders">
+        <MappingFragment StoreEntitySet="tstproducts_orders">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="CustomOrderNumber" ColumnName="CustomOrderNumber" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="StoreId" ColumnName="StoreId" />
+          <ScalarProperty Name="PaymentStatusId" ColumnName="PaymentStatusId" />
+          <ScalarProperty Name="PaymentMethodSystemName" ColumnName="PaymentMethodSystemName" />
+          <ScalarProperty Name="CustomerCurrencyCode" ColumnName="CustomerCurrencyCode" />
+          <ScalarProperty Name="CurrencyRate" ColumnName="CurrencyRate" />
+          <ScalarProperty Name="OrderSubtotalInclTax" ColumnName="OrderSubtotalInclTax" />
+          <ScalarProperty Name="OrderSubtotalExclTax" ColumnName="OrderSubtotalExclTax" />
+          <ScalarProperty Name="OrderSubTotalDiscountInclTax" ColumnName="OrderSubTotalDiscountInclTax" />
+          <ScalarProperty Name="OrderSubTotalDiscountExclTax" ColumnName="OrderSubTotalDiscountExclTax" />
+          <ScalarProperty Name="PaymentMethodAdditionalFeeInclTax" ColumnName="PaymentMethodAdditionalFeeInclTax" />
+          <ScalarProperty Name="PaymentMethodAdditionalFeeExclTax" ColumnName="PaymentMethodAdditionalFeeExclTax" />
+          <ScalarProperty Name="TaxRates" ColumnName="TaxRates" />
+          <ScalarProperty Name="OrderTax" ColumnName="OrderTax" />
+          <ScalarProperty Name="OrderDiscount" ColumnName="OrderDiscount" />
+          <ScalarProperty Name="OrderTotal" ColumnName="OrderTotal" />
+          <ScalarProperty Name="RefundedAmount" ColumnName="RefundedAmount" />
+          <ScalarProperty Name="AffiliateId" ColumnName="AffiliateId" />
+          <ScalarProperty Name="BankCardId" ColumnName="BankCardId" />
+          <ScalarProperty Name="AuthorizationTransactionId" ColumnName="AuthorizationTransactionId" />
+          <ScalarProperty Name="AuthorizationTransactionCode" ColumnName="AuthorizationTransactionCode" />
+          <ScalarProperty Name="AuthorizationTransactionResult" ColumnName="AuthorizationTransactionResult" />
+          <ScalarProperty Name="CaptureTransactionId" ColumnName="CaptureTransactionId" />
+          <ScalarProperty Name="CaptureTransactionResult" ColumnName="CaptureTransactionResult" />
+          <ScalarProperty Name="SubscriptionTransactionId" ColumnName="SubscriptionTransactionId" />
+          <ScalarProperty Name="PaidDate" ColumnName="PaidDate" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstproducts_recurringpayments">
+      <EntityTypeMapping TypeName="tstdbvModel.tstproducts_recurringpayments">
+        <MappingFragment StoreEntitySet="tstproducts_recurringpayments">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="InitialOrderId" ColumnName="InitialOrderId" />
+          <ScalarProperty Name="CycleLength" ColumnName="CycleLength" />
+          <ScalarProperty Name="CyclePeriodId" ColumnName="CyclePeriodId" />
+          <ScalarProperty Name="TotalCycles" ColumnName="TotalCycles" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="HasLastPaymentFailed" ColumnName="HasLastPaymentFailed" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstproducts_salesreturns">
+      <EntityTypeMapping TypeName="tstdbvModel.tstproducts_salesreturns">
+        <MappingFragment StoreEntitySet="tstproducts_salesreturns">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="ReasonForReturn" ColumnName="ReasonForReturn" />
+          <ScalarProperty Name="RequestedAction" ColumnName="RequestedAction" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="CustomNumber" ColumnName="CustomNumber" />
+          <ScalarProperty Name="StoreId" ColumnName="StoreId" />
+          <ScalarProperty Name="OrderItemId" ColumnName="OrderItemId" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="ReturnedQuantity" ColumnName="ReturnedQuantity" />
+          <ScalarProperty Name="CustomerComments" ColumnName="CustomerComments" />
+          <ScalarProperty Name="UploadedFileId" ColumnName="UploadedFileId" />
+          <ScalarProperty Name="StaffNotes" ColumnName="StaffNotes" />
+          <ScalarProperty Name="ReturnRequestStatusId" ColumnName="ReturnRequestStatusId" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstproducts_searches">
+      <EntityTypeMapping TypeName="tstdbvModel.tstproducts_searches">
+        <MappingFragment StoreEntitySet="tstproducts_searches">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+          <ScalarProperty Name="DateSearched" ColumnName="DateSearched" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstproducts_tags">
+      <EntityTypeMapping TypeName="tstdbvModel.tstproducts_tags">
+        <MappingFragment StoreEntitySet="tstproducts_tags">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstproducts_transactions">
+      <EntityTypeMapping TypeName="tstdbvModel.tstproducts_transactions">
+        <MappingFragment StoreEntitySet="tstproducts_transactions">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="SenderId" ColumnName="SenderId" />
+          <ScalarProperty Name="ReceiverId" ColumnName="ReceiverId" />
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+          <ScalarProperty Name="TypeOfTransaction" ColumnName="TypeOfTransaction" />
+          <ScalarProperty Name="TransactionDetails" ColumnName="TransactionDetails" />
+          <ScalarProperty Name="PaymentMethod" ColumnName="PaymentMethod" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+          <ScalarProperty Name="AmountPaid" ColumnName="AmountPaid" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="ReceiptNo" ColumnName="ReceiptNo" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstproducts_wishlist">
+      <EntityTypeMapping TypeName="tstdbvModel.tstproducts_wishlist">
+        <MappingFragment StoreEntitySet="tstproducts_wishlist">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="DatePosted" ColumnName="DatePosted" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstshortstories">
+      <EntityTypeMapping TypeName="tstdbvModel.tstshortstory">
+        <MappingFragment StoreEntitySet="tstshortstories">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="CoverPhotoId" ColumnName="CoverPhotoId" />
+          <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+          <ScalarProperty Name="DatePublished" ColumnName="DatePublished" />
+          <ScalarProperty Name="DateModified" ColumnName="DateModified" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstshortstories_collections">
+      <EntityTypeMapping TypeName="tstdbvModel.tstshortstories_collections">
+        <MappingFragment StoreEntitySet="tstshortstories_collections">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="DeveloperId" ColumnName="DeveloperId" />
+          <ScalarProperty Name="CollectionName" ColumnName="CollectionName" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateModified" ColumnName="DateModified" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="PictureId" ColumnName="PictureId" />
+          <ScalarProperty Name="NumberOfFiles" ColumnName="NumberOfFiles" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstshortstories_collectionsitems">
+      <EntityTypeMapping TypeName="tstdbvModel.tstshortstories_collectionsitems">
+        <MappingFragment StoreEntitySet="tstshortstories_collectionsitems">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="CollectionId" ColumnName="CollectionId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstshortstories_searches">
+      <EntityTypeMapping TypeName="tstdbvModel.tstshortstories_searches">
+        <MappingFragment StoreEntitySet="tstshortstories_searches">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+          <ScalarProperty Name="DateSearched" ColumnName="DateSearched" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstshortstories_writers">
+      <EntityTypeMapping TypeName="tstdbvModel.tstshortstories_writers">
+        <MappingFragment StoreEntitySet="tstshortstories_writers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="Biography" ColumnName="Biography" />
+          <ScalarProperty Name="LinkURL" ColumnName="LinkURL" />
+          <ScalarProperty Name="BookCount" ColumnName="BookCount" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstsystem_apierrors">
+      <EntityTypeMapping TypeName="tstdbvModel.tstsystem_apierrors">
+        <MappingFragment StoreEntitySet="tstsystem_apierrors">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstsystem_faq">
+      <EntityTypeMapping TypeName="tstdbvModel.tstsystem_faq">
+        <MappingFragment StoreEntitySet="tstsystem_faq">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Question" ColumnName="Question" />
+          <ScalarProperty Name="Answer" ColumnName="Answer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstsystem_termsconditions">
+      <EntityTypeMapping TypeName="tstdbvModel.tstsystem_termsconditions">
+        <MappingFragment StoreEntitySet="tstsystem_termsconditions">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TermNumber" ColumnName="TermNumber" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstwikis">
+      <EntityTypeMapping TypeName="tstdbvModel.tstwiki">
+        <MappingFragment StoreEntitySet="tstwikis">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Body" ColumnName="Body" />
+          <ScalarProperty Name="MetaKeywords" ColumnName="MetaKeywords" />
+          <ScalarProperty Name="MetaTitle" ColumnName="MetaTitle" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="BodyOverview" ColumnName="BodyOverview" />
+          <ScalarProperty Name="AllowComments" ColumnName="AllowComments" />
+          <ScalarProperty Name="Tags" ColumnName="Tags" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="MetaDescription" ColumnName="MetaDescription" />
+          <ScalarProperty Name="LimitedToStores" ColumnName="LimitedToStores" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstwikis_searches">
+      <EntityTypeMapping TypeName="tstdbvModel.tstwikis_searches">
+        <MappingFragment StoreEntitySet="tstwikis_searches">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+          <ScalarProperty Name="DateSearched" ColumnName="DateSearched" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tstzuckstories">
+      <EntityTypeMapping TypeName="tstdbvModel.tstzuckstory">
+        <MappingFragment StoreEntitySet="tstzuckstories">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="PostId" ColumnName="PostId" />
+          <ScalarProperty Name="PictureId" ColumnName="PictureId" />
+          <ScalarProperty Name="VideoId" ColumnName="VideoId" />
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+          <ScalarProperty Name="PollCampaignId" ColumnName="PollCampaignId" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="DatePublished" ColumnName="DatePublished" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="Shares" ColumnName="Shares" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeletedOn" ColumnName="IsDeletedOn" />
+          <ScalarProperty Name="IsActiveOn" ColumnName="IsActiveOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

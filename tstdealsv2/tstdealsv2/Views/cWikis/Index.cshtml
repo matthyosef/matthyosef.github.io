@@ -1,0 +1,944 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en" class="dark-style layout-navbar-fixed layout-menu-fixed " dir="~/assets" data-theme="theme-default"
+      data-assets-path="./assets" data-template="vertical-menu-template-dark">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>263deals</title>
+
+
+    <meta name="description" content="the best ecommerce platform" />
+    <meta name="keywords" content="ecommerce, zimbabwe, deals, digital products, online shop">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="#" />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="~/assets/fonts/boxicons.css" />
+    <link rel="stylesheet" href="~/assets/fonts/flag-icons.css" />
+    <link rel="stylesheet" href="~/assets/styles/icon-font.css" />
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="~/assets/styles/core-dark.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="~/assets/styles/theme-default-dark.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="~/assets/styles/demo.css" />
+
+    <!-- Vendors CSS -->
+    <link rel="stylesheet" href="~/assets/plugins/perfect-scrollbar/perfect-scrollbar.css" />
+    <link rel="stylesheet" href="~/assets/plugins/typeahead-js/typeahead.css" />
+    <link rel="stylesheet" href="~/assets/plugins/apex-charts/apex-charts.css" />
+
+    <!-- Social CSS -->
+    <link rel="stylesheet" href="~/assets/plugins/glightbox-master/dist/css/glightbox.min.css" />
+    <link rel="stylesheet" href="~/assets/plugins/zuck.js/dist/zuck.min.css" />
+
+    <!-- Page CSS -->
+    <!-- MAIN -->
+    <link rel="stylesheet" type="text/css" href="~/assets/styles/app.min.css" />
+
+    <!-- Helpers -->
+    <script src="~/assets/scripts/helpers.js"></script>
+
+    <script src="~/assets/scripts/config.js"></script>
+</head>
+
+<body>
+
+
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-content-navbar  ">
+        <div class="layout-container">
+            <!-- Menu -->
+            <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+                <div class="app-brand demo ">
+                    <a href="index.html" class="app-brand-link">
+                        <img src="~/assets/images/sweetbao.png" alt="" class="img-logo" />
+                        <h2 class="text-logo">263<small>deals</small></h2>
+                    </a>
+                </div>
+
+                <div class="menu-divider mt-0  "></div>
+                <div class="menu-inner-shadow"></div>
+
+                <ul class="menu-inner py-1">
+                    <li class="menu-item">
+                        <a href='@Url.Action("Index","cHome","")'  class="menu-link">
+                            <i class="menu-icon tf-icons bi bi-arrow-left-circle"></i>
+                            <div data-i18n="Overview">Return Home</div>
+                        </a>
+                    </li>
+                    <!-- Filters -->
+                    <li class="menu-header small text-uppercase">
+                        <span class="menu-header-text">Filters</span>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <i class="menu-icon tf-icons bi bi-app-indicator"></i>
+                            <div data-i18n="Artworks">All</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <i class="menu-icon tf-icons bi bi-activity"></i>
+                            <div data-i18n="Ebooks">Trending</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <i class="menu-icon tf-icons bi bi-arrow-through-heart"></i>
+                            <div data-i18n="Courses">Most Popular</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <i class="menu-icon tf-icons bi bi-layers"></i>
+                            <div data-i18n="Movies">Recents</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <i class="menu-icon tf-icons bi bi-star"></i>
+                            <div data-i18n="Songs">Favourites</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <i class="menu-icon tf-icons bi-chat-right-dots"></i>
+                            <div data-i18n="Songs">Comments</div>
+                        </a>
+                    </li>
+                    <!-- Sources -->
+                    <li class="menu-header small text-uppercase">
+                        <span class="menu-header-text">Sources</span>
+                    </li>
+                    <li class="menu-item mb-4">
+                        <a href="#" class="menu-link">
+                            <i class="menu-icon tf-icons bi bi-funnel"></i>
+                            <div data-i18n="Clubs">Searches</div>
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+            <!-- / Menu -->
+            <!-- Layout container -->
+            <div class="layout-page">
+                <nav class="layout-navbar navbar navbar-expand-xl align-items-center bg-navbar-theme"
+                     id="layout-navbar">
+                    <div class="container-fluid">
+
+                        <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0   d-xl-none ">
+                            <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+                                <i class="bx bx-menu bx-sm"></i>
+                            </a>
+                        </div>
+
+                        <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+                            <!-- Search -->
+                            <div class="navbar-nav align-items-center">
+                                <div class="nav-item navbar-search-wrapper mb-0">
+                                    <a class="nav-item nav-link px-0" href="javascript:void(0);">
+                                        <i class="bx bx-search-alt bx-sm"></i>
+                                        <label type="text" class="d-md-inline-block text-muted">Search?</label>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- /Search -->
+
+                            <ul class="navbar-nav gap-3 flex-row align-items-center ms-auto">
+                                <!-- Quick links  -->
+                                <li class="nav-item me-2 me-xl-0">
+                                    <a class="nav-link" href="javascript:void(0);"
+                                       data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+                                        <i class='bx bx-grid-alt bx-sm'></i>
+                                    </a>
+                                </li>
+                                <!-- Quick links -->
+                                <!-- Cart  -->
+                                <li class="nav-item me-2 me-xl-0">
+                                    <a class="nav-link" href="javascript:void(0);"
+                                       data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">
+                                        <i class='bx bx-cart bx-sm'></i>
+                                    </a>
+                                </li>
+                                <!-- Cart -->
+                                <!-- Notification -->
+                                <li class="nav-item me-xl-2">
+                                    <a class="nav-link" href="javascript:void(0);"
+                                       data-bs-toggle="offcanvas" data-bs-target="#offcanvasNotifications" aria-controls="offcanvasNotifications">
+                                        <i class="bx bx-bell bx-sm"></i>
+                                        <span class="badge bg-secondary rounded-pill badge-notifications">5</span>
+                                    </a>
+                                </li>
+                                <!--/ Notification -->
+                                <!-- Messages -->
+                                <li class="nav-item me-xl-2">
+                                    <a class="nav-link" href="javascript:void(0);"
+                                       data-bs-toggle="offcanvas" data-bs-target="#offcanvasMessages" aria-controls="offcanvasMessages">
+                                        <i class="bx bx-chat bx-sm"></i>
+                                        <span class="badge bg-dark rounded-pill badge-notifications">5</span>
+                                    </a>
+                                </li>
+                                <!--/ Messages -->
+                                <!-- User -->
+                                <li class="nav-item navbar-dropdown dropdown-user dropdown">
+                                    <a class="nav-link" href="javascript:void(0);"
+                                       data-bs-toggle="offcanvas" data-bs-target="#offcanvasSettings" aria-controls="offcanvasSettings">
+                                        <div class="avatar avatar-online">
+                                            <img src="~/assets/images/avatars/1.png" alt class="rounded-circle">
+                                        </div>
+                                    </a>
+                                </li>
+                                <!--/ User -->
+
+
+                            </ul>
+                        </div>
+
+
+                        <!-- Search Small Screens -->
+                        <div class="navbar-search-wrapper search-input-wrapper  d-none">
+                            <input type="text" class="form-control search-input container-fluid border-0"
+                                   placeholder="Search..." aria-label="Search...">
+                            <i class="bx bx-x bx-sm search-toggler cursor-pointer"></i>
+                        </div>
+
+
+                    </div>
+                </nav>
+
+                <!-- offcanvas -->
+
+                <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasMenu">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title">Menu</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body mx-0 flex-grow-0">
+                        <div class="row mb-0">
+                            <div class="col pe-2">
+                                <a href="#" data-back-button class="card card-style rounded-m me-0 p-3 mb-3">
+                                    <i class="fa fa-gift text-danger fs-4"></i>
+                                    <h6 class="pt-3">
+                                        Your Orders</h4>
+                                        <p class="small mt-n2 mb-0 color-highlight">Track, return, or buy things again</p>
+                                </a>
+                            </div>
+                            <div class="col ps-2">
+                                <a href="#" data-back-button class="card card-style rounded-m ms-0  p-3 mb-3">
+                                    <i class="fa fa-shopping-bag text-success fs-4"></i>
+                                    <h6 class="pt-3">
+                                        Wishlist</h4>
+                                        <p class="small mt-n2 mb-0 color-highlight">Act on or delete preferences</p>
+                                </a>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col pe-2">
+                                <a href="#" data-back-button class="card card-style rounded-m me-0 p-3 mb-3">
+                                    <i class="fa fa-question-circle text-white fs-4"></i>
+                                    <h6 class="pt-3">
+                                        Searches</h4>
+                                        <p class="small mt-n2 mb-0 color-highlight">Discover your taste</p>
+                                </a>
+                            </div>
+                            <div class="col ps-2">
+                                <a href="#" data-back-button class="card card-style rounded-m ms-0  p-3 mb-3">
+                                    <i class="fa fa-code text-warning fs-4"></i>
+                                    <h6 class="pt-3">
+                                        Transactions Log</h4>
+                                        <p class="small mt-n2 mb-0 color-highlight">View deals occured</p>
+                                </a>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col pe-2">
+                                <a href="#" data-back-button class="card card-style rounded-m me-0 p-3 mb-3">
+                                    <i class="fa fa-image text-primary fs-4"></i>
+                                    <h6 class="pt-3">
+                                        Photos</h4>
+                                        <p class="small mt-n2 mb-0 color-highlight">Browse photos</p>
+                                </a>
+                            </div>
+                            <div class="col ps-2">
+                                <a href="#" data-back-button class="card card-style rounded-m ms-0  p-3 mb-3">
+                                    <i class="fa fa-camera text-info fs-4"></i>
+                                    <h6 class="pt-3">
+                                        Videos</h4>
+                                        <p class="small mt-n2 mb-0 color-highlight">Browse videos</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasCart">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title">Cart</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body mx-0 flex-grow-0">
+                        <div class="row d-flex justify-content-center align-items-center h-100">
+                            <div class="col-12">
+                                <div class="card rounded-3 mb-4">
+                                    <div class="card-body p-4">
+                                        <div class="row d-flex justify-content-between align-items-center">
+                                            <div class="col-md-4 col-lg-4 col-xl-4">
+                                                <img src="~/assets/images/4.jpg"
+                                                     class="img-fluid rounded-3" alt="Cotton T-shirt">
+                                            </div>
+                                            <div class="col-md-8 col-lg-8 col-xl-8 text-center">
+                                                <p class="lead fs-6 my-2">Basic T-shirt</p>
+                                                <p><span class="text-success">$45.65</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card rounded-3 mb-4">
+                                    <div class="card-body p-4">
+                                        <div class="row d-flex justify-content-between align-items-center">
+                                            <div class="col-md-4 col-lg-4 col-xl-4">
+                                                <img src="~/assets/images/4.jpg"
+                                                     class="img-fluid rounded-3" alt="Cotton T-shirt">
+                                            </div>
+                                            <div class="col-md-8 col-lg-8 col-xl-8 text-center">
+                                                <p class="lead fs-6 my-2">Basic T-shirt</p>
+                                                <p><span class="text-success">$45.65</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card rounded-3 mb-4">
+                                    <div class="card-body p-4">
+                                        <div class="row d-flex justify-content-between align-items-center">
+                                            <div class="col-md-4 col-lg-4 col-xl-4">
+                                                <img src="~/assets/images/4.jpg"
+                                                     class="img-fluid rounded-3" alt="Cotton T-shirt">
+                                            </div>
+                                            <div class="col-md-8 col-lg-8 col-xl-8 text-center">
+                                                <p class="lead fs-6 my-2">Basic T-shirt</p>
+                                                <p><span class="text-success">$45.65</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card rounded-3 mb-4">
+                                    <div class="card-body p-4">
+                                        <div class="row d-flex justify-content-between align-items-center">
+                                            <div class="col-md-4 col-lg-4 col-xl-4">
+                                                <img src="~/assets/images/4.jpg"
+                                                     class="img-fluid rounded-3" alt="Cotton T-shirt">
+                                            </div>
+                                            <div class="col-md-8 col-lg-8 col-xl-8 text-center">
+                                                <p class="lead fs-6 my-2">Basic T-shirt</p>
+                                                <p><span class="text-success">$45.65</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="card">
+                                    <div class="card-body">
+                                        <button type="button" class="btn btn-success btn-block btn-lg">Proceed to Pay</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasNotifications">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title mb-0">Notifications</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body mx-0 flex-grow-0">
+                        <div class="mt-0">
+                            <ul class="list-group list-group-flush list-unstyled">
+                                <!-- Notif item -->
+                                <li>
+                                    <div class="list-group-item list-group-item-action rounded badge-unread d-flex border-0 mb-1 p-3">
+                                        <div class="avatar text-center d-none d-sm-inline-block">
+                                            <img class="avatar-img rounded-circle" src="~/assets/images/avatar/01.jpg" alt="">
+                                        </div>
+                                        <div class="ms-sm-3">
+                                            <div class=" d-flex">
+                                                <p class="small mb-2"><b>Judy Nguyen</b> sent you a friend request.</p>
+                                                <p class="small ms-3 text-nowrap">Just now</p>
+                                            </div>
+                                            <div class="d-flex">
+                                                <button class="btn btn-sm py-1 btn-primary me-2">Accept </button>
+                                                <button class="btn btn-sm py-1 btn-danger-soft">Delete </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- Notif item -->
+                                <li>
+                                    <div class="list-group-item list-group-item-action rounded badge-unread d-flex border-0 mb-1 p-3 position-relative">
+                                        <div class="avatar text-center d-none d-sm-inline-block">
+                                            <img class="avatar-img rounded-circle" src="~/assets/images/avatar/02.jpg" alt="">
+                                        </div>
+                                        <div class="ms-sm-3 d-flex">
+                                            <div>
+                                                <p class="small mb-2">Wish <b>Amanda Reed</b> a happy birthday (Nov 12)</p>
+                                                <button class="btn btn-sm btn-outline-light py-1 me-2">Say happy birthday 🎂</button>
+                                            </div>
+                                            <p class="small ms-3">2min</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- Notif item -->
+                                <li>
+                                    <a href="#" class="list-group-item list-group-item-action rounded d-flex border-0 mb-1 p-3">
+                                        <div class="avatar text-center d-none d-sm-inline-block">
+                                            <div class="avatar-img rounded-circle bg-success"><span class="text-white position-absolute top-50 start-50 translate-middle fw-bold">WB</span></div>
+                                        </div>
+                                        <div class="ms-sm-3">
+                                            <div class="d-flex">
+                                                <p class="small mb-2">Webestica has 15 like and 1 new activity</p>
+                                                <p class="small ms-3">1hr</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <!-- Notif item -->
+                                <li>
+                                    <a href="#" class="list-group-item list-group-item-action rounded d-flex border-0 p-3 mb-1">
+                                        <div class="avatar text-center d-none d-sm-inline-block">
+                                            <img class="avatar-img rounded-circle" src="~/assets/images/logo/12.svg" alt="">
+                                        </div>
+                                        <div class="ms-sm-3 d-flex">
+                                            <p class="small mb-2"><b>Bootstrap in the news:</b> The search giant’s parent company, Alphabet, just joined an exclusive club of tech stocks.</p>
+                                            <p class="small ms-3">4hr</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-footer text-center">
+                            <a href="#" class="btn btn-sm btn-primary-soft">See all incoming activity</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasMessages">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title">Messages</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body mx-0 flex-grow-0">
+                        <div class="mx-2 mr-2 mb-0 mt-2">
+                            <a href="page-chat.html" class="d-flex mb-3">
+                                <div>
+                                    <img src="~/assets/images/04.png" class="avatar-xl rounded-circle me-3" />
+                                </div>
+                                <div>
+                                    <h5 class="opacity-5">Jane Louder</h5>
+                                    <p class="line-height-s mt-1 opacity-5">This is a sample chat box, it looks pretty sweet and has text in it.</p>
+                                </div>
+                                <div class="align-self-center ps-3">
+                                    <i class="fa fa-angle-right opacity-5"></i>
+                                </div>
+                            </a>
+                            <hr />
+                        </div>
+                        <div class="mx-2 mr-2 mb-0 mt-2">
+                            <a href="page-chat.html" class="d-flex mb-3">
+                                <div>
+                                    <img src="~/assets/images/author-2.jpg" class="avatar-xl rounded-circle me-3" />
+                                </div>
+                                <div>
+                                    <h5 class="opacity-5">Jane Louder</h5>
+                                    <p class="line-height-s mt-1 opacity-5">This is a sample chat box, it looks pretty sweet and has text in it.</p>
+                                </div>
+                                <div class="align-self-center ps-3">
+                                    <i class="fa fa-angle-right opacity-5"></i>
+                                </div>
+                            </a>
+                            <hr />
+                        </div>
+                    </div>
+                </div>
+
+
+                @Html.Partial("~/Views/Shared/_pCanvasSettings.cshtml")
+                <!-- / Navbar -->
+                <!-- Content wrapper -->
+                <div class="content-wrapper">
+                    <div class="container-xxl flex-grow-1 container-p-y">
+                        <div class="row">
+                            <!-- Main content -->
+                            <div class="col-lg-12 col-sm-12 mb-3">
+                                <!-- End of post 1 -->
+                                <div class="card row-hover position-relative py-3 px-3 mb-3 border-warning border-top-0 border-right-0 border-bottom-0 rounded-0">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-8 mb-3 mb-sm-0">
+                                            <h5>
+                                                <a href="blank-post-details.html" class="text-secondary">Drupal 8 quick starter guide</a>
+                                            </h5>
+                                            <p class="text-sm"><span class="op-6">Posted</span> <a class="text-info" href="#">20 minutes</a> <span class="op-6">ago by</span> <a class="text-info" href="#">KenyeW</a></p>
+                                            <div class="text-sm op-5"> <a class="text-info mr-2" href="#">#C++</a> <a class="text-info mr-2" href="#">#AppStrap Theme</a> <a class="text-info mr-2" href="#">#Wordpress</a> </div>
+                                        </div>
+                                        <div class="col-md-4 op-7">
+                                            <div class="row text-center op-7">
+                                                <div class="col px-1"> <i class="ion-connection-bars icon-1x"></i> <span class="d-block text-sm">141 Votes</span> </div>
+                                                <div class="col px-1"> <i class="ion-ios-chatboxes-outline icon-1x"></i> <span class="d-block text-sm">122 Replys</span> </div>
+                                                <div class="col px-1"> <i class="ion-ios-eye-outline icon-1x"></i> <span class="d-block text-sm">290 Views</span> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /End of post 1 -->
+                                <!-- End of post 2 -->
+                                <div class="card row-hover position-relative py-3 px-3 mb-3 border-primary border-top-0 border-right-0 border-bottom-0 rounded-0">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-8 mb-3 mb-sm-0">
+                                            <h5>
+                                                <a href="blank-post-details.html" class="text-secondary">HELP! My Windows XP machine is down</a>
+                                            </h5>
+                                            <p class="text-sm"><span class="op-6">Posted</span> <a class="text-info" href="#">54 minutes</a> <span class="op-6">ago by</span> <a class="text-info" href="#">DanielD</a></p>
+                                            <div class="text-sm op-5"> <a class="text-info mr-2" href="#">#Development</a> <a class="text-info mr-2" href="#">#AppStrap Theme</a> </div>
+                                        </div>
+                                        <div class="col-md-4 op-7">
+                                            <div class="row text-center op-7">
+                                                <div class="col px-1"> <i class="ion-connection-bars icon-1x"></i> <span class="d-block text-sm">256 Votes</span> </div>
+                                                <div class="col px-1"> <i class="ion-ios-chatboxes-outline icon-1x"></i> <span class="d-block text-sm">251 Replys</span> </div>
+                                                <div class="col px-1"> <i class="ion-ios-eye-outline icon-1x"></i> <span class="d-block text-sm">223 Views</span> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /End of post 2 -->
+                                <!-- End of post 3 -->
+                                <div class="card row-hover position-relative py-3 px-3 mb-3 border-primary border-top-0 border-right-0 border-bottom-0 rounded-0">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-8 mb-3 mb-sm-0">
+                                            <h5>
+                                                <a href="blank-post-details.html" class="text-secondary">Bootstrap 4 development in record time with AppStrap Bootstrap 4 Theme</a>
+                                            </h5>
+                                            <p class="text-sm"><span class="op-6">Posted</span> <a class="text-info" href="#">32 minutes</a> <span class="op-6">ago by</span> <a class="text-info" href="#">AppStrapMaster</a></p>
+                                            <div class="text-sm op-5"> <a class="text-info mr-2" href="#">#Bootstrap 4</a> <a class="text-info mr-2" href="#">#Wordpress</a> </div>
+                                        </div>
+                                        <div class="col-md-4 op-7">
+                                            <div class="row text-center op-7">
+                                                <div class="col px-1"> <i class="ion-connection-bars icon-1x"></i> <span class="d-block text-sm">245 Votes</span> </div>
+                                                <div class="col px-1"> <i class="ion-ios-chatboxes-outline icon-1x"></i> <span class="d-block text-sm">116 Replys</span> </div>
+                                                <div class="col px-1"> <i class="ion-ios-eye-outline icon-1x"></i> <span class="d-block text-sm">257 Views</span> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /End of post 3 -->
+                                <!-- End of post 4 -->
+                                <div class="card row-hover position-relative py-3 px-3 mb-3 border-warning border-top-0 border-right-0 border-bottom-0 rounded-0">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-8 mb-3 mb-sm-0">
+                                            <h5>
+                                                <a href="blank-post-details.html" class="text-secondary">Bootstrap 4 development in record time with AppStrap Bootstrap 4 Theme</a>
+                                            </h5>
+                                            <p class="text-sm"><span class="op-6">Posted</span> <a class="text-info" href="#">29 minutes</a> <span class="op-6">ago by</span> <a class="text-info" href="#">Themelize.me</a></p>
+                                            <div class="text-sm op-5"> <a class="text-info mr-2" href="#">#Android</a> <a class="text-info mr-2" href="#">#Bootstrap 4</a> <a class="text-info mr-2" href="#">#Wordpress</a> <a class="text-info mr-2" href="#">#Drupal</a> </div>
+                                        </div>
+                                        <div class="col-md-4 op-7">
+                                            <div class="row text-center op-7">
+                                                <div class="col px-1"> <i class="ion-connection-bars icon-1x"></i> <span class="d-block text-sm">49 Votes</span> </div>
+                                                <div class="col px-1"> <i class="ion-ios-chatboxes-outline icon-1x"></i> <span class="d-block text-sm">29 Replys</span> </div>
+                                                <div class="col px-1"> <i class="ion-ios-eye-outline icon-1x"></i> <span class="d-block text-sm">170 Views</span> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /End of post 4 -->
+                                <!-- End of post 5 -->
+                                <div class="card row-hover position-relative py-3 px-3 mb-3 border-primary border-top-0 border-right-0 border-bottom-0 rounded-0">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-8 mb-3 mb-sm-0">
+                                            <h5>
+                                                <a href="blank-post-details.html" class="text-secondary">Drupal 8 quick starter guide</a>
+                                            </h5>
+                                            <p class="text-sm"><span class="op-6">Posted</span> <a class="text-info" href="#">53 minutes</a> <span class="op-6">ago by</span> <a class="text-info" href="#">Themelize.me</a></p>
+                                            <div class="text-sm op-5"> <a class="text-info mr-2" href="#">#iOS</a> <a class="text-info mr-2" href="#">#Bootstrap 4</a> </div>
+                                        </div>
+                                        <div class="col-md-4 op-7">
+                                            <div class="row text-center op-7">
+                                                <div class="col px-1"> <i class="ion-connection-bars icon-1x"></i> <span class="d-block text-sm">164 Votes</span> </div>
+                                                <div class="col px-1"> <i class="ion-ios-chatboxes-outline icon-1x"></i> <span class="d-block text-sm">82 Replys</span> </div>
+                                                <div class="col px-1"> <i class="ion-ios-eye-outline icon-1x"></i> <span class="d-block text-sm">240 Views</span> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /End of post 5 -->
+                                <!-- End of post 6 -->
+                                <div class="card row-hover position-relative py-3 px-3 mb-3 border-danger border-top-0 border-right-0 border-bottom-0 rounded-0">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-8 mb-3 mb-sm-0">
+                                            <h5>
+                                                <a href="blank-post-details.html" class="text-secondary">Custom shortcut or command to launch command in terminal?</a>
+                                            </h5>
+                                            <p class="text-sm"><span class="op-6">Posted</span> <a class="text-info" href="#">44 minutes</a> <span class="op-6">ago by</span> <a class="text-info" href="#">DanielD</a></p>
+                                            <div class="text-sm op-5"> <a class="text-info mr-2" href="#">#Development</a> <a class="text-info mr-2" href="#">#C++</a> <a class="text-info mr-2" href="#">#Bootstrap 4</a> </div>
+                                        </div>
+                                        <div class="col-md-4 op-7">
+                                            <div class="row text-center op-7">
+                                                <div class="col px-1"> <i class="ion-connection-bars icon-1x"></i> <span class="d-block text-sm">180 Votes</span> </div>
+                                                <div class="col px-1"> <i class="ion-ios-chatboxes-outline icon-1x"></i> <span class="d-block text-sm">35 Replys</span> </div>
+                                                <div class="col px-1"> <i class="ion-ios-eye-outline icon-1x"></i> <span class="d-block text-sm">44 Views</span> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /End of post 6 -->
+                                <!-- End of post 7 -->
+                                <div class="card row-hover position-relative py-3 px-3 mb-3 border-primary border-top-0 border-right-0 border-bottom-0 rounded-0">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-8 mb-3 mb-sm-0">
+                                            <h5>
+                                                <a href="blank-post-details.html" class="text-secondary">HELP! My Windows XP machine is down</a>
+                                            </h5>
+                                            <p class="text-sm"><span class="op-6">Posted</span> <a class="text-info" href="#">3 minutes</a> <span class="op-6">ago by</span> <a class="text-info" href="#">DanielD</a></p>
+                                            <div class="text-sm op-5"> <a class="text-info mr-2" href="#">#C++</a> <a class="text-info mr-2" href="#">#AppStrap Theme</a> <a class="text-info mr-2" href="#">#Drupal</a> </div>
+                                        </div>
+                                        <div class="col-md-4 op-7">
+                                            <div class="row text-center op-7">
+                                                <div class="col px-1"> <i class="ion-connection-bars icon-1x"></i> <span class="d-block text-sm">236 Votes</span> </div>
+                                                <div class="col px-1"> <i class="ion-ios-chatboxes-outline icon-1x"></i> <span class="d-block text-sm">79 Replys</span> </div>
+                                                <div class="col px-1"> <i class="ion-ios-eye-outline icon-1x"></i> <span class="d-block text-sm">162 Views</span> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /End of post 7 -->
+                                <!-- End of post 8 -->
+                                <div class="card row-hover position-relative py-3 px-3 mb-3 border-primary border-top-0 border-right-0 border-bottom-0 rounded-0">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-8 mb-3 mb-sm-0">
+                                            <h5>
+                                                <a href="blank-post-details.html" class="text-secondary">Bootstrap 4 development in record time with AppStrap Bootstrap 4 Theme</a>
+                                            </h5>
+                                            <p class="text-sm"><span class="op-6">Posted</span> <a class="text-info" href="#">46 minutes</a> <span class="op-6">ago by</span> <a class="text-info" href="#">DanielD</a></p>
+                                            <div class="text-sm op-5"> <a class="text-info mr-2" href="#">#Development</a> <a class="text-info mr-2" href="#">#C++</a> <a class="text-info mr-2" href="#">#Drupal</a> </div>
+                                        </div>
+                                        <div class="col-md-4 op-7">
+                                            <div class="row text-center op-7">
+                                                <div class="col px-1"> <i class="ion-connection-bars icon-1x"></i> <span class="d-block text-sm">130 Votes</span> </div>
+                                                <div class="col px-1"> <i class="ion-ios-chatboxes-outline icon-1x"></i> <span class="d-block text-sm">121 Replys</span> </div>
+                                                <div class="col px-1"> <i class="ion-ios-eye-outline icon-1x"></i> <span class="d-block text-sm">191 Views</span> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /End of post 8 -->
+                                <!-- End of post 9 -->
+                                <div class="card row-hover position-relative py-3 px-3 mb-3 border-primary border-top-0 border-right-0 border-bottom-0 rounded-0">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-8 mb-3 mb-sm-0">
+                                            <h5>
+                                                <a href="blank-post-details.html" class="text-secondary">HELP! My Windows XP machine is down</a>
+                                            </h5>
+                                            <p class="text-sm"><span class="op-6">Posted</span> <a class="text-info" href="#">41 minutes</a> <span class="op-6">ago by</span> <a class="text-info" href="#">KylieJ</a></p>
+                                            <div class="text-sm op-5"> <a class="text-info mr-2" href="#">#Android</a> <a class="text-info mr-2" href="#">#Bootstrap 4</a> <a class="text-info mr-2" href="#">#Wordpress</a> </div>
+                                        </div>
+                                        <div class="col-md-4 op-7">
+                                            <div class="row text-center op-7">
+                                                <div class="col px-1"> <i class="ion-connection-bars icon-1x"></i> <span class="d-block text-sm">194 Votes</span> </div>
+                                                <div class="col px-1"> <i class="ion-ios-chatboxes-outline icon-1x"></i> <span class="d-block text-sm">16 Replys</span> </div>
+                                                <div class="col px-1"> <i class="ion-ios-eye-outline icon-1x"></i> <span class="d-block text-sm">113 Views</span> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /End of post 9 -->
+                                <!-- End of post 10 -->
+                                <div class="card row-hover position-relative py-3 px-3 mb-3 border-primary border-top-0 border-right-0 border-bottom-0 rounded-0">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-8 mb-3 mb-sm-0">
+                                            <h5>
+                                                <a href="blank-post-details.html" class="text-secondary">HELP! My Windows XP machine is down</a>
+                                            </h5>
+                                            <p class="text-sm"><span class="op-6">Posted</span> <a class="text-info" href="#">30 minutes</a> <span class="op-6">ago by</span> <a class="text-info" href="#">AppStrapMaster</a></p>
+                                            <div class="text-sm op-5"> <a class="text-info mr-2" href="#">#Android</a> <a class="text-info mr-2" href="#">#AppStrap Theme</a> <a class="text-info mr-2" href="#">#Wordpress</a> </div>
+                                        </div>
+                                        <div class="col-md-4 op-7">
+                                            <div class="row text-center op-7">
+                                                <div class="col px-1"> <i class="ion-connection-bars icon-1x"></i> <span class="d-block text-sm">179 Votes</span> </div>
+                                                <div class="col px-1"> <i class="ion-ios-chatboxes-outline icon-1x"></i> <span class="d-block text-sm">194 Replys</span> </div>
+                                                <div class="col px-1"> <i class="ion-ios-eye-outline icon-1x"></i> <span class="d-block text-sm">167 Views</span> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /End of post 10 -->
+                                <!-- End of post 11 -->
+                                <div class="card row-hover position-relative py-3 px-3 mb-3 border-primary border-top-0 border-right-0 border-bottom-0 rounded-0">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-8 mb-3 mb-sm-0">
+                                            <h5>
+                                                <a href="blank-post-details.html" class="text-secondary">Bootstrap 4 development in record time with AppStrap Bootstrap 4 Theme</a>
+                                            </h5>
+                                            <p class="text-sm"><span class="op-6">Posted</span> <a class="text-info" href="#">56 minutes</a> <span class="op-6">ago by</span> <a class="text-info" href="#">AppStrapMaster</a></p>
+                                            <div class="text-sm op-5"> <a class="text-info mr-2" href="#">#Development</a> <a class="text-info mr-2" href="#">#Wordpress</a> </div>
+                                        </div>
+                                        <div class="col-md-4 op-7">
+                                            <div class="row text-center op-7">
+                                                <div class="col px-1"> <i class="ion-connection-bars icon-1x"></i> <span class="d-block text-sm">11 Votes</span> </div>
+                                                <div class="col px-1"> <i class="ion-ios-chatboxes-outline icon-1x"></i> <span class="d-block text-sm">120 Replys</span> </div>
+                                                <div class="col px-1"> <i class="ion-ios-eye-outline icon-1x"></i> <span class="d-block text-sm">240 Views</span> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /End of post 11 -->
+                                <!-- End of post 12 -->
+                                <div class="card row-hover position-relative py-3 px-3 mb-3 border-danger border-top-0 border-right-0 border-bottom-0 rounded-0">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-8 mb-3 mb-sm-0">
+                                            <h5>
+                                                <a href="blank-post-details.html" class="text-secondary">Windows batch, recursively copy files</a>
+                                            </h5>
+                                            <p class="text-sm"><span class="op-6">Posted</span> <a class="text-info" href="#">25 minutes</a> <span class="op-6">ago by</span> <a class="text-info" href="#">Wizzy</a></p>
+                                            <div class="text-sm op-5"> <a class="text-info mr-2" href="#">#Development</a> <a class="text-info mr-2" href="#">#Wordpress</a> </div>
+                                        </div>
+                                        <div class="col-md-4 op-7">
+                                            <div class="row text-center op-7">
+                                                <div class="col px-1"> <i class="ion-connection-bars icon-1x"></i> <span class="d-block text-sm">25 Votes</span> </div>
+                                                <div class="col px-1"> <i class="ion-ios-chatboxes-outline icon-1x"></i> <span class="d-block text-sm">211 Replys</span> </div>
+                                                <div class="col px-1"> <i class="ion-ios-eye-outline icon-1x"></i> <span class="d-block text-sm">234 Views</span> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /End of post 12 -->
+                                <!-- End of post 13 -->
+                                <div class="card row-hover position-relative py-3 px-3 mb-3 border-primary border-top-0 border-right-0 border-bottom-0 rounded-0">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-8 mb-3 mb-sm-0">
+                                            <h5>
+                                                <a href="blank-post-details.html" class="text-secondary">Drupal 8 quick starter guide</a>
+                                            </h5>
+                                            <p class="text-sm"><span class="op-6">Posted</span> <a class="text-info" href="#">21 minutes</a> <span class="op-6">ago by</span> <a class="text-info" href="#">KylieJ</a></p>
+                                            <div class="text-sm op-5"> <a class="text-info mr-2" href="#">#C++</a> <a class="text-info mr-2" href="#">#AppStrap Theme</a> </div>
+                                        </div>
+                                        <div class="col-md-4 op-7">
+                                            <div class="row text-center op-7">
+                                                <div class="col px-1"> <i class="ion-connection-bars icon-1x"></i> <span class="d-block text-sm">70 Votes</span> </div>
+                                                <div class="col px-1"> <i class="ion-ios-chatboxes-outline icon-1x"></i> <span class="d-block text-sm">187 Replys</span> </div>
+                                                <div class="col px-1"> <i class="ion-ios-eye-outline icon-1x"></i> <span class="d-block text-sm">234 Views</span> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /End of post 13 -->
+                                <!-- End of post 14 -->
+                                <div class="card row-hover position-relative py-3 px-3 mb-3 border-primary border-top-0 border-right-0 border-bottom-0 rounded-0">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-8 mb-3 mb-sm-0">
+                                            <h5>
+                                                <a href="blank-post-details.html" class="text-secondary">Windows batch, recursively copy files</a>
+                                            </h5>
+                                            <p class="text-sm"><span class="op-6">Posted</span> <a class="text-info" href="#">60 minutes</a> <span class="op-6">ago by</span> <a class="text-info" href="#">KenyeW</a></p>
+                                            <div class="text-sm op-5"> <a class="text-info mr-2" href="#">#Development</a> <a class="text-info mr-2" href="#">#iOS</a> <a class="text-info mr-2" href="#">#Bootstrap 4</a> <a class="text-info mr-2" href="#">#Wordpress</a> </div>
+                                        </div>
+                                        <div class="col-md-4 op-7">
+                                            <div class="row text-center op-7">
+                                                <div class="col px-1"> <i class="ion-connection-bars icon-1x"></i> <span class="d-block text-sm">288 Votes</span> </div>
+                                                <div class="col px-1"> <i class="ion-ios-chatboxes-outline icon-1x"></i> <span class="d-block text-sm">206 Replys</span> </div>
+                                                <div class="col px-1"> <i class="ion-ios-eye-outline icon-1x"></i> <span class="d-block text-sm">1 Views</span> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /End of post 14 -->
+                                <!-- End of post 15 -->
+                                <div class="card row-hover position-relative py-3 px-3 mb-3 border-primary border-top-0 border-right-0 border-bottom-0 rounded-0">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-8 mb-3 mb-sm-0">
+                                            <h5>
+                                                <a href="blank-post-details.html" class="text-secondary">Custom shortcut or command to launch command in terminal?</a>
+                                            </h5>
+                                            <p class="text-sm"><span class="op-6">Posted</span> <a class="text-info" href="#">27 minutes</a> <span class="op-6">ago by</span> <a class="text-info" href="#">KylieJ</a></p>
+                                            <div class="text-sm op-5"> <a class="text-info mr-2" href="#">#AppStrap Theme</a> <a class="text-info mr-2" href="#">#Wordpress</a> <a class="text-info mr-2" href="#">#Drupal</a> </div>
+                                        </div>
+                                        <div class="col-md-4 op-7">
+                                            <div class="row text-center op-7">
+                                                <div class="col px-1"> <i class="ion-connection-bars icon-1x"></i> <span class="d-block text-sm">144 Votes</span> </div>
+                                                <div class="col px-1"> <i class="ion-ios-chatboxes-outline icon-1x"></i> <span class="d-block text-sm">92 Replys</span> </div>
+                                                <div class="col px-1"> <i class="ion-ios-eye-outline icon-1x"></i> <span class="d-block text-sm">25 Views</span> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /End of post 15 -->
+                                <!-- End of post 16 -->
+                                <div class="card row-hover position-relative py-3 px-3 mb-3 border-primary border-top-0 border-right-0 border-bottom-0 rounded-0">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-8 mb-3 mb-sm-0">
+                                            <h5>
+                                                <a href="blank-post-details.html" class="text-secondary">HELP! My Windows XP machine is down</a>
+                                            </h5>
+                                            <p class="text-sm"><span class="op-6">Posted</span> <a class="text-info" href="#">22 minutes</a> <span class="op-6">ago by</span> <a class="text-info" href="#">Themelize.me</a></p>
+                                            <div class="text-sm op-5"> <a class="text-info mr-2" href="#">#Development</a> <a class="text-info mr-2" href="#">#Android</a> <a class="text-info mr-2" href="#">#Bootstrap 4</a> <a class="text-info mr-2" href="#">#Wordpress</a> </div>
+                                        </div>
+                                        <div class="col-md-4 op-7">
+                                            <div class="row text-center op-7">
+                                                <div class="col px-1"> <i class="ion-connection-bars icon-1x"></i> <span class="d-block text-sm">199 Votes</span> </div>
+                                                <div class="col px-1"> <i class="ion-ios-chatboxes-outline icon-1x"></i> <span class="d-block text-sm">75 Replys</span> </div>
+                                                <div class="col px-1"> <i class="ion-ios-eye-outline icon-1x"></i> <span class="d-block text-sm">61 Views</span> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /End of post 16 -->
+                                <!-- End of post 17 -->
+                                <div class="card row-hover position-relative py-3 px-3 mb-3 border-primary border-top-0 border-right-0 border-bottom-0 rounded-0">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-8 mb-3 mb-sm-0">
+                                            <h5>
+                                                <a href="blank-post-details.html" class="text-secondary">HELP! My Windows XP machine is down</a>
+                                            </h5>
+                                            <p class="text-sm"><span class="op-6">Posted</span> <a class="text-info" href="#">14 minutes</a> <span class="op-6">ago by</span> <a class="text-info" href="#">AppStrapMaster</a></p>
+                                            <div class="text-sm op-5"> <a class="text-info mr-2" href="#">#C++</a> <a class="text-info mr-2" href="#">#Android</a> <a class="text-info mr-2" href="#">#Drupal</a> </div>
+                                        </div>
+                                        <div class="col-md-4 op-7">
+                                            <div class="row text-center op-7">
+                                                <div class="col px-1"> <i class="ion-connection-bars icon-1x"></i> <span class="d-block text-sm">74 Votes</span> </div>
+                                                <div class="col px-1"> <i class="ion-ios-chatboxes-outline icon-1x"></i> <span class="d-block text-sm">77 Replys</span> </div>
+                                                <div class="col px-1"> <i class="ion-ios-eye-outline icon-1x"></i> <span class="d-block text-sm">144 Views</span> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /End of post 17 -->
+                                <!-- End of post 18 -->
+                                <div class="card row-hover position-relative py-3 px-3 mb-3 border-primary border-top-0 border-right-0 border-bottom-0 rounded-0">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-8 mb-3 mb-sm-0">
+                                            <h5>
+                                                <a href="blank-post-details.html" class="text-secondary">Custom shortcut or command to launch command in terminal?</a>
+                                            </h5>
+                                            <p class="text-sm"><span class="op-6">Posted</span> <a class="text-info" href="#">15 minutes</a> <span class="op-6">ago by</span> <a class="text-info" href="#">Themelize.me</a></p>
+                                            <div class="text-sm op-5"> <a class="text-info mr-2" href="#">#Android</a> <a class="text-info mr-2" href="#">#Bootstrap 4</a> <a class="text-info mr-2" href="#">#AppStrap Theme</a> </div>
+                                        </div>
+                                        <div class="col-md-4 op-7">
+                                            <div class="row text-center op-7">
+                                                <div class="col px-1"> <i class="ion-connection-bars icon-1x"></i> <span class="d-block text-sm">88 Votes</span> </div>
+                                                <div class="col px-1"> <i class="ion-ios-chatboxes-outline icon-1x"></i> <span class="d-block text-sm">48 Replys</span> </div>
+                                                <div class="col px-1"> <i class="ion-ios-eye-outline icon-1x"></i> <span class="d-block text-sm">283 Views</span> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /End of post 18 -->
+                                <!-- End of post 19 -->
+                                <div class="card row-hover position-relative py-3 px-3 mb-3 border-primary border-top-0 border-right-0 border-bottom-0 rounded-0">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-8 mb-3 mb-sm-0">
+                                            <h5>
+                                                <a href="blank-post-details.html" class="text-secondary">Drupal 8 quick starter guide</a>
+                                            </h5>
+                                            <p class="text-sm"><span class="op-6">Posted</span> <a class="text-info" href="#">59 minutes</a> <span class="op-6">ago by</span> <a class="text-info" href="#">KylieJ</a></p>
+                                            <div class="text-sm op-5"> <a class="text-info mr-2" href="#">#Android</a> <a class="text-info mr-2" href="#">#Bootstrap 4</a> <a class="text-info mr-2" href="#">#Wordpress</a> </div>
+                                        </div>
+                                        <div class="col-md-4 op-7">
+                                            <div class="row text-center op-7">
+                                                <div class="col px-1"> <i class="ion-connection-bars icon-1x"></i> <span class="d-block text-sm">82 Votes</span> </div>
+                                                <div class="col px-1"> <i class="ion-ios-chatboxes-outline icon-1x"></i> <span class="d-block text-sm">22 Replys</span> </div>
+                                                <div class="col px-1"> <i class="ion-ios-eye-outline icon-1x"></i> <span class="d-block text-sm">40 Views</span> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /End of post 19 -->
+                                <!-- End of post 20 -->
+                                <div class="card row-hover position-relative py-3 px-3 mb-3 border-primary border-top-0 border-right-0 border-bottom-0 rounded-0">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-8 mb-3 mb-sm-0">
+                                            <h5>
+                                                <a href="blank-post-details.html" class="text-secondary">Bootstrap 4 development in record time with AppStrap Bootstrap 4 Theme</a>
+                                            </h5>
+                                            <p class="text-sm"><span class="op-6">Posted</span> <a class="text-info" href="#">26 minutes</a> <span class="op-6">ago by</span> <a class="text-info" href="#">Themelize.me</a></p>
+                                            <div class="text-sm op-5"> <a class="text-info mr-2" href="#">#Development</a> <a class="text-info mr-2" href="#">#iOS</a> <a class="text-info mr-2" href="#">#Bootstrap 4</a> <a class="text-info mr-2" href="#">#Wordpress</a> </div>
+                                        </div>
+                                        <div class="col-md-4 op-7">
+                                            <div class="row text-center op-7">
+                                                <div class="col px-1"> <i class="ion-connection-bars icon-1x"></i> <span class="d-block text-sm">163 Votes</span> </div>
+                                                <div class="col px-1"> <i class="ion-ios-chatboxes-outline icon-1x"></i> <span class="d-block text-sm">236 Replys</span> </div>
+                                                <div class="col px-1"> <i class="ion-ios-eye-outline icon-1x"></i> <span class="d-block text-sm">22 Views</span> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /End of post 20 -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / Content -->
+                    <!-- Footer -->
+                    @Html.Partial("~/Views/Shared/_pFooter.cshtml")
+                    <!-- / Footer -->
+                    <div class="content-backdrop fade"></div>
+                </div>
+                <!-- Content wrapper -->
+            </div>
+            <!-- / Layout page -->
+        </div>
+
+        <!-- Overlay -->
+        <div class="layout-overlay layout-menu-toggle"></div>
+
+        <!-- Drag Target Area To SlideIn Menu On Small Screens -->
+        <div class="drag-target"></div>
+
+    </div>
+    <!-- / Layout wrapper -->
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/core.js -->
+    <script src="~/assets/plugins/jquery/jquery.js"></script>
+    <script src="~/assets/plugins/popper/popper.js"></script>
+    <script src="~/assets/scripts/bootstrap.js"></script>
+    <script src="~/assets/plugins/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+    <script src="~/assets/plugins/hammer/hammer.js"></script>
+
+
+    <script src="~/assets/plugins/i18n/i18n.js"></script>
+    <script src="~/assets/plugins/typeahead-js/typeahead.js"></script>
+
+    <script src="~/assets/scripts/menu.js"></script>
+    <!-- endbuild -->
+    <!-- Vendors JS -->
+    <script src="~/assets/plugins/apex-charts/apexcharts.js"></script>
+    <script src="~/assets/plugins/tiny-slider/dist/tiny-slider.js"></script>
+    <script src="~/assets/plugins/OverlayScrollbars-master/js/OverlayScrollbars.min.js"></script>
+    <script src="~/assets/plugins/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="~/assets/plugins/glightbox-master/dist/js/glightbox.min.js"></script>
+    <script src="~/assets/plugins/flatpickr/dist/flatpickr.min.js"></script>
+    <script src="~/assets/plugins/plyr/plyr.js"></script>
+    <script src="~/assets/plugins/dropzone/dist/min/dropzone.min.js"></script>
+    <script src="~/assets/plugins/zuck.js/dist/zuck.min.js"></script>
+
+    <script src="~/assets/scripts/zuck-stories.js"></script>
+    <script src="~/assets/scripts/functions.js"></script>
+
+    <!-- Main JS -->
+    <script src="~/assets/scripts/main.js"></script>
+
+    <!-- Page JS -->
+    <script src="~/assets/scripts/dashboards-analytics.js"></script>
+</body>
+
+</html>
+

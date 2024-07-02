@@ -1,0 +1,3074 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="tstdbvModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tstaccount">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AddressId" Type="Int64" Nullable="false" />
+    <Property Name="Username" Type="String" Nullable="false" />
+    <Property Name="EncryptionMethod" Type="String" />
+    <Property Name="KeyScheme" Type="String" />
+    <Property Name="Password" Type="String" Nullable="false" />
+    <Property Name="PasswordHash" Type="String" />
+    <Property Name="BPN" Type="String" />
+    <Property Name="TIN" Type="String" />
+    <Property Name="AccountType" Type="String" />
+    <Property Name="TimeRegion" Type="String" />
+    <Property Name="IsCreatedOn" Type="DateTime" />
+    <Property Name="IsUpdatedOn" Type="DateTime" />
+    <Property Name="IsSuspended" Type="SByte" />
+    <Property Name="IsSuspendedOn" Type="DateTime" />
+    <Property Name="SuspensionEndsOn" Type="DateTime" />
+    <Property Name="IsActive" Type="SByte" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+    <Property Name="IsPrivate" Type="SByte" />
+    <Property Name="IsDeleted" Type="SByte" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstaccount_activitylog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="LinkVisited" Type="String" Nullable="false" />
+    <Property Name="DeviceDetails" Type="String" />
+    <Property Name="BrowserDetails" Type="String" />
+    <Property Name="Ipv4Address" Type="String" />
+    <Property Name="Ipv6Address" Type="String" />
+    <Property Name="VisitedOn" Type="DateTime" />
+    <Property Name="TimeSpent" Type="Time" />
+  </EntityType>
+  <EntityType Name="tstaccount_address">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="CountryId" Type="Int64" />
+    <Property Name="StateProvinceId" Type="Int64" />
+    <Property Name="Firstname" Type="String" />
+    <Property Name="Lastname" Type="String" />
+    <Property Name="Email" Type="String" />
+    <Property Name="Company" Type="String" />
+    <Property Name="StateOrProvince" Type="String" />
+    <Property Name="City" Type="String" />
+    <Property Name="Address1" Type="String" />
+    <Property Name="Address2" Type="String" />
+    <Property Name="ZipPostalCode" Type="String" />
+    <Property Name="PhoneNumber" Type="String" />
+    <Property Name="FaxNumber" Type="String" />
+    <Property Name="CustomAttributes" Type="String" />
+    <Property Name="CreatedOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstaccount_alertrule">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Keyword" Type="String" />
+    <Property Name="Category" Type="String" />
+    <Property Name="AlertPriority" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="tstaccount_alerts">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="AlertMessage" Type="String" />
+    <Property Name="TimeSent" Type="DateTime" />
+    <Property Name="AlertPriority" Type="Boolean" />
+    <Property Name="WarningType" Type="String" />
+  </EntityType>
+  <EntityType Name="tstaccount_authentication">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Email" Type="String" />
+    <Property Name="ExternalIdentifier" Type="String" />
+    <Property Name="ExternalDisplayIdentifier" Type="String" />
+    <Property Name="OAuthToken" Type="String" />
+    <Property Name="OAuthAccessToken" Type="String" />
+    <Property Name="ProviderSystemName" Type="String" />
+    <Property Name="SecretKey" Type="String" />
+  </EntityType>
+  <EntityType Name="tstaccount_bankaccount">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="BankName" Type="String" Nullable="false" />
+    <Property Name="AccountName" Type="String" Nullable="false" />
+    <Property Name="CardType" Type="String" />
+    <Property Name="CardName" Type="String" />
+    <Property Name="CardNumber" Type="String" />
+    <Property Name="MaskedCreditCardNumber" Type="String" />
+    <Property Name="CardCvv2" Type="String" />
+    <Property Name="CardExpirationMonth" Type="String" />
+    <Property Name="CardExpirationYear" Type="String" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstaccount_connections">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="FriendId" Type="Int64" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstaccount_country">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CountryName" Type="String" Nullable="false" />
+    <Property Name="TwoLetterIsoCode" Type="String" />
+    <Property Name="ThreeLetterIsoCode" Type="String" />
+    <Property Name="AllowsBilling" Type="Boolean" Nullable="false" />
+    <Property Name="AllowsShipping" Type="Boolean" Nullable="false" />
+    <Property Name="NumericIsoCode" Type="Int64" Nullable="false" />
+    <Property Name="SubjectToVat" Type="Boolean" Nullable="false" />
+    <Property Name="Published" Type="Boolean" Nullable="false" />
+    <Property Name="DisplayOrder" Type="Int64" Nullable="false" />
+    <Property Name="LimitedToStores" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tstaccount_currency">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="CurrencyCode" Type="String" Nullable="false" />
+    <Property Name="DisplayLocale" Type="String" />
+    <Property Name="CustomFormatting" Type="String" />
+    <Property Name="Rate" Type="Decimal" Nullable="false" />
+    <Property Name="LimitedToStores" Type="Boolean" Nullable="false" />
+    <Property Name="Published" Type="Boolean" Nullable="false" />
+    <Property Name="DisplayOrder" Type="Int64" Nullable="false" />
+    <Property Name="UpdatedOn" Type="DateTime" />
+    <Property Name="RoundingTypeId" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tstaccount_interests">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="StoreId" Type="Int64" />
+    <Property Name="ProductId" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstaccount_language">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="LanguageCulture" Type="String" Nullable="false" />
+    <Property Name="UniqueSeoCode" Type="String" />
+    <Property Name="FlagImageFileName" Type="String" />
+    <Property Name="Rtl" Type="Boolean" Nullable="false" />
+    <Property Name="LimitedToStores" Type="Boolean" Nullable="false" />
+    <Property Name="DefaultCurrencyId" Type="Int64" Nullable="false" />
+    <Property Name="Published" Type="Boolean" Nullable="false" />
+    <Property Name="DisplayOrder" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tstaccount_settings">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="Value" Type="String" Nullable="false" />
+    <Property Name="StoreId" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tstaccount_stateprovince">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="Abbreviation" Type="String" />
+    <Property Name="CountryId" Type="Int64" Nullable="false" />
+    <Property Name="Published" Type="Boolean" Nullable="false" />
+    <Property Name="DisplayOrder" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tstaccount_store">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="PictureId" Type="Int64" Nullable="false" />
+    <Property Name="StoreName" Type="String" Nullable="false" />
+    <Property Name="StoreURL" Type="String" />
+    <Property Name="Hosts" Type="String" />
+    <Property Name="CompanyName" Type="String" />
+    <Property Name="CompanyAddress" Type="String" />
+    <Property Name="CompanyPhoneNumber" Type="String" />
+    <Property Name="CompanyVat" Type="String" />
+    <Property Name="DefaultMetaKeywords" Type="String" />
+    <Property Name="DefaultMetaDescription" Type="String" />
+    <Property Name="DefaultTitle" Type="String" />
+    <Property Name="HomepageTitle" Type="String" />
+    <Property Name="HomepageDescription" Type="String" />
+    <Property Name="SslEnabled" Type="Boolean" />
+    <Property Name="DefaultLanguageId" Type="Int64" />
+    <Property Name="DisplayOrder" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstaccount_taxrates">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="CountryId" Type="Int64" Nullable="false" />
+    <Property Name="StateProvinceId" Type="Int64" Nullable="false" />
+    <Property Name="Percentage" Type="Decimal" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tstapplication">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="ProductId" Type="Int64" Nullable="false" />
+    <Property Name="AppName" Type="String" Nullable="false" />
+    <Property Name="AppDescription" Type="String" />
+    <Property Name="ReleasedDate" Type="DateTime" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstapplications_collections">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="DeveloperId" Type="Int64" Nullable="false" />
+    <Property Name="CollectionName" Type="String" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" />
+    <Property Name="DateModified" Type="DateTime" />
+    <Property Name="CategoryId" Type="Int64" />
+    <Property Name="PictureId" Type="Int64" />
+    <Property Name="NumberOfFiles" Type="Int32" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstapplications_collectionsitems">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="CollectionId" Type="Int64" Nullable="false" />
+    <Property Name="ProductId" Type="Int64" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstapplications_developers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstapplications_searches">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Keywords" Type="String" />
+    <Property Name="DateSearched" Type="DateTime" />
+    <Property Name="Count" Type="Int64" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstarchive">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="LinkURL" Type="String" Nullable="false" />
+    <Property Name="Category" Type="String" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Name="DateModified" Type="DateTime" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstarchives_searches">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Keywords" Type="String" />
+    <Property Name="DateSearched" Type="DateTime" />
+    <Property Name="Count" Type="Int64" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstartwork">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="ProductId" Type="Int64" Nullable="false" />
+    <Property Name="ArtistName" Type="String" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" />
+    <Property Name="MediumType" Type="String" />
+    <Property Name="Description" Type="String" />
+    <Property Name="PictureId" Type="Int64" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstartworks_artists">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="ArtistName" Type="String" Nullable="false" />
+    <Property Name="Description" Type="String" />
+    <Property Name="PictureId" Type="Int64" />
+    <Property Name="TypeOfArt" Type="String" />
+    <Property Name="NumberOfArticles" Type="Int32" />
+    <Property Name="DateJoined" Type="DateTime" />
+    <Property Name="YearsActive" Type="Int32" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstartworks_collections">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="DeveloperId" Type="Int64" Nullable="false" />
+    <Property Name="CollectionName" Type="String" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" />
+    <Property Name="DateModified" Type="DateTime" />
+    <Property Name="CategoryId" Type="Int64" />
+    <Property Name="PictureId" Type="Int64" />
+    <Property Name="NumberOfFiles" Type="Int32" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstartworks_collectionsitems">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="CollectionId" Type="Int64" Nullable="false" />
+    <Property Name="ProductId" Type="Int64" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstartworks_publishers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="City" Type="String" />
+    <Property Name="CountryId" Type="Int64" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstartworks_searches">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Keywords" Type="String" />
+    <Property Name="DateSearched" Type="DateTime" />
+    <Property Name="Count" Type="Int64" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstauction">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="ProductId" Type="Int64" Nullable="false" />
+    <Property Name="BrandName" Type="String" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" />
+    <Property Name="MediumType" Type="String" />
+    <Property Name="Description" Type="String" />
+    <Property Name="PictureId" Type="Int64" />
+    <Property Name="BiddingPrice" Type="Decimal" />
+    <Property Name="BiddingMessage" Type="String" />
+    <Property Name="BiddingEndDate" Type="DateTime" />
+    <Property Name="WinnerId" Type="Int64" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstauctions_brands">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="City" Type="String" />
+    <Property Name="CountryId" Type="Int64" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstauctions_collections">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="DeveloperId" Type="Int64" Nullable="false" />
+    <Property Name="CollectionName" Type="String" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" />
+    <Property Name="DateModified" Type="DateTime" />
+    <Property Name="CategoryId" Type="Int64" />
+    <Property Name="PictureId" Type="Int64" />
+    <Property Name="NumberOfFiles" Type="Int32" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstauctions_collectionsitems">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="CollectionId" Type="Int64" Nullable="false" />
+    <Property Name="ProductId" Type="Int64" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstauctions_offers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BidderId" Type="Int64" Nullable="false" />
+    <Property Name="ProductId" Type="Int64" Nullable="false" />
+    <Property Name="OfferPrice" Type="Decimal" />
+    <Property Name="OfferMessage" Type="String" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstauctions_searches">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Keywords" Type="String" />
+    <Property Name="DateSearched" Type="DateTime" />
+    <Property Name="Count" Type="Int64" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstblog_categories">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="MetaKeywords" Type="String" />
+    <Property Name="MetaTitle" Type="String" />
+    <Property Name="Description" Type="String" />
+    <Property Name="MetaDescription" Type="String" />
+    <Property Name="ParentCategoryId" Type="Int64" />
+    <Property Name="PictureId" Type="Int64" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Name="UpdatedOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstblog_comments">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PostId" Type="Int64" Nullable="false" />
+    <Property Name="SenderId" Type="Int64" Nullable="false" />
+    <Property Name="RecepientId" Type="Int64" Nullable="false" />
+    <Property Name="CommentText" Type="String" Nullable="false" />
+    <Property Name="IsApproved" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstblog_links">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="PostId" Type="Int64" />
+    <Property Name="LinkURL" Type="String" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstblog_notifications">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Title" Type="String" />
+    <Property Name="Description" Type="String" />
+    <Property Name="Source" Type="String" />
+    <Property Name="TimeSent" Type="DateTime" />
+    <Property Name="IsRead" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="tstblog_photos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="PostId" Type="Int64" />
+    <Property Name="PhotoId" Type="Int64" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstblog_post">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Title" Type="String" Nullable="false" />
+    <Property Name="Body" Type="String" Nullable="false" />
+    <Property Name="MetaKeywords" Type="String" />
+    <Property Name="MetaTitle" Type="String" />
+    <Property Name="LanguageId" Type="Int64" />
+    <Property Name="BodyOverview" Type="String" />
+    <Property Name="AllowComments" Type="Boolean" Nullable="false" />
+    <Property Name="Tags" Type="String" />
+    <Property Name="StartDate" Type="DateTime" />
+    <Property Name="EndDate" Type="DateTime" />
+    <Property Name="MetaDescription" Type="String" />
+    <Property Name="LimitedToStores" Type="Boolean" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstblog_searches">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Keywords" Type="String" />
+    <Property Name="DateSearched" Type="DateTime" />
+    <Property Name="Count" Type="Int64" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstblog_videos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="PostId" Type="Int64" />
+    <Property Name="VideoId" Type="Int64" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstbrand">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="StoreId" Type="Int64" Nullable="false" />
+    <Property Name="PictureId" Type="Int64" Nullable="false" />
+    <Property Name="BrandName" Type="String" Nullable="false" />
+    <Property Name="CountryId" Type="Int64" />
+    <Property Name="Industry" Type="String" />
+    <Property Name="WebsiteURL" Type="String" />
+    <Property Name="OtherURL" Type="String" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstbrands_searches">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Keywords" Type="String" />
+    <Property Name="DateSearched" Type="DateTime" />
+    <Property Name="Count" Type="Int64" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstcalendar_events">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Title" Type="String" Nullable="false" />
+    <Property Name="Location" Type="String" />
+    <Property Name="StartDate" Type="DateTime" />
+    <Property Name="EndDate" Type="DateTime" />
+    <Property Name="Description" Type="String" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstcampaign">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="Subject" Type="String" Nullable="false" />
+    <Property Name="Body" Type="String" Nullable="false" />
+    <Property Name="Category" Type="String" />
+    <Property Name="Location" Type="String" />
+    <Property Name="CampaignStatus" Type="Boolean" />
+    <Property Name="ExpectedRevenue" Type="Decimal" />
+    <Property Name="BudgetCost" Type="Decimal" />
+    <Property Name="ActualCost" Type="Decimal" />
+    <Property Name="ExpectedResponse" Type="String" />
+    <Property Name="NumberSent" Type="Int32" />
+    <Property Name="Sponsor" Type="String" />
+    <Property Name="TargetAudience" Type="String" />
+    <Property Name="TargetSize" Type="Int32" />
+    <Property Name="ExpectedResponseCount" Type="Int32" />
+    <Property Name="ExpectedSalesCount" Type="Int32" />
+    <Property Name="ExpectedROI" Type="Decimal" />
+    <Property Name="ActualResponseCount" Type="Int32" />
+    <Property Name="ActualSalesCount" Type="Int32" />
+    <Property Name="ActualROI" Type="Decimal" />
+    <Property Name="ClosingDate" Type="DateTime" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstcampaigns_brands">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="City" Type="String" />
+    <Property Name="CountryId" Type="Int64" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstcampaigns_collections">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="DeveloperId" Type="Int64" Nullable="false" />
+    <Property Name="CollectionName" Type="String" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" />
+    <Property Name="DateModified" Type="DateTime" />
+    <Property Name="CategoryId" Type="Int64" />
+    <Property Name="PictureId" Type="Int64" />
+    <Property Name="NumberOfFiles" Type="Int32" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstcampaigns_collectionsitems">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="CollectionId" Type="Int64" Nullable="false" />
+    <Property Name="ProductId" Type="Int64" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstcampaigns_pollanswer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="PollId" Type="Int64" Nullable="false" />
+    <Property Name="NumberOfVotes" Type="Int64" Nullable="false" />
+    <Property Name="DisplayOrder" Type="Int64" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstcampaigns_polls">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="LanguageId" Type="Int64" Nullable="false" />
+    <Property Name="SystemKeywords" Type="String" />
+    <Property Name="Published" Type="Boolean" Nullable="false" />
+    <Property Name="ShowOnHomepage" Type="Boolean" Nullable="false" />
+    <Property Name="AllowGuestsToVote" Type="Boolean" Nullable="false" />
+    <Property Name="DisplayOrder" Type="Int64" Nullable="false" />
+    <Property Name="LimitedToStores" Type="Boolean" Nullable="false" />
+    <Property Name="StartDate" Type="DateTime" />
+    <Property Name="EndDate" Type="DateTime" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstcampaigns_searches">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Keywords" Type="String" />
+    <Property Name="DateSearched" Type="DateTime" />
+    <Property Name="Count" Type="Int64" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstcampaigns_votes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PollId" Type="Int64" Nullable="false" />
+    <Property Name="CandidateId" Type="Int64" Nullable="false" />
+    <Property Name="VoterId" Type="Int64" Nullable="false" />
+    <Property Name="Choice" Type="Boolean" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstclassified">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="ProductId" Type="Int64" Nullable="false" />
+    <Property Name="BannerId" Type="Int64" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstclassifieds_collections">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="DeveloperId" Type="Int64" Nullable="false" />
+    <Property Name="CollectionName" Type="String" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" />
+    <Property Name="DateModified" Type="DateTime" />
+    <Property Name="CategoryId" Type="Int64" />
+    <Property Name="PictureId" Type="Int64" />
+    <Property Name="NumberOfFiles" Type="Int32" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstclassifieds_collectionsitems">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="CollectionId" Type="Int64" Nullable="false" />
+    <Property Name="ProductId" Type="Int64" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstclassifieds_searches">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Keywords" Type="String" />
+    <Property Name="DateSearched" Type="DateTime" />
+    <Property Name="Count" Type="Int64" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstclub">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="StoreId" Type="Int64" Nullable="false" />
+    <Property Name="PictureId" Type="Int64" Nullable="false" />
+    <Property Name="ClubName" Type="String" />
+    <Property Name="Description" Type="String" />
+    <Property Name="DateEstablished" Type="DateTime" />
+    <Property Name="Location" Type="String" />
+    <Property Name="MembersCount" Type="Int32" />
+    <Property Name="SubscriptionPrice" Type="Decimal" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstclubs_searches">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Keywords" Type="String" />
+    <Property Name="DateSearched" Type="DateTime" />
+    <Property Name="Count" Type="Int64" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstclubs_subscriptions">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="CustomerId" Type="Int64" Nullable="false" />
+    <Property Name="SubscriptionGuId" Type="Guid" Nullable="false" />
+    <Property Name="ClubId" Type="Int64" Nullable="false" />
+    <Property Name="SubscriptionType" Type="String" />
+    <Property Name="StartDate" Type="DateTime" />
+    <Property Name="EndDate" Type="DateTime" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstcompetition">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="GameId" Type="Int64" />
+    <Property Name="CompetitionName" Type="String" Nullable="false" />
+    <Property Name="Description" Type="String" Nullable="false" />
+    <Property Name="MetaDescription" Type="String" />
+    <Property Name="CompetitionModel" Type="String" />
+    <Property Name="CategoryId" Type="Int64" />
+    <Property Name="Keywords" Type="String" />
+    <Property Name="StartDate" Type="DateTime" />
+    <Property Name="EndDate" Type="DateTime" />
+    <Property Name="Location" Type="String" />
+    <Property Name="EntryPrice" Type="Decimal" />
+    <Property Name="TeamSize" Type="Int32" />
+    <Property Name="MaxNoOfTeams" Type="Int32" />
+    <Property Name="TeamsRegistered" Type="Int32" />
+    <Property Name="TotalPrizeMoney" Type="Decimal" />
+    <Property Name="FirstPlaceId" Type="Int64" />
+    <Property Name="SecondPlaceId" Type="Int64" />
+    <Property Name="ThirdPlaceId" Type="Int64" />
+    <Property Name="FourthPlaceId" Type="Int64" />
+    <Property Name="FifthPlaceId" Type="Int64" />
+    <Property Name="SixthPlaceId" Type="Int64" />
+    <Property Name="SeventhPlaceId" Type="Int64" />
+    <Property Name="EigthPlaceId" Type="Int64" />
+    <Property Name="NinthPlaceId" Type="Int64" />
+    <Property Name="TenthPlaceId" Type="Int64" />
+    <Property Name="FirstPlaceReward" Type="Decimal" />
+    <Property Name="SecondPlaceReward" Type="Decimal" />
+    <Property Name="ThirdPlaceReward" Type="Decimal" />
+    <Property Name="FourthPlaceReward" Type="Decimal" />
+    <Property Name="FifthPlaceReward" Type="Decimal" />
+    <Property Name="SixthPlaceReward" Type="Decimal" />
+    <Property Name="SeventhPlaceReward" Type="Decimal" />
+    <Property Name="EigthPlaceReward" Type="Decimal" />
+    <Property Name="NinthPlaceReward" Type="Decimal" />
+    <Property Name="TenthPlaceReward" Type="Decimal" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstcompetitions_brands">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="City" Type="String" />
+    <Property Name="CountryId" Type="Int64" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstcompetitions_collections">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="DeveloperId" Type="Int64" Nullable="false" />
+    <Property Name="CollectionName" Type="String" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" />
+    <Property Name="DateModified" Type="DateTime" />
+    <Property Name="CategoryId" Type="Int64" />
+    <Property Name="PictureId" Type="Int64" />
+    <Property Name="NumberOfFiles" Type="Int32" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstcompetitions_collectionsitems">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="CollectionId" Type="Int64" Nullable="false" />
+    <Property Name="ProductId" Type="Int64" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstcompetitions_searches">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Keywords" Type="String" />
+    <Property Name="DateSearched" Type="DateTime" />
+    <Property Name="Count" Type="Int64" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstcours">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="CategoryId" Type="Int64" Nullable="false" />
+    <Property Name="PictureId" Type="Int64" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" />
+    <Property Name="Title" Type="String" Nullable="false" />
+    <Property Name="Keywords" Type="String" Nullable="false" />
+    <Property Name="Description" Type="String" />
+    <Property Name="ContentCovered" Type="String" />
+    <Property Name="EndDate" Type="DateTime" />
+    <Property Name="Price" Type="Decimal" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstcourses_assignmentanswers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AssignmentId" Type="Int64" Nullable="false" />
+    <Property Name="LearnerId" Type="Int64" Nullable="false" />
+    <Property Name="AnswerText" Type="String" />
+    <Property Name="SubmissionDate" Type="DateTime" />
+    <Property Name="MarksGotten" Type="Int32" />
+    <Property Name="PrivateMessage" Type="String" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstcourses_assignments">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="CourseId" Type="Int64" Nullable="false" />
+    <Property Name="Title" Type="String" Nullable="false" />
+    <Property Name="AssignTo" Type="Int64" />
+    <Property Name="DateDue" Type="DateTime" />
+    <Property Name="DateCutoff" Type="DateTime" />
+    <Property Name="MultiSubmit" Type="SByte" />
+    <Property Name="Description" Type="String" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstcourses_assignmentsquestions">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="AssignmentId" Type="Int64" />
+    <Property Name="QuestionText" Type="String" />
+    <Property Name="MarksAwarded" Type="Int32" />
+    <Property Name="TopicSection" Type="String" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstcourses_collections">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="DeveloperId" Type="Int64" Nullable="false" />
+    <Property Name="CollectionName" Type="String" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" />
+    <Property Name="DateModified" Type="DateTime" />
+    <Property Name="CategoryId" Type="Int64" />
+    <Property Name="PictureId" Type="Int64" />
+    <Property Name="NumberOfFiles" Type="Int32" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstcourses_collectionsitems">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="CollectionId" Type="Int64" Nullable="false" />
+    <Property Name="ProductId" Type="Int64" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstcourses_enrollment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="MemberId" Type="Int64" Nullable="false" />
+    <Property Name="CourseId" Type="Int64" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstcourses_gradebook">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="LearnerId" Type="Int64" />
+    <Property Name="CourseId" Type="Int64" />
+    <Property Name="ExamScore" Type="Int32" />
+    <Property Name="AssignmentScore" Type="Int32" />
+    <Property Name="FinalGrade" Type="String" />
+    <Property Name="Comments" Type="String" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstcourses_notes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="PostId" Type="Int64" />
+    <Property Name="CourseId" Type="Int64" />
+    <Property Name="Title" Type="String" Nullable="false" />
+    <Property Name="Description" Type="String" />
+    <Property Name="Tags" Type="String" />
+    <Property Name="Pinned" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedAt" Type="DateTime" />
+    <Property Name="UpdatedAt" Type="DateTime" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstcourses_searches">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Keywords" Type="String" />
+    <Property Name="DateSearched" Type="DateTime" />
+    <Property Name="Count" Type="Int64" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstcourses_testresults">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="TestId" Type="Int64" Nullable="false" />
+    <Property Name="DateTaken" Type="DateTime" />
+    <Property Name="FinalScore" Type="String" Nullable="false" />
+    <Property Name="Status" Type="SByte" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstcourses_tests">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="CourseId" Type="Int64" Nullable="false" />
+    <Property Name="Title" Type="String" Nullable="false" />
+    <Property Name="Format" Type="SByte" Nullable="false" />
+    <Property Name="StartDate" Type="DateTime" />
+    <Property Name="EndDate" Type="DateTime" />
+    <Property Name="RandomizeOrder" Type="SByte" Nullable="false" />
+    <Property Name="NumQuestions" Type="SByte" Nullable="false" />
+    <Property Name="Instructions" Type="String" />
+    <Property Name="ContentId" Type="Int64" Nullable="false" />
+    <Property Name="ResultRelease" Type="SByte" Nullable="false" />
+    <Property Name="Difficulty" Type="SByte" Nullable="false" />
+    <Property Name="NumTakes" Type="SByte" Nullable="false" />
+    <Property Name="Description" Type="String" />
+    <Property Name="PassScore" Type="Int32" Nullable="false" />
+    <Property Name="PassPercent" Type="Int32" Nullable="false" />
+    <Property Name="PassFeedback" Type="String" />
+    <Property Name="FailFeedback" Type="String" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstcourses_testsanswers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StudentId" Type="Int64" Nullable="false" />
+    <Property Name="QuestionId" Type="Int64" Nullable="false" />
+    <Property Name="Answer" Type="String" />
+    <Property Name="Score" Type="String" Nullable="false" />
+    <Property Name="Notes" Type="String" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstcourses_testsquestions">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="CourseId" Type="Int64" Nullable="false" />
+    <Property Name="Feedback" Type="String" />
+    <Property Name="Question" Type="String" />
+    <Property Name="Choice_0" Type="String" />
+    <Property Name="Choice_1" Type="String" />
+    <Property Name="Choice_2" Type="String" />
+    <Property Name="Choice_3" Type="String" />
+    <Property Name="Choice_4" Type="String" />
+    <Property Name="ExpectedAnswer" Type="String" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstcourses_tutors">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Firstname" Type="String" Nullable="false" />
+    <Property Name="Lastname" Type="String" Nullable="false" />
+    <Property Name="PictureId" Type="Int64" />
+    <Property Name="Email" Type="String" />
+    <Property Name="MobileNumber" Type="Int64" />
+    <Property Name="Qualifications" Type="String" />
+    <Property Name="Description" Type="String" />
+    <Property Name="JoiningDate" Type="DateTime" />
+    <Property Name="RegistrationDate" Type="DateTime" />
+    <Property Name="IsPublic" Type="Boolean" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstdownload">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="DownloadGuId" Type="Guid" Nullable="false" />
+    <Property Name="UseDownloadURL" Type="Boolean" Nullable="false" />
+    <Property Name="DownloadURL" Type="String" />
+    <Property Name="DownloadBinary" Type="Binary" />
+    <Property Name="ContentType" Type="String" />
+    <Property Name="FileName" Type="String" />
+    <Property Name="Extension" Type="String" />
+    <Property Name="IsNew" Type="Boolean" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstdownloads_searches">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Keywords" Type="String" />
+    <Property Name="DateSearched" Type="DateTime" />
+    <Property Name="Count" Type="Int64" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstebook">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="ProductId" Type="Int64" Nullable="false" />
+    <Property Name="ISBN" Type="String" Nullable="false" />
+    <Property Name="Title" Type="String" Nullable="false" />
+    <Property Name="Description" Type="String" />
+    <Property Name="Category" Type="Int64" />
+    <Property Name="Edition" Type="String" />
+    <Property Name="PublisherId" Type="Int64" Nullable="false" />
+    <Property Name="LanguageId" Type="Int64" Nullable="false" />
+    <Property Name="CoverPhotoId" Type="Int64" Nullable="false" />
+    <Property Name="Tags" Type="String" Nullable="false" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstebooks_authors">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Firstname" Type="String" Nullable="false" />
+    <Property Name="Lastname" Type="String" Nullable="false" />
+    <Property Name="Biography" Type="String" />
+    <Property Name="LinkURL" Type="String" />
+    <Property Name="BookCount" Type="Int32" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstebooks_collections">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="DeveloperId" Type="Int64" Nullable="false" />
+    <Property Name="CollectionName" Type="String" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" />
+    <Property Name="DateModified" Type="DateTime" />
+    <Property Name="CategoryId" Type="Int64" />
+    <Property Name="PictureId" Type="Int64" />
+    <Property Name="NumberOfFiles" Type="Int32" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstebooks_collectionsitems">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="CollectionId" Type="Int64" Nullable="false" />
+    <Property Name="ProductId" Type="Int64" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstebooks_publishers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="City" Type="String" />
+    <Property Name="CountryId" Type="Int64" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstebooks_searches">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Keywords" Type="String" />
+    <Property Name="DateSearched" Type="DateTime" />
+    <Property Name="Count" Type="Int64" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstfile">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="MemberId" Type="Int64" Nullable="false" />
+    <Property Name="FolderId" Type="Int64" Nullable="false" />
+    <Property Name="ParentFileId" Type="Int64" Nullable="false" />
+    <Property Name="DateAdded" Type="DateTime" />
+    <Property Name="DateModified" Type="DateTime" />
+    <Property Name="NumberOfComments" Type="Int64" Nullable="false" />
+    <Property Name="NumberOfRevisions" Type="Int64" Nullable="false" />
+    <Property Name="FileName" Type="String" Nullable="false" />
+    <Property Name="FileExtension" Type="String" Nullable="false" />
+    <Property Name="FileSize" Type="Int64" Nullable="false" />
+    <Property Name="VirtualPath" Type="String" Nullable="false" />
+    <Property Name="Description" Type="String" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstfiles_audio">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="Encoder" Type="String" Nullable="false" />
+    <Property Name="Path" Type="String" Nullable="false" />
+    <Property Name="FileName" Type="String" Nullable="false" />
+    <Property Name="Extension" Type="String" Nullable="false" />
+    <Property Name="Format" Type="String" Nullable="false" />
+    <Property Name="Duration" Type="String" Nullable="false" />
+    <Property Name="Size" Type="String" Nullable="false" />
+    <Property Name="Bitrate" Type="String" Nullable="false" />
+    <Property Name="AudioCodec" Type="String" Nullable="false" />
+    <Property Name="AudioBitrate" Type="String" Nullable="false" />
+    <Property Name="AudioRate" Type="String" Nullable="false" />
+    <Property Name="AudioChannels" Type="String" Nullable="false" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstfiles_folders">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="ParentFolderId" Type="Int64" Nullable="false" />
+    <Property Name="Title" Type="String" Nullable="false" />
+    <Property Name="VirtualPath" Type="String" Nullable="false" />
+    <Property Name="Description" Type="String" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstfiles_images">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Title" Type="String" Nullable="false" />
+    <Property Name="Description" Type="String" Nullable="false" />
+    <Property Name="Tags" Type="String" Nullable="false" />
+    <Property Name="DateAdded" Type="DateTime" />
+    <Property Name="LastViewed" Type="DateTime" />
+    <Property Name="Reported" Type="Boolean" />
+    <Property Name="FileName" Type="String" Nullable="false" />
+    <Property Name="Extension" Type="String" Nullable="false" />
+    <Property Name="VirtualPath" Type="String" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstfiles_pdf">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Generator" Type="String" Nullable="false" />
+    <Property Name="ModuleName" Type="String" Nullable="false" />
+    <Property Name="HeaderContent" Type="String" />
+    <Property Name="BodyContent" Type="String" />
+    <Property Name="FooterContent" Type="String" />
+    <Property Name="Status" Type="Boolean" Nullable="false" />
+    <Property Name="PrimaryName" Type="String" Nullable="false" />
+    <Property Name="SecondaryName" Type="String" Nullable="false" />
+    <Property Name="MetaAuthor" Type="String" Nullable="false" />
+    <Property Name="MetaKeywords" Type="String" Nullable="false" />
+    <Property Name="MetatagsStatus" Type="Boolean" Nullable="false" />
+    <Property Name="MetaSubject" Type="String" Nullable="false" />
+    <Property Name="MetaTitle" Type="String" Nullable="false" />
+    <Property Name="PageFormat" Type="String" Nullable="false" />
+    <Property Name="MarginChkbox" Type="Boolean" />
+    <Property Name="MarginTop" Type="Int16" />
+    <Property Name="MarginBottom" Type="Int16" />
+    <Property Name="MarginLeft" Type="Int16" />
+    <Property Name="MarginRight" Type="Int16" />
+    <Property Name="HeaderHeight" Type="Int16" />
+    <Property Name="FooterHeight" Type="Int16" />
+    <Property Name="PageOrientation" Type="String" Nullable="false" />
+    <Property Name="Language" Type="String" Nullable="false" />
+    <Property Name="FileName" Type="String" Nullable="false" />
+    <Property Name="Visibility" Type="String" Nullable="false" />
+    <Property Name="Default" Type="Boolean" />
+    <Property Name="Conditions" Type="String" />
+    <Property Name="WatermarkType" Type="Boolean" Nullable="false" />
+    <Property Name="WatermarkText" Type="String" Nullable="false" />
+    <Property Name="WatermarkAngle" Type="Int16" Nullable="false" />
+    <Property Name="WatermarkImage" Type="String" Nullable="false" />
+    <Property Name="TemplateMembers" Type="String" Nullable="false" />
+    <Property Name="OnePdf" Type="Boolean" />
+    <Property Name="Type" Type="Boolean" />
+    <Property Name="Styles" Type="String" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstfiles_videos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="Encoder" Type="String" Nullable="false" />
+    <Property Name="Path" Type="String" Nullable="false" />
+    <Property Name="FileName" Type="String" Nullable="false" />
+    <Property Name="Extension" Type="String" Nullable="false" />
+    <Property Name="Format" Type="String" Nullable="false" />
+    <Property Name="Duration" Type="String" Nullable="false" />
+    <Property Name="Size" Type="String" Nullable="false" />
+    <Property Name="Bitrate" Type="String" Nullable="false" />
+    <Property Name="VideoWidth" Type="String" Nullable="false" />
+    <Property Name="VideoHeight" Type="String" Nullable="false" />
+    <Property Name="VideoWhRatio" Type="String" Nullable="false" />
+    <Property Name="VideoCodec" Type="String" Nullable="false" />
+    <Property Name="VideoRate" Type="String" Nullable="false" />
+    <Property Name="VideoBitrate" Type="String" Nullable="false" />
+    <Property Name="VideoColor" Type="String" Nullable="false" />
+    <Property Name="AudioCodec" Type="String" Nullable="false" />
+    <Property Name="AudioBitrate" Type="String" Nullable="false" />
+    <Property Name="AudioRate" Type="String" Nullable="false" />
+    <Property Name="AudioChannels" Type="String" Nullable="false" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstforum">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="ForumGroupId" Type="Int64" />
+    <Property Name="Description" Type="String" />
+    <Property Name="NumTopics" Type="Int64" />
+    <Property Name="NumPosts" Type="Int64" />
+    <Property Name="LastTopicId" Type="Int64" />
+    <Property Name="LastPostId" Type="Int64" />
+    <Property Name="LastPostCustomerId" Type="Int64" />
+    <Property Name="LastPostTime" Type="DateTime" />
+    <Property Name="DisplayOrder" Type="Int64" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Name="UpdatedOn" Type="DateTime" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstforums_group">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="GroupName" Type="String" Nullable="false" />
+    <Property Name="DisplayOrder" Type="Int64" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Name="UpdatedOn" Type="DateTime" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstforums_post">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Text" Type="String" Nullable="false" />
+    <Property Name="IpAddress" Type="String" />
+    <Property Name="CustomerId" Type="Int64" Nullable="false" />
+    <Property Name="TopicId" Type="Int64" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Name="UpdatedOn" Type="DateTime" />
+    <Property Name="VoteCount" Type="Int64" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstforums_privatemessage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Subject" Type="String" Nullable="false" />
+    <Property Name="Text" Type="String" Nullable="false" />
+    <Property Name="FromCustomerId" Type="Int64" Nullable="false" />
+    <Property Name="ToCustomerId" Type="Int64" Nullable="false" />
+    <Property Name="StoreId" Type="Int64" Nullable="false" />
+    <Property Name="IsRead" Type="Boolean" Nullable="false" />
+    <Property Name="IsDeletedByAuthor" Type="Boolean" Nullable="false" />
+    <Property Name="IsDeletedByRecipient" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstforums_searches">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Keywords" Type="String" />
+    <Property Name="DateSearched" Type="DateTime" />
+    <Property Name="Count" Type="Int64" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstforums_subscriptions">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="CustomerId" Type="Int64" Nullable="false" />
+    <Property Name="SubscriptionGuId" Type="Guid" Nullable="false" />
+    <Property Name="ForumId" Type="Int64" Nullable="false" />
+    <Property Name="TopicId" Type="Int64" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstforums_topic">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Subject" Type="String" Nullable="false" />
+    <Property Name="CustomerId" Type="Int64" Nullable="false" />
+    <Property Name="ForumId" Type="Int64" Nullable="false" />
+    <Property Name="TopicTypeId" Type="Int64" Nullable="false" />
+    <Property Name="NumPosts" Type="Int64" Nullable="false" />
+    <Property Name="LastPostId" Type="Int64" Nullable="false" />
+    <Property Name="LastPostCustomerId" Type="Int64" Nullable="false" />
+    <Property Name="LastPostTime" Type="DateTime" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Name="UpdatedOn" Type="DateTime" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstmovy">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="VideoId" Type="Int64" Nullable="false" />
+    <Property Name="ProductId" Type="Int64" Nullable="false" />
+    <Property Name="Title" Type="String" Nullable="false" />
+    <Property Name="Description" Type="String" />
+    <Property Name="ReleaseDate" Type="DateTime" />
+    <Property Name="LanguageId" Type="SByte" Nullable="false" />
+    <Property Name="RentalDuration" Type="Int64" Nullable="false" />
+    <Property Name="RentalRate" Type="Decimal" Nullable="false" />
+    <Property Name="FilmLength" Type="Int64" />
+    <Property Name="ReplacementCost" Type="Decimal" Nullable="false" />
+    <Property Name="Rating" Type="String" />
+    <Property Name="TrailerURL" Type="String" />
+    <Property Name="SpecialFeatures" Type="String" />
+    <Property Name="LastUpDate" Type="DateTime" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstmovies_actors">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="MovieId" Type="Int64" Nullable="false" />
+    <Property Name="Firstname" Type="String" Nullable="false" />
+    <Property Name="Lastname" Type="String" Nullable="false" />
+    <Property Name="Gender" Type="String" />
+    <Property Name="Nationality" Type="String" />
+    <Property Name="RoleDescription" Type="String" />
+    <Property Name="LinkURL" Type="String" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstmovies_collections">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="DeveloperId" Type="Int64" Nullable="false" />
+    <Property Name="CollectionName" Type="String" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" />
+    <Property Name="DateModified" Type="DateTime" />
+    <Property Name="CategoryId" Type="Int64" />
+    <Property Name="PictureId" Type="Int64" />
+    <Property Name="NumberOfFiles" Type="Int32" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstmovies_collectionsitems">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="CollectionId" Type="Int64" Nullable="false" />
+    <Property Name="ProductId" Type="Int64" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstmovies_crew">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="MovieId" Type="Int64" />
+    <Property Name="MovieSeriesId" Type="Int64" />
+    <Property Name="MovieEpisodeId" Type="Int64" />
+    <Property Name="CastName" Type="String" />
+    <Property Name="MovieRole" Type="String" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstmovies_episodes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="MovieSeriesId" Type="Int64" />
+    <Property Name="EpisodeNumber" Type="Int32" />
+    <Property Name="EpisodeTitle" Type="String" />
+    <Property Name="Duration" Type="Int64" />
+    <Property Name="ReleaseDate" Type="DateTime" />
+    <Property Name="GenreId" Type="Int64" />
+    <Property Name="Keywords" Type="String" />
+    <Property Name="Description" Type="String" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstmovies_searches">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Keywords" Type="String" />
+    <Property Name="DateSearched" Type="DateTime" />
+    <Property Name="Count" Type="Int64" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstmovies_series">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Title" Type="String" Nullable="false" />
+    <Property Name="Duration" Type="Int64" />
+    <Property Name="ReleaseDate" Type="DateTime" />
+    <Property Name="GenreId" Type="Int64" />
+    <Property Name="Keywords" Type="String" />
+    <Property Name="Description" Type="String" />
+    <Property Name="NumberOfEpisodes" Type="Int32" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstmovies_studios">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="City" Type="String" />
+    <Property Name="CountryId" Type="Int64" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstmusic_albumitems">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="AlbumId" Type="Int64" Nullable="false" />
+    <Property Name="SongId" Type="Int64" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstmusic_albums">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="ArtistId" Type="Int64" Nullable="false" />
+    <Property Name="AlbumName" Type="String" />
+    <Property Name="ReleasedDate" Type="DateTime" />
+    <Property Name="GenreId" Type="Int64" />
+    <Property Name="PictureId" Type="Int64" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstmusic_artists">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="ArtistsName" Type="String" Nullable="false" />
+    <Property Name="Description" Type="String" />
+    <Property Name="InstrumentsPlayed" Type="String" />
+    <Property Name="Category" Type="String" />
+    <Property Name="NumberOfSongs" Type="Int32" />
+    <Property Name="DateJoined" Type="DateTime" />
+    <Property Name="YearsActive" Type="Int32" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstmusic_genres">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="Description" Type="String" />
+    <Property Name="CoverPhotoId" Type="Int64" />
+  </EntityType>
+  <EntityType Name="tstmusic_playlist">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="PlaylistName" Type="String" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" />
+    <Property Name="DateModified" Type="DateTime" />
+    <Property Name="Status" Type="String" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstmusic_searches">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Keywords" Type="String" />
+    <Property Name="DateSearched" Type="DateTime" />
+    <Property Name="Count" Type="Int64" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstmusic_studios">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="City" Type="String" />
+    <Property Name="CountryId" Type="Int64" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstmusic_tracks">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="AlbumId" Type="Int64" />
+    <Property Name="AudioId" Type="Int64" Nullable="false" />
+    <Property Name="PublisherId" Type="Int64" Nullable="false" />
+    <Property Name="ArtistName" Type="String" Nullable="false" />
+    <Property Name="TrackTitle" Type="String" Nullable="false" />
+    <Property Name="Genre" Type="String" />
+    <Property Name="PlayTime" Type="Time" />
+    <Property Name="Lyrics" Type="String" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstnew">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="PictureId" Type="Int64" Nullable="false" />
+    <Property Name="Title" Type="String" Nullable="false" />
+    <Property Name="ShortTitle" Type="String" />
+    <Property Name="FullTitle" Type="String" />
+    <Property Name="MetaKeywords" Type="String" />
+    <Property Name="MetaTitle" Type="String" />
+    <Property Name="LanguageId" Type="Int64" Nullable="false" />
+    <Property Name="Published" Type="Boolean" Nullable="false" />
+    <Property Name="StartDate" Type="DateTime" />
+    <Property Name="EndDate" Type="DateTime" />
+    <Property Name="AllowComments" Type="Boolean" />
+    <Property Name="LimitedToStores" Type="Boolean" />
+    <Property Name="MetaDescription" Type="String" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstnewsletter">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="ProductId" Type="Int64" Nullable="false" />
+    <Property Name="Title" Type="String" Nullable="false" />
+    <Property Name="CategoryId" Type="Int64" Nullable="false" />
+    <Property Name="Description" Type="String" Nullable="false" />
+    <Property Name="CoverPhotoId" Type="Int64" />
+    <Property Name="FileDocumentId" Type="Int64" />
+    <Property Name="Status" Type="Boolean" Nullable="false" />
+    <Property Name="SubscriptionPrice" Type="Decimal" />
+    <Property Name="DateCreated" Type="DateTime" />
+    <Property Name="DateUpdated" Type="DateTime" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstnewsletters_brands">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="City" Type="String" />
+    <Property Name="CountryId" Type="Int64" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstnewsletters_collections">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="DeveloperId" Type="Int64" Nullable="false" />
+    <Property Name="CollectionName" Type="String" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" />
+    <Property Name="DateModified" Type="DateTime" />
+    <Property Name="CategoryId" Type="Int64" />
+    <Property Name="PictureId" Type="Int64" />
+    <Property Name="NumberOfFiles" Type="Int32" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstnewsletters_collectionsitems">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="CollectionId" Type="Int64" Nullable="false" />
+    <Property Name="ProductId" Type="Int64" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstnewsletters_searches">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Keywords" Type="String" />
+    <Property Name="DateSearched" Type="DateTime" />
+    <Property Name="Count" Type="Int64" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstnewsletters_subscription">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="NewsletterId" Type="Int64" Nullable="false" />
+    <Property Name="Email" Type="String" Nullable="false" />
+    <Property Name="NewsLetterSubscriptionGuId" Type="Guid" Nullable="false" />
+    <Property Name="StartDate" Type="DateTime" />
+    <Property Name="EndDate" Type="DateTime" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstpreset">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="ProductId" Type="Int64" Nullable="false" />
+    <Property Name="PresetGroup" Type="Int16" Nullable="false" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstpresets_collections">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="DeveloperId" Type="Int64" Nullable="false" />
+    <Property Name="CollectionName" Type="String" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" />
+    <Property Name="DateModified" Type="DateTime" />
+    <Property Name="CategoryId" Type="Int64" />
+    <Property Name="PictureId" Type="Int64" />
+    <Property Name="NumberOfFiles" Type="Int32" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstpresets_collectionsitems">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="CollectionId" Type="Int64" Nullable="false" />
+    <Property Name="ProductId" Type="Int64" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstpresets_developers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="City" Type="String" />
+    <Property Name="CountryId" Type="Int64" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstpresets_searches">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Keywords" Type="String" />
+    <Property Name="DateSearched" Type="DateTime" />
+    <Property Name="Count" Type="Int64" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstproduct">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="StoreId" Type="Int64" />
+    <Property Name="ProductName" Type="String" Nullable="false" />
+    <Property Name="MetaKeywords" Type="String" />
+    <Property Name="MetaTitle" Type="String" />
+    <Property Name="Sku" Type="String" />
+    <Property Name="Gtin" Type="String" />
+    <Property Name="ProductTypeId" Type="Int64" />
+    <Property Name="ShortDescription" Type="String" />
+    <Property Name="FullDescription" Type="String" />
+    <Property Name="MetaDescription" Type="String" />
+    <Property Name="AllowCustomerReviews" Type="Boolean" />
+    <Property Name="ApprovedRatingSum" Type="Int64" />
+    <Property Name="NotApprovedRatingSum" Type="Int64" />
+    <Property Name="IsGiftCard" Type="Boolean" />
+    <Property Name="GiftCardTypeId" Type="Int64" />
+    <Property Name="OverriddenGiftCardAmount" Type="Decimal" />
+    <Property Name="IsDownload" Type="Boolean" />
+    <Property Name="DownloadId" Type="Int64" />
+    <Property Name="UnlimitedDownloads" Type="Boolean" />
+    <Property Name="MaxNumberOfDownloads" Type="Int64" />
+    <Property Name="DownloadExpirationDays" Type="Int64" />
+    <Property Name="DownloadActivationTypeId" Type="Int64" />
+    <Property Name="HasSampleDownload" Type="Boolean" />
+    <Property Name="SampleDownloadId" Type="Int64" />
+    <Property Name="HasUserAgreement" Type="Boolean" />
+    <Property Name="UserAgreementText" Type="String" />
+    <Property Name="IsRecurring" Type="Boolean" />
+    <Property Name="RecurringCycleLength" Type="Int64" />
+    <Property Name="RecurringCyclePeriodId" Type="Int64" />
+    <Property Name="RecurringTotalCycles" Type="Int64" />
+    <Property Name="IsRental" Type="Boolean" />
+    <Property Name="RentalPriceLength" Type="Int64" />
+    <Property Name="IsTaxExempt" Type="Boolean" />
+    <Property Name="TaxCategoryId" Type="Int64" />
+    <Property Name="StockQuantity" Type="Int64" />
+    <Property Name="MinStockQuantity" Type="Int64" />
+    <Property Name="AllowBackInStockSubscriptions" Type="Boolean" />
+    <Property Name="OrderMinimumQuantity" Type="Int64" />
+    <Property Name="OrderMaximumQuantity" Type="Int64" />
+    <Property Name="Price" Type="Decimal" />
+    <Property Name="OldPrice" Type="Decimal" />
+    <Property Name="ProductCost" Type="Decimal" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Name="UpdatedOn" Type="DateTime" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstproducts_affiliates">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="AffiliateAddressId" Type="Int64" Nullable="false" />
+    <Property Name="ProductId" Type="Int64" Nullable="false" />
+    <Property Name="Commission" Type="Decimal" />
+    <Property Name="DateJoined" Type="DateTime" />
+    <Property Name="AdminComment" Type="String" />
+    <Property Name="FriendlyURLName" Type="String" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstproducts_banners">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Title" Type="String" Nullable="false" />
+    <Property Name="LinkURL" Type="String" Nullable="false" />
+    <Property Name="CoverImageId" Type="Int64" Nullable="false" />
+    <Property Name="HtmlText" Type="String" />
+    <Property Name="StartDate" Type="DateTime" />
+    <Property Name="ExpiryDate" Type="DateTime" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstproducts_cart">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="ProductId" Type="Int64" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstproducts_customers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Username" Type="String" />
+    <Property Name="Email" Type="String" />
+    <Property Name="DateOfBirth" Type="DateTime" />
+    <Property Name="CurrencyId" Type="Int64" />
+    <Property Name="LanguageId" Type="Int64" />
+    <Property Name="StateProvinceId" Type="Int64" />
+    <Property Name="LastIpLocation" Type="String" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstproducts_discounts">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="DiscountName" Type="String" Nullable="false" />
+    <Property Name="CouponCode" Type="String" />
+    <Property Name="AdminComment" Type="String" />
+    <Property Name="DiscountTypeId" Type="Int64" Nullable="false" />
+    <Property Name="UsePercentage" Type="Boolean" Nullable="false" />
+    <Property Name="DiscountPercentage" Type="Decimal" Nullable="false" />
+    <Property Name="DiscountAmount" Type="Decimal" Nullable="false" />
+    <Property Name="MaximumDiscountAmount" Type="Decimal" />
+    <Property Name="StartDate" Type="DateTime" />
+    <Property Name="EndDate" Type="DateTime" />
+    <Property Name="RequiresCouponCode" Type="Boolean" Nullable="false" />
+    <Property Name="IsCumulative" Type="Boolean" Nullable="false" />
+    <Property Name="DiscountLimitationId" Type="Int64" Nullable="false" />
+    <Property Name="LimitationTimes" Type="Int64" Nullable="false" />
+    <Property Name="MaximumDiscountedQuantity" Type="Int64" />
+    <Property Name="AppliedToSubCategories" Type="Boolean" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstproducts_giftcards">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="PurchasedWithOrderItemId" Type="Int64" />
+    <Property Name="GiftCardTypeId" Type="Int64" Nullable="false" />
+    <Property Name="Amount" Type="Decimal" Nullable="false" />
+    <Property Name="IsGiftCardActivated" Type="Boolean" Nullable="false" />
+    <Property Name="GiftCardCouponCode" Type="String" />
+    <Property Name="RecipientName" Type="String" />
+    <Property Name="RecipientEmail" Type="String" />
+    <Property Name="SenderName" Type="String" />
+    <Property Name="SenderEmail" Type="String" />
+    <Property Name="Message" Type="String" />
+    <Property Name="IsRecipientNotified" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstproducts_manufacturers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="ManufacturerName" Type="String" Nullable="false" />
+    <Property Name="MetaKeywords" Type="String" />
+    <Property Name="MetaTitle" Type="String" />
+    <Property Name="Description" Type="String" />
+    <Property Name="MetaDescription" Type="String" />
+    <Property Name="PictureId" Type="Int64" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Name="UpdatedOn" Type="DateTime" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstproducts_orderitem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="OrderId" Type="Int64" Nullable="false" />
+    <Property Name="ProductId" Type="Int64" Nullable="false" />
+    <Property Name="Quantity" Type="Int64" Nullable="false" />
+    <Property Name="UnitPriceInclTax" Type="Decimal" Nullable="false" />
+    <Property Name="UnitPriceExclTax" Type="Decimal" Nullable="false" />
+    <Property Name="PriceInclTax" Type="Decimal" Nullable="false" />
+    <Property Name="PriceExclTax" Type="Decimal" Nullable="false" />
+    <Property Name="DiscountAmountInclTax" Type="Decimal" Nullable="false" />
+    <Property Name="DiscountAmountExclTax" Type="Decimal" Nullable="false" />
+    <Property Name="OriginalProductCost" Type="Decimal" Nullable="false" />
+    <Property Name="AttributeDescription" Type="String" />
+    <Property Name="AttributesXml" Type="String" />
+    <Property Name="DownloadCount" Type="Int64" Nullable="false" />
+    <Property Name="RentalStartDate" Type="DateTime" />
+    <Property Name="RentalEndDate" Type="DateTime" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstproducts_orders">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="CustomOrderNumber" Type="String" Nullable="false" />
+    <Property Name="CustomerId" Type="Int64" Nullable="false" />
+    <Property Name="StoreId" Type="Int64" Nullable="false" />
+    <Property Name="PaymentStatusId" Type="Int64" Nullable="false" />
+    <Property Name="PaymentMethodSystemName" Type="String" />
+    <Property Name="CustomerCurrencyCode" Type="String" />
+    <Property Name="CurrencyRate" Type="Decimal" Nullable="false" />
+    <Property Name="OrderSubtotalInclTax" Type="Decimal" Nullable="false" />
+    <Property Name="OrderSubtotalExclTax" Type="Decimal" Nullable="false" />
+    <Property Name="OrderSubTotalDiscountInclTax" Type="Decimal" Nullable="false" />
+    <Property Name="OrderSubTotalDiscountExclTax" Type="Decimal" Nullable="false" />
+    <Property Name="PaymentMethodAdditionalFeeInclTax" Type="Decimal" Nullable="false" />
+    <Property Name="PaymentMethodAdditionalFeeExclTax" Type="Decimal" Nullable="false" />
+    <Property Name="TaxRates" Type="String" />
+    <Property Name="OrderTax" Type="Decimal" Nullable="false" />
+    <Property Name="OrderDiscount" Type="Decimal" Nullable="false" />
+    <Property Name="OrderTotal" Type="Decimal" Nullable="false" />
+    <Property Name="RefundedAmount" Type="Decimal" Nullable="false" />
+    <Property Name="AffiliateId" Type="Int64" Nullable="false" />
+    <Property Name="BankCardId" Type="Int64" Nullable="false" />
+    <Property Name="AuthorizationTransactionId" Type="String" />
+    <Property Name="AuthorizationTransactionCode" Type="String" />
+    <Property Name="AuthorizationTransactionResult" Type="String" />
+    <Property Name="CaptureTransactionId" Type="String" />
+    <Property Name="CaptureTransactionResult" Type="String" />
+    <Property Name="SubscriptionTransactionId" Type="String" />
+    <Property Name="PaidDate" Type="DateTime" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstproducts_recurringpayments">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="InitialOrderId" Type="Int64" Nullable="false" />
+    <Property Name="CycleLength" Type="Int64" Nullable="false" />
+    <Property Name="CyclePeriodId" Type="Int64" Nullable="false" />
+    <Property Name="TotalCycles" Type="Int64" Nullable="false" />
+    <Property Name="StartDate" Type="DateTime" />
+    <Property Name="HasLastPaymentFailed" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstproducts_salesreturns">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="ReasonForReturn" Type="String" Nullable="false" />
+    <Property Name="RequestedAction" Type="String" Nullable="false" />
+    <Property Name="CustomerId" Type="Int64" Nullable="false" />
+    <Property Name="CustomNumber" Type="String" />
+    <Property Name="StoreId" Type="Int64" Nullable="false" />
+    <Property Name="OrderItemId" Type="Int64" Nullable="false" />
+    <Property Name="Quantity" Type="Int64" Nullable="false" />
+    <Property Name="ReturnedQuantity" Type="Int64" Nullable="false" />
+    <Property Name="CustomerComments" Type="String" />
+    <Property Name="UploadedFileId" Type="Int64" Nullable="false" />
+    <Property Name="StaffNotes" Type="String" />
+    <Property Name="ReturnRequestStatusId" Type="Int64" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Name="UpdatedOn" Type="DateTime" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstproducts_searches">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Keywords" Type="String" />
+    <Property Name="DateSearched" Type="DateTime" />
+    <Property Name="Count" Type="Int64" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstproducts_tags">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="ProductId" Type="Int64" />
+    <Property Name="Name" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tstproducts_transactions">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="SenderId" Type="Int64" Nullable="false" />
+    <Property Name="ReceiverId" Type="Int64" Nullable="false" />
+    <Property Name="CurrencyId" Type="Int64" />
+    <Property Name="TypeOfTransaction" Type="String" />
+    <Property Name="TransactionDetails" Type="String" />
+    <Property Name="PaymentMethod" Type="String" Nullable="false" />
+    <Property Name="AccountName" Type="String" Nullable="false" />
+    <Property Name="AccountNumber" Type="String" Nullable="false" />
+    <Property Name="AmountPaid" Type="Decimal" Nullable="false" />
+    <Property Name="Date" Type="DateTime" />
+    <Property Name="ReceiptNo" Type="String" />
+    <Property Name="Reason" Type="String" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstproducts_wishlist">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="ProductId" Type="Int64" Nullable="false" />
+    <Property Name="DatePosted" Type="DateTime" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstshortstory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Title" Type="String" Nullable="false" />
+    <Property Name="Content" Type="String" Nullable="false" />
+    <Property Name="CategoryId" Type="Int64" />
+    <Property Name="CoverPhotoId" Type="Int64" />
+    <Property Name="Keywords" Type="String" />
+    <Property Name="DatePublished" Type="DateTime" />
+    <Property Name="DateModified" Type="DateTime" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstshortstories_collections">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="DeveloperId" Type="Int64" Nullable="false" />
+    <Property Name="CollectionName" Type="String" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" />
+    <Property Name="DateModified" Type="DateTime" />
+    <Property Name="CategoryId" Type="Int64" />
+    <Property Name="PictureId" Type="Int64" />
+    <Property Name="NumberOfFiles" Type="Int32" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstshortstories_collectionsitems">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="CollectionId" Type="Int64" Nullable="false" />
+    <Property Name="ProductId" Type="Int64" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstshortstories_searches">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Keywords" Type="String" />
+    <Property Name="DateSearched" Type="DateTime" />
+    <Property Name="Count" Type="Int64" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstshortstories_writers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Firstname" Type="String" Nullable="false" />
+    <Property Name="Lastname" Type="String" Nullable="false" />
+    <Property Name="Biography" Type="String" />
+    <Property Name="LinkURL" Type="String" />
+    <Property Name="BookCount" Type="Int32" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstsystem_apierrors">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Message" Type="String" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstsystem_faq">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Question" Type="String" />
+    <Property Name="Answer" Type="String" />
+  </EntityType>
+  <EntityType Name="tstsystem_termsconditions">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TermNumber" Type="String" />
+    <Property Name="Title" Type="String" />
+    <Property Name="Content" Type="String" />
+    <Property Name="EffectiveDate" Type="DateTime" />
+    <Property Name="IsActive" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="tstwiki">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Title" Type="String" Nullable="false" />
+    <Property Name="Body" Type="String" Nullable="false" />
+    <Property Name="MetaKeywords" Type="String" />
+    <Property Name="MetaTitle" Type="String" />
+    <Property Name="LanguageId" Type="Int64" />
+    <Property Name="BodyOverview" Type="String" />
+    <Property Name="AllowComments" Type="Boolean" Nullable="false" />
+    <Property Name="Tags" Type="String" />
+    <Property Name="StartDate" Type="DateTime" />
+    <Property Name="EndDate" Type="DateTime" />
+    <Property Name="MetaDescription" Type="String" />
+    <Property Name="LimitedToStores" Type="Boolean" />
+    <Property Name="CreatedOn" Type="DateTime" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstwikis_searches">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="Keywords" Type="String" />
+    <Property Name="DateSearched" Type="DateTime" />
+    <Property Name="Count" Type="Int64" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tstzuckstory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerId" Type="Int64" Nullable="false" />
+    <Property Name="PostId" Type="Int64" />
+    <Property Name="PictureId" Type="Int64" />
+    <Property Name="VideoId" Type="Int64" />
+    <Property Name="EventId" Type="Int64" />
+    <Property Name="PollCampaignId" Type="Int64" />
+    <Property Name="Content" Type="String" Nullable="false" />
+    <Property Name="DatePublished" Type="DateTime" />
+    <Property Name="Likes" Type="Int64" />
+    <Property Name="Views" Type="Int64" />
+    <Property Name="Shares" Type="Int64" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsDeletedOn" Type="DateTime" />
+    <Property Name="IsActiveOn" Type="DateTime" />
+  </EntityType>
+  <EntityContainer Name="tstdbvEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tstaccounts" EntityType="Self.tstaccount" />
+    <EntitySet Name="tstaccount_activitylog" EntityType="Self.tstaccount_activitylog" />
+    <EntitySet Name="tstaccount_address" EntityType="Self.tstaccount_address" />
+    <EntitySet Name="tstaccount_alertrule" EntityType="Self.tstaccount_alertrule" />
+    <EntitySet Name="tstaccount_alerts" EntityType="Self.tstaccount_alerts" />
+    <EntitySet Name="tstaccount_authentication" EntityType="Self.tstaccount_authentication" />
+    <EntitySet Name="tstaccount_bankaccount" EntityType="Self.tstaccount_bankaccount" />
+    <EntitySet Name="tstaccount_connections" EntityType="Self.tstaccount_connections" />
+    <EntitySet Name="tstaccount_country" EntityType="Self.tstaccount_country" />
+    <EntitySet Name="tstaccount_currency" EntityType="Self.tstaccount_currency" />
+    <EntitySet Name="tstaccount_interests" EntityType="Self.tstaccount_interests" />
+    <EntitySet Name="tstaccount_language" EntityType="Self.tstaccount_language" />
+    <EntitySet Name="tstaccount_settings" EntityType="Self.tstaccount_settings" />
+    <EntitySet Name="tstaccount_stateprovince" EntityType="Self.tstaccount_stateprovince" />
+    <EntitySet Name="tstaccount_store" EntityType="Self.tstaccount_store" />
+    <EntitySet Name="tstaccount_taxrates" EntityType="Self.tstaccount_taxrates" />
+    <EntitySet Name="tstapplications" EntityType="Self.tstapplication" />
+    <EntitySet Name="tstapplications_collections" EntityType="Self.tstapplications_collections" />
+    <EntitySet Name="tstapplications_collectionsitems" EntityType="Self.tstapplications_collectionsitems" />
+    <EntitySet Name="tstapplications_developers" EntityType="Self.tstapplications_developers" />
+    <EntitySet Name="tstapplications_searches" EntityType="Self.tstapplications_searches" />
+    <EntitySet Name="tstarchives" EntityType="Self.tstarchive" />
+    <EntitySet Name="tstarchives_searches" EntityType="Self.tstarchives_searches" />
+    <EntitySet Name="tstartworks" EntityType="Self.tstartwork" />
+    <EntitySet Name="tstartworks_artists" EntityType="Self.tstartworks_artists" />
+    <EntitySet Name="tstartworks_collections" EntityType="Self.tstartworks_collections" />
+    <EntitySet Name="tstartworks_collectionsitems" EntityType="Self.tstartworks_collectionsitems" />
+    <EntitySet Name="tstartworks_publishers" EntityType="Self.tstartworks_publishers" />
+    <EntitySet Name="tstartworks_searches" EntityType="Self.tstartworks_searches" />
+    <EntitySet Name="tstauctions" EntityType="Self.tstauction" />
+    <EntitySet Name="tstauctions_brands" EntityType="Self.tstauctions_brands" />
+    <EntitySet Name="tstauctions_collections" EntityType="Self.tstauctions_collections" />
+    <EntitySet Name="tstauctions_collectionsitems" EntityType="Self.tstauctions_collectionsitems" />
+    <EntitySet Name="tstauctions_offers" EntityType="Self.tstauctions_offers" />
+    <EntitySet Name="tstauctions_searches" EntityType="Self.tstauctions_searches" />
+    <EntitySet Name="tstblog_categories" EntityType="Self.tstblog_categories" />
+    <EntitySet Name="tstblog_comments" EntityType="Self.tstblog_comments" />
+    <EntitySet Name="tstblog_links" EntityType="Self.tstblog_links" />
+    <EntitySet Name="tstblog_notifications" EntityType="Self.tstblog_notifications" />
+    <EntitySet Name="tstblog_photos" EntityType="Self.tstblog_photos" />
+    <EntitySet Name="tstblog_post" EntityType="Self.tstblog_post" />
+    <EntitySet Name="tstblog_searches" EntityType="Self.tstblog_searches" />
+    <EntitySet Name="tstblog_videos" EntityType="Self.tstblog_videos" />
+    <EntitySet Name="tstbrands" EntityType="Self.tstbrand" />
+    <EntitySet Name="tstbrands_searches" EntityType="Self.tstbrands_searches" />
+    <EntitySet Name="tstcalendar_events" EntityType="Self.tstcalendar_events" />
+    <EntitySet Name="tstcampaigns" EntityType="Self.tstcampaign" />
+    <EntitySet Name="tstcampaigns_brands" EntityType="Self.tstcampaigns_brands" />
+    <EntitySet Name="tstcampaigns_collections" EntityType="Self.tstcampaigns_collections" />
+    <EntitySet Name="tstcampaigns_collectionsitems" EntityType="Self.tstcampaigns_collectionsitems" />
+    <EntitySet Name="tstcampaigns_pollanswer" EntityType="Self.tstcampaigns_pollanswer" />
+    <EntitySet Name="tstcampaigns_polls" EntityType="Self.tstcampaigns_polls" />
+    <EntitySet Name="tstcampaigns_searches" EntityType="Self.tstcampaigns_searches" />
+    <EntitySet Name="tstcampaigns_votes" EntityType="Self.tstcampaigns_votes" />
+    <EntitySet Name="tstclassifieds" EntityType="Self.tstclassified" />
+    <EntitySet Name="tstclassifieds_collections" EntityType="Self.tstclassifieds_collections" />
+    <EntitySet Name="tstclassifieds_collectionsitems" EntityType="Self.tstclassifieds_collectionsitems" />
+    <EntitySet Name="tstclassifieds_searches" EntityType="Self.tstclassifieds_searches" />
+    <EntitySet Name="tstclubs" EntityType="Self.tstclub" />
+    <EntitySet Name="tstclubs_searches" EntityType="Self.tstclubs_searches" />
+    <EntitySet Name="tstclubs_subscriptions" EntityType="Self.tstclubs_subscriptions" />
+    <EntitySet Name="tstcompetitions" EntityType="Self.tstcompetition" />
+    <EntitySet Name="tstcompetitions_brands" EntityType="Self.tstcompetitions_brands" />
+    <EntitySet Name="tstcompetitions_collections" EntityType="Self.tstcompetitions_collections" />
+    <EntitySet Name="tstcompetitions_collectionsitems" EntityType="Self.tstcompetitions_collectionsitems" />
+    <EntitySet Name="tstcompetitions_searches" EntityType="Self.tstcompetitions_searches" />
+    <EntitySet Name="tstcourses" EntityType="Self.tstcours" />
+    <EntitySet Name="tstcourses_assignmentanswers" EntityType="Self.tstcourses_assignmentanswers" />
+    <EntitySet Name="tstcourses_assignments" EntityType="Self.tstcourses_assignments" />
+    <EntitySet Name="tstcourses_assignmentsquestions" EntityType="Self.tstcourses_assignmentsquestions" />
+    <EntitySet Name="tstcourses_collections" EntityType="Self.tstcourses_collections" />
+    <EntitySet Name="tstcourses_collectionsitems" EntityType="Self.tstcourses_collectionsitems" />
+    <EntitySet Name="tstcourses_enrollment" EntityType="Self.tstcourses_enrollment" />
+    <EntitySet Name="tstcourses_gradebook" EntityType="Self.tstcourses_gradebook" />
+    <EntitySet Name="tstcourses_notes" EntityType="Self.tstcourses_notes" />
+    <EntitySet Name="tstcourses_searches" EntityType="Self.tstcourses_searches" />
+    <EntitySet Name="tstcourses_testresults" EntityType="Self.tstcourses_testresults" />
+    <EntitySet Name="tstcourses_tests" EntityType="Self.tstcourses_tests" />
+    <EntitySet Name="tstcourses_testsanswers" EntityType="Self.tstcourses_testsanswers" />
+    <EntitySet Name="tstcourses_testsquestions" EntityType="Self.tstcourses_testsquestions" />
+    <EntitySet Name="tstcourses_tutors" EntityType="Self.tstcourses_tutors" />
+    <EntitySet Name="tstdownloads" EntityType="Self.tstdownload" />
+    <EntitySet Name="tstdownloads_searches" EntityType="Self.tstdownloads_searches" />
+    <EntitySet Name="tstebooks" EntityType="Self.tstebook" />
+    <EntitySet Name="tstebooks_authors" EntityType="Self.tstebooks_authors" />
+    <EntitySet Name="tstebooks_collections" EntityType="Self.tstebooks_collections" />
+    <EntitySet Name="tstebooks_collectionsitems" EntityType="Self.tstebooks_collectionsitems" />
+    <EntitySet Name="tstebooks_publishers" EntityType="Self.tstebooks_publishers" />
+    <EntitySet Name="tstebooks_searches" EntityType="Self.tstebooks_searches" />
+    <EntitySet Name="tstfiles" EntityType="Self.tstfile" />
+    <EntitySet Name="tstfiles_audio" EntityType="Self.tstfiles_audio" />
+    <EntitySet Name="tstfiles_folders" EntityType="Self.tstfiles_folders" />
+    <EntitySet Name="tstfiles_images" EntityType="Self.tstfiles_images" />
+    <EntitySet Name="tstfiles_pdf" EntityType="Self.tstfiles_pdf" />
+    <EntitySet Name="tstfiles_videos" EntityType="Self.tstfiles_videos" />
+    <EntitySet Name="tstforums" EntityType="Self.tstforum" />
+    <EntitySet Name="tstforums_group" EntityType="Self.tstforums_group" />
+    <EntitySet Name="tstforums_post" EntityType="Self.tstforums_post" />
+    <EntitySet Name="tstforums_privatemessage" EntityType="Self.tstforums_privatemessage" />
+    <EntitySet Name="tstforums_searches" EntityType="Self.tstforums_searches" />
+    <EntitySet Name="tstforums_subscriptions" EntityType="Self.tstforums_subscriptions" />
+    <EntitySet Name="tstforums_topic" EntityType="Self.tstforums_topic" />
+    <EntitySet Name="tstmovies" EntityType="Self.tstmovy" />
+    <EntitySet Name="tstmovies_actors" EntityType="Self.tstmovies_actors" />
+    <EntitySet Name="tstmovies_collections" EntityType="Self.tstmovies_collections" />
+    <EntitySet Name="tstmovies_collectionsitems" EntityType="Self.tstmovies_collectionsitems" />
+    <EntitySet Name="tstmovies_crew" EntityType="Self.tstmovies_crew" />
+    <EntitySet Name="tstmovies_episodes" EntityType="Self.tstmovies_episodes" />
+    <EntitySet Name="tstmovies_searches" EntityType="Self.tstmovies_searches" />
+    <EntitySet Name="tstmovies_series" EntityType="Self.tstmovies_series" />
+    <EntitySet Name="tstmovies_studios" EntityType="Self.tstmovies_studios" />
+    <EntitySet Name="tstmusic_albumitems" EntityType="Self.tstmusic_albumitems" />
+    <EntitySet Name="tstmusic_albums" EntityType="Self.tstmusic_albums" />
+    <EntitySet Name="tstmusic_artists" EntityType="Self.tstmusic_artists" />
+    <EntitySet Name="tstmusic_genres" EntityType="Self.tstmusic_genres" />
+    <EntitySet Name="tstmusic_playlist" EntityType="Self.tstmusic_playlist" />
+    <EntitySet Name="tstmusic_searches" EntityType="Self.tstmusic_searches" />
+    <EntitySet Name="tstmusic_studios" EntityType="Self.tstmusic_studios" />
+    <EntitySet Name="tstmusic_tracks" EntityType="Self.tstmusic_tracks" />
+    <EntitySet Name="tstnews" EntityType="Self.tstnew" />
+    <EntitySet Name="tstnewsletters" EntityType="Self.tstnewsletter" />
+    <EntitySet Name="tstnewsletters_brands" EntityType="Self.tstnewsletters_brands" />
+    <EntitySet Name="tstnewsletters_collections" EntityType="Self.tstnewsletters_collections" />
+    <EntitySet Name="tstnewsletters_collectionsitems" EntityType="Self.tstnewsletters_collectionsitems" />
+    <EntitySet Name="tstnewsletters_searches" EntityType="Self.tstnewsletters_searches" />
+    <EntitySet Name="tstnewsletters_subscription" EntityType="Self.tstnewsletters_subscription" />
+    <EntitySet Name="tstpresets" EntityType="Self.tstpreset" />
+    <EntitySet Name="tstpresets_collections" EntityType="Self.tstpresets_collections" />
+    <EntitySet Name="tstpresets_collectionsitems" EntityType="Self.tstpresets_collectionsitems" />
+    <EntitySet Name="tstpresets_developers" EntityType="Self.tstpresets_developers" />
+    <EntitySet Name="tstpresets_searches" EntityType="Self.tstpresets_searches" />
+    <EntitySet Name="tstproducts" EntityType="Self.tstproduct" />
+    <EntitySet Name="tstproducts_affiliates" EntityType="Self.tstproducts_affiliates" />
+    <EntitySet Name="tstproducts_banners" EntityType="Self.tstproducts_banners" />
+    <EntitySet Name="tstproducts_cart" EntityType="Self.tstproducts_cart" />
+    <EntitySet Name="tstproducts_customers" EntityType="Self.tstproducts_customers" />
+    <EntitySet Name="tstproducts_discounts" EntityType="Self.tstproducts_discounts" />
+    <EntitySet Name="tstproducts_giftcards" EntityType="Self.tstproducts_giftcards" />
+    <EntitySet Name="tstproducts_manufacturers" EntityType="Self.tstproducts_manufacturers" />
+    <EntitySet Name="tstproducts_orderitem" EntityType="Self.tstproducts_orderitem" />
+    <EntitySet Name="tstproducts_orders" EntityType="Self.tstproducts_orders" />
+    <EntitySet Name="tstproducts_recurringpayments" EntityType="Self.tstproducts_recurringpayments" />
+    <EntitySet Name="tstproducts_salesreturns" EntityType="Self.tstproducts_salesreturns" />
+    <EntitySet Name="tstproducts_searches" EntityType="Self.tstproducts_searches" />
+    <EntitySet Name="tstproducts_tags" EntityType="Self.tstproducts_tags" />
+    <EntitySet Name="tstproducts_transactions" EntityType="Self.tstproducts_transactions" />
+    <EntitySet Name="tstproducts_wishlist" EntityType="Self.tstproducts_wishlist" />
+    <EntitySet Name="tstshortstories" EntityType="Self.tstshortstory" />
+    <EntitySet Name="tstshortstories_collections" EntityType="Self.tstshortstories_collections" />
+    <EntitySet Name="tstshortstories_collectionsitems" EntityType="Self.tstshortstories_collectionsitems" />
+    <EntitySet Name="tstshortstories_searches" EntityType="Self.tstshortstories_searches" />
+    <EntitySet Name="tstshortstories_writers" EntityType="Self.tstshortstories_writers" />
+    <EntitySet Name="tstsystem_apierrors" EntityType="Self.tstsystem_apierrors" />
+    <EntitySet Name="tstsystem_faq" EntityType="Self.tstsystem_faq" />
+    <EntitySet Name="tstsystem_termsconditions" EntityType="Self.tstsystem_termsconditions" />
+    <EntitySet Name="tstwikis" EntityType="Self.tstwiki" />
+    <EntitySet Name="tstwikis_searches" EntityType="Self.tstwikis_searches" />
+    <EntitySet Name="tstzuckstories" EntityType="Self.tstzuckstory" />
+  </EntityContainer>
+</Schema>
