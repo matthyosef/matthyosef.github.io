@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-style layout-navbar-fixed layout-menu-fixed " dir="assets" data-theme="theme-default"
+    data-assets-path="./assets" data-template="vertical-menu-template-dark">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>263deals</title>
+
+
+    <meta name="description" content="the best ecommerce platform" />
+    <meta name="keywords" content="ecommerce, zimbabwe, deals, digital products, online shop">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="#" />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="assets/fonts/boxicons.css" />
+    <link rel="stylesheet" href="assets/fonts/flag-icons.css" />
+    <link rel="stylesheet" href="assets/styles/icon-font.css" />
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="assets/styles/core-dark.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="assets/styles/theme-default-dark.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="assets/styles/demo.css" />
+
+    <!-- Vendors CSS -->
+    <link rel="stylesheet" href="assets/plugins/perfect-scrollbar/perfect-scrollbar.css" />
+    <link rel="stylesheet" href="assets/plugins/typeahead-js/typeahead.css" />
+    <link rel="stylesheet" href="assets/plugins/datatables-bs5/datatables.bootstrap5.css">
+    <link rel="stylesheet" href="assets/plugins/datatables-responsive-bs5/responsive.bootstrap5.css">
+    <link rel="stylesheet" href="assets/plugins/datatables-checkboxes-jquery/datatables.checkboxes.css">
+    <link rel="stylesheet" href="assets/plugins/datatables-buttons-bs5/buttons.bootstrap5.css">
+    <link rel="stylesheet" href="assets/plugins/flatpickr/flatpickr.css" />
+    
+    <link rel="stylesheet" href="assets/plugins/dropzone/dropzone.css" />
+    <!-- Row Group CSS -->
+    <link rel="stylesheet" href="assets/plugins/datatables-rowgroup-bs5/rowgroup.bootstrap5.css">
+    <!-- Form Validation -->
+    <link rel="stylesheet" href="assets/plugins/formvalidation/dist/css/formValidation.min.css" />
+    <!-- Page CSS -->
+    <!-- MAIN -->
+    <style>
+        .img-logo {
+            opacity: 0.5;
+            max-width: 100%;
+            max-height: 100%;
+            height: 40px;
+            width: 40px;
+            object-fit: fill;
+        }
+
+        .text-logo {
+            color: var(--bs-body-color);
+            opacity: 0.65;
+            text-transform: uppercase;
+            margin-bottom: 0rem;
+            font-family: Cambria;
+            font-size: 28px;
+        }
+    </style>
+
+    <!-- Helpers -->
+    <script src="assets/scripts/helpers.js"></script>
+
+    <script src="assets/scripts/config.js"></script>
+</head>
+
+<body>
+
+
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-content-navbar  ">
+        <div class="layout-container">
+            <!-- Menu -->
+            <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+                <div class="app-brand demo ">
+                    <a href="index.html" class="app-brand-link">
+                        <img src="assets/images/sweetbao.png" alt="" class="img-logo" />
+                        <h2 class="text-logo">263<small>deals</small></h2>
+                    </a>
+                </div>
+
+                <div class="menu-divider mt-0  "></div>
+                <div class="menu-inner-shadow"></div>
+
+                <ul class="menu-inner py-1">
+                    <li class="menu-item">
+            <a href="#" class="menu-link menu-toggle">
+              <i class="menu-icon tf-icons bi bi-card-image"></i>
+              <div data-i18n="Ebooks">Artworks</div>
+            </a>
+            <ul class="menu-sub">
+              <li class="menu-item">
+                <a href="panel-artworks-all.html" class="menu-link">
+                  <div data-i18n="Collapsed menu">All Artworks</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="panel-artworks-collections.html" class="menu-link">
+                  <div data-i18n="Content nav + Sidebar">Collections</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="panel-artworks-artists.html" class="menu-link">
+                  <div data-i18n="Horizontal">Artists</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="panel-artworks-publishers.html" class="menu-link">
+                  <div data-i18n="Without menu">Publishers</div>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu-link menu-toggle">
+              <i class="menu-icon tf-icons bi bi-book"></i>
+              <div data-i18n="Ebooks">Ebooks</div>
+            </a>
+            <ul class="menu-sub">
+              <li class="menu-item">
+                <a href="panel-ebooks-all.html" class="menu-link">
+                  <div data-i18n="Collapsed menu">All Books</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="panel-artworks-collections.html" class="menu-link">
+                  <div data-i18n="Content nav + Sidebar">Collections</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="panel-ebooks-authors.html" class="menu-link">
+                  <div data-i18n="Horizontal">Authors</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="panel-artworks-publishers.html" class="menu-link">
+                  <div data-i18n="Without menu">Publishers</div>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu-link menu-toggle">
+              <i class="menu-icon tf-icons bi bi-award"></i>
+              <div data-i18n="Ebooks">Courses</div>
+            </a>
+            <ul class="menu-sub">
+              <li class="menu-item">
+                <a href="panel-courses-all.html" class="menu-link">
+                  <div data-i18n="Collapsed menu">All Courses</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="panel-courses-assignments.html" class="menu-link">
+                  <div data-i18n="Content nav + Sidebar">Assignments</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="panel-courses-tests.html" class="menu-link">
+                  <div data-i18n="Horizontal">Tests</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="panel-courses-notes.html" class="menu-link">
+                  <div data-i18n="Horizontal">Notes</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="panel-courses-tutors.html" class="menu-link">
+                  <div data-i18n="Without menu">Tutors</div>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu-link menu-toggle">
+              <i class="menu-icon tf-icons bi bi-hexagon"></i>
+              <div data-i18n="Ebooks">Newsletters</div>
+            </a>
+            <ul class="menu-sub">
+              <li class="menu-item">
+                <a href="panel-newsletters-all.html" class="menu-link">
+                  <div data-i18n="Collapsed menu">All Newsletters</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="panel-newsletters-subscribers.html" class="menu-link">
+                  <div data-i18n="Content nav + Sidebar">Subscribers</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="menu-link">
+                  <div data-i18n="Without menu">Brands</div>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu-link menu-toggle">
+              <i class="menu-icon tf-icons bi bi-film"></i>
+              <div data-i18n="Ebooks">Movies</div>
+            </a>
+            <ul class="menu-sub">
+              <li class="menu-item">
+                <a href="panel-movies-all.html" class="menu-link">
+                  <div data-i18n="Collapsed menu">All Movies</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="panel-movies-seasons.html" class="menu-link">
+                  <div data-i18n="Content nav + Sidebar">Seasons</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="panel-movies-episodes.html" class="menu-link">
+                  <div data-i18n="Horizontal">Episodes</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="panel-movies-crew.html" class="menu-link">
+                  <div data-i18n="Without menu">Crew</div>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu-link menu-toggle">
+              <i class="menu-icon tf-icons bi bi-soundwave"></i>
+              <div data-i18n="Ebooks">Songs</div>
+            </a>
+            <ul class="menu-sub">
+              <li class="menu-item">
+                <a href="panel-songs-all.html" class="menu-link">
+                  <div data-i18n="Collapsed menu">All Songs</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="panel-songs-albums.html" class="menu-link">
+                  <div data-i18n="Content nav + Sidebar">Albums</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="panel-artworks-artists.html" class="menu-link">
+                  <div data-i18n="Horizontal">Artists</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="panel-artworks-publishers.html" class="menu-link">
+                  <div data-i18n="Without menu">Publishers</div>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu-link menu-toggle">
+              <i class="menu-icon tf-icons bi bi-braces"></i>
+              <div data-i18n="Ebooks">Presets & Apps</div>
+            </a>
+            <ul class="menu-sub">
+              <li class="menu-item">
+                <a href="panel-presets-applications.html" class="menu-link">
+                  <div data-i18n="Collapsed menu">Applications</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="panel-presets-templates.html" class="menu-link">
+                  <div data-i18n="Content nav + Sidebar">Templates</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="panel-presets-video_effects.html" class="menu-link">
+                  <div data-i18n="Content nav + Sidebar">Video Effects</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="panel-presets-sound_effects.html" class="menu-link">
+                  <div data-i18n="Horizontal">Sound Effects</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="panel-presets-developers.html" class="menu-link">
+                  <div data-i18n="Without menu">Developers</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="panel-presets-collections.html" class="menu-link">
+                  <div data-i18n="Without menu">Collections</div>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu-link menu-toggle">
+              <i class="menu-icon tf-icons bi bi-graph-up"></i>
+              <div data-i18n="Ebooks">Events Manager</div>
+            </a>
+            <ul class="menu-sub">
+              <li class="menu-item">
+                <a href="panel-events-calendar.html" class="menu-link">
+                  <div data-i18n="Collapsed menu">Calendar</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="panel-events-campaigns.html" class="menu-link">
+                  <div data-i18n="Content navbar">Campaigns</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="panel-events-competitions.html" class="menu-link">
+                  <div data-i18n="Content nav + Sidebar">Competitions</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="panel-events-classifieds.html" class="menu-link">
+                  <div data-i18n="Horizontal">Classifieds</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="panel-presets-developers.html" class="menu-link">
+                  <div data-i18n="Without menu">Developers</div>
+                </a>
+              </li>
+            </ul>
+          </li>
+                    <!-- Panel -->
+                    <li class="menu-header small text-uppercase"><span class="menu-header-text">Panel</span>
+                    </li>
+                    <li class="menu-item">
+                        <a href="panel-dashboard.html" class="menu-link">
+                            <i class="menu-icon tf-icons bi bi-tv"></i>
+                            <div data-i18n="Artworks">Dashboard</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bi bi-alt"></i>
+                            <div data-i18n="Artworks">Catalog</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                              <a href="panel-catalog-products.html" class="menu-link">
+                                <div data-i18n="Collapsed menu">Products</div>
+                              </a>
+                            </li>
+                            <li class="menu-item">
+                              <a href="panel-catalog-categories.html" class="menu-link">
+                                <div data-i18n="Content navbar">Categories</div>
+                              </a>
+                            </li>
+                            <li class="menu-item">
+                              <a href="panel-catalog-manufactures.html" class="menu-link">
+                                <div data-i18n="Content nav + Sidebar">Manufacturers</div>
+                              </a>
+                            </li>
+                            <li class="menu-item">
+                              <a href="panel-catalog-product_reviews.html" class="menu-link">
+                                <div data-i18n="Horizontal">Product Reviews</div>
+                              </a>
+                            </li>
+                            <li class="menu-item">
+                              <a href="panel-catalog-product_tags.html" class="menu-link">
+                                <div data-i18n="Without menu">Product Tags</div>
+                              </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bi bi-cart3"></i>
+                            <div data-i18n="Ebooks">Sales</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                              <a href="panel-sales-orders.html" class="menu-link">
+                                <div data-i18n="Collapsed menu">Orders</div>
+                              </a>
+                            </li>
+                            <li class="menu-item">
+                              <a href="panel-sales-returns.html" class="menu-link">
+                                <div data-i18n="Content nav + Sidebar">Return requests</div>
+                              </a>
+                            </li>
+                            <li class="menu-item">
+                              <a href="panel-sales-recurring_payments.html" class="menu-link">
+                                <div data-i18n="Horizontal">Recurring payments</div>
+                              </a>
+                            </li>
+                            <li class="menu-item">
+                              <a href="panel-sales-gift_cards.html" class="menu-link">
+                                <div data-i18n="Without menu">Gift cards</div>
+                              </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="panel-sales-shopping_carts.html" class="menu-link">
+                                  <div data-i18n="Without menu">Shopping Carts</div>
+                                </a>
+                              </li>
+                              <li class="menu-item">
+                                <a href="panel-sales-wishlists.html" class="menu-link">
+                                  <div data-i18n="Without menu">Wishlists</div>
+                                </a>
+                              </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bi bi-person"></i>
+                            <div data-i18n="Artworks">Customers</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                              <a href="panel-customers-all.html" class="menu-link">
+                                <div data-i18n="Collapsed menu">All customers</div>
+                              </a>
+                            </li>
+                            <li class="menu-item">
+                              <a href="panel-customers-online.html" class="menu-link">
+                                <div data-i18n="Content nav + Sidebar">Online customers</div>
+                              </a>
+                            </li>
+                            <li class="menu-item">
+                              <a href="panel-customers-vendors.html" class="menu-link">
+                                <div data-i18n="Horizontal">Vendors</div>
+                              </a>
+                            </li>
+                            <li class="menu-item">
+                              <a href="panel-customers-activity_log.html" class="menu-link">
+                                <div data-i18n="Without menu">Activity log</div>
+                              </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bi bi-tags"></i>
+                            <div data-i18n="Artworks">Promotions</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                              <a href="panel-promotions-discounts.html" class="menu-link">
+                                <div data-i18n="Collapsed menu">Discounts</div>
+                              </a>
+                            </li>
+                            <li class="menu-item">
+                              <a href="panel-promotions-affiliates.html" class="menu-link">
+                                <div data-i18n="Content navbar">Affiliates</div>
+                              </a>
+                            </li>
+                            <li class="menu-item">
+                              <a href="panel-promotions-subscribers.html" class="menu-link">
+                                <div data-i18n="Content nav + Sidebar">Blog subscribers</div>
+                              </a>
+                            </li>
+                            <li class="menu-item">
+                              <a href="panel-promotions-campaigns.html" class="menu-link">
+                                <div data-i18n="Horizontal">Campaigns</div>
+                              </a>
+                            </li>
+                            <li class="menu-item">
+                              <a href="panel-promotions-adverts.html" class="menu-link">
+                                <div data-i18n="Without menu">Adverts</div>
+                              </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+            <a href="#" class="menu-link menu-toggle">
+              <i class="menu-icon tf-icons bi bi-bucket"></i>
+              <div data-i18n="Artworks">Content Management</div>
+            </a>
+            <ul class="menu-sub">
+              <li class="menu-item">
+                <a href="panel-content-news_items.html" class="menu-link">
+                  <div data-i18n="Collapsed menu">News items</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="panel-content-news_comments.html" class="menu-link">
+                  <div data-i18n="Content navbar">News comments</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="panel-content-blog_posts.html" class="menu-link">
+                  <div data-i18n="Content nav + Sidebar">Blog posts</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="panel-content-blog_comments.html" class="menu-link">
+                  <div data-i18n="Horizontal">Blog comments</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="panel-content-polls.html" class="menu-link">
+                  <div data-i18n="Without menu">Polls</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="panel-content-forums.html" class="menu-link">
+                  <div data-i18n="Without menu">Forums</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="panel-content-stories.html" class="menu-link">
+                  <div data-i18n="Collapsed menu">Stories</div>
+                </a>
+              </li>
+            </ul>
+          </li>
+                    <li class="menu-item">
+            <a href="#" class="menu-link menu-toggle">
+              <i class="menu-icon tf-icons bi bi-bezier"></i>
+              <div data-i18n="Artworks">Configuration</div>
+            </a>
+            <ul class="menu-sub">
+              <li class="menu-item">
+                <a href="panel-configuration-emails.html" class="menu-link">
+                  <div data-i18n="Collapsed menu">Email accounts</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="panel-configuration-stores.html" class="menu-link">
+                  <div data-i18n="Content navbar">Stores</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="panel-configuration-brands.html" class="menu-link">
+                  <div data-i18n="Content nav + Sidebar">Brands</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="panel-configuration-clubs.html" class="menu-link">
+                  <div data-i18n="Horizontal">Clubs</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="panel-configuration-payment_methods.html" class="menu-link">
+                  <div data-i18n="Content nav + Sidebar">Payment methods</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="panel-configuration-payment_methods.html" class="menu-link">
+                  <div data-i18n="Horizontal">Exchange rates</div>
+                </a>
+              </li>
+            </ul>
+          </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bi bi-lock"></i>
+                            <div data-i18n="Artworks">Settings</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                              <a href="panel-settings-general.html" class="menu-link">
+                                <div data-i18n="Collapsed menu">General settings</div>
+                              </a>
+                            </li>
+                            <li class="menu-item">
+                              <a href="panel-settings-customers.html" class="menu-link">
+                                <div data-i18n="Content navbar">Customer settings</div>
+                              </a>
+                            </li>
+                            <li class="menu-item">
+                              <a href="panel-settings-orders.html" class="menu-link">
+                                <div data-i18n="Content nav + Sidebar">Order settings</div>
+                              </a>
+                            </li>
+                            <li class="menu-item">
+                              <a href="panel-settings-catalog.html" class="menu-link">
+                                <div data-i18n="Horizontal">Catalog settings</div>
+                              </a>
+                            </li>
+                            <li class="menu-item">
+                              <a href="panel-settings-shopping_cart.html" class="menu-link">
+                                <div data-i18n="Without menu">Shopping cart settings</div>
+                              </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="panel-settings-vendors.html" class="menu-link">
+                                  <div data-i18n="Without menu">Vendor settings</div>
+                                </a>
+                              </li>
+                              <li class="menu-item">
+                                <a href="panel-settings-blog.html" class="menu-link">
+                                  <div data-i18n="Without menu">Blog settings</div>
+                                </a>
+                              </li>
+                              <li class="menu-item">
+                                <a href="panel-settings-news.html" class="menu-link">
+                                  <div data-i18n="Without menu">News settings</div>
+                                </a>
+                              </li>
+                              <li class="menu-item">
+                                <a href="panel-settings-forums.html" class="menu-link">
+                                  <div data-i18n="Without menu">Forum settings</div>
+                                </a>
+                              </li>
+                              <li class="menu-item">
+                                <a href="panel-settings-media.html" class="menu-link">
+                                  <div data-i18n="Without menu">Media settings</div>
+                                </a>
+                              </li>
+                              <li class="menu-item">
+                                <a href="panel-settings-all.html" class="menu-link">
+                                  <div data-i18n="Without menu">All settings</div>
+                                </a>
+                              </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item mb-4">
+                        <a href="#" class="menu-link">
+                            <i class="menu-icon tf-icons bi bi-bar-chart"></i>
+                            <div data-i18n="Artworks">Reports</div>
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+            <!-- / Menu -->
+
+            <!-- Layout container -->
+            <div class="layout-page">
+                <nav class="layout-navbar navbar navbar-expand-xl align-items-center bg-navbar-theme"
+                    id="layout-navbar">
+                    <div class="container-fluid">
+
+                        <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0   d-xl-none ">
+                            <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+                                <i class="bx bx-menu bx-sm"></i>
+                            </a>
+                        </div>
+
+                        <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+                            <!-- Search -->
+                            <div class="navbar-nav align-items-center">
+                                <div class="nav-item navbar-search-wrapper mb-0">
+                                    <a class="nav-item nav-link px-0" href="javascript:void(0);">
+                                        <i class="bx bx-search-alt bx-sm"></i>
+                                        <label type="text" class="d-md-inline-block text-muted">Search?</label>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- /Search -->
+
+                            <ul class="navbar-nav gap-3 flex-row align-items-center ms-auto">
+                                <!-- Quick links  -->
+                                <li class="nav-item me-2 me-xl-0">
+                                    <a class="nav-link" href="javascript:void(0);" data-bs-toggle="offcanvas"
+                                        data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+                                        <i class='bx bx-grid-alt bx-sm'></i>
+                                    </a>
+                                </li>
+                                <!-- Quick links -->
+
+                                <!-- Cart  -->
+                                <li class="nav-item me-2 me-xl-0">
+                                    <a class="nav-link" href="javascript:void(0);" data-bs-toggle="offcanvas"
+                                        data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">
+                                        <i class='bx bx-cart bx-sm'></i>
+                                    </a>
+                                </li>
+                                <!-- Cart -->
+
+                                <!-- Notification -->
+                                <li class="nav-item me-xl-2">
+                                    <a class="nav-link" href="javascript:void(0);" data-bs-toggle="offcanvas"
+                                        data-bs-target="#offcanvasNotifications" aria-controls="offcanvasNotifications">
+                                        <i class="bx bx-bell bx-sm"></i>
+                                        <span class="badge bg-secondary rounded-pill badge-notifications">5</span>
+                                    </a>
+                                </li>
+                                <!--/ Notification -->
+
+                                <!-- Messages -->
+                                <li class="nav-item me-xl-2">
+                                    <a class="nav-link" href="javascript:void(0);" data-bs-toggle="offcanvas"
+                                        data-bs-target="#offcanvasMessages" aria-controls="offcanvasMessages">
+                                        <i class="bx bx-chat bx-sm"></i>
+                                        <span class="badge bg-dark rounded-pill badge-notifications">5</span>
+                                    </a>
+                                </li>
+                                <!--/ Messages -->
+
+                                <!-- User -->
+                                <li class="nav-item navbar-dropdown dropdown-user dropdown">
+                                    <a class="nav-link" href="javascript:void(0);" data-bs-toggle="offcanvas"
+                                        data-bs-target="#offcanvasSettings" aria-controls="offcanvasSettings">
+                                        <div class="avatar avatar-online">
+                                            <img src="assets/images/avatars/1.png" alt class="rounded-circle">
+                                        </div>
+                                    </a>
+                                </li>
+                                <!--/ User -->
+
+
+                            </ul>
+                        </div>
+
+
+                        <!-- Search Small Screens -->
+                        <div class="navbar-search-wrapper search-input-wrapper  d-none">
+                            <input type="text" class="form-control search-input container-fluid border-0"
+                                placeholder="Search..." aria-label="Search...">
+                            <i class="bx bx-x bx-sm search-toggler cursor-pointer"></i>
+                        </div>
+
+
+                    </div>
+                </nav>
+
+                <!-- offcanvas -->
+
+                <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                    id="offcanvasMenu">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title">Menu</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body mx-0 flex-grow-0">
+                        <div class="row mb-0">
+                            <div class="col pe-2">
+                                <a href="#" data-back-button class="card card-style rounded-m me-0 p-3 mb-3">
+                                    <i class="fa fa-gift text-danger fs-4"></i>
+                                    <h6 class="pt-3">Your Orders</h4>
+                                        <p class="small mt-n2 mb-0 color-highlight">Track, return, or buy things again
+                                        </p>
+                                </a>
+                            </div>
+                            <div class="col ps-2">
+                                <a href="#" data-back-button class="card card-style rounded-m ms-0  p-3 mb-3">
+                                    <i class="fa fa-shopping-bag text-success fs-4"></i>
+                                    <h6 class="pt-3">Wishlist</h4>
+                                        <p class="small mt-n2 mb-0 color-highlight">Act on or delete preferences</p>
+                                </a>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col pe-2">
+                                <a href="#" data-back-button class="card card-style rounded-m me-0 p-3 mb-3">
+                                    <i class="fa fa-question-circle text-white fs-4"></i>
+                                    <h6 class="pt-3">Searches</h4>
+                                        <p class="small mt-n2 mb-0 color-highlight">Discover your taste</p>
+                                </a>
+                            </div>
+                            <div class="col ps-2">
+                                <a href="#" data-back-button class="card card-style rounded-m ms-0  p-3 mb-3">
+                                    <i class="fa fa-code text-warning fs-4"></i>
+                                    <h6 class="pt-3">Transactions Log</h4>
+                                        <p class="small mt-n2 mb-0 color-highlight">View deals occured</p>
+                                </a>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col pe-2">
+                                <a href="#" data-back-button class="card card-style rounded-m me-0 p-3 mb-3">
+                                    <i class="fa fa-image text-primary fs-4"></i>
+                                    <h6 class="pt-3">Photos</h4>
+                                        <p class="small mt-n2 mb-0 color-highlight">Browse photos</p>
+                                </a>
+                            </div>
+                            <div class="col ps-2">
+                                <a href="#" data-back-button class="card card-style rounded-m ms-0  p-3 mb-3">
+                                    <i class="fa fa-camera text-info fs-4"></i>
+                                    <h6 class="pt-3">Videos</h4>
+                                        <p class="small mt-n2 mb-0 color-highlight">Browse videos</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                    id="offcanvasCart">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title">Cart</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body mx-0 flex-grow-0">
+                        <div class="row d-flex justify-content-center align-items-center h-100">
+                            <div class="col-12">
+                                <div class="card rounded-3 mb-4">
+                                    <div class="card-body p-4">
+                                        <div class="row d-flex justify-content-between align-items-center gap-2">
+                                            <div class="col-md-4 col-lg-4 col-xl-4">
+                                                <img src="assets/images/4.jpg" class="img-fluid rounded-3"
+                                                    alt="Cotton T-shirt">
+                                            </div>
+                                            <div class="col-md-8 col-lg-8 col-xl-8 text-center">
+                                                <p class="lead fs-6 my-2">Basic T-shirt</p>
+                                                <p><span class="text-success">$45.65</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card rounded-3 mb-4">
+                                    <div class="card-body p-4">
+                                        <div class="row d-flex justify-content-between align-items-center gap-2">
+                                            <div class="col-md-4 col-lg-4 col-xl-4">
+                                                <img src="assets/images/4.jpg" class="img-fluid rounded-3"
+                                                    alt="Cotton T-shirt">
+                                            </div>
+                                            <div class="col-md-8 col-lg-8 col-xl-8 text-center">
+                                                <p class="lead fs-6 my-2">Basic T-shirt</p>
+                                                <p><span class="text-success">$45.65</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card rounded-3 mb-4">
+                                    <div class="card-body p-4">
+                                        <div class="row d-flex justify-content-between align-items-center gap-2">
+                                            <div class="col-md-4 col-lg-4 col-xl-4">
+                                                <img src="assets/images/4.jpg" class="img-fluid rounded-3"
+                                                    alt="Cotton T-shirt">
+                                            </div>
+                                            <div class="col-md-8 col-lg-8 col-xl-8 text-center">
+                                                <p class="lead fs-6 my-2">Basic T-shirt</p>
+                                                <p><span class="text-success">$45.65</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card rounded-3 mb-4">
+                                    <div class="card-body p-4">
+                                        <div class="row d-flex justify-content-between align-items-center gap-2">
+                                            <div class="col-md-4 col-lg-4 col-xl-4">
+                                                <img src="assets/images/4.jpg" class="img-fluid rounded-3"
+                                                    alt="Cotton T-shirt">
+                                            </div>
+                                            <div class="col-md-8 col-lg-8 col-xl-8 text-center">
+                                                <p class="lead fs-6 my-2">Basic T-shirt</p>
+                                                <p><span class="text-success">$45.65</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="card">
+                                    <div class="card-body">
+                                        <button type="button" class="btn btn-success btn-block btn-lg">Proceed to
+                                            Pay</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                    id="offcanvasNotifications">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title mb-0">Notifications</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body mx-0 flex-grow-0">
+                        <div class="mt-0">
+                            <ul class="list-group list-group-flush list-unstyled">
+                                <!-- Notif item -->
+                                <li>
+                                    <div
+                                        class="list-group-item list-group-item-action rounded badge-unread d-flex border-0 mb-1 p-3">
+                                        <div class="avatar text-center d-none d-sm-inline-block">
+                                            <img class="avatar-img rounded-circle" src="assets/images/avatar/01.jpg"
+                                                alt="">
+                                        </div>
+                                        <div class="ms-sm-3">
+                                            <div class=" d-flex">
+                                                <p class="small mb-2"><b>Judy Nguyen</b> sent you a friend request.</p>
+                                                <p class="small ms-3 text-nowrap">Just now</p>
+                                            </div>
+                                            <div class="d-flex">
+                                                <button class="btn btn-sm py-1 btn-primary me-2">Accept </button>
+                                                <button class="btn btn-sm py-1 btn-danger-soft">Delete </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- Notif item -->
+                                <li>
+                                    <div
+                                        class="list-group-item list-group-item-action rounded badge-unread d-flex border-0 mb-1 p-3 position-relative">
+                                        <div class="avatar text-center d-none d-sm-inline-block">
+                                            <img class="avatar-img rounded-circle" src="assets/images/avatar/02.jpg"
+                                                alt="">
+                                        </div>
+                                        <div class="ms-sm-3 d-flex">
+                                            <div>
+                                                <p class="small mb-2">Wish <b>Amanda Reed</b> a happy birthday (Nov 12)
+                                                </p>
+                                                <button class="btn btn-sm btn-outline-light py-1 me-2">Say happy
+                                                    birthday 🎂</button>
+                                            </div>
+                                            <p class="small ms-3">2min</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- Notif item -->
+                                <li>
+                                    <a href="#"
+                                        class="list-group-item list-group-item-action rounded d-flex border-0 mb-1 p-3">
+                                        <div class="avatar text-center d-none d-sm-inline-block">
+                                            <div class="avatar-img rounded-circle bg-success"><span
+                                                    class="text-white position-absolute top-50 start-50 translate-middle fw-bold">WB</span>
+                                            </div>
+                                        </div>
+                                        <div class="ms-sm-3">
+                                            <div class="d-flex">
+                                                <p class="small mb-2">Webestica has 15 like and 1 new activity</p>
+                                                <p class="small ms-3">1hr</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <!-- Notif item -->
+                                <li>
+                                    <a href="#"
+                                        class="list-group-item list-group-item-action rounded d-flex border-0 p-3 mb-1">
+                                        <div class="avatar text-center d-none d-sm-inline-block">
+                                            <img class="avatar-img rounded-circle" src="assets/images/logo/12.svg"
+                                                alt="">
+                                        </div>
+                                        <div class="ms-sm-3 d-flex">
+                                            <p class="small mb-2"><b>Bootstrap in the news:</b> The search giant’s
+                                                parent company, Alphabet, just joined an exclusive club of tech stocks.
+                                            </p>
+                                            <p class="small ms-3">4hr</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-footer text-center">
+                            <a href="#" class="btn btn-sm btn-primary-soft">See all incoming activity</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                    id="offcanvasMessages">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title">Messages</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body mx-0 flex-grow-0">
+
+                        <button type="button" class="btn btn-primary mb-2 d-grid w-100">Continue</button>
+                        <button type="button" class="btn btn-label-secondary d-grid w-100"
+                            data-bs-dismiss="offcanvas">Cancel</button>
+                    </div>
+                </div>
+
+
+                <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                    id="offcanvasSettings">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title">Settings</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body mx-0 flex-grow-0">
+
+                    </div>
+                </div>
+                <!-- / Navbar -->
+
+                <!-- Content wrapper -->
+                <div class="content-wrapper">
+                    <div class="container-xxl flex-grow-1 container-p-y">
+                        <h4 class="py-3 breadcrumb-wrapper mb-4">
+                            <span class="text-muted fw-light">Settings /</span> General
+                        </h4>
+                        
+                        <div class="accordion" id="collapsibleSection">
+                          <!-- Delivery Address -->
+                          <div class="card accordion-item">
+                            <h2 class="accordion-header" id="headingDeliveryAddress">
+                              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDeliveryAddress" aria-expanded="true" aria-controls="collapseDeliveryAddress"><i class="fa fa-info"></i>&nbsp;&nbsp; Common</button>
+                            </h2>
+                            <div id="collapseDeliveryAddress" class="accordion-collapse collapse show" aria-labelledby="headingDeliveryAddress" data-bs-parent="#collapsibleSection">
+                              <div class="accordion-body">
+                                <div class="row g-3">
+                                  <div class="col-md-6">
+                                    <div class="row">
+                                      <label class="col-sm-3 col-form-label text-sm-end" for="collapsible-fullname">Store theme &nbsp;&nbsp;<i class="fa fa-question-circle"></i></label>
+                                      <div class="col-sm-9">
+                                        <form action="#" class="dropzone needsclick" id="dropzone-basic">
+                                          <div class="fallback">
+                                            <input title="drop file" name="file" type="file" />
+                                          </div>
+                                        </form>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <div class="row">
+                                      <label class="col-sm-3 col-form-label text-sm-end" for="collapsible-phone">Store logo &nbsp;&nbsp;<i class="fa fa-question-circle"></i></label>
+                                      <div class="col-sm-9">
+                                        <form action="#" class="dropzone needsclick" id="dropzone-basic">
+                                          <div class="fallback">
+                                            <input title="drop file" name="file" type="file" />
+                                          </div>
+                                        </form>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Delivery Options -->
+                          <div class="card accordion-item">
+                            <h2 class="accordion-header" id="headingDeliveryOptions">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDeliveryOptions" aria-expanded="false" aria-controls="collapseDeliveryOptions"><i class="fa fa-share-alt"></i>&nbsp;&nbsp; Social media</button>
+                            </h2>
+                            <div id="collapseDeliveryOptions" class="accordion-collapse collapse" aria-labelledby="headingDeliveryOptions" data-bs-parent="#collapsibleSection">
+                              <div class="accordion-body">
+                                <div class="row g-3">
+                                  <div class="col-md-12">
+                                    <div class="row">
+                                      <label class="col-sm-3 col-form-label text-sm-end" for="collapsible-fullname">Facebook page url &nbsp;&nbsp;<i class="fa fa-question-circle"></i></label>
+                                      <div class="col-sm-8">
+                                        <input type="text" class="form-text form-control"  placeholder="d"/>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-12">
+                                    <div class="row">
+                                      <label class="col-sm-3 col-form-label text-sm-end" for="collapsible-phone">Instagram page url &nbsp;&nbsp;<i class="fa fa-question-circle"></i></label>
+                                      <div class="col-sm-8">
+                                        <input type="text" class="form-text form-control" placeholder="d"/>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-12">
+                                    <div class="row">
+                                      <label class="col-sm-3 col-form-label text-sm-end" for="collapsible-phone">Twitter page url &nbsp;&nbsp;<i class="fa fa-question-circle"></i></label>
+                                      <div class="col-sm-8">
+                                        <input type="text" class="form-text form-control" placeholder="d"/>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-12">
+                                    <div class="row">
+                                      <label class="col-sm-3 col-form-label text-sm-end" for="collapsible-phone">Youtube page url &nbsp;&nbsp;<i class="fa fa-question-circle"></i></label>
+                                      <div class="col-sm-8">
+                                        <input type="text" class="form-text form-control" placeholder="d"/>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row py-4">
+                          <div class="col-md-4">
+                            <a href="#" class="btn btn-primary w-100">Save</a>
+                          </div>
+                        </div>
+                    </div>
+                    <!-- / Content -->
+
+                    <!-- Footer -->
+                    <footer class="content-footer footer bg-footer-theme">
+                        <div
+                            class="container-fluid d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
+                            <div class="mb-2 mb-md-0">
+                                Copyright&nbsp;&copy;
+                                <script>
+                                    document.write(new Date().getFullYear())
+                                </script>
+                                VeneVayo&nbsp;263deals&trade;
+                            </div>
+                            <div>
+
+                                <a href="#" class="footer-link me-4" target="_blank">About Us</a>
+                                <a href="#" target="_blank" class="footer-link me-4">Settings</a>
+
+                                <a href="#" target="_blank" class="footer-link me-4">Privacy Policy</a>
+
+
+                                <a href="#" target="_blank" class="footer-link d-sm-inline-block">Terms And
+                                    Conditions</a>
+
+                            </div>
+                        </div>
+                    </footer>
+                    <!-- / Footer -->
+                    <div class="content-backdrop fade"></div>
+                </div>
+                <!-- Content wrapper -->
+            </div>
+            <!-- / Layout page -->
+        </div>
+
+        <!-- Overlay -->
+        <div class="layout-overlay layout-menu-toggle"></div>
+
+        <!-- Drag Target Area To SlideIn Menu On Small Screens -->
+        <div class="drag-target"></div>
+
+    </div>
+    <!-- / Layout wrapper -->
+
+
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/core.js -->
+    <script src="assets/plugins/jquery/jquery.js"></script>
+    <script src="assets/plugins/popper/popper.js"></script>
+    <script src="assets/scripts/bootstrap.js"></script>
+    <script src="assets/plugins/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+    <script src="assets/plugins/hammer/hammer.js"></script>
+
+
+    <script src="assets/plugins/i18n/i18n.js"></script>
+    <script src="assets/plugins/typeahead-js/typeahead.js"></script>
+
+    <script src="assets/scripts/menu.js"></script>
+    <!-- endbuild -->
+
+    <!-- Vendors JS -->
+    <script src="assets/plugins/datatables-bs5/datatables-bootstrap5.js"></script>
+    <script src="assets/plugins/dropzone/dropzone.js"></script>
+    <!-- Flat Picker -->
+    <script src="assets/plugins/moment/moment.js"></script>
+    <script src="assets/plugins/flatpickr/flatpickr.js"></script>
+    <!-- Form Validation -->
+    <script src="assets/plugins/formvalidation/dist/js/FormValidation.min.js"></script>
+    <script src="assets/plugins/formvalidation/dist/js/plugins/Bootstrap5.min.js"></script>
+    <script src="assets/plugins/formvalidation/dist/js/plugins/AutoFocus.min.js"></script>
+
+    <!-- Main JS -->
+    <script src="assets/scripts/main.js"></script>
+
+    <!-- Page JS -->
+    <script src="assets/scripts/tables-datatables-basic.js"></script>
+    <script src="assets/scripts/forms-file-upload.js"></script>
+</body>
+
+</html>
